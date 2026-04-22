@@ -12,13 +12,13 @@
       animation:zcFloat 3s ease-in-out infinite; cursor:pointer;
     }
     #zc-btn {
-      width:62px; height:62px; border-radius:50%; border:none; cursor:pointer;
+      width:62px; height:62px; border-radius:18px; border:none; cursor:pointer;
       background:linear-gradient(135deg,#26277A 0%,#00DCFC 100%);
       display:flex; align-items:center; justify-content:center;
       box-shadow:0 6px 20px rgba(38,39,122,.45); transition:transform .2s, box-shadow .2s;
     }
     #zc-btn:hover { transform:scale(1.08); box-shadow:0 8px 28px rgba(38,39,122,.55); }
-    #zc-btn svg { width:34px; height:34px; }
+    #zc-btn svg { width:32px; height:32px; }
     #zc-win {
       position:fixed; bottom:100px; right:24px; width:360px;
       background:#fff; border-radius:18px; box-shadow:0 12px 40px rgba(0,0,0,.2);
@@ -77,18 +77,12 @@
   s.textContent = css;
   document.head.appendChild(s);
 
-  // ── AI chat icon SVG (speech bubble + sparkle) ──────────────────────────────
-  var robotSVG = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">'
-    /* main speech bubble */
-    + '<rect x="6" y="8" width="44" height="34" rx="10" fill="white"/>'
-    /* bubble tail */
-    + '<path d="M14 42 L10 54 L26 44" fill="white"/>'
-    /* sparkle center */
-    + '<path d="M28 18 L29.5 23 L34.5 24.5 L29.5 26 L28 31 L26.5 26 L21.5 24.5 L26.5 23 Z" fill="#26277A"/>'
-    /* small sparkle top-right */
-    + '<path d="M38 12 L38.8 14.2 L41 15 L38.8 15.8 L38 18 L37.2 15.8 L35 15 L37.2 14.2 Z" fill="#00DCFC"/>'
-    /* tiny sparkle bottom-left */
-    + '<path d="M18 30 L18.5 31.5 L20 32 L18.5 32.5 L18 34 L17.5 32.5 L16 32 L17.5 31.5 Z" fill="#00DCFC"/>'
+  // ── Chat icon: Heroicons chat-bubble-left-ellipsis (MIT) ────────────────────
+  var robotSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">'
+    + '<path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97Z" clip-rule="evenodd" />'
+    + '<circle cx="8.5" cy="9.75" r="1" fill="#26277A"/>'
+    + '<circle cx="12" cy="9.75" r="1" fill="#26277A"/>'
+    + '<circle cx="15.5" cy="9.75" r="1" fill="#26277A"/>'
     + '</svg>';
 
   // ── Chat bubble for header ───────────────────────────────────────────────────
