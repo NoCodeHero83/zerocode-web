@@ -77,6 +77,18 @@
       #zc-win { width:calc(100vw - 32px); right:16px; bottom:92px; }
       #zc-widget { right:16px; bottom:16px; }
     }
+    .cpel-switcher__toggle a::before {
+      content:'';
+      display:inline-block;
+      width:15px; height:15px;
+      vertical-align:middle;
+      margin-right:5px;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/%3E%3C/svg%3E");
+      background-size:contain;
+      background-repeat:no-repeat;
+      background-position:center;
+    }
+    .cpel-switcher__flag { display:none; }
   `;
   var s = document.createElement('style');
   s.textContent = css;
@@ -99,7 +111,7 @@
     + '</svg>';
 
   // ── Send arrow ───────────────────────────────────────────────────────────────
-  var sendSVG = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>';
+  var sendSVG = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2" fill="white" stroke="none"/></svg>';
 
   // ── DOM ──────────────────────────────────────────────────────────────────────
   var widget = document.createElement('div');
@@ -118,7 +130,7 @@
     + '<button id="zc-close" aria-label="Close chat">&#x2715;</button>'
     + '</div>'
     + '<div id="zc-msgs">'
-    + '<div class="zc-m zc-bot">What\'s currently breaking as your volume increases?</div>'
+    + '<div class="zc-m zc-bot">Hi, my name is Nathan. I am a senior advisor from ZEROCODE. How can I help you today?</div>'
     + '</div>'
     + '<div id="zc-input-row">'
     + '<input id="zc-input" type="text" placeholder="Type your message…" autocomplete="off" aria-label="Chat message"/>'
