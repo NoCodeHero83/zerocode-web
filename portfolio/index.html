@@ -596,7 +596,7 @@ solutions</h2>				</div>
 				</div>
 				</div>
 				</div>
-				<nav class="elementor-pagination" id="portfolio-pagination" aria-label="Pagination" style="margin-top:40px;text-align:center;">
+				<nav class="elementor-pagination" id="portfolio-pagination" aria-label="Pagination" style="margin-top:40px;text-align:center;grid-column:1/-1;display:flex;justify-content:center;align-items:center;gap:8px;">
 					<span class="page-numbers prev" id="portfolio-prev" onclick="portfolioPaginate(1)" style="cursor:pointer;">Previous</span>
 					<span id="portfolio-pg-1" aria-current="page" class="page-numbers current" onclick="portfolioPaginate(1)" style="cursor:pointer;"><span class="elementor-screen-only">Page</span>1</span>
 					<span id="portfolio-pg-2" class="page-numbers" onclick="portfolioPaginate(2)" style="cursor:pointer;"><span class="elementor-screen-only">Page</span>2</span>
@@ -1275,7 +1275,7 @@ jQuery(document).ready(function($) {
   function go(page) {
     var all = items(), total = Math.ceil(all.length / PER_PAGE);
     cur = Math.max(1, Math.min(page, total));
-    all.forEach(function(el, i) { el.style.display = (i >= (cur-1)*PER_PAGE && i < cur*PER_PAGE) ? '' : 'none'; });
+    all.forEach(function(el, i) { var show = (i >= (cur-1)*PER_PAGE && i < cur*PER_PAGE); el.style.display = show ? '' : 'none'; if (show) el.querySelectorAll('.elementor-invisible').forEach(function(inv){ inv.classList.remove('elementor-invisible'); }); });
     var prev = document.getElementById('portfolio-prev');
     var next = document.getElementById('portfolio-next');
     var pg1  = document.getElementById('portfolio-pg-1');
