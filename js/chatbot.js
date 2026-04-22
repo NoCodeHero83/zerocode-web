@@ -75,18 +75,12 @@
   s.textContent = css;
   document.head.appendChild(s);
 
-  // ── Robot icon SVG ───────────────────────────────────────────────────────────
-  var robotSVG = '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">'
-    + '<rect x="14" y="22" width="36" height="30" rx="7" fill="white"/>'
-    + '<circle cx="23" cy="35" r="4.5" fill="#26277A"/>'
-    + '<circle cx="41" cy="35" r="4.5" fill="#26277A"/>'
-    + '<circle cx="24.5" cy="33.5" r="1.5" fill="white"/>'
-    + '<circle cx="42.5" cy="33.5" r="1.5" fill="white"/>'
-    + '<rect x="25" y="43" width="14" height="3.5" rx="1.75" fill="#00DCFC"/>'
-    + '<rect x="29" y="12" width="6" height="10" rx="3" fill="white"/>'
-    + '<circle cx="32" cy="10" r="4" fill="white"/>'
-    + '<rect x="6" y="29" width="5" height="13" rx="2.5" fill="white"/>'
-    + '<rect x="53" y="29" width="5" height="13" rx="2.5" fill="white"/>'
+  // ── Chat bubble icon SVG ─────────────────────────────────────────────────────
+  var robotSVG = '<svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">'
+    + '<path d="M28 6C15.85 6 6 14.954 6 26c0 5.077 2.1 9.7 5.53 13.18L9 50l11.4-3.56C22.7 47.46 25.3 48 28 48c12.15 0 22-8.954 22-20S40.15 6 28 6z" fill="white" fill-opacity="0.95"/>'
+    + '<circle cx="19" cy="26" r="3" fill="#26277A"/>'
+    + '<circle cx="28" cy="26" r="3" fill="#26277A"/>'
+    + '<circle cx="37" cy="26" r="3" fill="#26277A"/>'
     + '</svg>';
 
   // ── Chat bubble for header ───────────────────────────────────────────────────
@@ -103,7 +97,7 @@
   // ── DOM ──────────────────────────────────────────────────────────────────────
   var widget = document.createElement('div');
   widget.id = 'zc-widget';
-  widget.innerHTML = '<div id="zc-label">Hey, do you need help? 🤖</div>'
+  widget.innerHTML = '<div id="zc-label">Hey, do you need help?</div>'
     + '<button id="zc-btn" aria-label="Open Zerocode AI chat">' + robotSVG + '</button>';
   document.body.appendChild(widget);
 
