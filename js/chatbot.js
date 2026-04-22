@@ -82,18 +82,20 @@
   s.textContent = css;
   document.head.appendChild(s);
 
-  // ── Button icon: AI sparkle (industry standard for AI assistants) ─────────────
+  // ── Button icon: chat bubble with AI sparkle inside ──────────────────────────
   var sparkSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">'
-    // Large 4-pointed star
-    + '<path d="M12 2.5 C12 2.5 13 8.5 13.8 10.2 C14.6 11.9 16.5 13 19.5 12 C16.5 11 14.6 12.1 13.8 13.8 C13 15.5 12 21.5 12 21.5 C12 21.5 11 15.5 10.2 13.8 C9.4 12.1 7.5 11 4.5 12 C7.5 13 9.4 11.9 10.2 10.2 C11 8.5 12 2.5 12 2.5Z" fill="white"/>'
-    // Small top-right sparkle
-    + '<path d="M19.5 3.5 C19.5 3.5 20 5.8 20.4 6.6 C20.8 7.4 21.8 7.9 23 7.5 C21.8 7.1 20.8 7.6 20.4 8.4 C20 9.2 19.5 11.5 19.5 11.5 C19.5 11.5 19 9.2 18.6 8.4 C18.2 7.6 17.2 7.1 16 7.5 C17.2 7.9 18.2 7.4 18.6 6.6 C19 5.8 19.5 3.5 19.5 3.5Z" fill="rgba(255,255,255,0.65)"/>'
+    // Chat bubble body with tail bottom-left
+    + '<path d="M4 2H20Q22 2 22 4V14Q22 16 20 16H9L4 21V16Q2 16 2 14V4Q2 2 4 2Z" fill="white"/>'
+    // AI sparkle inside bubble (dark blue so it reads on white)
+    + '<path d="M12 5.5L12.9 8.6L16 9.5L12.9 10.4L12 13.5L11.1 10.4L8 9.5L11.1 8.6Z" fill="#26277A" opacity="0.75"/>'
+    // Tiny secondary sparkle top-right
+    + '<path d="M18 4.5L18.5 6L20 6.5L18.5 7L18 8.5L17.5 7L16 6.5L17.5 6Z" fill="#26277A" opacity="0.45"/>'
     + '</svg>';
 
-  // ── Header icon: smaller sparkle, white on transparent ──────────────────────
+  // ── Header icon: matching chat bubble, white palette ─────────────────────────
   var headSVG = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">'
-    + '<path d="M12 3 C12 3 12.9 8.2 13.6 9.8 C14.3 11.4 16 12.3 18.5 11.5 C16 10.7 14.3 11.6 13.6 13.2 C12.9 14.8 12 20 12 20 C12 20 11.1 14.8 10.4 13.2 C9.7 11.6 8 10.7 5.5 11.5 C8 12.3 9.7 11.4 10.4 9.8 C11.1 8.2 12 3 12 3Z" fill="white"/>'
-    + '<path d="M19 5 C19 5 19.5 7 19.8 7.7 C20.1 8.4 21 8.9 22 8.5 C21 8.1 20.1 8.6 19.8 9.3 C19.5 10 19 12 19 12 C19 12 18.5 10 18.2 9.3 C17.9 8.6 17 8.1 16 8.5 C17 8.9 17.9 8.4 18.2 7.7 C18.5 7 19 5 19 5Z" fill="rgba(255,255,255,0.65)"/>'
+    + '<path d="M4 2H20Q22 2 22 4V14Q22 16 20 16H9L4 21V16Q2 16 2 14V4Q2 2 4 2Z" fill="white"/>'
+    + '<path d="M12 5.5L12.9 8.6L16 9.5L12.9 10.4L12 13.5L11.1 10.4L8 9.5L11.1 8.6Z" fill="rgba(38,39,122,0.7)"/>'
     + '</svg>';
 
   // ── Send arrow ───────────────────────────────────────────────────────────────
