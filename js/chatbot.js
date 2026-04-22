@@ -2,8 +2,6 @@
   // ── Styles ──────────────────────────────────────────────────────────────────
   var css = `
     #zc-widget { position:fixed; bottom:24px; right:24px; z-index:999999; display:flex; flex-direction:column; align-items:flex-end; }
-    /* hide legacy Elementor chat element immediately, before JS runs */
-    .elementor-element-5030b56 { display:none !important; }
     #zc-label {
       background:#26277A; color:#fff; padding:9px 16px; border-radius:22px;
       font-size:15px; font-weight:700; letter-spacing:.01em; line-height:1.4;
@@ -18,7 +16,7 @@
       box-shadow:0 6px 20px rgba(38,39,122,.45); transition:transform .2s, box-shadow .2s;
     }
     #zc-btn:hover { transform:scale(1.08); box-shadow:0 8px 28px rgba(38,39,122,.55); }
-    #zc-btn svg { width:32px; height:32px; }
+    #zc-btn svg { width:34px; height:34px; }
     #zc-win {
       position:fixed; bottom:100px; right:24px; width:360px;
       background:#fff; border-radius:18px; box-shadow:0 12px 40px rgba(0,0,0,.2);
@@ -33,7 +31,7 @@
       width:42px; height:42px; background:rgba(255,255,255,.2); border-radius:50%;
       display:flex; align-items:center; justify-content:center; flex-shrink:0;
     }
-    #zc-head-ico svg { width:26px; height:26px; fill:#fff; }
+    #zc-head-ico svg { width:26px; height:26px; }
     #zc-head-text h3 { margin:0; font-size:16px; font-weight:700; }
     #zc-head-text p  { margin:4px 0 0; font-size:12px; opacity:.85; }
     #zc-close { margin-left:auto; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; opacity:.8; line-height:1; padding:0 2px; }
@@ -77,20 +75,36 @@
   s.textContent = css;
   document.head.appendChild(s);
 
-  // ── Chat icon: Heroicons chat-bubble-left-ellipsis (MIT) ────────────────────
-  var robotSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">'
-    + '<path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97Z" clip-rule="evenodd" />'
-    + '<circle cx="8.5" cy="9.75" r="1" fill="#26277A"/>'
-    + '<circle cx="12" cy="9.75" r="1" fill="#26277A"/>'
-    + '<circle cx="15.5" cy="9.75" r="1" fill="#26277A"/>'
+  // ── Button icon: professional robot / AI-agent face ──────────────────────────
+  var robotSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">'
+    // Antenna post
+    + '<rect x="11.25" y="1.5" width="1.5" height="3.5" rx=".75" fill="white"/>'
+    // Antenna ball
+    + '<circle cx="12" cy="1.5" r="1.5" fill="white"/>'
+    // Head body
+    + '<rect x="2.5" y="5" width="19" height="14" rx="4" fill="white"/>'
+    // Left eye
+    + '<circle cx="8.5" cy="11.5" r="2.5" fill="#26277A"/>'
+    // Left eye highlight
+    + '<circle cx="9.3" cy="10.7" r=".9" fill="rgba(255,255,255,.75)"/>'
+    // Right eye
+    + '<circle cx="15.5" cy="11.5" r="2.5" fill="#26277A"/>'
+    // Right eye highlight
+    + '<circle cx="16.3" cy="10.7" r=".9" fill="rgba(255,255,255,.75)"/>'
+    // Mouth / speaker bar
+    + '<rect x="8.5" y="15.5" width="7" height="1.5" rx=".75" fill="#26277A"/>'
     + '</svg>';
 
-  // ── Chat bubble for header ───────────────────────────────────────────────────
+  // ── Header icon: matching robot face, white palette ──────────────────────────
   var headSVG = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">'
-    + '<path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" fill="white"/>'
-    + '<circle cx="8.5" cy="11" r="1.5" fill="#26277A"/>'
-    + '<circle cx="12" cy="11" r="1.5" fill="#26277A"/>'
-    + '<circle cx="15.5" cy="11" r="1.5" fill="#26277A"/>'
+    + '<rect x="11.25" y="2" width="1.5" height="3" rx=".75" fill="white"/>'
+    + '<circle cx="12" cy="2" r="1.3" fill="white"/>'
+    + '<rect x="3" y="5" width="18" height="13" rx="3.5" fill="white"/>'
+    + '<circle cx="8.5" cy="11" r="2" fill="#26277A"/>'
+    + '<circle cx="9.2" cy="10.3" r=".7" fill="rgba(255,255,255,.8)"/>'
+    + '<circle cx="15.5" cy="11" r="2" fill="#26277A"/>'
+    + '<circle cx="16.2" cy="10.3" r=".7" fill="rgba(255,255,255,.8)"/>'
+    + '<rect x="8.5" y="14" width="7" height="1.5" rx=".75" fill="#26277A"/>'
     + '</svg>';
 
   // ── Send arrow ───────────────────────────────────────────────────────────────
@@ -120,10 +134,6 @@
     + '<button id="zc-send" aria-label="Send">' + sendSVG + '</button>'
     + '</div>';
   document.body.appendChild(win);
-
-  // ── Hide broken Elementor element ────────────────────────────────────────────
-  var elLegacy = document.querySelector('.elementor-element-5030b56');
-  if (elLegacy) elLegacy.style.display = 'none';
 
   // ── Logic ────────────────────────────────────────────────────────────────────
   var label   = document.getElementById('zc-label');
