@@ -77,18 +77,6 @@
       #zc-win { width:calc(100vw - 32px); right:16px; bottom:92px; }
       #zc-widget { right:16px; bottom:16px; }
     }
-    .cpel-switcher__toggle a::before {
-      content:'';
-      display:inline-block;
-      width:15px; height:15px;
-      vertical-align:middle;
-      margin-right:5px;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/%3E%3C/svg%3E");
-      background-size:contain;
-      background-repeat:no-repeat;
-      background-position:center;
-    }
-    .cpel-switcher__flag { display:none; }
   `;
   var s = document.createElement('style');
   s.textContent = css;
