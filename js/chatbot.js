@@ -2,6 +2,8 @@
   // ── Styles ──────────────────────────────────────────────────────────────────
   var css = `
     #zc-widget { position:fixed; bottom:24px; right:24px; z-index:999999; display:flex; flex-direction:column; align-items:flex-end; }
+    /* hide legacy Elementor chat element immediately, before JS runs */
+    .elementor-element-5030b56 { display:none !important; }
     #zc-label {
       background:#26277A; color:#fff; padding:9px 16px; border-radius:22px;
       font-size:15px; font-weight:700; letter-spacing:.01em; line-height:1.4;
@@ -75,12 +77,18 @@
   s.textContent = css;
   document.head.appendChild(s);
 
-  // ── Chat bubble icon SVG ─────────────────────────────────────────────────────
-  var robotSVG = '<svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">'
-    + '<path d="M28 6C15.85 6 6 14.954 6 26c0 5.077 2.1 9.7 5.53 13.18L9 50l11.4-3.56C22.7 47.46 25.3 48 28 48c12.15 0 22-8.954 22-20S40.15 6 28 6z" fill="white" fill-opacity="0.95"/>'
-    + '<circle cx="19" cy="26" r="3" fill="#26277A"/>'
-    + '<circle cx="28" cy="26" r="3" fill="#26277A"/>'
-    + '<circle cx="37" cy="26" r="3" fill="#26277A"/>'
+  // ── AI chat icon SVG (speech bubble + sparkle) ──────────────────────────────
+  var robotSVG = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">'
+    /* main speech bubble */
+    + '<rect x="6" y="8" width="44" height="34" rx="10" fill="white"/>'
+    /* bubble tail */
+    + '<path d="M14 42 L10 54 L26 44" fill="white"/>'
+    /* sparkle center */
+    + '<path d="M28 18 L29.5 23 L34.5 24.5 L29.5 26 L28 31 L26.5 26 L21.5 24.5 L26.5 23 Z" fill="#26277A"/>'
+    /* small sparkle top-right */
+    + '<path d="M38 12 L38.8 14.2 L41 15 L38.8 15.8 L38 18 L37.2 15.8 L35 15 L37.2 14.2 Z" fill="#00DCFC"/>'
+    /* tiny sparkle bottom-left */
+    + '<path d="M18 30 L18.5 31.5 L20 32 L18.5 32.5 L18 34 L17.5 32.5 L16 32 L17.5 31.5 Z" fill="#00DCFC"/>'
     + '</svg>';
 
   // ── Chat bubble for header ───────────────────────────────────────────────────
