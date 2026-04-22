@@ -10,13 +10,19 @@
       animation:zcFloat 3s ease-in-out infinite; cursor:pointer;
     }
     #zc-btn {
-      width:62px; height:62px; border-radius:18px; border:none; cursor:pointer;
+      width:62px; height:62px; border-radius:50%; border:none; cursor:pointer;
       background:linear-gradient(135deg,#26277A 0%,#00DCFC 100%);
       display:flex; align-items:center; justify-content:center;
       box-shadow:0 6px 20px rgba(38,39,122,.45); transition:transform .2s, box-shadow .2s;
+      animation:zcPulse 2.8s ease-out infinite;
     }
-    #zc-btn:hover { transform:scale(1.08); box-shadow:0 8px 28px rgba(38,39,122,.55); }
-    #zc-btn svg { width:34px; height:34px; }
+    #zc-btn:hover { transform:scale(1.08); box-shadow:0 8px 28px rgba(38,39,122,.6); animation:none; }
+    #zc-btn svg { width:30px; height:30px; }
+    @keyframes zcPulse {
+      0%   { box-shadow:0 6px 20px rgba(38,39,122,.45), 0 0 0 0 rgba(0,220,252,.45); }
+      60%  { box-shadow:0 6px 20px rgba(38,39,122,.45), 0 0 0 14px rgba(0,220,252,0); }
+      100% { box-shadow:0 6px 20px rgba(38,39,122,.45), 0 0 0 0 rgba(0,220,252,0); }
+    }
     #zc-win {
       position:fixed; bottom:100px; right:24px; width:360px;
       background:#fff; border-radius:18px; box-shadow:0 12px 40px rgba(0,0,0,.2);
@@ -32,8 +38,9 @@
       display:flex; align-items:center; justify-content:center; flex-shrink:0;
     }
     #zc-head-ico svg { width:26px; height:26px; }
-    #zc-head-text h3 { margin:0; font-size:16px; font-weight:700; }
+    #zc-head-text h3 { margin:0; font-size:16px; font-weight:700; display:flex; align-items:center; gap:7px; }
     #zc-head-text p  { margin:4px 0 0; font-size:12px; opacity:.85; }
+    #zc-online { width:9px; height:9px; background:#22d36b; border-radius:50%; display:inline-block; flex-shrink:0; box-shadow:0 0 0 2px rgba(34,211,107,.35); }
     #zc-close { margin-left:auto; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; opacity:.8; line-height:1; padding:0 2px; }
     #zc-close:hover { opacity:1; }
     #zc-msgs {
@@ -75,36 +82,18 @@
   s.textContent = css;
   document.head.appendChild(s);
 
-  // ── Button icon: professional robot / AI-agent face ──────────────────────────
-  var robotSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">'
-    // Antenna post
-    + '<rect x="11.25" y="1.5" width="1.5" height="3.5" rx=".75" fill="white"/>'
-    // Antenna ball
-    + '<circle cx="12" cy="1.5" r="1.5" fill="white"/>'
-    // Head body
-    + '<rect x="2.5" y="5" width="19" height="14" rx="4" fill="white"/>'
-    // Left eye
-    + '<circle cx="8.5" cy="11.5" r="2.5" fill="#26277A"/>'
-    // Left eye highlight
-    + '<circle cx="9.3" cy="10.7" r=".9" fill="rgba(255,255,255,.75)"/>'
-    // Right eye
-    + '<circle cx="15.5" cy="11.5" r="2.5" fill="#26277A"/>'
-    // Right eye highlight
-    + '<circle cx="16.3" cy="10.7" r=".9" fill="rgba(255,255,255,.75)"/>'
-    // Mouth / speaker bar
-    + '<rect x="8.5" y="15.5" width="7" height="1.5" rx=".75" fill="#26277A"/>'
+  // ── Button icon: AI sparkle (industry standard for AI assistants) ─────────────
+  var sparkSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">'
+    // Large 4-pointed star
+    + '<path d="M12 2.5 C12 2.5 13 8.5 13.8 10.2 C14.6 11.9 16.5 13 19.5 12 C16.5 11 14.6 12.1 13.8 13.8 C13 15.5 12 21.5 12 21.5 C12 21.5 11 15.5 10.2 13.8 C9.4 12.1 7.5 11 4.5 12 C7.5 13 9.4 11.9 10.2 10.2 C11 8.5 12 2.5 12 2.5Z" fill="white"/>'
+    // Small top-right sparkle
+    + '<path d="M19.5 3.5 C19.5 3.5 20 5.8 20.4 6.6 C20.8 7.4 21.8 7.9 23 7.5 C21.8 7.1 20.8 7.6 20.4 8.4 C20 9.2 19.5 11.5 19.5 11.5 C19.5 11.5 19 9.2 18.6 8.4 C18.2 7.6 17.2 7.1 16 7.5 C17.2 7.9 18.2 7.4 18.6 6.6 C19 5.8 19.5 3.5 19.5 3.5Z" fill="rgba(255,255,255,0.65)"/>'
     + '</svg>';
 
-  // ── Header icon: matching robot face, white palette ──────────────────────────
-  var headSVG = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">'
-    + '<rect x="11.25" y="2" width="1.5" height="3" rx=".75" fill="white"/>'
-    + '<circle cx="12" cy="2" r="1.3" fill="white"/>'
-    + '<rect x="3" y="5" width="18" height="13" rx="3.5" fill="white"/>'
-    + '<circle cx="8.5" cy="11" r="2" fill="#26277A"/>'
-    + '<circle cx="9.2" cy="10.3" r=".7" fill="rgba(255,255,255,.8)"/>'
-    + '<circle cx="15.5" cy="11" r="2" fill="#26277A"/>'
-    + '<circle cx="16.2" cy="10.3" r=".7" fill="rgba(255,255,255,.8)"/>'
-    + '<rect x="8.5" y="14" width="7" height="1.5" rx=".75" fill="#26277A"/>'
+  // ── Header icon: smaller sparkle, white on transparent ──────────────────────
+  var headSVG = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">'
+    + '<path d="M12 3 C12 3 12.9 8.2 13.6 9.8 C14.3 11.4 16 12.3 18.5 11.5 C16 10.7 14.3 11.6 13.6 13.2 C12.9 14.8 12 20 12 20 C12 20 11.1 14.8 10.4 13.2 C9.7 11.6 8 10.7 5.5 11.5 C8 12.3 9.7 11.4 10.4 9.8 C11.1 8.2 12 3 12 3Z" fill="white"/>'
+    + '<path d="M19 5 C19 5 19.5 7 19.8 7.7 C20.1 8.4 21 8.9 22 8.5 C21 8.1 20.1 8.6 19.8 9.3 C19.5 10 19 12 19 12 C19 12 18.5 10 18.2 9.3 C17.9 8.6 17 8.1 16 8.5 C17 8.9 17.9 8.4 18.2 7.7 C18.5 7 19 5 19 5Z" fill="rgba(255,255,255,0.65)"/>'
     + '</svg>';
 
   // ── Send arrow ───────────────────────────────────────────────────────────────
@@ -113,8 +102,8 @@
   // ── DOM ──────────────────────────────────────────────────────────────────────
   var widget = document.createElement('div');
   widget.id = 'zc-widget';
-  widget.innerHTML = '<div id="zc-label">Hey, do you need help?</div>'
-    + '<button id="zc-btn" aria-label="Open Zerocode AI chat">' + robotSVG + '</button>';
+  widget.innerHTML = '<div id="zc-label">Talk to an advisor</div>'
+    + '<button id="zc-btn" aria-label="Open Zerocode AI chat">' + sparkSVG + '</button>';
   document.body.appendChild(widget);
 
   var win = document.createElement('div');
@@ -123,11 +112,11 @@
   win.setAttribute('aria-label', 'Zerocode AI Chat');
   win.innerHTML = '<div id="zc-head">'
     + '<div id="zc-head-ico">' + headSVG + '</div>'
-    + '<div id="zc-head-text"><h3>Zerocode AI</h3><p>Ask me about our services</p></div>'
+    + '<div id="zc-head-text"><h3>Nathan <span id="zc-online"></span></h3><p>Senior Advisor · ZEROCODE</p></div>'
     + '<button id="zc-close" aria-label="Close chat">&#x2715;</button>'
     + '</div>'
     + '<div id="zc-msgs">'
-    + '<div class="zc-m zc-bot">Hi! I\'m the Zerocode AI assistant. How can I help you today?</div>'
+    + '<div class="zc-m zc-bot">What\'s currently breaking as your volume increases?</div>'
     + '</div>'
     + '<div id="zc-input-row">'
     + '<input id="zc-input" type="text" placeholder="Type your message…" autocomplete="off" aria-label="Chat message"/>'
