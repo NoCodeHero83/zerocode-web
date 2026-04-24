@@ -224,6 +224,67 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
 			<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/LOGO.png" />
 <meta name="msapplication-TileImage" content="https://zerocode.la/wp-content/uploads/2025/06/cropped-ZEROCODE_Imagotipo-Horizontal-12-270x270.png" />
+
+<style id="zc-responsive-fixes">
+/* Banner top: scale text to one line on mobile */
+.elementor-element-b1755e2 .elementor-widget-container p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 1024px) {
+  .elementor-element-b1755e2 .elementor-widget-container p {
+    font-size: clamp(8px, 1.5vw, 14px) !important;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-element-b1755e2 .elementor-widget-container p {
+    font-size: clamp(7px, 2.8vw, 13px) !important;
+  }
+}
+
+/* Footer: stack columns on mobile */
+@media (max-width: 767px) {
+  .ftr_cnt_sec > .e-con-inner,
+  .elementor-element-1c2f5fa,
+  .elementor-element-a163d2b {
+    flex-direction: column !important;
+  }
+  .elementor-element-1c2f5fa .elementor-video,
+  .elementor-element-9d4dacb video {
+    width: 100% !important;
+    max-height: 220px;
+    object-fit: cover;
+  }
+  .elementor-element-52c9b46 .e-con-inner {
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+  }
+  .elementor-element-52c9b46 .e-con-inner > .e-con {
+    min-width: calc(50% - 12px) !important;
+    flex: 1 1 calc(50% - 12px) !important;
+  }
+  .elementor-element-76ae831 {
+    min-width: 100% !important;
+    flex: 1 1 100% !important;
+    margin-bottom: 8px !important;
+  }
+  /* Contact form section in footer */
+  .bx_gra .e-con-inner,
+  .elementor-element-916cf16 .e-con-inner,
+  .elementor-element-e8c4ee6 .e-con-inner {
+    flex-direction: column !important;
+  }
+  /* Clutch + achievements row */
+  .elementor-element-f5d4881 > .e-con-inner,
+  .elementor-element-f5d4881 > .e-con-full {
+    flex-direction: column !important;
+  }
+  .elementor-element-9cc2600 {
+    width: 100% !important;
+  }
+}
+</style>
 </head>
 <body class="wp-singular portfolio-template-default single single-portfolio postid-1646 logged-in admin-bar no-customize-support wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-6 elementor-page-1270">
 
