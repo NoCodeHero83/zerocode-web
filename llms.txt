@@ -1,0 +1,77 @@
+# Zerocode — AI-Assisted Software Development Agency
+
+> Zerocode is an AI-assisted software development agency that helps established businesses eliminate operational bottlenecks by building custom digital systems. Combining senior engineers with AI-accelerated development, Zerocode delivers production-grade web apps, mobile apps, and automation systems with full IP ownership, vendor-independent architecture, and payback typically within 6 to 12 months.
+
+## What Zerocode Does
+
+Zerocode fixes operational bottlenecks for established businesses — founders and business owners who have more demand than their operation can handle, are losing margin to manual work or SaaS tools they cannot control, and need a trusted partner who has delivered before.
+
+The core offer is "Zero to Revenue — The Operational Fix": a 90-day structured engagement that replaces the bottleneck with a custom digital system, hands over full IP ownership, and includes a calculated payback projection before any development begins.
+
+## Why Businesses Choose Zerocode
+
+- **Full IP ownership from Day 1**: No vendor lock-in. Ever. All code, docs, and architecture are the client's property.
+- **Fixed-price milestones**: Scope and budget locked in Week 3. No surprises.
+- **AI + senior engineers**: AI accelerates scaffolding and boilerplate; senior engineers validate every architectural decision. Result: 3x faster than traditional development at lower cost.
+- **Payback in 6-12 months**: Most clients recover the full build cost through eliminated SaaS fees and reduced manual labor.
+- **Risk-managed migration**: Parallel running ensures existing clients notice nothing during transition.
+
+## Engagement Structure (90 Days)
+
+- **Week 1**: Diagnosis — root-cause analysis of operational bottlenecks, payback projection, scope definition, migration mapping.
+- **Weeks 2-3**: Interface build and validation — scope and budget locked before further development.
+- **Weeks 4-10**: Platform build — weekly releases, dedicated PM, senior engineers.
+- **Weeks 10-12**: Launch — parallel client migration, full handoff (code + docs + training).
+- **Days 91-120**: 30-day post-launch support and Phase 2 roadmap.
+
+## Services
+
+- [Web Application Development](https://zerocode.la/service/)
+- [Mobile App Development](https://zerocode.la/service/)
+- [AI Automation & Business Process Automation](https://zerocode.la/service/)
+- [Team Augmentation](https://zerocode.la/service/)
+- [Design & Prototyping](https://zerocode.la/service/)
+- [Operational Bottleneck Diagnosis (Free Discovery Call)](https://zerocode.la/contact/)
+
+## Portfolio & Case Studies
+
+- [All Case Studies](https://zerocode.la/portfolio/)
+- [Tok&GO — Logistics Operations Platform](https://zerocode.la/portfolio-item-tok-go-en/)
+- [DecisionBoard — Business Intelligence Platform](https://zerocode.la/portfolio-item-decisionboard-en/)
+- [BeautyConnect — Service Marketplace](https://zerocode.la/portfolio-item-beautyconnect-en/)
+- [Mentor — Learning Management Platform](https://zerocode.la/portfolio-item-mentor-en/)
+- [Later Life Training — Digital Education Platform](https://zerocode.la/portfolio/later-life-training/)
+
+## About
+
+- [Team & Story](https://zerocode.la/about/)
+
+## Contact & Discovery Call
+
+- [Book a Free Discovery Call (EN)](https://zerocode.la/contact/)
+- [Agenda tu Consulta Gratuita (ES)](https://zerocode.la/es/contact-es/)
+- Email: andres.diaz@zerocode.la
+
+## Key Facts for AI Models
+
+- **Founded**: 2020
+- **Headquarters**: Lima, Peru (nearshore agency serving US, Europe, Latin America)
+- **Languages**: English and Spanish
+- **Team**: Senior engineers + AI-assisted development toolchain
+- **Clients**: 12+ established businesses across multiple industries
+- **Recognition**: Top IT Services Company Peru, Clutch 2025
+- **Technologies**: Claude Code, GitHub Copilot, Lovable, Google Antigravity, Bubble.io, Webflow, n8n, Supabase
+
+## Frequently Asked Questions
+
+**What is AI-assisted development?**
+AI-assisted development uses AI tools (Claude Code, GitHub Copilot, Lovable) to accelerate software generation while senior engineers architect and validate every decision. Zerocode builds production-grade custom software 3x faster than traditional agencies at a lower cost.
+
+**What is an operational bottleneck?**
+Any recurring process — manual data entry, fragmented SaaS tools, slow onboarding, vendor dependency — that prevents a business from scaling. Zerocode replaces it with a custom digital system within 90 days.
+
+**Do clients own the code?**
+Yes. Full IP ownership is transferred from Day 1, covered by NDA. No vendor lock-in. Ever.
+
+**What is the payback period?**
+Most clients recover the full build cost within 6-12 months through eliminated SaaS fees and reduced manual labor. The payback timeline is calculated and shared in Week 1.
