@@ -244,11 +244,11 @@ def audit_file(path):
     if 'hreflang' not in head:
         warn('NO_HREFLANG', path, 'No hreflang link tags found')
 
-    # 10. WordPress admin-ajax or wp-json in inline JS (won't work on Vercel)
+    # 10. WordPress admin-ajax or wp-json in inline JS (fail silently on Vercel — INFO not WARN)
     ajax_refs = re.findall(r'(?:admin-ajax\.php|wp-json)[^\s"\'<>]{0,60}', html)
     if ajax_refs:
-        warn('WP_AJAX_REF', path,
-             f'{len(ajax_refs)} reference(s) to WP admin-ajax/wp-json — e.g. {ajax_refs[0][:60]}')
+        info('WP_AJAX_REF', path,
+             f'{len(ajax_refs)} WP plugin API call(s) — fail silently on static site (expected)')
 
     # 11. Broken internal href links (relative paths)
     internal_hrefs = re.findall(r'<a[^>]+href=["\'](/[^"\'#?][^"\']*)["\']', html)
@@ -280,7 +280,17 @@ print(f'Scanning {len(html_files)} HTML files...\n')
 for f in html_files:
     audit_file(f)
 
-# 9b. Duplicate titles — skip pairs where one file is a 1-level subdir mirror of the other
+# 9b. Duplicate titles — skip pairs where all duplicates share the same canonical URL
+def _get_canonical(path):
+    try:
+        html = open(path, encoding='utf-8').read()
+        m = re.search(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)', html)
+        if not m:
+            m = re.search(r'<link[^>]+href=["\']([^"\']+)["\'][^>]+rel=["\']canonical["\']', html)
+        return m.group(1).rstrip('/') if m else None
+    except Exception:
+        return None
+
 def _is_1level_mirror(path):
     parts = path.split('/')
     return (len(parts) == 2 and parts[1] == 'index.html'
@@ -289,6 +299,10 @@ def _is_1level_mirror(path):
 for title, files in all_titles.items():
     non_mirror = [f for f in files if not _is_1level_mirror(f)]
     if len(non_mirror) > 1:
+        # Skip if all files share the same canonical (bilingual route mirrors)
+        canonicals = set(_get_canonical(f) for f in non_mirror if _get_canonical(f))
+        if len(canonicals) <= 1 and canonicals:
+            continue
         warn('DUP_TITLE', non_mirror[0], f'Title used on {len(non_mirror)} pages: "{title[:60]}"')
 
 # ── Report ────────────────────────────────────────────────────────────────────
