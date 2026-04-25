@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | AI Assisted Development, Operations & Software Guides — Zerocode</title>
+<meta name="description" content="Practical guides on AI assisted software development, operational bottlenecks, SaaS migration, web app development costs, and building digital systems that scale." />
+<link rel="canonical" href="https://zerocode.la/blog/" />
+<link rel="alternate" hreflang="en" href="https://zerocode.la/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://zerocode.la/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zerocode.la/blog/" />
+<meta property="og:title" content="Blog | AI Assisted Development, Operations & Software Guides — Zerocode" />
+<meta property="og:description" content="Practical guides on AI assisted software development, operational bottlenecks, SaaS migration, web app development costs, and building digital systems that scale." />
+<meta property="og:image" content="https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png" />
+<meta property="og:site_name" content="Zerocode" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Blog | AI Assisted Development, Operations & Software Guides — Zerocode" />
+<meta name="twitter:description" content="Practical guides on AI assisted software development, operational bottlenecks, SaaS migration, web app development costs, and building digital systems that scale." />
+<meta name="twitter:image" content="https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png" />
+<meta name="twitter:site" content="@zerocodela" />
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "name": "Zerocode Blog",
+      "description": "Practical guides on AI assisted software development, operational efficiency, SaaS migration, and building digital systems that scale.",
+      "url": "https://zerocode.la/blog/",
+      "publisher": {"@type": "Organization", "name": "Zerocode", "url": "https://zerocode.la"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zerocode.la/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zerocode.la/blog/"}
+      ]
+    }
+  ]
+}</script>
+
+  <style>
+    :root {
+      --navy: #26277A;
+      --cyan: #00DCFC;
+      --dark: #0f1035;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg-light: #f8f9ff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    a { color: var(--navy); }
+
+    /* NAV */
+    .zc-nav {
+      background: var(--navy);
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,.3);
+    }
+    .zc-nav-logo img { height: 38px; display: block; }
+    .zc-nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .zc-nav-links a {
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .zc-nav-links a:hover { color: var(--cyan); }
+    .zc-nav-cta {
+      background: var(--cyan) !important;
+      color: var(--navy) !important;
+      font-weight: 700 !important;
+      padding: 9px 20px !important;
+      border-radius: 8px !important;
+      transition: background .2s !important;
+    }
+    .zc-nav-cta:hover { background: #fff !important; }
+
+    /* BREADCRUMB */
+    .zc-breadcrumb {
+      background: var(--bg-light);
+      padding: 12px 48px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .zc-breadcrumb a { color: var(--navy); text-decoration: none; }
+    .zc-breadcrumb a:hover { text-decoration: underline; }
+    .zc-breadcrumb span { margin: 0 6px; }
+
+    /* HERO */
+    .zc-hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 100%);
+      padding: 80px 48px 64px;
+      text-align: center;
+      color: #fff;
+    }
+    .zc-hero .tag {
+      display: inline-block;
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      border: 1px solid rgba(0,220,252,.4);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .zc-hero h1 {
+      font-size: clamp(28px, 5vw, 50px);
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 820px;
+      margin: 0 auto 20px;
+    }
+    .zc-hero .subtitle {
+      font-size: 18px;
+      opacity: .8;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+    .zc-hero .meta {
+      font-size: 13px;
+      opacity: .6;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ARTICLE BODY */
+    .zc-article {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+    .zc-article h2 {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 56px 0 18px;
+      line-height: 1.25;
+    }
+    .zc-article h3 {
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 36px 0 14px;
+    }
+    .zc-article p { margin-bottom: 22px; }
+    .zc-article ul, .zc-article ol {
+      margin: 0 0 22px 26px;
+    }
+    .zc-article li { margin-bottom: 10px; }
+    .zc-article strong { color: var(--navy); }
+
+    /* BLUF */
+    .zc-bluf {
+      background: var(--bg-light);
+      border-left: 5px solid var(--cyan);
+      padding: 24px 28px;
+      margin: 0 0 40px;
+      border-radius: 0 12px 12px 0;
+    }
+    .zc-bluf .bluf-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .zc-bluf p { margin: 0; font-size: 16px; font-weight: 500; }
+
+    /* STAT CALLOUT */
+    .zc-stat {
+      background: linear-gradient(135deg, var(--navy), #1a5fc8);
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 14px;
+      margin: 36px 0;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .zc-stat .num {
+      font-size: 54px;
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1;
+      white-space: nowrap;
+      min-width: 100px;
+      text-align: center;
+    }
+    .zc-stat .desc { font-size: 15px; line-height: 1.55; opacity: .9; }
+    .zc-stat .source { font-size: 12px; opacity: .6; margin-top: 6px; }
+
+    /* TABLE */
+    .zc-table-wrap { overflow-x: auto; margin: 36px 0; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    .zc-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .zc-table th { background: var(--navy); color: #fff; padding: 14px 18px; text-align: left; font-weight: 600; font-size: 14px; }
+    .zc-table td { padding: 13px 18px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .zc-table tr:last-child td { border-bottom: none; }
+    .zc-table tr:nth-child(even) td { background: var(--bg-light); }
+    .zc-yes { color: #16a34a; font-weight: 700; }
+    .zc-no  { color: #dc2626; font-weight: 700; }
+    .zc-partial { color: #d97706; font-weight: 700; }
+
+    /* HIGHLIGHT BOX */
+    .zc-box {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin: 36px 0;
+      background: var(--bg-light);
+    }
+    .zc-box h3 { margin-top: 0; color: var(--navy); }
+
+    /* FAQ */
+    .zc-faq { margin: 56px 0 0; }
+    .zc-faq > h2 { margin-top: 0; }
+    .zc-faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .zc-faq-q {
+      padding: 18px 22px;
+      font-weight: 600;
+      font-size: 16px;
+      background: var(--bg-light);
+      color: var(--navy);
+    }
+    .zc-faq-a {
+      padding: 16px 22px;
+      font-size: 16px;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    /* CTA BLOCK */
+    .zc-cta {
+      background: linear-gradient(135deg, var(--dark), var(--navy));
+      color: #fff;
+      padding: 72px 48px;
+      text-align: center;
+    }
+    .zc-cta h2 { font-size: 34px; font-weight: 800; margin-bottom: 16px; }
+    .zc-cta p { font-size: 18px; opacity: .85; max-width: 580px; margin: 0 auto 28px; }
+    .zc-cta-points {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .zc-cta-points span { font-size: 15px; opacity: .85; }
+    .zc-cta-points span::before { content: "\2713  "; color: var(--cyan); font-weight: 700; }
+    .zc-cta a.btn {
+      display: inline-block;
+      background: var(--cyan);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 17px;
+      padding: 17px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .zc-cta a.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,220,252,.45); }
+
+    /* FOOTER */
+    .zc-footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.65);
+      padding: 44px 48px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .zc-footer-links {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .zc-footer-links a { color: var(--cyan); text-decoration: none; }
+    .zc-footer-links a:hover { text-decoration: underline; }
+
+    /* BLOG INDEX CARDS */
+    .zc-blog-intro {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px 20px;
+      text-align: center;
+    }
+    .zc-blog-intro h2 { font-size: 26px; color: var(--navy); margin-bottom: 14px; }
+    .zc-blog-intro p { color: var(--muted); font-size: 17px; }
+    .zc-blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+    .zc-blog-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .zc-blog-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(38,39,122,.18); }
+    .zc-blog-card-top {
+      background: linear-gradient(135deg, var(--navy), #1a5fc8);
+      padding: 28px;
+      color: #fff;
+    }
+    .zc-blog-card-top .cat {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 10px;
+    }
+    .zc-blog-card-top h2 { font-size: 19px; font-weight: 700; line-height: 1.35; }
+    .zc-blog-card-body { padding: 22px 28px; }
+    .zc-blog-card-body p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+    .zc-blog-card-body .read { font-size: 14px; font-weight: 600; color: var(--navy); }
+
+    @media(max-width: 768px) {
+      .zc-nav { padding: 0 20px; }
+      .zc-nav-links { display: none; }
+      .zc-hero { padding: 60px 20px 48px; }
+      .zc-article { padding: 48px 20px 60px; }
+      .zc-cta { padding: 52px 20px; }
+      .zc-cta h2 { font-size: 26px; }
+      .zc-footer { padding: 36px 20px; }
+      .zc-stat { flex-direction: column; text-align: center; }
+      .zc-breadcrumb { padding: 12px 20px; }
+      .zc-blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</head>
+<body>
+
+<nav class="zc-nav">
+  <a href="/" class="zc-nav-logo">
+    <img src="/images/ZEROCODE_Imagotipo-Horizontal-1.png" alt="Zerocode logo" />
+  </a>
+  <ul class="zc-nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/service/">Services</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/contact/" class="zc-nav-cta">Free Discovery Call</a></li>
+  </ul>
+</nav>
+
+
+<div class="zc-hero">
+  <div class="tag">Insights &amp; Resources</div>
+  <h1>The Zerocode Blog</h1>
+  <p class="subtitle">Practical guides on AI assisted software development, operational efficiency, SaaS migration, and building digital systems that scale.</p>
+</div>
+
+<div class="zc-blog-intro">
+  <h2>Latest Articles</h2>
+  <p>Authored by the Zerocode engineering team based on real client engagements and project outcomes.</p>
+</div>
+
+<div class="zc-blog-grid">
+
+  <a href="/blog/eliminate-operational-bottlenecks/" class="zc-blog-card">
+    <div class="zc-blog-card-top">
+      <div class="cat">Operations &amp; Software</div>
+      <h2>How to Eliminate Operational Bottlenecks with Custom Software</h2>
+    </div>
+    <div class="zc-blog-card-body">
+      <p>Most businesses lose 20 to 30 percent of operational capacity to bottlenecks that generic software cannot fix. This guide explains how custom digital systems solve them permanently in 90 days.</p>
+      <span class="read">Read article &#8250;</span>
+    </div>
+  </a>
+
+  <a href="/blog/no-code-vs-low-code-vs-ai-assisted-development/" class="zc-blog-card">
+    <div class="zc-blog-card-top">
+      <div class="cat">Development Approaches</div>
+      <h2>No Code vs Low Code vs AI Assisted Development: Which Is Right for Your Business?</h2>
+    </div>
+    <div class="zc-blog-card-body">
+      <p>A practical comparison of the three main modern development approaches: speed, cost, ownership, scalability, and the decision framework for choosing correctly.</p>
+      <span class="read">Read article &#8250;</span>
+    </div>
+  </a>
+
+  <a href="/blog/web-app-development-cost-guide/" class="zc-blog-card">
+    <div class="zc-blog-card-top">
+      <div class="cat">Cost and Planning</div>
+      <h2>Web App Development Cost Guide 2026</h2>
+    </div>
+    <div class="zc-blog-card-body">
+      <p>A complete breakdown of web app development costs by type, the seven factors that drive price, hidden costs to budget for, and how to calculate ROI before you commit.</p>
+      <span class="read">Read article &#8250;</span>
+    </div>
+  </a>
+
+  <a href="/blog/replace-saas-tools-custom-software/" class="zc-blog-card">
+    <div class="zc-blog-card-top">
+      <div class="cat">SaaS Migration &amp; Ownership</div>
+      <h2>How to Replace SaaS Tools with Custom Software and Own Your Stack</h2>
+    </div>
+    <div class="zc-blog-card-body">
+      <p>When SaaS subscriptions cost more than a custom replacement, how to migrate safely without disrupting operations, and how to calculate the financial case for ownership.</p>
+      <span class="read">Read article &#8250;</span>
+    </div>
+  </a>
+
+</div>
+
+
+<footer class="zc-footer">
+  <div class="zc-footer-links">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/service/">Services</a>
+    <a href="/portfolio/">Portfolio</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+    <a href="/es/">Versión en Español</a>
+  </div>
+  <p>&copy; 2026 Zerocode. AI Assisted Software Development Agency. Lima, Peru.</p>
+  <p style="margin-top:8px;">Serving clients in the United States, Europe, and Latin America.</p>
+</footer>
+<script src="/js/chatbot.js?v=10" defer></script>
+
+</body>
+</html>

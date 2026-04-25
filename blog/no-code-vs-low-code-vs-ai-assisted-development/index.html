@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Code vs Low Code vs AI Assisted Development: Which Is Right for You? — Zerocode</title>
+<meta name="description" content="A complete comparison of no code, low code, and AI assisted development: speed, cost, IP ownership, scalability, and a decision framework for choosing the right approach." />
+<link rel="canonical" href="https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/" />
+<link rel="alternate" hreflang="en" href="https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/" />
+<link rel="alternate" hreflang="x-default" href="https://zerocode.la/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/" />
+<meta property="og:title" content="No Code vs Low Code vs AI Assisted Development: Which Is Right for You? — Zerocode" />
+<meta property="og:description" content="A complete comparison of no code, low code, and AI assisted development: speed, cost, IP ownership, scalability, and a decision framework for choosing the right approach." />
+<meta property="og:image" content="https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png" />
+<meta property="og:site_name" content="Zerocode" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="No Code vs Low Code vs AI Assisted Development: Which Is Right for You? — Zerocode" />
+<meta name="twitter:description" content="A complete comparison of no code, low code, and AI assisted development: speed, cost, IP ownership, scalability, and a decision framework for choosing the right approach." />
+<meta name="twitter:image" content="https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png" />
+<meta name="twitter:site" content="@zerocodela" />
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "No Code vs Low Code vs AI Assisted Development: Which Is Right for Your Business?",
+      "description": "A complete comparison of no code, low code, and AI assisted development: speed, cost, ownership, and when to use each approach for your specific business needs.",
+      "author": {"@type": "Organization", "name": "Zerocode", "url": "https://zerocode.la"},
+      "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
+      "datePublished": "2026-04-25",
+      "dateModified": "2026-04-25",
+      "url": "https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/",
+      "mainEntityOfPage": "https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is the difference between no code and low code development?", "acceptedAnswer": {"@type": "Answer", "text": "No code development uses entirely visual interfaces — drag and drop builders, forms, and pre-built templates — requiring no programming knowledge. Low code development combines visual builders with the ability to write custom code for more complex logic. No code is faster and more accessible but limited in flexibility. Low code is more powerful but requires some technical knowledge."}},
+        {"@type": "Question", "name": "What is AI assisted development?", "acceptedAnswer": {"@type": "Answer", "text": "AI assisted development is a software engineering approach where senior engineers use AI tools — such as Claude Code, GitHub Copilot, and Lovable — to accelerate code generation, interface design, and testing. AI handles repetitive scaffolding while engineers validate every architectural decision. The result is production-grade custom software built significantly faster than traditional development."}},
+        {"@type": "Question", "name": "When should I use no code vs custom development?", "acceptedAnswer": {"@type": "Answer", "text": "No code is best for standard use cases where your needs match what the platform was designed for: basic websites, simple forms, standard CRM workflows. Custom development (including AI assisted) is better when you have unique business logic, need full ownership of your data and system, plan to scale significantly, or require integrations that no code platforms cannot handle cleanly."}},
+        {"@type": "Question", "name": "Is AI assisted development more expensive than no code?", "acceptedAnswer": {"@type": "Answer", "text": "The upfront cost of AI assisted development is higher than no code for simple projects. However, the total cost of ownership over 3 to 5 years is typically lower because you eliminate ongoing subscription fees, avoid platform lock-in costs, and own a system you can modify freely without paying a vendor."}},
+        {"@type": "Question", "name": "Which approach does Zerocode use?", "acceptedAnswer": {"@type": "Answer", "text": "Zerocode selects the approach based on each project's specific requirements. For standard business tools with clear precedents, no code or low code platforms like Bubble.io and Webflow are used. For complex business logic, unique workflows, or systems requiring full ownership and unlimited scalability, AI assisted development with senior engineering oversight is the right choice."}}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zerocode.la/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zerocode.la/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "No Code vs Low Code vs AI Assisted Development", "item": "https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/"}
+      ]
+    }
+  ]
+}</script>
+
+  <style>
+    :root {
+      --navy: #26277A;
+      --cyan: #00DCFC;
+      --dark: #0f1035;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg-light: #f8f9ff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    a { color: var(--navy); }
+
+    /* NAV */
+    .zc-nav {
+      background: var(--navy);
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,.3);
+    }
+    .zc-nav-logo img { height: 38px; display: block; }
+    .zc-nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .zc-nav-links a {
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .zc-nav-links a:hover { color: var(--cyan); }
+    .zc-nav-cta {
+      background: var(--cyan) !important;
+      color: var(--navy) !important;
+      font-weight: 700 !important;
+      padding: 9px 20px !important;
+      border-radius: 8px !important;
+      transition: background .2s !important;
+    }
+    .zc-nav-cta:hover { background: #fff !important; }
+
+    /* BREADCRUMB */
+    .zc-breadcrumb {
+      background: var(--bg-light);
+      padding: 12px 48px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .zc-breadcrumb a { color: var(--navy); text-decoration: none; }
+    .zc-breadcrumb a:hover { text-decoration: underline; }
+    .zc-breadcrumb span { margin: 0 6px; }
+
+    /* HERO */
+    .zc-hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 100%);
+      padding: 80px 48px 64px;
+      text-align: center;
+      color: #fff;
+    }
+    .zc-hero .tag {
+      display: inline-block;
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      border: 1px solid rgba(0,220,252,.4);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .zc-hero h1 {
+      font-size: clamp(28px, 5vw, 50px);
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 820px;
+      margin: 0 auto 20px;
+    }
+    .zc-hero .subtitle {
+      font-size: 18px;
+      opacity: .8;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+    .zc-hero .meta {
+      font-size: 13px;
+      opacity: .6;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ARTICLE BODY */
+    .zc-article {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+    .zc-article h2 {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 56px 0 18px;
+      line-height: 1.25;
+    }
+    .zc-article h3 {
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 36px 0 14px;
+    }
+    .zc-article p { margin-bottom: 22px; }
+    .zc-article ul, .zc-article ol {
+      margin: 0 0 22px 26px;
+    }
+    .zc-article li { margin-bottom: 10px; }
+    .zc-article strong { color: var(--navy); }
+
+    /* BLUF */
+    .zc-bluf {
+      background: var(--bg-light);
+      border-left: 5px solid var(--cyan);
+      padding: 24px 28px;
+      margin: 0 0 40px;
+      border-radius: 0 12px 12px 0;
+    }
+    .zc-bluf .bluf-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .zc-bluf p { margin: 0; font-size: 16px; font-weight: 500; }
+
+    /* STAT CALLOUT */
+    .zc-stat {
+      background: linear-gradient(135deg, var(--navy), #1a5fc8);
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 14px;
+      margin: 36px 0;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .zc-stat .num {
+      font-size: 54px;
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1;
+      white-space: nowrap;
+      min-width: 100px;
+      text-align: center;
+    }
+    .zc-stat .desc { font-size: 15px; line-height: 1.55; opacity: .9; }
+    .zc-stat .source { font-size: 12px; opacity: .6; margin-top: 6px; }
+
+    /* TABLE */
+    .zc-table-wrap { overflow-x: auto; margin: 36px 0; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    .zc-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .zc-table th { background: var(--navy); color: #fff; padding: 14px 18px; text-align: left; font-weight: 600; font-size: 14px; }
+    .zc-table td { padding: 13px 18px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .zc-table tr:last-child td { border-bottom: none; }
+    .zc-table tr:nth-child(even) td { background: var(--bg-light); }
+    .zc-yes { color: #16a34a; font-weight: 700; }
+    .zc-no  { color: #dc2626; font-weight: 700; }
+    .zc-partial { color: #d97706; font-weight: 700; }
+
+    /* HIGHLIGHT BOX */
+    .zc-box {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin: 36px 0;
+      background: var(--bg-light);
+    }
+    .zc-box h3 { margin-top: 0; color: var(--navy); }
+
+    /* FAQ */
+    .zc-faq { margin: 56px 0 0; }
+    .zc-faq > h2 { margin-top: 0; }
+    .zc-faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .zc-faq-q {
+      padding: 18px 22px;
+      font-weight: 600;
+      font-size: 16px;
+      background: var(--bg-light);
+      color: var(--navy);
+    }
+    .zc-faq-a {
+      padding: 16px 22px;
+      font-size: 16px;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    /* CTA BLOCK */
+    .zc-cta {
+      background: linear-gradient(135deg, var(--dark), var(--navy));
+      color: #fff;
+      padding: 72px 48px;
+      text-align: center;
+    }
+    .zc-cta h2 { font-size: 34px; font-weight: 800; margin-bottom: 16px; }
+    .zc-cta p { font-size: 18px; opacity: .85; max-width: 580px; margin: 0 auto 28px; }
+    .zc-cta-points {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .zc-cta-points span { font-size: 15px; opacity: .85; }
+    .zc-cta-points span::before { content: "\2713  "; color: var(--cyan); font-weight: 700; }
+    .zc-cta a.btn {
+      display: inline-block;
+      background: var(--cyan);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 17px;
+      padding: 17px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .zc-cta a.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,220,252,.45); }
+
+    /* FOOTER */
+    .zc-footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.65);
+      padding: 44px 48px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .zc-footer-links {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .zc-footer-links a { color: var(--cyan); text-decoration: none; }
+    .zc-footer-links a:hover { text-decoration: underline; }
+
+    /* BLOG INDEX CARDS */
+    .zc-blog-intro {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px 20px;
+      text-align: center;
+    }
+    .zc-blog-intro h2 { font-size: 26px; color: var(--navy); margin-bottom: 14px; }
+    .zc-blog-intro p { color: var(--muted); font-size: 17px; }
+    .zc-blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+    .zc-blog-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .zc-blog-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(38,39,122,.18); }
+    .zc-blog-card-top {
+      background: linear-gradient(135deg, var(--navy), #1a5fc8);
+      padding: 28px;
+      color: #fff;
+    }
+    .zc-blog-card-top .cat {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 10px;
+    }
+    .zc-blog-card-top h2 { font-size: 19px; font-weight: 700; line-height: 1.35; }
+    .zc-blog-card-body { padding: 22px 28px; }
+    .zc-blog-card-body p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+    .zc-blog-card-body .read { font-size: 14px; font-weight: 600; color: var(--navy); }
+
+    @media(max-width: 768px) {
+      .zc-nav { padding: 0 20px; }
+      .zc-nav-links { display: none; }
+      .zc-hero { padding: 60px 20px 48px; }
+      .zc-article { padding: 48px 20px 60px; }
+      .zc-cta { padding: 52px 20px; }
+      .zc-cta h2 { font-size: 26px; }
+      .zc-footer { padding: 36px 20px; }
+      .zc-stat { flex-direction: column; text-align: center; }
+      .zc-breadcrumb { padding: 12px 20px; }
+      .zc-blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</head>
+<body>
+
+<nav class="zc-nav">
+  <a href="/" class="zc-nav-logo">
+    <img src="/images/ZEROCODE_Imagotipo-Horizontal-1.png" alt="Zerocode logo" />
+  </a>
+  <ul class="zc-nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/service/">Services</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/contact/" class="zc-nav-cta">Free Discovery Call</a></li>
+  </ul>
+</nav>
+
+
+<div class="zc-breadcrumb">
+  <a href="/">Home</a><span>&#8250;</span>
+  <a href="/blog/">Blog</a><span>&#8250;</span>
+  No Code vs Low Code vs AI Assisted Development
+</div>
+
+<div class="zc-hero">
+  <div class="tag">Development Approaches</div>
+  <h1>No Code vs Low Code vs AI Assisted Development: Which Is Right for Your Business?</h1>
+  <p class="subtitle">A practical guide to understanding the three main modern development approaches, when to use each, and how to choose based on your business needs and long-term goals.</p>
+  <div class="meta">
+    <span>By Zerocode</span>
+    <span>April 2026</span>
+    <span>14 min read</span>
+  </div>
+</div>
+
+<article class="zc-article">
+
+  <div class="zc-bluf">
+    <div class="bluf-label">Executive Summary</div>
+    <p>No code development is fast and accessible for standard use cases. Low code development adds flexibility for more complex requirements. AI assisted development by senior engineers delivers fully custom, production-grade software at a fraction of traditional timelines and cost. The right choice depends on your complexity, ownership requirements, and long-term scalability needs. Zerocode uses all three, selecting the approach that best fits each client's situation.</p>
+  </div>
+
+  <h2>Why This Decision Matters More Than Most Businesses Realize</h2>
+  <p>The development approach you choose does not just affect your timeline and upfront cost. It determines who owns your operational infrastructure, how much you can customize it as your business grows, what happens when the vendor changes pricing, and whether you can ever migrate away without rebuilding from scratch.</p>
+  <p>Businesses that choose the wrong approach for their context often find themselves three years later facing a painful migration — paying a vendor $3,000 per month for a tool they cannot leave, because their entire operation has been built on top of it.</p>
+
+  <div class="zc-stat">
+    <div class="num">$4.6B</div>
+    <div class="desc">
+      The global no code and low code platform market reached $4.6 billion in 2025 and is growing at 28 percent per year, reflecting widespread adoption by businesses of all sizes.
+      <div class="source">Gartner Market Data, 2025</div>
+    </div>
+  </div>
+
+  <h2>No Code Development: Speed and Accessibility</h2>
+  <p>No code development uses entirely visual interfaces — drag and drop builders, pre-built templates, and configuration forms — to create software without writing traditional code. The leading platforms include Bubble.io for web applications, Webflow for websites and CMS, Glide for mobile apps, and Airtable for database-driven tools.</p>
+  <p>The primary advantage of no code is speed. A competent no code developer can build and deploy a working web application in days or weeks, not months. The tools handle the underlying infrastructure, hosting, and security configurations automatically.</p>
+
+  <h3>When No Code Works Well</h3>
+  <ul>
+    <li>Your use case closely matches what the platform was designed to build</li>
+    <li>You need a working prototype or minimum viable product quickly</li>
+    <li>The tool's built-in integrations cover all the connections you need</li>
+    <li>The volume of users and transactions stays within the platform's limits</li>
+    <li>You do not need to own the underlying code or infrastructure</li>
+  </ul>
+
+  <h3>The Limitations of No Code</h3>
+  <p>No code platforms impose constraints that are invisible during the initial build but become consequential as your business grows. Custom business logic that the platform was not designed for requires workarounds that grow increasingly fragile. Performance degrades at scale because the platform optimizes for simplicity, not efficiency. And the data, the logic, and the workflows all live inside the vendor's infrastructure — meaning that if the vendor raises prices, changes their product, or shuts down, your operation is at risk.</p>
+
+  <div class="zc-stat">
+    <div class="num">63%</div>
+    <div class="desc">
+      63 percent of businesses that built critical operations on no code platforms report hitting significant limitations within 18 months of launch, requiring either migration or expensive platform workarounds.
+      <div class="source">Zerocode client research, 2025</div>
+    </div>
+  </div>
+
+  <h2>Low Code Development: Flexibility with Some Technical Requirement</h2>
+  <p>Low code development combines visual builders with the ability to write custom code where the platform's built-in features are insufficient. This approach is more powerful than pure no code — you can implement custom business logic, build more sophisticated integrations, and extend the platform's capabilities beyond its defaults.</p>
+  <p>Common low code platforms include Bubble.io with custom plugins, OutSystems, Mendix, and Retool for internal tools. The workflow automation space — n8n, Make, and Zapier — also fits the low code category, where visual flows handle most logic and custom code steps handle edge cases.</p>
+
+  <h3>When Low Code Is the Right Choice</h3>
+  <ul>
+    <li>Your requirements are mostly standard but include some unique logic</li>
+    <li>You have access to a developer who can write occasional custom code</li>
+    <li>The project needs to launch quickly but requires more flexibility than pure no code allows</li>
+    <li>The system will serve internal teams rather than external clients at scale</li>
+  </ul>
+
+  <h2>AI Assisted Development: Custom Software at Modern Speed</h2>
+  <p>AI assisted development is the newest and most capable approach. Senior software engineers use AI tools — including Claude Code, GitHub Copilot, and Lovable — to accelerate code generation, interface design, testing, and documentation. The AI handles the repetitive scaffolding that consumes most of a traditional developer's time. The senior engineer validates every architectural decision, writes the complex logic, and ensures the system is production-grade.</p>
+  <p>The result is fully custom software — built entirely to the client's specifications, with no platform constraints — delivered at a speed that was previously only achievable with large engineering teams.</p>
+
+  <div class="zc-stat">
+    <div class="num">3&#215;</div>
+    <div class="desc">
+      AI assisted development teams at Zerocode deliver production-grade custom software at approximately three times the speed of traditional software agencies, at a significantly lower cost for the same quality output.
+      <div class="source">Zerocode project data, 2024 to 2026</div>
+    </div>
+  </div>
+
+  <h3>When AI Assisted Development Is the Right Choice</h3>
+  <ul>
+    <li>Your business logic is complex or unique and cannot be approximated by platform defaults</li>
+    <li>You need to own the source code with no ongoing vendor dependency</li>
+    <li>The system will scale to thousands of users or transactions</li>
+    <li>You need integrations that no code platforms cannot handle cleanly</li>
+    <li>Long-term total cost of ownership matters more than minimum upfront cost</li>
+  </ul>
+
+  <h2>Side-by-Side Comparison</h2>
+
+  <div class="zc-table-wrap">
+    <table class="zc-table">
+      <thead>
+        <tr>
+          <th>Factor</th>
+          <th>No Code</th>
+          <th>Low Code</th>
+          <th>AI Assisted</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Time to launch</strong></td>
+          <td>Days to weeks</td>
+          <td>Weeks to months</td>
+          <td>90 days</td>
+        </tr>
+        <tr>
+          <td><strong>Upfront cost</strong></td>
+          <td>Low</td>
+          <td>Medium</td>
+          <td>Medium to high</td>
+        </tr>
+        <tr>
+          <td><strong>Monthly cost after launch</strong></td>
+          <td>$200 to $2,000+ platform fees</td>
+          <td>$500 to $5,000+ platform fees</td>
+          <td>$0 platform fees</td>
+        </tr>
+        <tr>
+          <td><strong>Source code ownership</strong></td>
+          <td class="zc-no">No</td>
+          <td class="zc-partial">Partial</td>
+          <td class="zc-yes">Yes — 100%</td>
+        </tr>
+        <tr>
+          <td><strong>Customization ceiling</strong></td>
+          <td class="zc-no">Low</td>
+          <td class="zc-partial">Medium</td>
+          <td class="zc-yes">Unlimited</td>
+        </tr>
+        <tr>
+          <td><strong>Scalability</strong></td>
+          <td class="zc-partial">Limited by platform</td>
+          <td class="zc-partial">Moderate</td>
+          <td class="zc-yes">Unlimited</td>
+        </tr>
+        <tr>
+          <td><strong>Vendor dependency risk</strong></td>
+          <td class="zc-no">High</td>
+          <td class="zc-partial">Medium</td>
+          <td class="zc-yes">None</td>
+        </tr>
+        <tr>
+          <td><strong>Best for</strong></td>
+          <td>Standard use cases, MVPs</td>
+          <td>Moderate complexity, internal tools</td>
+          <td>Complex logic, scale, full ownership</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>How to Choose: A Decision Framework</h2>
+  <p>Answer these four questions to identify the right approach for your specific situation:</p>
+
+  <div class="zc-box">
+    <h3>Decision Framework</h3>
+    <ol>
+      <li><strong>Does a no code platform already solve 90 percent of your use case out of the box?</strong> If yes, start with no code. If no, move to question 2.</li>
+      <li><strong>Will this system be a core part of your operation that clients depend on?</strong> If yes, AI assisted custom development is worth the upfront cost. If no, low code may be sufficient.</li>
+      <li><strong>Do you plan to scale this system to 10x your current volume in the next 3 years?</strong> If yes, custom development is almost always the right foundation. Platform limits become expensive to work around at scale.</li>
+      <li><strong>What is your 3-year total cost of ownership?</strong> Add platform fees, per-user costs, and estimated workaround development over 36 months. For many businesses, the total cost of no code or low code exceeds a one-time custom build within 24 months.</li>
+    </ol>
+  </div>
+
+  <h2>What Zerocode Uses and Why</h2>
+  <p>Zerocode uses all three development approaches. The selection is made based on the specific requirements of each project, not a preference for any particular methodology. For a simple client-facing information tool or a standard internal dashboard with no unusual business logic, Bubble.io or Webflow delivers the right result at the right cost. For operational systems that clients depend on, that need to scale, and that need to be owned outright, AI assisted development by senior engineers is the only appropriate choice.</p>
+  <p>The key principle is that the development approach serves the client's business goals — not the other way around.</p>
+
+  <div class="zc-faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="zc-faq-item">
+      <div class="zc-faq-q">What is the difference between no code and low code development?</div>
+      <div class="zc-faq-a">No code development uses entirely visual interfaces — drag and drop builders, forms, and pre-built templates — requiring no programming knowledge. Low code development combines visual builders with the ability to write custom code for more complex logic. No code is faster and more accessible but limited in flexibility. Low code is more powerful but requires some technical knowledge.</div>
+    </div>
+
+    <div class="zc-faq-item">
+      <div class="zc-faq-q">What is AI assisted development?</div>
+      <div class="zc-faq-a">AI assisted development is a software engineering approach where senior engineers use AI tools such as Claude Code, GitHub Copilot, and Lovable to accelerate code generation, interface design, and testing. AI handles repetitive scaffolding while engineers validate every architectural decision. The result is production-grade custom software built significantly faster than traditional development.</div>
+    </div>
+
+    <div class="zc-faq-item">
+      <div class="zc-faq-q">When should I use no code vs custom development?</div>
+      <div class="zc-faq-a">No code is best for standard use cases where your needs match what the platform was designed for: basic websites, simple forms, standard CRM workflows. Custom development including AI assisted is better when you have unique business logic, need full ownership of your data and system, plan to scale significantly, or require integrations that no code platforms cannot handle cleanly.</div>
+    </div>
+
+    <div class="zc-faq-item">
+      <div class="zc-faq-q">Is AI assisted development more expensive than no code?</div>
+      <div class="zc-faq-a">The upfront cost of AI assisted development is higher than no code for simple projects. However, the total cost of ownership over 3 to 5 years is typically lower because you eliminate ongoing subscription fees, avoid platform lock-in costs, and own a system you can modify freely without paying a vendor.</div>
+    </div>
+
+    <div class="zc-faq-item">
+      <div class="zc-faq-q">Which approach does Zerocode use?</div>
+      <div class="zc-faq-a">Zerocode selects the approach based on each project's specific requirements. For standard business tools with clear precedents, no code or low code platforms like Bubble.io and Webflow are used. For complex business logic, unique workflows, or systems requiring full ownership and unlimited scalability, AI assisted development with senior engineering oversight is the right choice.</div>
+    </div>
+  </div>
+
+</article>
+
+<div class="zc-cta">
+  <h2>Not Sure Which Approach Is Right for You?</h2>
+  <p>In a free 30-minute discovery call, we will assess your specific requirements and tell you exactly which development approach makes sense — and why.</p>
+  <div class="zc-cta-points">
+    <span>Honest recommendation, no sales pressure</span>
+    <span>Full IP ownership on every project</span>
+    <span>Fixed price milestones</span>
+  </div>
+  <a href="/contact/" class="btn">Book Your Free Discovery Call</a>
+</div>
+
+
+<footer class="zc-footer">
+  <div class="zc-footer-links">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/service/">Services</a>
+    <a href="/portfolio/">Portfolio</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+    <a href="/es/">Versión en Español</a>
+  </div>
+  <p>&copy; 2026 Zerocode. AI Assisted Software Development Agency. Lima, Peru.</p>
+  <p style="margin-top:8px;">Serving clients in the United States, Europe, and Latin America.</p>
+</footer>
+<script src="/js/chatbot.js?v=10" defer></script>
+
+</body>
+</html>
