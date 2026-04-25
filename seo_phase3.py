@@ -4,10 +4,64 @@ seo_phase3.py — Phase 3 Content Hub for zerocode.la
 Creates: /blog/index.html and 4 pillar articles
 Each article is structured for Google ranking and LLM citation.
 """
-import sys, os
+import sys, os, re
 sys.stdout.reconfigure(encoding='utf-8')
 
 BASE = 'https://zerocode.la'
+
+
+def extract_site_chrome():
+    """Read index.html and extract CSS links, header HTML, footer+scripts HTML."""
+    html = open('index.html', encoding='utf-8').read()
+
+    # All CSS link tags from the head
+    head_end = html.find('</head>')
+    css_links = '\n'.join(re.findall(r'<link[^>]+rel=["\']stylesheet["\'][^>]*/>', html[:head_end]))
+
+    # Inline style blocks that are important (skip tiny wp-emoji block)
+    important_styles = []
+    for m in re.finditer(r'<style([^>]*)>(.*?)</style>', html[:head_end], re.DOTALL):
+        content = m.group(2)
+        if len(content) > 300:  # skip tiny blocks
+            important_styles.append(f'<style{m.group(1)}>{content}</style>')
+    site_styles = '\n'.join(important_styles)
+
+    # Body opening tag (need elementor-kit-6 class for CSS cascade)
+    body_match = re.search(r'<body class="([^"]+)"', html)
+    body_classes = body_match.group(1) if body_match else 'elementor-kit-6 elementor-default'
+    # Replace page-specific class for blog pages
+    body_classes = re.sub(r'elementor-page-\d+', 'elementor-page-blog', body_classes)
+    body_classes = re.sub(r'page-id-\d+', 'page-id-blog', body_classes)
+    body_classes = re.sub(r'\bhome\b', '', body_classes).strip()
+
+    # Header HTML: from <e-page-transition to end of elementor-location-header div
+    body_start = html.find('>', html.find('<body')) + 1
+    body_content = html[body_start:]
+    trans_start = body_content.find('<e-page-transition')
+    chunk = body_content[trans_start:]
+    hdiv_pos = chunk.find('<div data-elementor-type="header"')
+    depth = 0
+    hend = 0
+    for i in range(hdiv_pos, len(chunk)):
+        if chunk[i:i+4] == '<div':
+            depth += 1
+        elif chunk[i:i+6] == '</div>':
+            depth -= 1
+            if depth == 0:
+                hend = i + 6
+                break
+    header_html = body_content[trans_start: trans_start + hend]
+
+    # Footer HTML + all scripts: from elementor-location-footer to </body>
+    footer_start = html.find('<div data-elementor-type="footer"')
+    body_end = html.find('</body>')
+    footer_html = html[footer_start:body_end]
+
+    return css_links, site_styles, body_classes, header_html, footer_html
+
+
+# Extract site chrome once at module load so all pages share it
+SITE_CSS_LINKS, SITE_STYLES, SITE_BODY_CLASSES, SITE_HEADER, SITE_FOOTER = extract_site_chrome()
 
 BLOG_CSS = """
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -364,38 +418,7 @@ BLOG_CSS = """
   </style>
 """
 
-NAV_HTML = """
-<nav class="zc-nav">
-  <a href="/" class="zc-nav-logo">
-    <img src="/images/Mesa-de-25@2x-8-1.png" alt="Zerocode — AI assisted software development agency" width="142" height="50" />
-  </a>
-  <ul class="zc-nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/service/">Service</a></li>
-    <li><a href="/portfolio/">Portfolio</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/contact/" class="zc-nav-cta">Book a free call</a></li>
-  </ul>
-</nav>
-"""
-
-FOOTER_HTML = """
-<footer class="zc-footer">
-  <div class="zc-footer-links">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/service/">Service</a>
-    <a href="/portfolio/">Portfolio</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a>
-    <a href="/es/">Español</a>
-  </div>
-  <p>&copy; 2026 Zerocode &mdash; AI Assisted Software Development Agency</p>
-  <p style="margin-top:6px;">Lima, Peru &middot; Serving the United States, Europe and Latin America</p>
-</footer>
-<script src="/js/chatbot.js?v=10" defer></script>
-"""
+# NAV and FOOTER are now taken directly from index.html via SITE_HEADER / SITE_FOOTER
 
 def page_shell(title, desc, canonical, content, article_schema=''):
     return f"""<!doctype html>
@@ -420,12 +443,14 @@ def page_shell(title, desc, canonical, content, article_schema=''):
 <meta name="twitter:image" content="{BASE}/images/ZEROCODE_Imagotipo-Horizontal-1.png" />
 <meta name="twitter:site" content="@zerocodela" />
 {article_schema}
+{SITE_CSS_LINKS}
+{SITE_STYLES}
 {BLOG_CSS}
 </head>
-<body>
-{NAV_HTML}
+<body class="{SITE_BODY_CLASSES}">
+{SITE_HEADER}
 {content}
-{FOOTER_HTML}
+{SITE_FOOTER}
 </body>
 </html>"""
 
