@@ -73,7 +73,8 @@
       "Bash(ls *.ico)",
       "Bash(ls vercel.json)",
       "Bash(python *)",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "Bash(curl -L -o \"images/maxresdefault.jpg\" \"https://img.youtube.com/vi/mViFYTwWvcM/maxresdefault.jpg\")"
     ]
   }
 }

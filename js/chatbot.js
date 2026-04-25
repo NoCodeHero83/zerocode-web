@@ -10,21 +10,21 @@
       animation:zcFloat 3s ease-in-out infinite; cursor:pointer;
     }
     #zc-btn {
-      width:62px; height:62px; border-radius:50%; border:none; cursor:pointer;
-      background:linear-gradient(135deg,#26277A 0%,#00DCFC 100%);
+      width:64px; height:64px; border-radius:18px; border:2px solid rgba(255,255,255,.25); cursor:pointer;
+      background:linear-gradient(135deg,#26277A 0%,#1a5fc8 50%,#00DCFC 100%);
       display:flex; align-items:center; justify-content:center;
-      box-shadow:0 6px 20px rgba(38,39,122,.45); transition:transform .2s, box-shadow .2s;
-      animation:zcPulse 2.8s ease-out infinite;
+      box-shadow:0 6px 24px rgba(38,39,122,.5); transition:transform .2s, box-shadow .2s;
+      animation:zcPulse 2.8s ease-out infinite; outline:none;
     }
-    #zc-btn:hover { transform:scale(1.08); box-shadow:0 8px 28px rgba(38,39,122,.6); animation:none; }
-    #zc-btn svg { width:30px; height:30px; }
+    #zc-btn:hover { transform:scale(1.08) rotate(-3deg); box-shadow:0 10px 32px rgba(38,39,122,.7); animation:none; }
+    #zc-btn svg { width:32px; height:32px; }
     @keyframes zcPulse {
-      0%   { box-shadow:0 6px 20px rgba(38,39,122,.45), 0 0 0 0 rgba(0,220,252,.45); }
-      60%  { box-shadow:0 6px 20px rgba(38,39,122,.45), 0 0 0 14px rgba(0,220,252,0); }
-      100% { box-shadow:0 6px 20px rgba(38,39,122,.45), 0 0 0 0 rgba(0,220,252,0); }
+      0%   { box-shadow:0 6px 24px rgba(38,39,122,.5), 0 0 0 0 rgba(0,220,252,.5); }
+      60%  { box-shadow:0 6px 24px rgba(38,39,122,.5), 0 0 0 16px rgba(0,220,252,0); }
+      100% { box-shadow:0 6px 24px rgba(38,39,122,.5), 0 0 0 0 rgba(0,220,252,0); }
     }
     #zc-win {
-      position:fixed; bottom:100px; right:24px; width:360px;
+      position:fixed; bottom:104px; right:24px; width:360px;
       background:#fff; border-radius:18px; box-shadow:0 12px 40px rgba(0,0,0,.2);
       display:none; flex-direction:column; overflow:hidden; z-index:999999;
       font-family:'Space Grotesk','Inter',system-ui,sans-serif;
@@ -58,12 +58,13 @@
     }
     #zc-input:focus { border-color:#26277A; }
     #zc-send {
-      width:42px; height:42px; background:#26277A; border:none; border-radius:50%;
+      width:42px; height:42px; background:#fff; border:1.5px solid #dde0f5; border-radius:50%;
       cursor:pointer; display:flex; align-items:center; justify-content:center;
-      flex-shrink:0; transition:background .2s;
+      flex-shrink:0; transition:background .2s, border-color .2s;
     }
-    #zc-send:hover { background:#00DCFC; }
-    #zc-send svg { width:18px; height:18px; fill:#fff; }
+    #zc-send:hover { background:#26277A; border-color:#26277A; }
+    #zc-send img { width:22px; height:22px; display:block; transition:filter .2s; }
+    #zc-send:hover img { filter:brightness(0) invert(1); }
     .zc-typing { display:flex; gap:5px; align-items:center; padding:8px 4px; }
     .zc-typing span {
       width:8px; height:8px; background:#26277A; border-radius:50%;
@@ -74,22 +75,34 @@
     @keyframes zcBounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-7px)} }
     @keyframes zcFloat  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
     @media(max-width:480px){
-      #zc-win { width:calc(100vw - 32px); right:16px; bottom:92px; }
+      #zc-win { width:calc(100vw - 32px); right:16px; bottom:96px; }
       #zc-widget { right:16px; bottom:16px; }
+    }
+    /* ── Language switcher chevron (Font Awesome webfont not in static export) ── */
+    .cpel-switcher__icon.fas.fa-chevron-down { font-family:initial !important; }
+    .cpel-switcher__icon.fas.fa-chevron-down::before {
+      content:"" !important;
+      display:inline-block;
+      width:10px; height:8px;
+      margin-left:3px;
+      vertical-align:middle;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='white' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'/%3E%3C/svg%3E") no-repeat center/contain;
     }
   `;
   var s = document.createElement('style');
   s.textContent = css;
   document.head.appendChild(s);
 
-  // ── Button icon: chat bubble with AI sparkle inside ──────────────────────────
-  var sparkSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">'
-    // Chat bubble body with tail bottom-left
-    + '<path d="M4 2H20Q22 2 22 4V14Q22 16 20 16H9L4 21V16Q2 16 2 14V4Q2 2 4 2Z" fill="white"/>'
-    // AI sparkle inside bubble (dark blue so it reads on white)
-    + '<path d="M12 5.5L12.9 8.6L16 9.5L12.9 10.4L12 13.5L11.1 10.4L8 9.5L11.1 8.6Z" fill="#26277A" opacity="0.75"/>'
-    // Tiny secondary sparkle top-right
-    + '<path d="M18 4.5L18.5 6L20 6.5L18.5 7L18 8.5L17.5 7L16 6.5L17.5 6Z" fill="#26277A" opacity="0.45"/>'
+  // ── Button icon: chat bubble with bold AI label ──────────────────────────────
+  var sparkSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">'
+    // Outer chat bubble (white, slightly transparent)
+    + '<path d="M6 4H42Q46 4 46 8V30Q46 34 42 34H17L8 43V34Q4 34 4 30V8Q4 4 6 4Z" fill="rgba(255,255,255,0.95)"/>'
+    // Inner shadow line to give depth
+    + '<path d="M6 4H42Q46 4 46 8V30Q46 34 42 34H17L8 43V34Q4 34 4 30V8Q4 4 6 4Z" stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none"/>'
+    // Bold "AI" text inside bubble
+    + '<text x="24" y="24" font-family="Arial,sans-serif" font-weight="900" font-size="16" fill="#26277A" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">AI</text>'
+    // Small sparkle star top-right
+    + '<path d="M38 7L39 10L42 11L39 12L38 15L37 12L34 11L37 10Z" fill="#00DCFC" opacity="0.9"/>'
     + '</svg>';
 
   // ── Header icon: matching chat bubble, white palette ─────────────────────────
@@ -98,8 +111,8 @@
     + '<path d="M12 5.5L12.9 8.6L16 9.5L12.9 10.4L12 13.5L11.1 10.4L8 9.5L11.1 8.6Z" fill="rgba(38,39,122,0.7)"/>'
     + '</svg>';
 
-  // ── Send arrow ───────────────────────────────────────────────────────────────
-  var sendSVG = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2" fill="white" stroke="none"/></svg>';
+  // ── Send icon: send message image ────────────────────────────────────────────
+  var sendSVG = '<img src="/images/sensmessage.jpg" alt="Send" />';
 
   // ── DOM ──────────────────────────────────────────────────────────────────────
   var widget = document.createElement('div');
