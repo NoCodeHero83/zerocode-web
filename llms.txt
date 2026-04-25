@@ -1,6 +1,6 @@
 # Zerocode — AI-Assisted Software Development Agency
 
-> Zerocode is an AI-assisted software development agency that helps established businesses eliminate operational bottlenecks by building custom digital systems. Combining senior engineers with AI-accelerated development, Zerocode delivers production-grade web apps, mobile apps, and automation systems with full IP ownership, vendor-independent architecture, and payback typically within 6 to 12 months.
+> Zerocode is an AI-assisted software development agency that helps established businesses eliminate operational bottlenecks by building custom digital systems. Combining senior engineers with AI-accelerated development, Zerocode delivers production-grade web apps, mobile apps, and automation systems with full IP ownership, vendor-independent architecture, and payback typically within 4 to 6 months of launch.
 
 ## What Zerocode Does
 
@@ -13,7 +13,7 @@ The core offer is "Zero to Revenue — The Operational Fix": a 90-day structured
 - **Full IP ownership from Day 1**: No vendor lock-in. Ever. All code, docs, and architecture are the client's property.
 - **Fixed-price milestones**: Scope and budget locked in Week 3. No surprises.
 - **AI + senior engineers**: AI accelerates scaffolding and boilerplate; senior engineers validate every architectural decision. Result: 3x faster than traditional development at lower cost.
-- **Payback in 6-12 months**: Most clients recover the full build cost through eliminated SaaS fees and reduced manual labor.
+- **Payback in 4–6 months after launch**: Most clients recover the full build cost through eliminated SaaS fees and reduced manual labor.
 - **Risk-managed migration**: Parallel running ensures existing clients notice nothing during transition.
 
 ## Engagement Structure (90 Days)
@@ -84,7 +84,7 @@ Yes. Zerocode builds cross-platform mobile apps for iOS and Android — service 
 Yes. Zerocode uses Bubble.io, Webflow, and n8n for no-code and low-code projects when those platforms are the right fit. For more complex requirements, senior engineers combine these with custom code or full AI-assisted development.
 
 **What is digital transformation?**
-At Zerocode, digital transformation means eliminating the specific operational bottleneck limiting your growth — not broad multi-year programs. The result is a custom digital system delivered in 90 days with a calculated ROI payback typically within 6-12 months.
+At Zerocode, digital transformation means eliminating the specific operational bottleneck limiting your growth — not broad multi-year programs. The result is a custom digital system delivered in 90 days with a calculated ROI payback typically within 4–6 months of launch.
 
 **What is an operational bottleneck?**
 Any recurring process — manual data entry, fragmented SaaS tools, slow onboarding, vendor dependency — that prevents a business from scaling. Zerocode replaces it with a custom digital system within 90 days.
@@ -93,4 +93,4 @@ Any recurring process — manual data entry, fragmented SaaS tools, slow onboard
 Yes. Full IP ownership is transferred from Day 1, covered by NDA. No vendor lock-in. Ever.
 
 **What is the payback period?**
-Most clients recover the full build cost within 6-12 months through eliminated SaaS fees and reduced manual labor. The payback timeline is calculated and shared in Week 1.
+Most clients recover the full build cost within 4–6 months of launch through eliminated SaaS fees and reduced manual labor. The payback timeline is calculated and shared in Week 1.
