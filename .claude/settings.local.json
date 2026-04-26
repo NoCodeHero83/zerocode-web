@@ -76,7 +76,10 @@
       "Bash(pip install *)",
       "Bash(curl -L -o \"images/maxresdefault.jpg\" \"https://img.youtube.com/vi/mViFYTwWvcM/maxresdefault.jpg\")",
       "WebSearch",
-      "WebFetch(domain:clutch.co)"
+      "WebFetch(domain:clutch.co)",
+      "Bash(ls portfolio-item-*-es.html)",
+      "Bash(ls -la es/portfolio/)",
+      "Bash(sort -k5 -rn)"
     ]
   }
 }
