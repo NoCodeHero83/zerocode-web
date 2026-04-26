@@ -505,13 +505,10 @@ BLOG_CSS = """
       transform: none !important;
       animation: none !important;
     }
-    .elementor-element-1c2f5fa > .elementor-widget-wrap {
-      display: flex !important;
-      flex-direction: row !important;
-      gap: 40px !important;
-      align-items: center !important;
-      flex-wrap: wrap !important;
-    }
+
+    /* Hide duplicate Elementor footer video+form sections — custom sections above replace them */
+    .elementor-element-dab233d,
+    .elementor-element-52c9b46 { display: none !important; }
 
     /* BLOG INDEX CARDS */
     .zc-blog-intro {
