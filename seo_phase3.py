@@ -506,9 +506,6 @@ BLOG_CSS = """
       animation: none !important;
     }
 
-    /* Hide duplicate Elementor footer video+form sections — custom sections above replace them */
-    .elementor-element-dab233d,
-    .elementor-element-52c9b46 { display: none !important; }
 
     /* BLOG INDEX CARDS */
     .zc-blog-intro {
@@ -833,74 +830,6 @@ A1_CONTENT = """
   </div>
 
 </article>
-
-<div class="zc-cta">
-  <div class="zc-cta-inner">
-    <div class="zc-cta-video">
-      <video autoplay muted loop playsinline>
-        <source src="/images/5869295_Indoors_Day_1280x720-1.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="zc-cta-text">
-      <div class="zc-cta-tag">Free Discovery Call</div>
-      <h2>Ready to Eliminate Your Operational Bottleneck?</h2>
-      <p>In Week 1, we diagnose your bottleneck, build your payback projection, and define exactly what needs to be built. No commitment required beyond the first call.</p>
-      <ul class="zc-cta-list">
-        <li>Full IP ownership from day one</li>
-        <li>Fixed price, no surprises</li>
-        <li>Payback in 4 to 6 months after launch</li>
-        <li>90-day delivery with weekly releases</li>
-      </ul>
-      <a href="/contact/" class="btn">Book Your Free Discovery Call</a>
-    </div>
-  </div>
-</div>
-
-<div class="zc-form-section">
-  <div class="zc-form-inner">
-    <div class="zc-form-text">
-      <h2>Start the Conversation</h2>
-      <p>Tell us about your main operational challenge. We review every submission personally and respond within one business day.</p>
-      <div class="zc-form-perks">
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Free, no-commitment discovery call</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Written payback projection in Week 1</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Full IP ownership from day one</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Fixed price, no surprises</span>
-        </div>
-      </div>
-    </div>
-    <div class="zc-form">
-      <form action="/contact/" method="get">
-        <div class="zc-form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Work Email" required>
-        </div>
-        <input type="text" name="company" placeholder="Company Name">
-        <select name="service">
-          <option value="" disabled selected>What can we help you with?</option>
-          <option value="bottleneck">Eliminate an operational bottleneck</option>
-          <option value="saas">Replace SaaS tools with custom software</option>
-          <option value="webapp">Build a custom web application</option>
-          <option value="automation">AI workflow automation</option>
-          <option value="other">Something else</option>
-        </select>
-        <textarea name="message" placeholder="Describe your main operational challenge..." rows="4"></textarea>
-        <button type="submit">Book My Free Discovery Call &#8250;</button>
-      </form>
-    </div>
-  </div>
-</div>
 """
 
 # ── ARTICLE 2 ────────────────────────────────────────────────────────────────
@@ -1145,74 +1074,6 @@ A2_CONTENT = """
   </div>
 
 </article>
-
-<div class="zc-cta">
-  <div class="zc-cta-inner">
-    <div class="zc-cta-video">
-      <video autoplay muted loop playsinline>
-        <source src="/images/5869295_Indoors_Day_1280x720-1.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="zc-cta-text">
-      <div class="zc-cta-tag">Free Discovery Call</div>
-      <h2>Not Sure Which Approach Is Right for You?</h2>
-      <p>In a free 30-minute discovery call, we assess your specific requirements and tell you exactly which development approach makes sense — and why. No sales pressure, just clarity.</p>
-      <ul class="zc-cta-list">
-        <li>Honest recommendation, no sales pressure</li>
-        <li>Full IP ownership on every custom project</li>
-        <li>Fixed price milestones from day one</li>
-        <li>Response within one business day</li>
-      </ul>
-      <a href="/contact/" class="btn">Book Your Free Discovery Call</a>
-    </div>
-  </div>
-</div>
-
-<div class="zc-form-section">
-  <div class="zc-form-inner">
-    <div class="zc-form-text">
-      <h2>Start the Conversation</h2>
-      <p>Tell us about your project. We review every submission personally and respond within one business day with a clear recommendation.</p>
-      <div class="zc-form-perks">
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Free, no-commitment discovery call</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Written payback projection in Week 1</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Full IP ownership from day one</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Fixed price, no surprises</span>
-        </div>
-      </div>
-    </div>
-    <div class="zc-form">
-      <form action="/contact/" method="get">
-        <div class="zc-form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Work Email" required>
-        </div>
-        <input type="text" name="company" placeholder="Company Name">
-        <select name="service">
-          <option value="" disabled selected>What can we help you with?</option>
-          <option value="bottleneck">Eliminate an operational bottleneck</option>
-          <option value="saas">Replace SaaS tools with custom software</option>
-          <option value="webapp">Build a custom web application</option>
-          <option value="automation">AI workflow automation</option>
-          <option value="other">Something else</option>
-        </select>
-        <textarea name="message" placeholder="Describe your project or challenge..." rows="4"></textarea>
-        <button type="submit">Book My Free Discovery Call &#8250;</button>
-      </form>
-    </div>
-  </div>
-</div>
 """
 
 # ── ARTICLE 3 ────────────────────────────────────────────────────────────────
@@ -1439,74 +1300,6 @@ A3_CONTENT = """
   </div>
 
 </article>
-
-<div class="zc-cta">
-  <div class="zc-cta-inner">
-    <div class="zc-cta-video">
-      <video autoplay muted loop playsinline>
-        <source src="/images/5869295_Indoors_Day_1280x720-1.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="zc-cta-text">
-      <div class="zc-cta-tag">Free Discovery Call</div>
-      <h2>Get a Fixed-Price Proposal for Your Web App</h2>
-      <p>In a free discovery call, we scope your project, build your payback projection, and give you a fixed-price proposal tied to milestones — no open-ended invoices, no surprises.</p>
-      <ul class="zc-cta-list">
-        <li>Fixed price, no surprises</li>
-        <li>Full IP ownership from day one</li>
-        <li>90-day delivery with weekly releases</li>
-        <li>Payback projection before development starts</li>
-      </ul>
-      <a href="/contact/" class="btn">Book Your Free Discovery Call</a>
-    </div>
-  </div>
-</div>
-
-<div class="zc-form-section">
-  <div class="zc-form-inner">
-    <div class="zc-form-text">
-      <h2>Start the Conversation</h2>
-      <p>Tell us about your web app project. We review every submission personally and respond within one business day with a clear next step.</p>
-      <div class="zc-form-perks">
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Free, no-commitment discovery call</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Written payback projection in Week 1</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Full IP ownership from day one</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Fixed price, no surprises</span>
-        </div>
-      </div>
-    </div>
-    <div class="zc-form">
-      <form action="/contact/" method="get">
-        <div class="zc-form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Work Email" required>
-        </div>
-        <input type="text" name="company" placeholder="Company Name">
-        <select name="service">
-          <option value="" disabled selected>What can we help you with?</option>
-          <option value="bottleneck">Eliminate an operational bottleneck</option>
-          <option value="saas">Replace SaaS tools with custom software</option>
-          <option value="webapp">Build a custom web application</option>
-          <option value="automation">AI workflow automation</option>
-          <option value="other">Something else</option>
-        </select>
-        <textarea name="message" placeholder="Describe your web app project..." rows="4"></textarea>
-        <button type="submit">Book My Free Discovery Call &#8250;</button>
-      </form>
-    </div>
-  </div>
-</div>
 """
 
 # ── ARTICLE 4 ────────────────────────────────────────────────────────────────
@@ -1715,74 +1508,6 @@ A4_CONTENT = """
   </div>
 
 </article>
-
-<div class="zc-cta">
-  <div class="zc-cta-inner">
-    <div class="zc-cta-video">
-      <video autoplay muted loop playsinline>
-        <source src="/images/5869295_Indoors_Day_1280x720-1.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="zc-cta-text">
-      <div class="zc-cta-tag">Free Discovery Call</div>
-      <h2>Calculate the Cost of Replacing Your SaaS Tools</h2>
-      <p>In a free discovery call, we review your current SaaS stack, build a financial model for replacement, and tell you exactly whether the business case supports a custom build.</p>
-      <ul class="zc-cta-list">
-        <li>Honest financial analysis, no sales pressure</li>
-        <li>Fixed price, full IP ownership</li>
-        <li>Zero disruption parallel migration</li>
-        <li>Payback projection before any development</li>
-      </ul>
-      <a href="/contact/" class="btn">Book Your Free Discovery Call</a>
-    </div>
-  </div>
-</div>
-
-<div class="zc-form-section">
-  <div class="zc-form-inner">
-    <div class="zc-form-text">
-      <h2>Start the Conversation</h2>
-      <p>Tell us which SaaS tools you are looking to replace and we will build a financial model showing whether a custom build makes sense for your business.</p>
-      <div class="zc-form-perks">
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Free, no-commitment discovery call</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Written payback projection in Week 1</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Full IP ownership from day one</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Zero disruption migration approach</span>
-        </div>
-      </div>
-    </div>
-    <div class="zc-form">
-      <form action="/contact/" method="get">
-        <div class="zc-form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Work Email" required>
-        </div>
-        <input type="text" name="company" placeholder="Company Name">
-        <select name="service">
-          <option value="" disabled selected>What can we help you with?</option>
-          <option value="bottleneck">Eliminate an operational bottleneck</option>
-          <option value="saas">Replace SaaS tools with custom software</option>
-          <option value="webapp">Build a custom web application</option>
-          <option value="automation">AI workflow automation</option>
-          <option value="other">Something else</option>
-        </select>
-        <textarea name="message" placeholder="Which SaaS tools are you looking to replace?" rows="4"></textarea>
-        <button type="submit">Book My Free Discovery Call &#8250;</button>
-      </form>
-    </div>
-  </div>
-</div>
 """
 
 # ── BLOG INDEX ───────────────────────────────────────────────────────────────
@@ -1844,74 +1569,6 @@ BLOG_INDEX_CONTENT = """
     </div>
   </a>
 
-</div>
-
-<div class="zc-cta">
-  <div class="zc-cta-inner">
-    <div class="zc-cta-video">
-      <video autoplay muted loop playsinline>
-        <source src="/images/5869295_Indoors_Day_1280x720-1.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="zc-cta-text">
-      <div class="zc-cta-tag">Free Discovery Call</div>
-      <h2>Book Your Free Discovery Call</h2>
-      <p>In 30 minutes, we diagnose your primary operational bottleneck and deliver a written payback projection — at no cost and no obligation.</p>
-      <ul class="zc-cta-list">
-        <li>Diagnose your bottleneck in Week 1</li>
-        <li>Fixed price, full IP ownership</li>
-        <li>Payback in 4 to 6 months after launch</li>
-        <li>90-day delivery with weekly releases</li>
-      </ul>
-      <a href="/contact/" class="btn">Book Your Free Discovery Call</a>
-    </div>
-  </div>
-</div>
-
-<div class="zc-form-section">
-  <div class="zc-form-inner">
-    <div class="zc-form-text">
-      <h2>Start the Conversation</h2>
-      <p>Tell us about your main operational challenge. We review every submission personally and respond within one business day.</p>
-      <div class="zc-form-perks">
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Free, no-commitment discovery call</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Written payback projection in Week 1</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Full IP ownership from day one</span>
-        </div>
-        <div class="zc-form-perk">
-          <span class="zc-form-perk-icon">&#10003;</span>
-          <span class="zc-form-perk-label">Fixed price, no surprises</span>
-        </div>
-      </div>
-    </div>
-    <div class="zc-form">
-      <form action="/contact/" method="get">
-        <div class="zc-form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Work Email" required>
-        </div>
-        <input type="text" name="company" placeholder="Company Name">
-        <select name="service">
-          <option value="" disabled selected>What can we help you with?</option>
-          <option value="bottleneck">Eliminate an operational bottleneck</option>
-          <option value="saas">Replace SaaS tools with custom software</option>
-          <option value="webapp">Build a custom web application</option>
-          <option value="automation">AI workflow automation</option>
-          <option value="other">Something else</option>
-        </select>
-        <textarea name="message" placeholder="Describe your main operational challenge..." rows="4"></textarea>
-        <button type="submit">Book My Free Discovery Call &#8250;</button>
-      </form>
-    </div>
-  </div>
 </div>
 """
 
