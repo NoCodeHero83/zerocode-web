@@ -630,8 +630,8 @@ A1_SCHEMA = """<script type="application/ld+json">{
       "description": "Most businesses lose 20 to 30 percent of operational capacity to bottlenecks that SaaS tools cannot fix. Custom software eliminates them permanently in 90 days.",
       "author": {"@type": "Person", "name": "Andrés Díaz", "url": "https://zerocode.la/about/", "sameAs": "https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/"},
       "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
-      "datePublished": "2026-04-25",
-      "dateModified": "2026-04-25",
+      "datePublished": "2026-04-25T00:00:00-05:00",
+      "dateModified": "2026-04-25T00:00:00-05:00",
       "url": "https://zerocode.la/blog/eliminate-operational-bottlenecks/",
       "mainEntityOfPage": "https://zerocode.la/blog/eliminate-operational-bottlenecks/",
       "image": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png", "width": 1200, "height": 630}
@@ -845,8 +845,8 @@ A2_SCHEMA = """<script type="application/ld+json">{
       "description": "A complete comparison of no code, low code, and AI assisted development: speed, cost, ownership, and when to use each approach for your specific business needs.",
       "author": {"@type": "Person", "name": "Andrés Díaz", "url": "https://zerocode.la/about/", "sameAs": "https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/"},
       "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
-      "datePublished": "2026-04-25",
-      "dateModified": "2026-04-25",
+      "datePublished": "2026-04-25T00:00:00-05:00",
+      "dateModified": "2026-04-25T00:00:00-05:00",
       "url": "https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/",
       "mainEntityOfPage": "https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/",
       "image": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png", "width": 1200, "height": 630}
@@ -1090,8 +1090,8 @@ A3_SCHEMA = """<script type="application/ld+json">{
       "description": "A complete breakdown of web app development costs in 2026: price ranges by type, factors that affect cost, hidden fees to avoid, and how to calculate ROI before you build.",
       "author": {"@type": "Person", "name": "Andrés Díaz", "url": "https://zerocode.la/about/", "sameAs": "https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/"},
       "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
-      "datePublished": "2026-04-25",
-      "dateModified": "2026-04-25",
+      "datePublished": "2026-04-25T00:00:00-05:00",
+      "dateModified": "2026-04-25T00:00:00-05:00",
       "url": "https://zerocode.la/blog/web-app-development-cost-guide/",
       "mainEntityOfPage": "https://zerocode.la/blog/web-app-development-cost-guide/",
       "image": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png", "width": 1200, "height": 630}
@@ -1318,8 +1318,8 @@ A4_SCHEMA = """<script type="application/ld+json">{
       "description": "A practical guide to replacing fragmented SaaS subscriptions with custom software you own: when to do it, how to migrate safely, and how to calculate the financial case.",
       "author": {"@type": "Person", "name": "Andrés Díaz", "url": "https://zerocode.la/about/", "sameAs": "https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/"},
       "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
-      "datePublished": "2026-04-25",
-      "dateModified": "2026-04-25",
+      "datePublished": "2026-04-25T00:00:00-05:00",
+      "dateModified": "2026-04-25T00:00:00-05:00",
       "url": "https://zerocode.la/blog/replace-saas-tools-custom-software/",
       "mainEntityOfPage": "https://zerocode.la/blog/replace-saas-tools-custom-software/",
       "image": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png", "width": 1200, "height": 630}
