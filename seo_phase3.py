@@ -82,11 +82,11 @@ BLOG_CSS = """
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Roboto Flex', 'Inter', system-ui, sans-serif;
+      font-family: 'Inter', 'Roboto Flex', system-ui, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.75;
-      font-size: 16px;
+      font-size: 18px;
     }
     a { color: var(--cyan); }
 
@@ -163,7 +163,7 @@ BLOG_CSS = """
     }
     .zc-hero h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(30px, 5vw, 52px);
+      font-size: clamp(28px, 4.5vw, 46px);
       font-weight: 700;
       line-height: 1.12;
       max-width: 860px;
@@ -172,7 +172,8 @@ BLOG_CSS = """
     }
     .zc-hero .subtitle {
       font-family: 'Roboto Flex', sans-serif;
-      font-size: 19px;
+      font-size: 20px;
+      font-weight: 400;
       color: rgba(255,255,255,0.68);
       max-width: 660px;
       margin: 0 auto 32px;
@@ -180,7 +181,8 @@ BLOG_CSS = """
     }
     .zc-hero .meta {
       font-family: 'Inter', sans-serif;
-      font-size: 13px;
+      font-size: 14px;
+      font-weight: 500;
       color: rgba(255,255,255,0.4);
       display: flex;
       gap: 24px;
@@ -205,15 +207,15 @@ BLOG_CSS = """
     }
     .zc-article h2:first-child { margin-top: 0; }
     .zc-article h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 21px;
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: 20px;
       font-weight: 600;
       color: rgba(255,255,255,0.92);
       margin: 48px 0 16px;
     }
-    .zc-article p { font-family: 'Roboto Flex', sans-serif; margin-bottom: 24px; color: rgba(255,255,255,0.78); font-size: 17px; line-height: 1.85; }
+    .zc-article p { font-family: 'Inter', sans-serif; margin-bottom: 24px; color: rgba(255,255,255,0.78); font-size: 18px; line-height: 1.85; }
     .zc-article ul, .zc-article ol { margin: 0 0 28px 28px; }
-    .zc-article li { font-family: 'Roboto Flex', sans-serif; margin-bottom: 12px; color: rgba(255,255,255,0.78); font-size: 17px; line-height: 1.75; }
+    .zc-article li { font-family: 'Inter', sans-serif; margin-bottom: 12px; color: rgba(255,255,255,0.78); font-size: 18px; line-height: 1.75; }
     .zc-article strong { color: var(--cyan); font-weight: 600; }
     .zc-article a { color: var(--cyan); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
@@ -234,7 +236,7 @@ BLOG_CSS = """
       color: var(--cyan);
       margin-bottom: 12px;
     }
-    .zc-bluf p { margin: 0; font-family: 'Roboto Flex', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.85); line-height: 1.75; }
+    .zc-bluf p { margin: 0; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.85); line-height: 1.75; }
 
     /* STAT CALLOUT */
     .zc-stat {
@@ -257,14 +259,14 @@ BLOG_CSS = """
       min-width: 120px;
       text-align: center;
     }
-    .zc-stat .desc { font-family: 'Roboto Flex', sans-serif; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8); }
+    .zc-stat .desc { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8); }
     .zc-stat .source { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.38); margin-top: 8px; }
 
     /* TABLE */
     .zc-table-wrap { overflow-x: auto; margin: 44px 0; border-radius: 16px; border: 1px solid var(--border); }
     .zc-table { width: 100%; border-collapse: collapse; font-size: 15px; }
     .zc-table th { background: #0F172A; color: var(--cyan); padding: 16px 20px; text-align: left; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
-    .zc-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); vertical-align: top; color: rgba(255,255,255,0.78); font-family: 'Roboto Flex', sans-serif; line-height: 1.6; }
+    .zc-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); vertical-align: top; color: rgba(255,255,255,0.78); font-family: 'Inter', sans-serif; line-height: 1.6; }
     .zc-table tr:last-child td { border-bottom: none; }
     .zc-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
     .zc-yes { color: #34d399; font-weight: 700; }
@@ -280,7 +282,7 @@ BLOG_CSS = """
       margin: 44px 0;
     }
     .zc-box h3 { font-family: 'Space Grotesk', sans-serif; margin-top: 0; margin-bottom: 20px; color: #FFFFFF; font-size: 20px; }
-    .zc-box li { font-family: 'Roboto Flex', sans-serif; margin-bottom: 12px; color: rgba(255,255,255,0.78); font-size: 16px; }
+    .zc-box li { font-family: 'Inter', sans-serif; margin-bottom: 12px; color: rgba(255,255,255,0.78); font-size: 18px; }
 
     /* FAQ */
     .zc-faq { margin: 72px 0 0; }
@@ -304,8 +306,8 @@ BLOG_CSS = """
     }
     .zc-faq-a {
       padding: 18px 24px;
-      font-family: 'Roboto Flex', sans-serif;
-      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
       background: rgba(0,0,0,0.25);
       border-top: 1px solid var(--border);
       color: rgba(255,255,255,0.72);
@@ -359,15 +361,15 @@ BLOG_CSS = """
       line-height: 1.15;
     }
     .zc-cta-text p {
-      font-family: 'Roboto Flex', sans-serif;
-      font-size: 17px;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
       color: rgba(255,255,255,0.68);
       margin-bottom: 28px;
       line-height: 1.75;
     }
     .zc-cta-list { list-style: none; margin: 0 0 36px; padding: 0; }
     .zc-cta-list li {
-      font-family: 'Roboto Flex', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 15px;
       color: rgba(255,255,255,0.72);
       margin-bottom: 12px;
@@ -421,8 +423,8 @@ BLOG_CSS = """
       line-height: 1.18;
     }
     .zc-form-text p {
-      font-family: 'Roboto Flex', sans-serif;
-      font-size: 17px;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
       color: rgba(255,255,255,0.62);
       line-height: 1.75;
       margin-bottom: 36px;
@@ -430,7 +432,7 @@ BLOG_CSS = """
     .zc-form-perks { display: flex; flex-direction: column; gap: 14px; }
     .zc-form-perk { display: flex; gap: 14px; align-items: flex-start; }
     .zc-form-perk-icon { color: var(--cyan); font-size: 16px; font-weight: 700; line-height: 1.5; flex-shrink: 0; width: 20px; }
-    .zc-form-perk-label { font-family: 'Roboto Flex', sans-serif; font-size: 15px; color: rgba(255,255,255,0.68); line-height: 1.55; }
+    .zc-form-perk-label { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(255,255,255,0.68); line-height: 1.55; }
     .zc-form form { display: flex; flex-direction: column; gap: 16px; }
     .zc-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .zc-form input[type=text],
@@ -515,7 +517,7 @@ BLOG_CSS = """
       text-align: center;
     }
     .zc-blog-intro h2 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: #FFFFFF; margin-bottom: 14px; letter-spacing: -0.5px; }
-    .zc-blog-intro p { font-family: 'Roboto Flex', sans-serif; color: rgba(255,255,255,0.58); font-size: 17px; }
+    .zc-blog-intro p { font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.58); font-size: 18px; }
     .zc-blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -552,7 +554,7 @@ BLOG_CSS = """
     }
     .zc-blog-card-top h2 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.45; color: #FFFFFF; }
     .zc-blog-card-body { padding: 22px 28px 28px; }
-    .zc-blog-card-body p { font-family: 'Roboto Flex', sans-serif; font-size: 14px; color: rgba(255,255,255,0.52); margin-bottom: 18px; line-height: 1.7; }
+    .zc-blog-card-body p { font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(255,255,255,0.52); margin-bottom: 18px; line-height: 1.7; }
     .zc-blog-card-body .read { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--cyan); letter-spacing: 0.05em; text-transform: uppercase; }
 
     @media(max-width: 900px) {
@@ -626,7 +628,7 @@ A1_SCHEMA = """<script type="application/ld+json">{
       "@type": "Article",
       "headline": "How to Eliminate Operational Bottlenecks with Custom Software",
       "description": "Most businesses lose 20 to 30 percent of operational capacity to bottlenecks that SaaS tools cannot fix. Custom software eliminates them permanently in 90 days.",
-      "author": {"@type": "Organization", "name": "Zerocode", "url": "https://zerocode.la"},
+      "author": {"@type": "Person", "name": "Andrés Díaz", "url": "https://zerocode.la/about/", "sameAs": "https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/"},
       "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
       "datePublished": "2026-04-25",
       "dateModified": "2026-04-25",
@@ -666,7 +668,7 @@ A1_CONTENT = """
   <h1>How to Eliminate Operational Bottlenecks with Custom Software</h1>
   <p class="subtitle">Most businesses lose 20 to 30 percent of their operational capacity to bottlenecks that generic software cannot fix. This guide explains how custom digital systems solve them permanently.</p>
   <div class="meta">
-    <span>By Zerocode</span>
+    <span>By <a href="/about/" style="color:inherit;text-decoration:none;">Andrés Díaz</a></span>
     <span>April 2026</span>
     <span>12 min read</span>
   </div>
@@ -762,7 +764,7 @@ A1_CONTENT = """
   </div>
 
   <h2>The 90-Day Framework for Eliminating a Bottleneck</h2>
-  <p>Zerocode has structured its engagements as a 90-day process specifically because that is the window within which a motivated team can diagnose, build, test, and launch a production-grade system that replaces a primary operational bottleneck. The structure is designed to minimize risk at every stage.</p>
+  <p>Zerocode has structured its <a href="/service/">custom software engagements</a> as a 90-day process specifically because that is the window within which a motivated team can diagnose, build, test, and launch a production-grade system that replaces a primary operational bottleneck. The structure is designed to minimize risk at every stage.</p>
 
   <h3>Week 1: Diagnosis and Payback Projection</h3>
   <p>The engagement begins with a structured discovery process. We map the bottleneck in detail — its exact mechanism, its frequency, its cost, and its upstream and downstream dependencies. We identify the minimum viable system that eliminates it. We build a payback projection that shows, in specific dollar terms, when the client will recover the full cost of the build. Scope and architecture are defined. No development begins until the client has full clarity on what will be built and what it will return.</p>
@@ -840,7 +842,7 @@ A2_SCHEMA = """<script type="application/ld+json">{
       "@type": "Article",
       "headline": "No Code vs Low Code vs AI Assisted Development: Which Is Right for Your Business?",
       "description": "A complete comparison of no code, low code, and AI assisted development: speed, cost, ownership, and when to use each approach for your specific business needs.",
-      "author": {"@type": "Organization", "name": "Zerocode", "url": "https://zerocode.la"},
+      "author": {"@type": "Person", "name": "Andrés Díaz", "url": "https://zerocode.la/about/", "sameAs": "https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/"},
       "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
       "datePublished": "2026-04-25",
       "dateModified": "2026-04-25",
@@ -880,7 +882,7 @@ A2_CONTENT = """
   <h1>No Code vs Low Code vs AI Assisted Development: Which Is Right for Your Business?</h1>
   <p class="subtitle">A practical guide to understanding the three main modern development approaches, when to use each, and how to choose based on your business needs and long-term goals.</p>
   <div class="meta">
-    <span>By Zerocode</span>
+    <span>By <a href="/about/" style="color:inherit;text-decoration:none;">Andrés Díaz</a></span>
     <span>April 2026</span>
     <span>14 min read</span>
   </div>
@@ -1041,8 +1043,8 @@ A2_CONTENT = """
   </div>
 
   <h2>What Zerocode Uses and Why</h2>
-  <p>Zerocode uses all three development approaches. The selection is made based on the specific requirements of each project, not a preference for any particular methodology. For a simple client-facing information tool or a standard internal dashboard with no unusual business logic, Bubble.io or Webflow delivers the right result at the right cost. For operational systems that clients depend on, that need to scale, and that need to be owned outright, AI assisted development by senior engineers is the only appropriate choice.</p>
-  <p>The key principle is that the development approach serves the client's business goals — not the other way around.</p>
+  <p>Zerocode uses all three development approaches. The selection is made based on the specific requirements of each project, not a preference for any particular methodology. For a simple client-facing information tool or a standard internal dashboard with no unusual business logic, Bubble.io or Webflow delivers the right result at the right cost. For operational systems that clients depend on, that need to scale, and that need to be owned outright, <a href="/service/">AI assisted development by senior engineers</a> is the only appropriate choice.</p>
+  <p>The key principle is that the development approach serves the client's business goals — not the other way around. Browse the <a href="/portfolio/">portfolio</a> to see how this plays out across real engagements.</p>
 
   <div class="zc-faq">
     <h2>Frequently Asked Questions</h2>
@@ -1084,7 +1086,7 @@ A3_SCHEMA = """<script type="application/ld+json">{
       "@type": "Article",
       "headline": "Web App Development Cost Guide 2026",
       "description": "A complete breakdown of web app development costs in 2026: price ranges by type, factors that affect cost, hidden fees to avoid, and how to calculate ROI before you build.",
-      "author": {"@type": "Organization", "name": "Zerocode", "url": "https://zerocode.la"},
+      "author": {"@type": "Person", "name": "Andrés Díaz", "url": "https://zerocode.la/about/", "sameAs": "https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/"},
       "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
       "datePublished": "2026-04-25",
       "dateModified": "2026-04-25",
@@ -1124,7 +1126,7 @@ A3_CONTENT = """
   <h1>Web App Development Cost Guide 2026</h1>
   <p class="subtitle">A complete breakdown of web app development costs, what drives them, which approach gives the best return, and how to build a business case before you commit to a project.</p>
   <div class="meta">
-    <span>By Zerocode</span>
+    <span>By <a href="/about/" style="color:inherit;text-decoration:none;">Andrés Díaz</a></span>
     <span>April 2026</span>
     <span>13 min read</span>
   </div>
@@ -1266,9 +1268,10 @@ A3_CONTENT = """
     <li><strong>Fixed price vs hourly:</strong> Fixed price proposals aligned to milestones protect you from scope creep. Hourly proposals put all the risk on you.</li>
     <li><strong>IP ownership terms:</strong> Confirm in writing that you own 100 percent of the code, documentation, and architecture from day one.</li>
     <li><strong>Milestone structure:</strong> Each milestone should have a clear deliverable and payment tied to that deliverable — not to time elapsed.</li>
-    <li><strong>Track record:</strong> Ask for references and case studies from similar projects. Review them on Clutch or comparable verified platforms.</li>
+    <li><strong>Track record:</strong> Ask for references and <a href="/portfolio/">case studies</a> from similar projects. Review them on Clutch or comparable verified platforms.</li>
     <li><strong>Communication and transparency:</strong> A team that cannot clearly explain their process before the project starts will not communicate clearly during it.</li>
   </ul>
+  <p>Zerocode's <a href="/service/">fixed-price, milestone-based services</a> are structured to give clients full cost certainty from the start.</p>
 
   <div class="zc-faq">
     <h2>Frequently Asked Questions</h2>
@@ -1310,7 +1313,7 @@ A4_SCHEMA = """<script type="application/ld+json">{
       "@type": "Article",
       "headline": "How to Replace SaaS Tools with Custom Software and Own Your Stack",
       "description": "A practical guide to replacing fragmented SaaS subscriptions with custom software you own: when to do it, how to migrate safely, and how to calculate the financial case.",
-      "author": {"@type": "Organization", "name": "Zerocode", "url": "https://zerocode.la"},
+      "author": {"@type": "Person", "name": "Andrés Díaz", "url": "https://zerocode.la/about/", "sameAs": "https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/"},
       "publisher": {"@type": "Organization", "name": "Zerocode", "logo": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png"}},
       "datePublished": "2026-04-25",
       "dateModified": "2026-04-25",
@@ -1350,7 +1353,7 @@ A4_CONTENT = """
   <h1>How to Replace SaaS Tools with Custom Software and Own Your Stack</h1>
   <p class="subtitle">A practical guide to identifying which SaaS tools are costing your business more than a custom replacement, how to migrate safely, and how to build the financial case for ownership.</p>
   <div class="meta">
-    <span>By Zerocode</span>
+    <span>By <a href="/about/" style="color:inherit;text-decoration:none;">Andrés Díaz</a></span>
     <span>April 2026</span>
     <span>13 min read</span>
   </div>
@@ -1476,7 +1479,7 @@ A4_CONTENT = """
   <p>The most common cause of scope creep in replacement projects is undocumented workflows that surface during development. Before the build begins, walk through every workflow that touches the SaaS tool and document it completely, including the exceptions and edge cases. This documentation becomes the specification for the custom system.</p>
 
   <h3>3. Define What You Will Not Rebuild</h3>
-  <p>Custom software should be built to do exactly what your business needs — not to replicate every feature of the tool you are replacing. Many SaaS tools include extensive feature sets that your team never uses. Replacing only the features you actually use results in a cleaner, more maintainable system and a significantly lower build cost.</p>
+  <p>Custom software should be built to do exactly what your business needs — not to replicate every feature of the tool you are replacing. Many SaaS tools include extensive feature sets that your team never uses. Replacing only the features you actually use results in a cleaner, more maintainable system and a significantly lower build cost. Explore <a href="/service/">Zerocode's services</a> or see <a href="/portfolio/">real replacement projects</a> to understand how this looks in practice.</p>
 
   <div class="zc-faq">
     <h2>Frequently Asked Questions</h2>
