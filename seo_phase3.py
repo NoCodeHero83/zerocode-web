@@ -99,19 +99,22 @@ BLOG_CSS = """
     .zc-back-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.38);
+      gap: 10px;
+      color: rgba(255,255,255,0.55);
       text-decoration: none;
       font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      transition: color .2s;
-      padding: 6px 0;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      transition: color .2s, gap .2s;
+      padding: 8px 14px 8px 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50px;
+      background: rgba(255,255,255,0.04);
     }
-    .zc-back-btn::before { content: '←'; font-size: 14px; font-weight: 400; letter-spacing: 0; }
-    .zc-back-btn:hover { color: var(--cyan); text-decoration: none; }
+    .zc-back-btn::before { content: '←'; font-size: 15px; font-weight: 300; letter-spacing: 0; color: var(--cyan); }
+    .zc-back-btn:hover { color: #fff; border-color: rgba(0,220,252,0.3); background: rgba(0,220,252,0.06); gap: 14px; text-decoration: none; }
 
     /* HERO */
     .zc-hero {
@@ -301,7 +304,7 @@ BLOG_CSS = """
     .zc-blog-intro {
       max-width: 720px;
       margin: 0 auto;
-      padding: 72px 24px 28px;
+      padding: 40px 24px 20px;
       text-align: center;
     }
     .zc-blog-intro h2 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: #FFFFFF; margin-bottom: 14px; letter-spacing: -0.5px; }
@@ -346,7 +349,7 @@ BLOG_CSS = """
     .zc-blog-card-body .read { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--cyan); letter-spacing: 0.05em; text-transform: uppercase; }
 
     @media(max-width: 768px) {
-      .zc-back-nav { padding: 28px 20px 0; }
+      .zc-back-nav { padding: 24px 20px 0; }
       .zc-hero { padding: 48px 20px 52px; }
       .zc-hero h1 { font-size: 28px; letter-spacing: -0.5px; }
       .zc-article { padding: 48px 20px 64px; }
@@ -354,22 +357,34 @@ BLOG_CSS = """
       .zc-stat { flex-direction: column; text-align: center; gap: 16px; }
       .zc-stat .num { min-width: unset; }
       .zc-blog-grid { grid-template-columns: 1fr; padding: 0 20px; }
-      .zc-blog-intro { padding: 52px 20px 20px; }
+      .zc-blog-intro { padding: 32px 20px 16px; }
     }
   </style>
 """
 
 # NAV and FOOTER are now taken directly from index.html via SITE_HEADER / SITE_FOOTER
 
-def page_shell(title, desc, canonical, content, article_schema=''):
-    # Activate the Blog nav item in the Elementor header for all blog pages
-    active_header = SITE_HEADER.replace(
-        'menu-item-blog"><a href="/blog/" class="elementor-item">Blog</a></li>',
-        'menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active">Blog</a></li>'
-    ).replace(
-        'menu-item-blog"><a href="/blog/" class="elementor-item" tabindex="-1">Blog</a></li>',
-        'menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active" tabindex="-1">Blog</a></li>'
+_HOME_ACTIVE    = 'menu-item-home current-menu-item page_item page-item-2316 current_page_item menu-item-5375"><a href="/" aria-current="page" class="elementor-item elementor-item-active">Home</a></li>'
+_HOME_ACTIVE_TB = 'menu-item-home current-menu-item page_item page-item-2316 current_page_item menu-item-5375"><a href="/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>'
+_HOME_PLAIN     = 'menu-item-home menu-item-5375"><a href="/" class="elementor-item">Home</a></li>'
+_HOME_PLAIN_TB  = 'menu-item-home menu-item-5375"><a href="/" class="elementor-item" tabindex="-1">Home</a></li>'
+_BLOG_PLAIN     = 'menu-item-blog"><a href="/blog/" class="elementor-item">Blog</a></li>'
+_BLOG_PLAIN_TB  = 'menu-item-blog"><a href="/blog/" class="elementor-item" tabindex="-1">Blog</a></li>'
+_BLOG_ACTIVE    = 'menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active">Blog</a></li>'
+_BLOG_ACTIVE_TB = 'menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active" tabindex="-1">Blog</a></li>'
+
+def _activate_blog_nav(html_chunk):
+    """Strip Home active state and mark Blog as active in any nav chunk."""
+    return (html_chunk
+        .replace(_HOME_ACTIVE,    _HOME_PLAIN)
+        .replace(_HOME_ACTIVE_TB, _HOME_PLAIN_TB)
+        .replace(_BLOG_PLAIN,     _BLOG_ACTIVE)
+        .replace(_BLOG_PLAIN_TB,  _BLOG_ACTIVE_TB)
     )
+
+def page_shell(title, desc, canonical, content, article_schema=''):
+    active_header = _activate_blog_nav(SITE_HEADER)
+    active_footer = _activate_blog_nav(SITE_FOOTER)
     return f"""<!doctype html>
 <html lang="en-US">
 <head>
@@ -399,7 +414,7 @@ def page_shell(title, desc, canonical, content, article_schema=''):
 <body class="{SITE_BODY_CLASSES}">
 {active_header}
 {content}
-{SITE_FOOTER}
+{active_footer}
 </body>
 </html>"""
 

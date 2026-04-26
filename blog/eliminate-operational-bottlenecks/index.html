@@ -295,19 +295,22 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
     .zc-back-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.38);
+      gap: 10px;
+      color: rgba(255,255,255,0.55);
       text-decoration: none;
       font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      transition: color .2s;
-      padding: 6px 0;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      transition: color .2s, gap .2s;
+      padding: 8px 14px 8px 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50px;
+      background: rgba(255,255,255,0.04);
     }
-    .zc-back-btn::before { content: '←'; font-size: 14px; font-weight: 400; letter-spacing: 0; }
-    .zc-back-btn:hover { color: var(--cyan); text-decoration: none; }
+    .zc-back-btn::before { content: '←'; font-size: 15px; font-weight: 300; letter-spacing: 0; color: var(--cyan); }
+    .zc-back-btn:hover { color: #fff; border-color: rgba(0,220,252,0.3); background: rgba(0,220,252,0.06); gap: 14px; text-decoration: none; }
 
     /* HERO */
     .zc-hero {
@@ -497,7 +500,7 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
     .zc-blog-intro {
       max-width: 720px;
       margin: 0 auto;
-      padding: 72px 24px 28px;
+      padding: 40px 24px 20px;
       text-align: center;
     }
     .zc-blog-intro h2 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: #FFFFFF; margin-bottom: 14px; letter-spacing: -0.5px; }
@@ -542,7 +545,7 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
     .zc-blog-card-body .read { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--cyan); letter-spacing: 0.05em; text-transform: uppercase; }
 
     @media(max-width: 768px) {
-      .zc-back-nav { padding: 28px 20px 0; }
+      .zc-back-nav { padding: 24px 20px 0; }
       .zc-hero { padding: 48px 20px 52px; }
       .zc-hero h1 { font-size: 28px; letter-spacing: -0.5px; }
       .zc-article { padding: 48px 20px 64px; }
@@ -550,7 +553,7 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
       .zc-stat { flex-direction: column; text-align: center; gap: 16px; }
       .zc-stat .num { min-width: unset; }
       .zc-blog-grid { grid-template-columns: 1fr; padding: 0 20px; }
-      .zc-blog-intro { padding: 52px 20px 20px; }
+      .zc-blog-intro { padding: 32px 20px 16px; }
     }
   </style>
 
@@ -582,13 +585,13 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
 				<div class="elementor-element elementor-element-fb0e069 elementor-nav-menu--dropdown-none elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-nav-menu" data-id="fb0e069" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
 				<div class="elementor-widget-container">
 								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
-				<ul id="menu-1-fb0e069" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2316 current_page_item menu-item-5375"><a href="/" aria-current="page" class="elementor-item elementor-item-active">Home</a></li>
+				<ul id="menu-1-fb0e069" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5375"><a href="/" class="elementor-item">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1164"><a href="/about/" class="elementor-item">About</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5683"><a href="/service/" class="elementor-item">Service</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active">Blog</a></li>
 </ul>			</nav>
 						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-fb0e069" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2316 current_page_item menu-item-5375"><a href="/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+				<ul id="menu-2-fb0e069" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5375"><a href="/" class="elementor-item" tabindex="-1">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1164"><a href="/about/" class="elementor-item" tabindex="-1">About</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5683"><a href="/service/" class="elementor-item" tabindex="-1">Service</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item" tabindex="-1">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active" tabindex="-1">Blog</a></li>
@@ -1032,16 +1035,16 @@ discuss your project.
 				<div class="elementor-element elementor-element-3fef000 elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="3fef000" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;}}" data-widget_type="nav-menu.default">
 				<div class="elementor-widget-container">
 								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
-				<ul id="menu-1-3fef000" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2316 current_page_item menu-item-5375"><a href="/" aria-current="page" class="elementor-item elementor-item-active">Home</a></li>
+				<ul id="menu-1-3fef000" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5375"><a href="/" class="elementor-item">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1164"><a href="/about/" class="elementor-item">About</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5683"><a href="/service/" class="elementor-item">Service</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog"><a href="/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active">Blog</a></li>
 </ul>			</nav>
 						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-3fef000" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2316 current_page_item menu-item-5375"><a href="/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+				<ul id="menu-2-3fef000" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5375"><a href="/" class="elementor-item" tabindex="-1">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1164"><a href="/about/" class="elementor-item" tabindex="-1">About</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5683"><a href="/service/" class="elementor-item" tabindex="-1">Service</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item" tabindex="-1">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog"><a href="/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item" tabindex="-1">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active" tabindex="-1">Blog</a></li>
 </ul>			</nav>
 						</div>
 				</div>
@@ -1189,16 +1192,16 @@ discuss your project.
 				<div class="elementor-element elementor-element-3a85cbe elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="3a85cbe" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
 				<div class="elementor-widget-container">
 								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
-				<ul id="menu-1-3a85cbe" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2316 current_page_item menu-item-5375"><a href="/" aria-current="page" class="elementor-item elementor-item-active">Home</a></li>
+				<ul id="menu-1-3a85cbe" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5375"><a href="/" class="elementor-item">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1164"><a href="/about/" class="elementor-item">About</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5683"><a href="/service/" class="elementor-item">Service</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog"><a href="/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active">Blog</a></li>
 </ul>			</nav>
 						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-3a85cbe" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2316 current_page_item menu-item-5375"><a href="/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+				<ul id="menu-2-3a85cbe" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5375"><a href="/" class="elementor-item" tabindex="-1">Home</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1164"><a href="/about/" class="elementor-item" tabindex="-1">About</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5683"><a href="/service/" class="elementor-item" tabindex="-1">Service</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item" tabindex="-1">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog"><a href="/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5396"><a href="/portfolio/" class="elementor-item" tabindex="-1">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/blog/" class="elementor-item elementor-item-active" tabindex="-1">Blog</a></li>
 </ul>			</nav>
 						</div>
 				</div>
