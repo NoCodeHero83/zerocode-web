@@ -633,7 +633,8 @@ A1_SCHEMA = """<script type="application/ld+json">{
       "datePublished": "2026-04-25",
       "dateModified": "2026-04-25",
       "url": "https://zerocode.la/blog/eliminate-operational-bottlenecks/",
-      "mainEntityOfPage": "https://zerocode.la/blog/eliminate-operational-bottlenecks/"
+      "mainEntityOfPage": "https://zerocode.la/blog/eliminate-operational-bottlenecks/",
+      "image": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png", "width": 1200, "height": 630}
     },
     {
       "@type": "FAQPage",
@@ -847,7 +848,8 @@ A2_SCHEMA = """<script type="application/ld+json">{
       "datePublished": "2026-04-25",
       "dateModified": "2026-04-25",
       "url": "https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/",
-      "mainEntityOfPage": "https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/"
+      "mainEntityOfPage": "https://zerocode.la/blog/no-code-vs-low-code-vs-ai-assisted-development/",
+      "image": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png", "width": 1200, "height": 630}
     },
     {
       "@type": "FAQPage",
@@ -1091,7 +1093,8 @@ A3_SCHEMA = """<script type="application/ld+json">{
       "datePublished": "2026-04-25",
       "dateModified": "2026-04-25",
       "url": "https://zerocode.la/blog/web-app-development-cost-guide/",
-      "mainEntityOfPage": "https://zerocode.la/blog/web-app-development-cost-guide/"
+      "mainEntityOfPage": "https://zerocode.la/blog/web-app-development-cost-guide/",
+      "image": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png", "width": 1200, "height": 630}
     },
     {
       "@type": "FAQPage",
@@ -1318,7 +1321,8 @@ A4_SCHEMA = """<script type="application/ld+json">{
       "datePublished": "2026-04-25",
       "dateModified": "2026-04-25",
       "url": "https://zerocode.la/blog/replace-saas-tools-custom-software/",
-      "mainEntityOfPage": "https://zerocode.la/blog/replace-saas-tools-custom-software/"
+      "mainEntityOfPage": "https://zerocode.la/blog/replace-saas-tools-custom-software/",
+      "image": {"@type": "ImageObject", "url": "https://zerocode.la/images/ZEROCODE_Imagotipo-Horizontal-1.png", "width": 1200, "height": 630}
     },
     {
       "@type": "FAQPage",
