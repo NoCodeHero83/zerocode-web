@@ -53,7 +53,7 @@
     #zc-input-row { display:flex; padding:12px; gap:8px; background:#fff; border-top:1px solid #eee; }
     #zc-input {
       flex:1; border:1.5px solid #dde0f5; border-radius:24px; padding:10px 16px;
-      font-size:14px; outline:none; font-family:inherit; color:#1a1a2e;
+      font-size:16px; outline:none; font-family:inherit; color:#1a1a2e;
       transition:border-color .2s;
     }
     #zc-input:focus { border-color:#26277A; }

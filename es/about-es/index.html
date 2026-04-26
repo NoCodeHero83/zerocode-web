@@ -1722,25 +1722,13 @@ jQuery(document).ready(function($) {
 
 	
 </script>
-<!-- <script src="/js/mobile-menu.js" defer></script>
-<script src="/js/chatbot.js?v=10" defer></script> -->
+<script src="/js/mobile-menu.js" defer></script>
+<script src="/js/chatbot.js?v=10" defer></script>
 
 <script>
 jQuery(document).ready(function($) {
   $(document).on('click', '.read_more_toggle', function() {
     var teamBlock = $(this).closest('.bx_gra').find('.team_text');
-    var buttonText = $(this).find('.elementor-button-text');
-
-    if (teamBlock.hasClass('active')) {
-      teamBlock.removeClass('active');
-      buttonText.text('Read more');
-    } else {
-      teamBlock.addClass('active');
-      buttonText.text('Read less');
-    }
-  });
-	  $(document).on('click', '.read_more_toggle', function() {
-    var teamBlock = $(this).closest('.bx_gra_es').find('.team_text');
     var buttonText = $(this).find('.elementor-button-text');
 
     if (teamBlock.hasClass('active')) {
