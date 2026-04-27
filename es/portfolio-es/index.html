@@ -1313,6 +1313,9 @@ jQuery(document).ready(function($) {
   function go(page) {
     var all = items(), total = Math.ceil(all.length / PER_PAGE);
     cur = Math.max(1, Math.min(page, total));
+    /* Reveal section wrapper — elementor-invisible makes visibility:hidden inherit down to all cards */
+    var section = document.querySelector('.elementor-element-4f4dbdd4');
+    if (section) section.classList.remove('elementor-invisible');
     all.forEach(function(el, i) { var show = (i >= (cur-1)*PER_PAGE && i < cur*PER_PAGE); el.style.display = show ? '' : 'none'; if (show) el.querySelectorAll('.elementor-invisible').forEach(function(inv){ inv.classList.remove('elementor-invisible'); }); });
     var prev = document.getElementById('portfolio-prev');
     var next = document.getElementById('portfolio-next');
@@ -1320,6 +1323,7 @@ jQuery(document).ready(function($) {
     var pg2  = document.getElementById('portfolio-pg-2');
     if (prev) prev.style.visibility = cur === 1     ? 'hidden' : 'visible';
     if (next) next.style.visibility = cur === total ? 'hidden' : 'visible';
+    if (pg2) pg2.style.display = total > 1 ? '' : 'none';
     [pg1, pg2].forEach(function(el, i) {
       if (!el) return;
       var active = cur === i+1;
@@ -1334,10 +1338,10 @@ jQuery(document).ready(function($) {
 
 <style id="zc-grid-fix">
 .elementor-loop-container.elementor-grid .e-loop-item{min-width:0!important}
-.elementor-398 .elementor-element.elementor-element-35dcb02{width:100%!important}
-.elementor-398 .elementor-element.elementor-element-35dcb02>.elementor-widget-container{width:100%!important}
-.elementor-398 .elementor-element.elementor-element-35dcb02 .elementor-widget-container a{display:block!important;width:100%!important}
-.elementor-398 .elementor-element.elementor-element-35dcb02 img{display:block!important;width:100%!important;height:300px!important;object-fit:cover!important;object-position:top left!important;border-radius:20px 20px 0px 0px!important}
+.elementor-398 .elementor-element.elementor-element-35dcb02,.elementor-7760 .elementor-element.elementor-element-35dcb02{width:100%!important}
+.elementor-398 .elementor-element.elementor-element-35dcb02>.elementor-widget-container,.elementor-7760 .elementor-element.elementor-element-35dcb02>.elementor-widget-container{width:100%!important}
+.elementor-398 .elementor-element.elementor-element-35dcb02 .elementor-widget-container a,.elementor-7760 .elementor-element.elementor-element-35dcb02 .elementor-widget-container a{display:block!important;width:100%!important}
+.elementor-398 .elementor-element.elementor-element-35dcb02 img,.elementor-7760 .elementor-element.elementor-element-35dcb02 img{display:block!important;width:100%!important;height:300px!important;object-fit:cover!important;object-position:top left!important;border-radius:20px 20px 0px 0px!important}
 </style>
 </body>
 </html>
