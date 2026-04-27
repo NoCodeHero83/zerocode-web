@@ -79,7 +79,8 @@
       "WebFetch(domain:clutch.co)",
       "Bash(ls portfolio-item-*-es.html)",
       "Bash(ls -la es/portfolio/)",
-      "Bash(sort -k5 -rn)"
+      "Bash(sort -k5 -rn)",
+      "Bash(grep -E \"^[0-9]+\\\\.js$\")"
     ]
   }
 }
