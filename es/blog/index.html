@@ -304,17 +304,25 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
   </style>
 
 <style>
-  .blog-grid { max-width: 1100px; margin: 60px auto 100px; padding: 0 48px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
-  .blog-hero { max-width: 860px; margin: 56px auto 0; padding: 0 48px; }
-  .blog-hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px,4vw,52px); font-weight: 800; letter-spacing: -.03em; margin-bottom: 14px; }
-  .blog-hero p { color: rgba(255,255,255,.65); font-size: 18px; }
-  .blog-card { background: #0F172A; border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 28px 28px 24px; display: flex; flex-direction: column; text-decoration: none; transition: border-color .2s, transform .2s; }
-  .blog-card:hover { border-color: rgba(0,220,252,.4); transform: translateY(-3px); }
-  .blog-card .tag { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #00DCFC; margin-bottom: 12px; }
-  .blog-card h2 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; color: #fff; line-height: 1.4; margin-bottom: 12px; }
-  .blog-card p { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.6; flex: 1; margin-bottom: 16px; }
-  .blog-card .read { font-size: 12px; color: rgba(255,255,255,.35); }
-  @media(max-width:768px) { .blog-hero, .blog-grid { padding-left: 20px; padding-right: 20px; } }
+  /* Blog index hero (overrides article-style zc-hero above) */
+  .zc-hero { background: #000000; background-image: radial-gradient(ellipse at 50% 0%, rgba(38,39,122,0.6) 0%, transparent 60%); padding: 64px 48px 72px; text-align: center; color: #fff; max-width: none; margin: 0; }
+  .zc-hero .tag { display: inline-block; color: #00DCFC; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; border: 1px solid rgba(0,220,252,0.35); padding: 5px 16px; border-radius: 50px; margin-bottom: 28px; }
+  .zc-hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.5vw, 46px); font-weight: 700; line-height: 1.12; max-width: 860px; margin: 0 auto 22px; letter-spacing: -1.5px; }
+  .zc-hero .subtitle { font-family: 'Roboto Flex', sans-serif; font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.68); max-width: 660px; margin: 0 auto 32px; line-height: 1.7; }
+  /* Blog index grid */
+  .zc-blog-intro { max-width: 720px; margin: 0 auto; padding: 40px 24px 20px; text-align: center; }
+  .zc-blog-intro h2 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: #FFFFFF; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .zc-blog-intro p { font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.58); font-size: 18px; }
+  .zc-blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1160px; margin: 48px auto 40px; padding: 0 32px; }
+  .zc-blog-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; overflow: hidden; transition: transform .25s, border-color .25s, box-shadow .25s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+  .zc-blog-card:hover { transform: translateY(-5px); border-color: rgba(0,220,252,0.35); box-shadow: 0 16px 48px rgba(0,220,252,0.08); }
+  .zc-blog-card-top { background: #0A0F1E; padding: 32px 28px 24px; flex: 1; }
+  .zc-blog-card-top .cat { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: #00DCFC; margin-bottom: 14px; }
+  .zc-blog-card-top h2 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.45; color: #FFFFFF; }
+  .zc-blog-card-body { padding: 22px 28px 28px; }
+  .zc-blog-card-body p { font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(255,255,255,0.52); margin-bottom: 18px; line-height: 1.7; }
+  .zc-blog-card-body .read { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #00DCFC; letter-spacing: 0.05em; text-transform: uppercase; }
+  @media(max-width: 768px) { .zc-blog-grid { grid-template-columns: 1fr; padding: 0 20px; } .zc-hero { padding: 48px 20px 52px; } }
 </style>
 <link rel="icon" href="/images/LOGOFINAL.png" type="image/png">
 </head>
@@ -349,12 +357,14 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7848"><a href="/es/about-es/" class="elementor-item">Acerca de</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7847"><a href="/es/service-es/" class="elementor-item">Servicios</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7846"><a href="/es/portfolio-es/" class="elementor-item">Portafolio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/es/blog/" class="elementor-item elementor-item-active">Blog</a></li>
 </ul>			</nav>
 						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
 				<ul id="menu-2-fb0e069" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7836 current_page_item menu-item-7838"><a href="/es/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Inicio</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7848"><a href="/es/about-es/" class="elementor-item" tabindex="-1">Acerca de</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7847"><a href="/es/service-es/" class="elementor-item" tabindex="-1">Servicios</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7846"><a href="/es/portfolio-es/" class="elementor-item" tabindex="-1">Portafolio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/es/blog/" class="elementor-item elementor-item-active" tabindex="-1">Blog</a></li>
 </ul>			</nav>
 						</div>
 				</div>
@@ -387,35 +397,63 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
 					</div>
 				</div>
 				</div>
-<div class="blog-hero">
-  <h1>Blog</h1>
-  <p>Guías prácticas sobre desarrollo de software, operaciones y sistemas digitales que generan retorno real.</p>
+<div class="zc-hero">
+  <div class="tag">Recursos e Insights</div>
+  <h1>El Blog de Zerocode</h1>
+  <p class="subtitle">Guías prácticas sobre desarrollo de software asistido por IA, eficiencia operativa, migración de SaaS y sistemas digitales que escalan.</p>
 </div>
-<div class="blog-grid">
-  <a href="/es/blog/cuellos-de-botella-operativos/" class="blog-card">
-    <div class="tag">Operaciones</div>
-    <h2>Cómo Eliminar los Cuellos de Botella Operativos</h2>
-    <p>Las empresas con ingresos entre $1M y $50M pierden hasta un 30% de capacidad operativa por procesos manuales y herramientas SaaS que no escalan. Aprende cómo eliminarlo en 90 días.</p>
-    <div class="read">12 min de lectura</div>
+
+<div class="zc-blog-intro">
+  <h2>Artículos Recientes</h2>
+  <p>Creado por el equipo de ingeniería de Zerocode basado en proyectos y clientes reales.</p>
+</div>
+
+<div class="zc-blog-grid">
+
+  <a href="/es/blog/cuellos-de-botella-operativos/" class="zc-blog-card">
+    <div class="zc-blog-card-top">
+      <div class="cat">Operaciones &amp; Software</div>
+      <h2>Cómo Eliminar los Cuellos de Botella Operativos con Software Personalizado</h2>
+    </div>
+    <div class="zc-blog-card-body">
+      <p>Las empresas con ingresos entre $1M y $50M pierden hasta un 30% de capacidad operativa por procesos manuales y herramientas SaaS que no escalan. Aprende cómo eliminarlo en 90 días.</p>
+      <span class="read">Leer artículo ›</span>
+    </div>
   </a>
-  <a href="/es/blog/no-code-vs-low-code-vs-desarrollo-asistido-ia/" class="blog-card">
-    <div class="tag">Tecnología</div>
-    <h2>No-Code vs Low-Code vs Desarrollo Asistido por IA</h2>
-    <p>Comparativa completa: velocidad, costo, propiedad del código y escalabilidad. Con un marco de decisión para elegir el enfoque correcto para tu negocio.</p>
-    <div class="read">10 min de lectura</div>
+
+  <a href="/es/blog/no-code-vs-low-code-vs-desarrollo-asistido-ia/" class="zc-blog-card">
+    <div class="zc-blog-card-top">
+      <div class="cat">Enfoques de Desarrollo</div>
+      <h2>No-Code vs Low-Code vs Desarrollo Asistido por IA</h2>
+    </div>
+    <div class="zc-blog-card-body">
+      <p>Comparativa completa: velocidad, costo, propiedad del código y escalabilidad. Con un marco de decisión para elegir el enfoque correcto para tu negocio.</p>
+      <span class="read">Leer artículo ›</span>
+    </div>
   </a>
-  <a href="/es/blog/guia-costos-desarrollo-aplicaciones-web/" class="blog-card">
-    <div class="tag">Costos</div>
-    <h2>Guía de Costos de Desarrollo de Aplicaciones Web 2026</h2>
-    <p>Desglose completo de costos: rangos por tipo de aplicación, factores que afectan el precio, costos ocultos y cómo calcular el ROI antes de construir.</p>
-    <div class="read">11 min de lectura</div>
+
+  <a href="/es/blog/guia-costos-desarrollo-aplicaciones-web/" class="zc-blog-card">
+    <div class="zc-blog-card-top">
+      <div class="cat">Costos y Planificación</div>
+      <h2>Guía de Costos de Desarrollo de Aplicaciones Web 2026</h2>
+    </div>
+    <div class="zc-blog-card-body">
+      <p>Desglose completo de costos: rangos por tipo de aplicación, factores que afectan el precio, costos ocultos y cómo calcular el ROI antes de construir.</p>
+      <span class="read">Leer artículo ›</span>
+    </div>
   </a>
-  <a href="/es/blog/reemplazar-saas-con-software-personalizado/" class="blog-card">
-    <div class="tag">Estrategia</div>
-    <h2>Cómo Reemplazar Herramientas SaaS con Software Propio</h2>
-    <p>Cuándo dejar de pagar por SaaS, cómo calcular el caso financiero y cómo migrar sin interrumpir las operaciones ni afectar a los clientes.</p>
-    <div class="read">9 min de lectura</div>
+
+  <a href="/es/blog/reemplazar-saas-con-software-personalizado/" class="zc-blog-card">
+    <div class="zc-blog-card-top">
+      <div class="cat">Migración SaaS &amp; Propiedad</div>
+      <h2>Cómo Reemplazar Herramientas SaaS con Software Propio</h2>
+    </div>
+    <div class="zc-blog-card-body">
+      <p>Cuándo dejar de pagar por SaaS, cómo calcular el caso financiero y cómo migrar sin interrumpir las operaciones ni afectar a los clientes.</p>
+      <span class="read">Leer artículo ›</span>
+    </div>
   </a>
+
 </div>
 <div data-elementor-type="footer" data-elementor-id="6445" class="elementor elementor-6445 elementor-location-footer" data-elementor-post-type="elementor_library">
 			<div class="elementor-element elementor-element-dab233d ftr_cnt_sec e-flex e-con-boxed e-con e-parent" data-id="dab233d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -609,12 +647,14 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7848"><a href="/es/about-es/" class="elementor-item">Acerca de</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7847"><a href="/es/service-es/" class="elementor-item">Servicios</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7846"><a href="/es/portfolio-es/" class="elementor-item">Portafolio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/es/blog/" class="elementor-item elementor-item-active">Blog</a></li>
 </ul>			</nav>
 						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
 				<ul id="menu-2-3fef000" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7836 current_page_item menu-item-7838"><a href="/es/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Inicio</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7848"><a href="/es/about-es/" class="elementor-item" tabindex="-1">Acerca de</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7847"><a href="/es/service-es/" class="elementor-item" tabindex="-1">Servicios</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7846"><a href="/es/portfolio-es/" class="elementor-item" tabindex="-1">Portafolio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/es/blog/" class="elementor-item elementor-item-active" tabindex="-1">Blog</a></li>
 </ul>			</nav>
 						</div>
 				</div>
@@ -767,12 +807,14 @@ background: -webkit-linear-gradient(left, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7848"><a href="/es/about-es/" class="elementor-item">Acerca de</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7847"><a href="/es/service-es/" class="elementor-item">Servicios</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7846"><a href="/es/portfolio-es/" class="elementor-item">Portafolio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/es/blog/" class="elementor-item elementor-item-active">Blog</a></li>
 </ul>			</nav>
 						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
 				<ul id="menu-2-3a85cbe" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7836 current_page_item menu-item-7838"><a href="/es/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Inicio</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7848"><a href="/es/about-es/" class="elementor-item" tabindex="-1">Acerca de</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7847"><a href="/es/service-es/" class="elementor-item" tabindex="-1">Servicios</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7846"><a href="/es/portfolio-es/" class="elementor-item" tabindex="-1">Portafolio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item current_page_item"><a href="/es/blog/" class="elementor-item elementor-item-active" tabindex="-1">Blog</a></li>
 </ul>			</nav>
 						</div>
 				</div>
