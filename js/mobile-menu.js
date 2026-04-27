@@ -11,6 +11,11 @@
  *   Font Awesome webfonts (/webfonts/) were not exported from WordPress.
  *   Render the chevron via a Unicode triangle that still flips correctly
  *   with the cpel-switcher's rotateX open/close animation.
+ *
+ * Fix 3: Elementor-invisible fallback
+ *   On mobile, Elementor's scroll-animation IntersectionObserver can miss
+ *   elements (e.g. loop-grid portfolio cards). We run a second observer so
+ *   visibility:hidden is removed as soon as each element enters the viewport.
  */
 (function () {
   'use strict';
@@ -28,15 +33,33 @@
     '}';
   document.head.appendChild(chevStyle);
 
-  /* ── 2. Mobile overlay (built from scratch — no Elementor popup) ─────── */
+  /* ── 2. elementor-invisible fallback (mobile only) ───────────────────── */
+  document.addEventListener('DOMContentLoaded', function () {
+    if ('IntersectionObserver' in window && window.matchMedia('(max-width:1024px)').matches) {
+      var revealObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.remove('elementor-invisible');
+            revealObs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.01 });
+
+      document.querySelectorAll('.elementor-invisible').forEach(function (el) {
+        revealObs.observe(el);
+      });
+    }
+  });
+
+  /* ── 3. Mobile overlay (built from scratch — no Elementor popup) ─────── */
   document.addEventListener('DOMContentLoaded', function () {
 
     /* Hamburger: any link that triggers an Elementor popup open action */
     var hamburger = document.querySelector('a[href*="popup%3Aopen"]');
     if (!hamburger) return;
 
-    var isEs     = document.documentElement.lang.startsWith('es');
-    var isOpen   = false;
+    var isEs   = document.documentElement.lang.startsWith('es');
+    var isOpen = false;
 
     /* ── Build overlay ─────────────────────────────────────────────────── */
     var overlay = document.createElement('div');
@@ -58,7 +81,7 @@
       '#zc-mobile-menu ul a{' +
         'display:block;color:#fff;text-decoration:none;' +
         'font-family:"Space Grotesk","Helvetica Neue",system-ui,sans-serif;' +
-        'font-size:24px;font-weight:600;letter-spacing:-0.3px;padding:14px 0;' +
+        'font-size:22px;font-weight:600;letter-spacing:-0.3px;padding:14px 0;' +
       '}' +
       '#zc-mobile-menu ul .current-menu-item>a,' +
       '#zc-mobile-menu ul .current_page_item>a{color:#00DCFC}' +
@@ -69,7 +92,18 @@
         'z-index:100001;padding:6px 10px;line-height:1;' +
       '}' +
       '#zc-mobile-close:hover{color:#fff}' +
-      '#zc-mobile-menu .zc-mob-lang{margin-top:32px}' +
+      '#zc-mobile-menu .zc-mob-lang{margin-top:32px;border-top:1px solid rgba(255,255,255,0.07);padding-top:24px}' +
+      /* Normalize language-switcher text sizes inside the overlay */
+      '#zc-mobile-menu .zc-mob-lang a{' +
+        'display:inline-flex;align-items:center;gap:6px;' +
+        'color:rgba(255,255,255,0.7);text-decoration:none;' +
+        'font-family:"Space Grotesk","Helvetica Neue",system-ui,sans-serif;' +
+        'font-size:14px!important;font-weight:500;padding:4px 0;' +
+      '}' +
+      '#zc-mobile-menu .zc-mob-lang .cpel-switcher__code{font-size:14px!important;font-weight:600}' +
+      '#zc-mobile-menu .zc-mob-lang .cpel-switcher__flag img{width:21px;height:15px;vertical-align:middle}' +
+      '#zc-mobile-menu .zc-mob-lang .cpel-switcher__list{list-style:none;margin:4px 0 0;padding:0}' +
+      '#zc-mobile-menu .zc-mob-lang .cpel-switcher__toggle{display:block}' +
       '#zc-mobile-menu .zc-mob-cta{' +
         'display:inline-block;margin-top:36px;' +
         'background:#00DCFC;color:#000;font-weight:700;' +
@@ -102,6 +136,42 @@
       ul.querySelectorAll('[tabindex]').forEach(function (el) {
         el.removeAttribute('tabindex');
       });
+
+      /* ── URL-based active state ─────────────────────────────────────── */
+      /* Clear whatever WordPress stamped into the HTML and re-derive from
+         the actual current URL so the right item is always highlighted. */
+      ul.querySelectorAll('li').forEach(function (li) {
+        li.classList.remove('current-menu-item', 'current_page_item');
+      });
+      ul.querySelectorAll('a').forEach(function (a) {
+        a.classList.remove('elementor-item-active');
+        a.removeAttribute('aria-current');
+      });
+
+      var curPath = window.location.pathname.replace(/\/$/, '') || '/';
+      var bestLink = null;
+      var bestLen  = 0;
+
+      ul.querySelectorAll('a[href]').forEach(function (a) {
+        try {
+          var linkPath = new URL(a.href, window.location.origin).pathname.replace(/\/$/, '') || '/';
+          /* Home ("/") should only win for the exact root path */
+          if (linkPath === '/') {
+            if (curPath === '/' && bestLen === 0) { bestLink = a; bestLen = 1; }
+          } else if ((curPath + '/').startsWith(linkPath + '/') && linkPath.length > bestLen) {
+            bestLink = a;
+            bestLen  = linkPath.length;
+          }
+        } catch (e) {}
+      });
+
+      if (bestLink) {
+        bestLink.classList.add('elementor-item-active');
+        bestLink.setAttribute('aria-current', 'page');
+        var parentLi = bestLink.closest('li');
+        if (parentLi) parentLi.classList.add('current-menu-item', 'current_page_item');
+      }
+
       overlay.appendChild(ul);
     }
 
@@ -115,8 +185,8 @@
     }
 
     /* CTA button */
-    var cta     = document.createElement('a');
-    cta.href    = isEs ? '/es/contact-es/' : '/contact/';
+    var cta       = document.createElement('a');
+    cta.href      = isEs ? '/es/contact-es/' : '/contact/';
     cta.className = 'zc-mob-cta';
     cta.textContent = isEs ? 'Agenda una Llamada' : 'Schedule a Call';
     overlay.appendChild(cta);
