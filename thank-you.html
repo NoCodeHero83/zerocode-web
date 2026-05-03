@@ -198,6 +198,46 @@
   }
 }
 </style>
+<!-- Meta Pixel: set META_PIXEL_ID to your numeric Pixel ID (must match Vercel env META_PIXEL_ID). Also update noscript img id below. -->
+<script>
+(function () {
+  var META_PIXEL_ID = 'REPLACE_META_PIXEL_ID';
+  if (typeof window === 'undefined') return;
+  if (META_PIXEL_ID === 'REPLACE_META_PIXEL_ID' || !META_PIXEL_ID) {
+    if (typeof console !== 'undefined' && console.warn) {
+      console.warn('Meta Pixel: set META_PIXEL_ID in thank-you.html (same as Vercel META_PIXEL_ID).');
+    }
+    return;
+  }
+  if (window.fbq) return;
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', META_PIXEL_ID);
+  fbq('track', 'PageView');
+})();
+</script>
+<noscript
+  ><img
+    height="1"
+    width="1"
+    style="display: none"
+    alt=""
+    src="https://www.facebook.com/tr?id=REPLACE_META_PIXEL_ID&amp;ev=PageView&amp;noscript=1"
+/></noscript>
 </head>
 <body>
 <!-- #zc-h1-start --><h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Thank You | Zerocode Will Be in Touch Within 24 Hours</h1><!-- #zc-h1-end -->
@@ -309,5 +349,44 @@
 
 <script src="/js/mobile-menu.js" defer></script>
 <script src="/js/chatbot.js?v=10" defer></script>
+<script>
+(function () {
+  var done = false;
+  function runScheduleConversion() {
+    if (done) return;
+    done = true;
+    var event_id = Date.now().toString();
+    var fbpRow = document.cookie
+      .split('; ')
+      .find(function (row) {
+        return row.startsWith('_fbp=');
+      });
+    var fbp = fbpRow ? fbpRow.slice('_fbp='.length) : undefined;
+    console.log('Schedule event fired');
+    console.log(event_id);
+    console.log('fbp:', fbp != null ? fbp : '(no _fbp cookie)');
+    if (typeof fbq === 'function') {
+      fbq('track', 'Schedule', {}, { eventID: event_id });
+    }
+    fetch('/api/meta-event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ event_id: event_id, fbp: fbp }),
+    })
+      .then(function () {
+        console.log('CAPI request sent');
+        console.log(fbp ? 'fbp included in CAPI POST' : 'fbp not sent (no cookie)');
+      })
+      .catch(function (err) {
+        console.error('CAPI request failed', err);
+      });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runScheduleConversion);
+  } else {
+    runScheduleConversion();
+  }
+})();
+</script>
 </body>
 </html>
