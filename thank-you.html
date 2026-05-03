@@ -336,35 +336,48 @@
 <script>
 (function () {
   var done = false;
+
   function runScheduleConversion() {
     if (done) return;
     done = true;
+
     var event_id = Date.now().toString();
+
     var fbpRow = document.cookie
       .split('; ')
       .find(function (row) {
         return row.startsWith('_fbp=');
       });
+
     var fbp = fbpRow ? fbpRow.slice('_fbp='.length) : undefined;
+
     console.log('Schedule event fired');
     console.log(event_id);
     console.log('fbp:', fbp != null ? fbp : '(no _fbp cookie)');
+
     if (typeof fbq === 'function') {
       fbq('track', 'Schedule', {}, { eventID: event_id });
     }
+
+    console.log('About to send CAPI request');
+
     fetch('/api/meta-event', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ event_id: event_id, fbp: fbp }),
     })
-      .then(function () {
-        console.log('CAPI request sent');
-        console.log(fbp ? 'fbp included in CAPI POST' : 'fbp not sent (no cookie)');
+      .then(function (res) {
+        console.log('CAPI status:', res.status);
+        return res.text();
+      })
+      .then(function (data) {
+        console.log('CAPI response:', data);
       })
       .catch(function (err) {
         console.error('CAPI request failed', err);
       });
   }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', runScheduleConversion);
   } else {
