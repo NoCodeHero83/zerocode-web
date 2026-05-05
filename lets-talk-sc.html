@@ -764,6 +764,8 @@ body{font-family:'Inter',sans-serif;}
 </style>
 <link rel="preconnect" href="https://assets.calendly.com">
 <link rel="preconnect" href="https://calendly.com">
+<link rel="dns-prefetch" href="https://assets.calendly.com">
+<link rel="dns-prefetch" href="https://calendly.com">
 </head>
 <body class="wp-singular page-template-default page page-id-6427 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-6427">
 
@@ -3575,31 +3577,21 @@ html, body { margin: 0 !important; padding: 0 !important; }
 <!-- Calendly deferred loader -->
 <script>
 (function(){
-  function loadCal(){
-    if(window._zcCal) return; 
-    window._zcCal=true;
+  var s=document.createElement('script');
+  s.src='https://assets.calendly.com/assets/external/widget.js';
+  s.async=true;
 
-    var s=document.createElement('script');
-    s.src='https://assets.calendly.com/assets/external/widget.js';
+  document.head.appendChild(s);
 
-    s.onload=function(){
-      Calendly.initInlineWidget({
-        url: 'https://calendly.com/andres-diaz-/discoverycall',
-        parentElement: document.getElementById('calendly-target')
-      });
+  s.onload=function(){
+    Calendly.initInlineWidget({
+      url: 'https://calendly.com/andres-diaz-/discoverycall',
+      parentElement: document.getElementById('calendly-target')
+    });
 
-      var sk=document.getElementById('zc-cal-skel');
-      if(sk) sk.style.display='none';
-    };
-
-    document.head.appendChild(s);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadCal);
-  } else {
-    loadCal();
-  }
+    var sk=document.getElementById('zc-cal-skel');
+    if(sk) sk.style.display='none';
+  };
 })();
 </script>
 </body>
