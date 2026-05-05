@@ -762,6 +762,8 @@ body{font-family:'Inter',sans-serif;}
             font-size: 18px !important;
         }
 </style>
+<link rel="preconnect" href="https://assets.calendly.com">
+<link rel="preconnect" href="https://calendly.com">
 </head>
 <body class="wp-singular page-template-default page page-id-6427 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-6427">
 
@@ -3593,14 +3595,11 @@ html, body { margin: 0 !important; padding: 0 !important; }
     document.head.appendChild(s);
   }
 
-  var observer = new IntersectionObserver(function(entries){
-    if(entries[0].isIntersecting){
-      loadCal();
-      observer.disconnect();
-    }
-  });
-
-  observer.observe(document.getElementById('calendario'));
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadCal);
+  } else {
+    loadCal();
+  }
 })();
 </script>
 </body>
