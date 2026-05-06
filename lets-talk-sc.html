@@ -682,6 +682,17 @@ body{font-family:'Inter',sans-serif;}
 /* Trust section spacing */
 .zc-sc-trust-section .e-con-inner{padding-top:24px;padding-bottom:24px;}
 
+/* ===== Mobile: Calendly inline widget ===== */
+@media (max-width: 768px) {
+  .calendly-inline-widget {
+    min-width: 100% !important;
+    width: 100% !important;
+    min-height: 850px !important;
+    height: 850px !important;
+    overflow: visible !important;
+  }
+}
+
 /* ===== Mobile: portfolio images ===== */
 @media (max-width: 768px) {
   .portfolio-item img, .portfolio-card img, [class*="portfolio"] img {
@@ -690,6 +701,35 @@ body{font-family:'Inter',sans-serif;}
     max-width: 100%;
     display: block;
     object-fit: cover;
+  }
+}
+
+/* ===== Mobile: portfolio grid items ===== */
+@media (max-width: 768px) {
+  /* Portfolio grid - stack items but keep them looking good */
+  .elementor-posts-container .elementor-post,
+  [class*="portfolio"] .elementor-post,
+  .e-loop-item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Portfolio images - full width, fixed height like desktop */
+  .elementor-posts-container img,
+  [class*="portfolio"] img,
+  .elementor-post__thumbnail img,
+  .e-loop-item img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* Portfolio card thumbnail wrapper */
+  .elementor-post__thumbnail,
+  [class*="thumbnail"] {
+    overflow: hidden;
+    width: 100%;
   }
 }
 
@@ -789,8 +829,22 @@ body{font-family:'Inter',sans-serif;}
 <link rel="preconnect" href="https://calendly.com">
 <link rel="dns-prefetch" href="https://assets.calendly.com">
 <link rel="dns-prefetch" href="https://calendly.com">
+<!-- Principio del widget de globo de Calendly -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Final del widget de globo de Calendly -->
+<style>
+#zc-hero-sub .elementor-heading-title {
+    text-transform: none !important;
+}
+
+@media (max-width: 767px) {
+    #zc-hero-sub .elementor-heading-title {
+        font-size: 18px !important;
+        line-height: 1.4;
+    }
+}
+</style>
 </head>
 <body class="wp-singular page-template-default page page-id-6427 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-6427">
 
@@ -866,7 +920,7 @@ body{font-family:'Inter',sans-serif;}
 				<div class="elementor-element elementor-element-d58228d elementor-widget__width-inherit elementor-widget elementor-widget-html" data-id="d58228d" data-element_type="widget" id="calendario" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 					<!-- Principio del widget integrado de Calendly -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/andres-diaz-/discoverycall?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+<div class="calendly-inline-widget" data-url="https://calendly.com/andres-diaz-/discoverycall?hide_gdpr_banner=1" style="min-width:320px;height:850px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Final del widget integrado de Calendly -->				</div>
 				</div>
@@ -1380,27 +1434,27 @@ body{font-family:'Inter',sans-serif;}
 							<div>
 
 <p style="font-size: 18px;">
-Andrés, el fundador, tiene 15 años en la industria — 6 desarrollando software corporativo de gran escala en multinacionales. El equipo que va a construir tu plataforma no está aprendiendo con tu proyecto.
+<span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Andrés, el fundador, tiene 15 años en la industria, 6 desarrollando software corporativo de gran escala en multinacionales. El equipo que va a construir tu plataforma no está aprendiendo con tu proyecto.
 </p>
 
 <p style="font-size: 18px;">
-8 especialistas, casi todos ingenieros senior, distribuidos en Latinoamérica. Cada proyecto tiene un PM dedicado como tu único punto de contacto.
+<span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> 8 especialistas, casi todos ingenieros senior, distribuidos en Latinoamérica. Cada proyecto tiene un PM dedicado como tu único punto de contacto.
 </p>
 
 <p style="font-size: 18px;">
-• Stack tecnológico de nivel enterprise: React, Next.js, Flutter y PostgreSQL acelerado con las herramientas de IA más avanzadas del mercado.
+<span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Stack tecnológico de nivel enterprise: React, Next.js, Flutter y PostgreSQL acelerado con las herramientas de IA más avanzadas del mercado.
 </p>
 
 <p style="font-size: 18px;">
-• Clientes en Chile, Argentina, Colombia, Paraguay, Reino Unido y México. El modelo remoto no es una limitación — es cómo operamos desde el primer día.
+<span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Clientes en Chile, Argentina, Colombia, Paraguay, Reino Unido y México. El modelo remoto no es una limitación — es cómo operamos desde el primer día.
 </p>
 
 <p style="font-size: 18px;">
-• Comunicación directa 24/7. Sin esperar actualizaciones, sin intermediarios.
+<span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Comunicación directa 24/7. Sin esperar actualizaciones, sin intermediarios.
 </p>
 
 <p style="font-size: 18px;">
-• Checkpoints semanales con entregables visibles. Siempre sabés exactamente en qué punto está tu proyecto.
+<span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Checkpoints semanales con entregables visibles. Siempre sabés exactamente en qué punto está tu proyecto.
 </p>
 
 </div>						</div>
@@ -3187,6 +3241,7 @@ font-weight: 400;
   .elementor-element-zc-hero-sub .elementor-heading-title {
     font-size: 22px !important;
     line-height: 1.45 !important;
+    text-transform: none !important;
   }
   /* Pain section h2 */
   .elementor-element-8098258 .elementor-heading-title {
@@ -3225,6 +3280,8 @@ font-weight: 400;
   .elementor-element-4c43028 p,
   .elementor-element-zc-trust-list p {
     font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
   }
 }
 
@@ -3237,8 +3294,9 @@ font-weight: 400;
     letter-spacing: 0 !important;
   }
   .elementor-element-zc-hero-sub .elementor-heading-title {
-    font-size: 14px !important;
-    line-height: 1.45 !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    text-transform: none !important;
   }
   /* Pain h2 */
   .elementor-element-8098258 .elementor-heading-title {
@@ -3276,6 +3334,8 @@ font-weight: 400;
   .elementor-element-4c43028 p,
   .elementor-element-zc-trust-list p {
     font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
   }
 }
 
@@ -3417,12 +3477,34 @@ font-weight: 400;
     width: 100% !important;
     max-width: 100% !important;
   }
-  /* Portfolio image: full width cover */
+  /* Portfolio image container: full width, no clipping */
+  .elementor-7760 .elementor-element.elementor-element-fda0c1a {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-dfaddb0 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
+    width: 100% !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+  /* Portfolio image: full width cover, tall enough to be clearly visible */
   .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
     object-fit: cover !important;
+    object-position: center !important;
     width: 100% !important;
-    height: 180px !important;
+    max-width: 100% !important;
+    height: 200px !important;
     display: block !important;
+    border-radius: 20px 20px 0 0 !important;
   }
   /* Portfolio text: centered on mobile */
   .elementor-7760 .elementor-element.elementor-element-06982da {
