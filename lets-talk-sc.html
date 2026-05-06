@@ -975,7 +975,10 @@ body{font-family:'Inter',sans-serif;}
 }
 
 .elementor-element-dc97373 {
-  gap: 0 !important;
+  gap: 24px !important;
+  --gap: 24px !important;
+  --row-gap: 24px !important;
+  --column-gap: 24px !important;
 }
 </style>
 </head>
@@ -1539,27 +1542,27 @@ body{font-family:'Inter',sans-serif;}
 				<div class="elementor-widget-container">
 							<div>
 
-<p class="spacing" style="font-size: 18px;">
+<p class="spacing" style="font-size: 18px; margin-bottom: 1.4em;">
 <span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Andrés, el fundador, tiene 15 años en la industria, 6 desarrollando software corporativo de gran escala en multinacionales. El equipo que va a construir tu plataforma no está aprendiendo con tu proyecto.
 </p>
 
-<p class="spacing" style="font-size: 18px;">
+<p class="spacing" style="font-size: 18px; margin-bottom: 1.4em;">
 <span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> 8 especialistas senior en Latinoamérica. Cada proyecto tiene un PM dedicado como tu único punto de contacto.
 </p>
 
-<p class="spacing" style="font-size: 18px;">
-<span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Stack de nivel enterprise: React,  Next.js,  Flutter y PostgreSQL,  potenciado con las herramientas de IA más avanzadas
+<p class="spacing" style="font-size: 18px; margin-bottom: 1.4em;">
+<span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Stack de nivel enterprise: React, Next.js, Flutter y PostgreSQL, potenciado con las herramientas de IA más avanzadas
 </p>
 
-<p class="spacing" style="font-size: 18px;">
+<p class="spacing" style="font-size: 18px; margin-bottom: 1.4em;">
 <span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Clientes en Chile, Argentina, Colombia, Paraguay, Reino Unido y México. El modelo remoto no es una limitación, es nuestro estándar.
 </p>
 
-<p class="spacing" style="font-size: 18px;">
+<p class="spacing" style="font-size: 18px; margin-bottom: 1.4em;">
 <span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Comunicación directa 24/7. Sin esperar actualizaciones ni intermediarios.
 </p>
 
-<p class="spacing" style="font-size: 18px;">
+<p class="spacing" style="font-size: 18px; margin-bottom: 0;">
 <span style="display:inline-block;width:10px;height:10px;background:#1e6bff;transform:rotate(45deg);margin-right:8px;position:relative;top:-1px;"></span> Checkpoints semanales con entregables visibles. Siempre sabes en qué punto está tu proyecto.
 </p>
 
@@ -3574,51 +3577,46 @@ font-weight: 400;
     grid-template-columns: 1fr !important;
     justify-items: center !important;
   }
-  /* Portfolio card: full width on mobile */
+  /* Portfolio cards: full width, column layout (image on top, text below) */
   .elementor-7760 .elementor-element.elementor-element-a1878cc {
+    --width: 100% !important;
+    --flex-direction: column !important;
     width: 100% !important;
     max-width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
   }
-  /* Portfolio image container: full width, no clipping */
+  /* Image wrapper: stretch overrides align-self:flex-start that collapses landscape images */
   .elementor-7760 .elementor-element.elementor-element-fda0c1a {
+    --width: 100% !important;
+    --align-self: stretch !important;
     width: 100% !important;
     max-width: 100% !important;
+    align-self: stretch !important;
+    flex-shrink: 0 !important;
   }
-  .elementor-7760 .elementor-element.elementor-element-dfaddb0 {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: visible !important;
-  }
+  /* Inner containers: full width chain */
+  .elementor-7760 .elementor-element.elementor-element-dfaddb0,
+  .elementor-7760 .elementor-element.elementor-element-35dcb02,
   .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
     width: 100% !important;
-    overflow: visible !important;
-    padding: 0 !important;
-  }
-  /* Portfolio image: full width cover, tall enough to be clearly visible */
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
-    object-fit: cover !important;
-    object-position: center !important;
-    width: 100% !important;
     max-width: 100% !important;
-    height: 200px !important;
+  }
+  /* Anchor: block so img width:100% resolves against the block container */
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 a {
     display: block !important;
+    width: 100% !important;
+    overflow: hidden !important;
     border-radius: 20px 20px 0 0 !important;
   }
-  /* Portfolio text: centered on mobile */
-  .elementor-7760 .elementor-element.elementor-element-06982da {
-    text-align: center !important;
-    --justify-content: center !important;
-    justify-content: center !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-b28bccb {
-    text-align: center !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-6780e9c {
-    text-align: center !important;
+  /* Image: fill card width, consistent 220px crop */
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
+    display: block !important;
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 0 !important;
   }
 }
 
