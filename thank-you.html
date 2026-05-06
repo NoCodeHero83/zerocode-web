@@ -115,20 +115,26 @@
       color: rgba(255,255,255,0.75);
     }
 
-    .site-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 40px;
-      font-size: 14px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.45);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-    .site-link:hover { color: #00DCFC; }
-    .site-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+.site-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-size: 20px; /* bigger */
+  font-weight: 700; /* stronger */
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s, transform 0.2s;
+}
+.site-link:hover { 
+  color: #00DCFC; 
+  transform: translateY(-2px);
+}
+.site-link svg { 
+  width: 18px; 
+  height: 18px; 
+}
 
     .logo {
       display: block;
@@ -320,7 +326,7 @@
 
     <h1>¡La reunión ya fue programada!</h1>
 
-    <p>Tu reunión ya está confirmada y en camino te llega un correo con todos los detalles y el enlace de acceso.</p>
+    <p>Tu reunión ya está confirmada y en unos momentos te llega un correo con todos los detalles y el enlace de acceso.</p>
 
     <a class="site-link" href="https://zerocode.la" target="_blank" rel="noopener">
       <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
