@@ -931,35 +931,31 @@ body{font-family:'Inter',sans-serif;}
   margin-bottom: 16px;
 }
 
-/* === STEP SYSTEM FIX (1, 2, 3 centrados arriba de cada sección) === */
 
-/* Cada bloque de step */
-.elementor-widget-heading {
-  text-align: center !important;
-}
+/* === FORCE CENTER STEP HEADINGS (1, 2, 3) === */
 
-/* Número (1, 2, 3) */
-.elementor-widget-heading h2,
-.elementor-widget-heading h2.elementor-heading-title {
-  display: block !important;
-  margin: 0 auto 8px auto !important;
-  text-align: center !important;
-  line-height: 1 !important;
-  font-weight: 700 !important;
-}
-
-/* Título debajo del número */
-.elementor-widget-heading + .elementor-widget-heading {
-  margin-top: 0 !important;
-}
-
-/* Fuerza que cada bloque se comporte como columna centrada */
+/* Forzar cada bloque a ser columna centrada */
 .elementor-element {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   text-align: center !important;
 }
 
-/* Evita que Elementor alinee a la izquierda por columnas internas */
-.e-con-inner {
+/* Número */
+.elementor-heading-title {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 0 8px 0 !important;
+  line-height: 1 !important;
+  display: block !important;
+}
+
+/* Evitar que containers de Elementor empujen a la izquierda */
+.e-con-inner,
+.elementor-widget-container {
+  display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
 }
 </style>
