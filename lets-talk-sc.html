@@ -933,28 +933,37 @@ body{font-family:'Inter',sans-serif;}
 
 
 
-/* === FIX ONLY STEP NUMBERS (1, 2, 3) === */
 
-/* target ONLY headings inside step blocks */
-.elementor-widget-heading .elementor-heading-title {
+/* === SAFE STEP GRID FIX (DO NOT BREAK ELEMENTOR LAYOUT) === */
+
+/* KEEP GRID INTACT */
+.elementor-section .e-con-inner {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 40px;
+}
+
+/* MOBILE STACK */
+@media (max-width: 767px) {
+  .elementor-section .e-con-inner {
+    flex-direction: column !important;
+  }
+}
+
+/* NUMBER (ONLY FIX VISUAL) */
+.elementor-heading-title {
   display: block !important;
   text-align: center !important;
   width: 100% !important;
-  margin: 0 0 8px 0 !important;
   line-height: 1 !important;
+  margin: 0 0 10px 0 !important;
 }
 
-/* ensure number is ABOVE title visually */
+/* ENSURE TEXT UNDER NUMBER STAYS CENTERED */
 .elementor-widget-heading {
   text-align: center !important;
-}
-
-/* safety: do NOT touch layout containers */
-.elementor-element,
-.e-con-inner,
-.elementor-widget-container {
-  display: unset !important;
-  align-items: unset !important;
 }
 </style>
 </head>
