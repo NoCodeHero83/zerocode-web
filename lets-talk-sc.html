@@ -744,6 +744,28 @@ body{font-family:'Inter',sans-serif;}
     padding-right: 8px;
   }
 }
+
+/* === Global paragraph typography === */
+/* Reference: .elementor-element-dd6dc4a — "Pierdes dinero..." bullet list */
+/* Desktop: font-family "Open Sans", font-size 22px, font-weight 500 */
+.elementor-widget-text-editor p,
+.elementor-text-editor p,
+.elementor-element p,
+.elementor-widget-container p {
+  font-family: "Open Sans", Sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+}
+
+/* Mobile (≤1024px): font-size reduces to 16px, matching the reference element's mobile override */
+@media (max-width: 1024px) {
+  .elementor-widget-text-editor p,
+  .elementor-text-editor p,
+  .elementor-element p,
+  .elementor-widget-container p {
+    font-size: 16px !important;
+  }
+}
 </style>
 <style>
 /* ===== FIX: "Mira cómo lo construimos" heading ===== */
@@ -844,6 +866,7 @@ body{font-family:'Inter',sans-serif;}
 <!-- Principio del widget de globo de Calendly -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/andres-diaz-/discoverycall?hide_gdpr_banner=1', text: 'Programe una reunión conmigo', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
 <!-- Final del widget de globo de Calendly -->
 <style>
 .elementor-element-zc-hero-sub .elementor-heading-title {
@@ -861,7 +884,7 @@ body{font-family:'Inter',sans-serif;}
 .elementor-element-zc-hero-sub .elementor-heading-title {
     text-transform: none !important;
     letter-spacing: normal !important;
-    font-size: 20px; /* optional: stronger hero */
+    font-size: 22px; /* optional: stronger hero */
     line-height: 1.5;
 }
 
@@ -872,7 +895,43 @@ body{font-family:'Inter',sans-serif;}
         letter-spacing: normal !important;
     }
 }
+/* ===== FIX GLOBAL ESPACIOS (ANTI TODO ISSUE) ===== */
+
+/* Reset márgenes de párrafos dentro de ese bloque */
+.zc-sc-trust-section p {
+  margin-bottom: 12px;
+}
+
+/* Elimina el espacio del último elemento */
+.zc-sc-trust-section p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/* Quita padding/margin del contenedor interno (Elementor export típico) */
+.zc-sc-trust-section .e-con-inner,
+.zc-sc-video-section .e-con-inner {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Control total del espacio entre secciones */
+.zc-sc-trust-section {
+  padding-bottom: 20px !important;
+  margin-bottom: 0 !important;
+}
+
+.zc-sc-video-section {
+  padding-top: 20px !important;
+  margin-top: 0 !important;
+}
+
+/* Por si hay wrappers invisibles jodiendo */
+.elementor-widget,
+.elementor-element {
+  margin-bottom: 0 !important;
+}
 </style>
+
 </head>
 <body class="wp-singular page-template-default page page-id-6427 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-6427">
 
@@ -1427,19 +1486,7 @@ body{font-family:'Inter',sans-serif;}
 <a class="page-numbers next" href="/es/?e-page-89c9da5=2">Siguiente</a>		</nav>
 						</div>
 				</div>
-				<div class="elementor-element elementor-element-327d1e3 elementor-hidden-tablet elementor-hidden-mobile elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="327d1e3" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm" href="/es/portfolio-es/">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-chevron-right" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>			</span>
-									<span class="elementor-button-text">Ver todo el portafolio</span>
-					</span>
-					</a>
-				</div>
-								</div>
-				</div>
+		
 					</div>
 				</div>
 		<div class="elementor-element elementor-element-zc-trust e-flex e-con-boxed e-con e-parent zc-sc-trust-section" data-id="zc-trust" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1680,7 +1727,7 @@ body{font-family:'Inter',sans-serif;}
 				</div>
 				<div class="elementor-element elementor-element-7604973 elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-id="7604973" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Preguntas frecuentes
+					<h2 class="elementor-heading-title elementor-size-default">PREGUNTAS FRECUENTES
 </h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-0cca0b1 elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-accordion" data-id="0cca0b1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="accordion.default">
@@ -2884,9 +2931,9 @@ html, body { overflow-x: hidden !important; max-width: 100% !important; }
   text-align: center !important;
 }
 .elementor-element-c8ef980 p {
-  font-family: "Roboto Flex", sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 400 !important;
+  font-family: "Open Sans", Sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
   color: #FFFFFF !important;
   text-align: center !important;
   line-height: 1.75 !important;
@@ -2900,9 +2947,9 @@ html, body { overflow-x: hidden !important; max-width: 100% !important; }
   text-align: center !important;
 }
 .elementor-element-f695aff p {
-  font-family: "Inter", sans-serif !important;
-  font-size: 18px !important;
-  font-weight: 400 !important;
+  font-family: "Open Sans", Sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
   color: #FFFFFF !important;
   text-align: center !important;
   line-height: 1.75 !important;
@@ -3331,7 +3378,7 @@ font-weight: 400;
   }
   /* General body text */
   .elementor-widget-text-editor p {
-    font-size: 15px !important;
+    font-size: 16px !important;
     line-height: 1.65 !important;
   }
   .elementor-element-4c43028 p,
@@ -3401,7 +3448,7 @@ font-weight: 400;
   }
   /* General body text */
   .elementor-widget-text-editor p {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 1.65 !important;
   }
   .elementor-element-4c43028 p,
