@@ -80,7 +80,8 @@
       "Bash(ls portfolio-item-*-es.html)",
       "Bash(ls -la es/portfolio/)",
       "Bash(sort -k5 -rn)",
-      "Bash(grep -E \"^[0-9]+\\\\.js$\")"
+      "Bash(grep -E \"^[0-9]+\\\\.js$\")",
+      "Bash(powershell *)"
     ]
   }
 }
