@@ -1204,6 +1204,7 @@ body{font-family:'Inter',sans-serif;}
 		<div class="elementor-element elementor-element-8f815ca e-con-full e-flex e-con e-child" data-id="8f815ca" data-element_type="container">
 					</div>
 		<div class="elementor-element elementor-element-de61ee3 e-con-full e-flex e-con e-child" data-id="de61ee3" data-element_type="container">
+				<div class="zc-step-badge"><span>1</span></div>
 				<div class="elementor-element elementor-element-5671ac9 elementor-widget elementor-widget-heading" data-id="5671ac9" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 					<h4 class="elementor-heading-title elementor-size-default"> Agendas tu llamada de diagnóstico</h4>				</div>
@@ -1224,6 +1225,7 @@ body{font-family:'Inter',sans-serif;}
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-d455c2a e-con-full e-flex e-con e-child" data-id="d455c2a" data-element_type="container">
+				<div class="zc-step-badge"><span>2</span></div>
 				<div class="elementor-element elementor-element-4c20c2c elementor-widget elementor-widget-heading" data-id="4c20c2c" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 					<h4 class="elementor-heading-title elementor-size-default">Ves el prototipo antes de comprometerte completamente</h4>				</div>
@@ -1244,6 +1246,7 @@ body{font-family:'Inter',sans-serif;}
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-82480e9 e-con-full e-flex e-con e-child" data-id="82480e9" data-element_type="container">
+				<div class="zc-step-badge"><span>3</span></div>
 				<div class="elementor-element elementor-element-acbc431 elementor-widget elementor-widget-heading" data-id="acbc431" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 					<h4 class="elementor-heading-title elementor-size-default">Tu plataforma en producción</h4>				</div>
@@ -3908,6 +3911,70 @@ html, body { margin: 0 !important; padding: 0 !important; }
   }
 }
 
+</style>
+<style>
+/* ── Step badge: navy diamond with white number ── */
+.zc-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: #0d1b5e;
+  transform: rotate(45deg);
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+.zc-step-badge span {
+  display: block;
+  transform: rotate(-45deg);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ── Portfolio cards mobile: definitive fix ── */
+@media (max-width: 767px) {
+  .elementor-7760 .elementor-element.elementor-element-a1878cc {
+    --width: 100% !important;
+    --flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-fda0c1a,
+  .elementor-7760 .elementor-element.elementor-element-fda0c1a.e-con {
+    --width: 100% !important;
+    --align-self: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-self: stretch !important;
+    flex-shrink: 0 !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-dfaddb0,
+  .elementor-7760 .elementor-element.elementor-element-35dcb02,
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 a {
+    display: block !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
+    display: block !important;
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 0 !important;
+  }
+}
 </style>
 <!-- Calendly widget loaded via <head> link/script tags -->
 </body>
