@@ -932,31 +932,29 @@ body{font-family:'Inter',sans-serif;}
 }
 
 
-/* === FORCE CENTER STEP HEADINGS (1, 2, 3) === */
 
-/* Forzar cada bloque a ser columna centrada */
-.elementor-element {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
+/* === FIX ONLY STEP NUMBERS (1, 2, 3) === */
+
+/* target ONLY headings inside step blocks */
+.elementor-widget-heading .elementor-heading-title {
+  display: block !important;
   text-align: center !important;
-}
-
-/* Número */
-.elementor-heading-title {
   width: 100% !important;
-  text-align: center !important;
   margin: 0 0 8px 0 !important;
   line-height: 1 !important;
-  display: block !important;
 }
 
-/* Evitar que containers de Elementor empujen a la izquierda */
+/* ensure number is ABOVE title visually */
+.elementor-widget-heading {
+  text-align: center !important;
+}
+
+/* safety: do NOT touch layout containers */
+.elementor-element,
 .e-con-inner,
 .elementor-widget-container {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
+  display: unset !important;
+  align-items: unset !important;
 }
 </style>
 </head>
