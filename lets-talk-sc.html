@@ -4008,6 +4008,153 @@ html, body { margin: 0 !important; padding: 0 !important; }
   }
 }
 </style>
+<style id="sc-mobile-fixes-2026-05-06b">
+/* ══════════════════════════════════════════════════════════════
+   MOBILE FIXES — 2026-05-06b
+   1. Calendly container — remove extra blank space below widget
+   2. No inner scroll: ¿Has pasado por esto?
+   3. No inner scroll: Lo que vas a saber
+   4. No inner scroll: Conectémonos card
+   5. Step badges — lighter blue
+   6. Portfolio — images + text full-width on mobile
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── 1. Calendly: hero section auto-sizes to content on mobile ── */
+@media (max-width: 768px) {
+  .elementor-6427 .elementor-element.elementor-element-ad38909 {
+    --min-height: auto !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .elementor-6427 .elementor-element.elementor-element-09f29d5 {
+    min-height: auto !important;
+  }
+  /* Also cap the widget itself to avoid Calendly's own 100vh setting */
+  .calendly-inline-widget,
+  .calendly-inline-widget iframe {
+    min-height: 680px !important;
+    height: 680px !important;
+  }
+}
+
+/* ── 2. No inner scroll: ¿Has pasado por esto? section ── */
+/* Root cause: overflow-x:hidden on .e-con forces overflow-y:auto per CSS spec */
+@media (max-width: 767px) {
+  .elementor-element-a4679ce,
+  .elementor-element-a4679ce > .e-con-inner,
+  .elementor-element-2c3d9e3,
+  .elementor-element-4ee3fea,
+  .elementor-element-b0bd24a {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  /* Remove sticky so it doesn't create a local scroll context */
+  .elementor-element-b0bd24a {
+    position: static !important;
+    top: auto !important;
+  }
+}
+
+/* ── 3. No inner scroll: Lo que vas a saber después de nuestra llamada ── */
+@media (max-width: 767px) {
+  .elementor-element-975afb6,
+  .elementor-element-975afb6 > .e-con-inner,
+  .elementor-element-abca89a {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
+
+/* ── 4. No inner scroll: Conectémonos card ── */
+@media (max-width: 767px) {
+  .elementor-element-d77e54e,
+  .elementor-element-0d1f883 {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
+
+/* ── 5. Step badges: lighter royal-blue (was very dark #0d1b5e) ── */
+.zc-step-badge {
+  background: #1e40af !important;
+}
+
+/* ── 6. Portfolio mobile: images + text full-width ── */
+@media (max-width: 767px) {
+  /* Loop item wrapper: occupy full column width */
+  .elementor-element-89c9da5 .e-loop-item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  /* Card root: column stack, auto height */
+  .elementor-7760 .elementor-element.elementor-element-a1878cc {
+    --flex-direction: column !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  /* Image-side container: full width */
+  .elementor-7760 .elementor-element.elementor-element-fda0c1a,
+  .elementor-7760 .elementor-element.elementor-element-fda0c1a.e-con {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    align-self: stretch !important;
+    flex-shrink: 0 !important;
+    height: auto !important;
+  }
+  /* Inner image wrapper */
+  .elementor-7760 .elementor-element.elementor-element-dfaddb0 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  /* Anchor wrapping the image */
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 a {
+    display: block !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 8px 8px 0 0 !important;
+  }
+  /* Image: full width, consistent 200px crop */
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
+    display: block !important;
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 0 !important;
+  }
+  /* Text container: full width, fills remaining space */
+  .elementor-7760 .elementor-element.elementor-element-06982da {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    --width: 100% !important;
+  }
+  /* Widgets inside text container */
+  .elementor-7760 .elementor-element.elementor-element-06982da .elementor-widget-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-06982da .elementor-heading-title {
+    width: 100% !important;
+    text-align: left !important;
+  }
+  .elementor-7760 .elementor-element.elementor-element-06982da p,
+  .elementor-7760 .elementor-element.elementor-element-06982da .elementor-text-editor {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+}
+</style>
 <!-- Calendly widget loaded via <head> link/script tags -->
 </body>
 </html>
