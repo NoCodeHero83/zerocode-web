@@ -3555,74 +3555,6 @@ font-weight: 400;
   }
 }
 
-/* ── TASK 4: Portfolio items — center text and image fix ── */
-@media (max-width: 1199px) {
-  /* Loop grid container: centered */
-  .elementor-element-89c9da5 .elementor-loop-container {
-    justify-content: center !important;
-  }
-  /* Portfolio cards: center text on tablet */
-  .elementor-7760 .elementor-element.elementor-element-06982da {
-    text-align: center !important;
-  }
-  /* Portfolio images: ensure cover fill */
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
-    object-fit: cover !important;
-    width: 100% !important;
-    height: 210px !important;
-    display: block !important;
-  }
-}
-
-@media (max-width: 767px) {
-  /* Portfolio grid: single column */
-  .elementor-element-89c9da5 .elementor-loop-container {
-    grid-template-columns: 1fr !important;
-    justify-items: center !important;
-  }
-  /* Portfolio cards: full width, column layout (image on top, text below) */
-  .elementor-7760 .elementor-element.elementor-element-a1878cc {
-    --width: 100% !important;
-    --flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-  /* Image wrapper: stretch overrides align-self:flex-start that collapses landscape images */
-  .elementor-7760 .elementor-element.elementor-element-fda0c1a {
-    --width: 100% !important;
-    --align-self: stretch !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    align-self: stretch !important;
-    flex-shrink: 0 !important;
-  }
-  /* Inner containers: full width chain */
-  .elementor-7760 .elementor-element.elementor-element-dfaddb0,
-  .elementor-7760 .elementor-element.elementor-element-35dcb02,
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  /* Anchor: block so img width:100% resolves against the block container */
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 a {
-    display: block !important;
-    width: 100% !important;
-    overflow: hidden !important;
-    border-radius: 20px 20px 0 0 !important;
-  }
-  /* Image: fill card width, consistent 220px crop */
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
-    display: block !important;
-    width: 100% !important;
-    height: 220px !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    border-radius: 0 !important;
-  }
-}
-
 /* ── TASK 5: Conectémonos section — mobile/tablet layout ── */
 @media (max-width: 1199px) {
   /* Card container: stack video + text vertically on tablet */
@@ -3871,45 +3803,6 @@ html, body { margin: 0 !important; padding: 0 !important; }
   }
 }
 
-/* ── Portfolio cards (lets-talk-sc): mobile layout ── */
-@media (max-width: 767px) {
-  .elementor-7760 .elementor-element.elementor-element-a1878cc {
-    --width: 100% !important;
-    --flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-fda0c1a {
-    --width: 100% !important;
-    --align-self: stretch !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    align-self: stretch !important;
-    flex-shrink: 0 !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-dfaddb0,
-  .elementor-7760 .elementor-element.elementor-element-35dcb02,
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 a {
-    display: block !important;
-    width: 100% !important;
-    overflow: hidden !important;
-    border-radius: 20px 20px 0 0 !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
-    display: block !important;
-    width: 100% !important;
-    height: 220px !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    border-radius: 0 !important;
-  }
-}
 
 </style>
 <style>
@@ -3933,55 +3826,6 @@ html, body { margin: 0 !important; padding: 0 !important; }
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
-}
-
-/* ── Portfolio cards mobile: definitive fix ── */
-@media (max-width: 767px) {
-  /* Card: full width, column stacking, auto height (not 100% of grid row) */
-  .elementor-7760 .elementor-element.elementor-element-a1878cc {
-    --width: 100% !important;
-    --flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-  /* Image wrapper: stretch overrides align-self:flex-start */
-  .elementor-7760 .elementor-element.elementor-element-fda0c1a,
-  .elementor-7760 .elementor-element.elementor-element-fda0c1a.e-con {
-    --width: 100% !important;
-    --align-self: stretch !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    align-self: stretch !important;
-    flex-shrink: 0 !important;
-  }
-  /* Inner containers: full width chain */
-  .elementor-7760 .elementor-element.elementor-element-dfaddb0,
-  .elementor-7760 .elementor-element.elementor-element-35dcb02,
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  /* Anchor: block so img % resolves against block container */
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 a {
-    display: block !important;
-    width: 100% !important;
-    overflow: hidden !important;
-    border-radius: 20px 20px 0 0 !important;
-  }
-  /* Image: identical to index.html fix */
-  .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
-    display: block !important;
-    width: 100% !important;
-    height: 220px !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    border-radius: 0 !important;
-  }
 }
 
 /* ── Spacing: Calendly → ¿Has pasado por esto? ── */
@@ -4082,76 +3926,43 @@ html, body { margin: 0 !important; padding: 0 !important; }
   background: #1e40af !important;
 }
 
-/* ── 6. Portfolio mobile: images + text full-width ── */
+/* ── 6. Portfolio cards: mobile layout (mirrors English homepage) ── */
 @media (max-width: 767px) {
-  /* Loop item wrapper: occupy full column width */
-  .elementor-element-89c9da5 .e-loop-item {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  /* Card root: column stack, auto height */
   .elementor-7760 .elementor-element.elementor-element-a1878cc {
+    --width: 100% !important;
     --flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
     flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
     align-items: stretch !important;
-    height: auto !important;
-    min-height: 0 !important;
   }
-  /* Image-side container: full width */
-  .elementor-7760 .elementor-element.elementor-element-fda0c1a,
-  .elementor-7760 .elementor-element.elementor-element-fda0c1a.e-con {
+  .elementor-7760 .elementor-element.elementor-element-fda0c1a {
+    --width: 100% !important;
+    --align-self: stretch !important;
     width: 100% !important;
     max-width: 100% !important;
-    min-width: 100% !important;
     align-self: stretch !important;
     flex-shrink: 0 !important;
-    height: auto !important;
   }
-  /* Inner image wrapper */
-  .elementor-7760 .elementor-element.elementor-element-dfaddb0 {
+  .elementor-7760 .elementor-element.elementor-element-dfaddb0,
+  .elementor-7760 .elementor-element.elementor-element-35dcb02,
+  .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
     width: 100% !important;
     max-width: 100% !important;
   }
-  /* Anchor wrapping the image */
   .elementor-7760 .elementor-element.elementor-element-35dcb02 a {
     display: block !important;
     width: 100% !important;
     overflow: hidden !important;
-    border-radius: 8px 8px 0 0 !important;
+    border-radius: 20px 20px 0 0 !important;
   }
-  /* Image: full width, consistent 200px crop */
   .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
     display: block !important;
     width: 100% !important;
-    height: 200px !important;
+    height: 220px !important;
     object-fit: cover !important;
     object-position: center top !important;
     border-radius: 0 !important;
-  }
-  /* Text container: full width, fills remaining space */
-  .elementor-7760 .elementor-element.elementor-element-06982da {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    flex: 1 1 100% !important;
-    --width: 100% !important;
-  }
-  /* Widgets inside text container */
-  .elementor-7760 .elementor-element.elementor-element-06982da .elementor-widget-container {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-06982da .elementor-heading-title {
-    width: 100% !important;
-    text-align: left !important;
-  }
-  .elementor-7760 .elementor-element.elementor-element-06982da p,
-  .elementor-7760 .elementor-element.elementor-element-06982da .elementor-text-editor {
-    width: 100% !important;
-    max-width: 100% !important;
-    text-align: left !important;
   }
 }
 </style>
