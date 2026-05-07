@@ -3926,7 +3926,19 @@ html, body { margin: 0 !important; padding: 0 !important; }
   background: #1e40af !important;
 }
 
-/* ── 6. Portfolio cards: mobile layout (mirrors English homepage) ── */
+/* ── 6. Portfolio cards: layout (mirrors English homepage) ── */
+
+/* Desktop/tablet: dfaddb0 must fill full width — matches loop-398 behaviour */
+@media (min-width: 768px) {
+  .elementor-7760 .elementor-element.elementor-element-dfaddb0 {
+    --width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* Mobile: column stack + cancel the global padding rules that create blank space
+   inside the image wrapper (lines 738-745 of sc-all-css add 16px to .e-con
+   and 8px to .elementor-widget-container, which breaks edge-to-edge alignment) */
 @media (max-width: 767px) {
   .elementor-7760 .elementor-element.elementor-element-a1878cc {
     --width: 100% !important;
@@ -3939,14 +3951,27 @@ html, body { margin: 0 !important; padding: 0 !important; }
   .elementor-7760 .elementor-element.elementor-element-fda0c1a {
     --width: 100% !important;
     --align-self: stretch !important;
+    --padding-left: 0px !important;
+    --padding-right: 0px !important;
     width: 100% !important;
     max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     align-self: stretch !important;
     flex-shrink: 0 !important;
   }
-  .elementor-7760 .elementor-element.elementor-element-dfaddb0,
+  .elementor-7760 .elementor-element.elementor-element-dfaddb0 {
+    --padding-left: 0px !important;
+    --padding-right: 0px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
   .elementor-7760 .elementor-element.elementor-element-35dcb02,
   .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
   }
