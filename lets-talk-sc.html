@@ -3,7 +3,7 @@
 <html lang="es-ES">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>Habla con Zerocode &#8211; Desarrollamos tu software a medida</title>
 <meta name="referrer" content="no-referrer">
 <link rel="icon" href="/images/cropped-ZEROCODE_Imagotipo-Horizontal-12-32x32.png" sizes="32x32">
@@ -669,7 +669,8 @@ img.wp-smiley,img.emoji{ display:none!important }
 body{font-family:'Inter',sans-serif;}
 
 /* Hero subheadline (~10px smaller than main hero title — tuned per breakpoint below) */
-.elementor-element-zc-hero-sub .elementor-heading-title{font-size:36px!important;line-height:1.45!important;font-weight:500!important;color:rgba(255,255,255,.88)!important;margin:12px 0 0!important;max-width:52rem;}
+.elementor-element-d809dd7{margin-block-end:0!important;}
+.elementor-element-zc-hero-sub .elementor-heading-title{font-size:36px!important;line-height:1.45!important;font-weight:500!important;color:rgba(255,255,255,.88)!important;margin:6px 0 0!important;max-width:52rem;}
 
 /* Embedded video blocks */
 .zc-sc-video-section{padding-top:8px;padding-bottom:8px;}
@@ -693,6 +694,11 @@ body{font-family:'Inter',sans-serif;}
     min-width: 100% !important;
     width: 100% !important;
     overflow: visible !important;
+    min-height: 900px !important;
+  }
+  .calendly-inline-widget iframe {
+    min-height: 900px !important;
+    height: 900px !important;
   }
 }
 
@@ -3877,9 +3883,12 @@ html, body { margin: 0 !important; padding: 0 !important; }
     min-height: auto !important;
   }
   /* Also cap the widget itself to avoid Calendly's own 100vh setting */
-  .calendly-inline-widget,
+  .calendly-inline-widget {
+    min-height: 900px !important;
+  }
   .calendly-inline-widget iframe {
-    min-height: 650px !important;
+    min-height: 900px !important;
+    height: 900px !important;
   }
 }
 
