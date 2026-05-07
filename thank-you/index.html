@@ -6,7 +6,6 @@
 <meta name="description" content="Thank you for reaching out to Zerocode. A senior advisor will contact you within 24 hours to confirm your free discovery call." />
 <link rel="canonical" href="https://zerocode.la/thank-you/" />
 <link rel="alternate" hreflang="en" href="https://zerocode.la/thank-you/" />
-<link rel="alternate" hreflang="es" href="https://zerocode.la/thank-you/" />
 <link rel="alternate" hreflang="x-default" href="https://zerocode.la/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://zerocode.la/thank-you/" />
@@ -230,6 +229,23 @@
   }
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1094617759459596');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1094617759459596&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <!-- #zc-h1-start --><h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Thank You | Zerocode Will Be in Touch Within 24 Hours</h1><!-- #zc-h1-end -->
@@ -340,5 +356,39 @@
   </div>
 
 <script src="/js/mobile-menu.js" defer></script>
+<script>
+(function () {
+  var done = false;
+
+  function runScheduleConversion() {
+    if (done) return;
+    done = true;
+
+    var event_id = Date.now().toString();
+
+    var fbpRow = document.cookie
+      .split('; ')
+      .find(function (row) { return row.startsWith('_fbp='); });
+
+    var fbp = fbpRow ? fbpRow.slice('_fbp='.length) : undefined;
+
+    if (typeof fbq === 'function') {
+      fbq('track', 'Schedule', {}, { eventID: event_id });
+    }
+
+    fetch('/api/meta-event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ event_id: event_id, fbp: fbp }),
+    }).catch(function () {});
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runScheduleConversion);
+  } else {
+    runScheduleConversion();
+  }
+})();
+</script>
 </body>
 </html>

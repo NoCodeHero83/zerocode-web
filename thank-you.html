@@ -6,7 +6,6 @@
 <meta name="description" content="Thank you for reaching out to Zerocode. A senior advisor will contact you within 24 hours to confirm your free discovery call." />
 <link rel="canonical" href="https://zerocode.la/thank-you/" />
 <link rel="alternate" hreflang="en" href="https://zerocode.la/thank-you/" />
-<link rel="alternate" hreflang="es" href="https://zerocode.la/thank-you/" />
 <link rel="alternate" hreflang="x-default" href="https://zerocode.la/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://zerocode.la/thank-you/" />
@@ -361,31 +360,15 @@
 
     var fbp = fbpRow ? fbpRow.slice('_fbp='.length) : undefined;
 
-    console.log('Schedule event fired');
-    console.log(event_id);
-    console.log('fbp:', fbp != null ? fbp : '(no _fbp cookie)');
-
     if (typeof fbq === 'function') {
       fbq('track', 'Schedule', {}, { eventID: event_id });
     }
-
-    console.log('About to send CAPI request');
 
     fetch('/api/meta-event', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ event_id: event_id, fbp: fbp }),
-    })
-      .then(function (res) {
-        console.log('CAPI status:', res.status);
-        return res.text();
-      })
-      .then(function (data) {
-        console.log('CAPI response:', data);
-      })
-      .catch(function (err) {
-        console.error('CAPI request failed', err);
-      });
+    }).catch(function () {});
   }
 
   if (document.readyState === 'loading') {
