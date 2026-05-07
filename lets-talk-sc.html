@@ -3915,14 +3915,14 @@ html, body { margin: 0 !important; padding: 0 !important; }
 <style>
 /* ── Step badge: navy diamond with white number ── */
 .zc-step-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 42px;
   height: 42px;
   background: #0d1b5e;
   transform: rotate(45deg);
-  margin-bottom: 18px;
+  margin: 0 auto 18px auto;
   flex-shrink: 0;
 }
 .zc-step-badge span {
@@ -3937,35 +3937,43 @@ html, body { margin: 0 !important; padding: 0 !important; }
 
 /* ── Portfolio cards mobile: definitive fix ── */
 @media (max-width: 767px) {
+  /* Card: full width, column stacking, auto height (not 100% of grid row) */
   .elementor-7760 .elementor-element.elementor-element-a1878cc {
     --width: 100% !important;
     --flex-direction: column !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
     flex-direction: column !important;
     align-items: stretch !important;
   }
+  /* Image wrapper: stretch overrides align-self:flex-start */
   .elementor-7760 .elementor-element.elementor-element-fda0c1a,
   .elementor-7760 .elementor-element.elementor-element-fda0c1a.e-con {
     --width: 100% !important;
     --align-self: stretch !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
     align-self: stretch !important;
     flex-shrink: 0 !important;
   }
+  /* Inner containers: full width chain */
   .elementor-7760 .elementor-element.elementor-element-dfaddb0,
   .elementor-7760 .elementor-element.elementor-element-35dcb02,
   .elementor-7760 .elementor-element.elementor-element-35dcb02 > .elementor-widget-container {
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
   }
+  /* Anchor: block so img % resolves against block container */
   .elementor-7760 .elementor-element.elementor-element-35dcb02 a {
     display: block !important;
     width: 100% !important;
     overflow: hidden !important;
     border-radius: 20px 20px 0 0 !important;
   }
+  /* Image: identical to index.html fix */
   .elementor-7760 .elementor-element.elementor-element-35dcb02 img {
     display: block !important;
     width: 100% !important;
@@ -3973,6 +3981,30 @@ html, body { margin: 0 !important; padding: 0 !important; }
     object-fit: cover !important;
     object-position: center top !important;
     border-radius: 0 !important;
+  }
+}
+
+/* ── Spacing: Calendly → ¿Has pasado por esto? ── */
+@media (max-width: 767px) {
+  /* Reduce hero section bottom padding so gap after calendar isn't huge */
+  .elementor-element-ad38909 {
+    --padding-bottom: 8px !important;
+  }
+  /* Reduce top padding of the pain-points section */
+  .elementor-element-a4679ce {
+    --padding-top: 20px !important;
+  }
+}
+
+/* ── Spacing: portfolio bottom → Por qué confiar ── */
+@media (max-width: 767px) {
+  /* Reduce portfolio section bottom padding */
+  .elementor-element-bb68422 {
+    --padding-bottom: 20px !important;
+  }
+  /* Reduce trust section top padding */
+  .elementor-element-zc-trust {
+    padding-top: 24px !important;
   }
 }
 </style>
