@@ -694,11 +694,6 @@ body{font-family:'Inter',sans-serif;}
     min-width: 100% !important;
     width: 100% !important;
     overflow: visible !important;
-    min-height: 900px !important;
-  }
-  .calendly-inline-widget iframe {
-    min-height: 900px !important;
-    height: 900px !important;
   }
 }
 
@@ -3882,14 +3877,6 @@ html, body { margin: 0 !important; padding: 0 !important; }
   .elementor-6427 .elementor-element.elementor-element-09f29d5 {
     min-height: auto !important;
   }
-  /* Also cap the widget itself to avoid Calendly's own 100vh setting */
-  .calendly-inline-widget {
-    min-height: 900px !important;
-  }
-  .calendly-inline-widget iframe {
-    min-height: 900px !important;
-    height: 900px !important;
-  }
 }
 
 /* ── 2. No inner scroll: ¿Has pasado por esto? section ── */
@@ -4005,5 +3992,24 @@ html, body { margin: 0 !important; padding: 0 !important; }
 }
 </style>
 <!-- Calendly widget loaded via <head> link/script tags -->
+<script>
+/* Sync Calendly container height to its content as the user navigates steps */
+(function () {
+  window.addEventListener('message', function (e) {
+    if (!e.data || e.data.event !== 'calendly.page_height') return;
+    var h = parseInt(e.data.payload && e.data.payload.height, 10);
+    if (!h || h < 1) return;
+    var widget = document.querySelector('.calendly-inline-widget');
+    if (!widget) return;
+    widget.style.minHeight = h + 'px';
+    widget.style.height    = h + 'px';
+    var iframe = widget.querySelector('iframe');
+    if (iframe) {
+      iframe.style.minHeight = h + 'px';
+      iframe.style.height    = h + 'px';
+    }
+  });
+}());
+</script>
 </body>
 </html>
