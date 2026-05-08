@@ -3670,46 +3670,33 @@ html, body { overflow-x: hidden !important; max-width: 100% !important; }
    + vignette overlays, matching zerocode.la/es hero visually.
    ══════════════════════════════════════════════════════════════════ */
 
-/* Zero out any browser default body gap */
-html { margin: 0 !important; padding: 0 !important; min-height: 100%; background-color: #000 !important; }
-body { margin: 0 !important; padding: 0 !important; background: transparent !important; }
+/* Zero out any browser default body gap; pure black base like the home page */
+html { margin: 0 !important; padding: 0 !important; background-color: #000 !important; }
+body { margin: 0 !important; padding: 0 !important; background-color: #000 !important; }
 
-/* ── Full-page SVG gradient — sits on html, behind all content ── */
-html {
-  background-image: url('/images/hero_gradient.svg') !important;
-  background-size: cover !important;
-  background-position: top center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-}
-/* iOS/tablet: fixed attachment unreliable — scroll but keep cover so
-   the gradient fills the full page height, not just the first screen */
-@media (max-width: 1024px) {
-  html {
-    background-attachment: scroll !important;
-    background-size: cover !important;
-    background-position: top center !important;
-  }
-}
-
-/* ── Outer hero wrapper: transparent — html gradient shows through ── */
+/* ── Hero outer wrapper: SVG gradient on ::before, same as home page ── */
 .elementor-6427 .elementor-element.elementor-element-09f29d5 {
-  --overlay-opacity: 0 !important;
+  --overlay-opacity: 1 !important;
   position: relative !important;
 }
 .elementor-6427 .elementor-element.elementor-element-09f29d5::before {
-  background-image: none !important;
   background-color: transparent !important;
-  opacity: 0 !important;
+  background-image: url('/images/testsvg.svg') !important;
+  background-position: bottom center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  opacity: 1 !important;
+  z-index: 0 !important;
 }
 
-/* ── Inner hero content: align to top, not centred ── */
+/* ── Inner hero content: top-aligned, matches home page spacing ── */
 .elementor-6427 .elementor-element.elementor-element-ad38909 {
   position: relative !important;
   z-index: 1 !important;
   --min-height: 100vh !important;
   min-height: 100vh !important;
   --justify-content: flex-start !important;
+  --padding-top: 110px !important;
 }
 
 /* ── Mobile: hero sizes to content ── */
@@ -3720,8 +3707,8 @@ html {
     --justify-content: flex-start !important;
     --gap: 14px 14px !important;
     --row-gap: 14px !important;
-    --padding-top: 20px !important;
-    --padding-bottom: 20px !important;
+    --padding-top: 100px !important;
+    --padding-bottom: 40px !important;
   }
   /* CTA button wrapper: no extra slab */
   .zc-hero-cta-wrap {
@@ -3820,9 +3807,9 @@ html {
   z-index: 0;
   pointer-events: none;
 }
-/* Inset top-shadow on the next section mirrors the fade from above */
+/* Inset top-shadow on the first content section bridges hero fade */
 .elementor-6427 .elementor-element.elementor-element-a4679ce {
-  box-shadow: inset 0 90px 70px -35px #0a0b14 !important;
+  box-shadow: inset 0 90px 70px -35px #000 !important;
 }
 </style>
 <style id="sc-targeted-fixes-2026-05-06">
@@ -4062,59 +4049,6 @@ html {
     object-position: center top !important;
     border-radius: 0 !important;
   }
-}
-</style>
-<style id="sc-bg-continuity">
-/*
-  BACKGROUND CONTINUITY
-  ─────────────────────
-  banner-bg-01.png is a large bright white/light-blue radial glow.
-  Ellipse-1-2.png is a solid cyan circle.
-  Both create harsh light-on-dark blobs that cause abrupt visual breaks.
-
-  Strategy:
-  1. Dark ::before overlay on every content section at ~72% opacity
-     → blobs become subtle ambient glows, not dominant bright shapes.
-  2. Inset box-shadow on section tops/bottoms fades the seams between
-     sections, creating a smooth gradient-like flow.
-  3. Ellipse section gets a stronger overlay since the image is opaque.
-*/
-
-/* ── 1. Dark overlay on ALL content sections (not the hero) ── */
-.elementor-6427 .e-con-boxed.e-parent:not(.elementor-element-09f29d5)::before {
-  content: '' !important;
-  position: absolute !important;
-  inset: 0 !important;
-  background-color: rgba(0, 0, 0, 0.88) !important;
-  background-image: none !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
-}
-/* Content inside each section sits above the overlay */
-.elementor-6427 .e-con-boxed.e-parent:not(.elementor-element-09f29d5) > .e-con-inner {
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-/* ── 2. Ellipse section needs full black overlay (opaque circle image) ── */
-.elementor-6427 .elementor-element.elementor-element-865276b::before {
-  background-color: rgba(0, 0, 0, 0.92) !important;
-}
-
-/* ── 3. Inset shadows at section seams for seamless blending ── */
-.elementor-6427 .e-con-boxed.e-parent:not(.elementor-element-09f29d5) {
-  box-shadow:
-    inset 0   80px 60px -40px #000,   /* top fade */
-    inset 0  -80px 60px -40px #000    /* bottom fade */
-    !important;
-}
-
-/* ── Stronger top fade on first content section — bridges hero ── */
-.elementor-6427 .elementor-element.elementor-element-a4679ce {
-  box-shadow:
-    inset 0  130px 90px -50px #000,
-    inset 0  -80px 60px -40px #000
-    !important;
 }
 </style>
 </body>
