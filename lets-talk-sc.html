@@ -3671,12 +3671,12 @@ html, body { overflow-x: hidden !important; max-width: 100% !important; }
    ══════════════════════════════════════════════════════════════════ */
 
 /* Zero out any browser default body gap */
-html { margin: 0 !important; padding: 0 !important; min-height: 100%; background-color: #0a0b14 !important; }
+html { margin: 0 !important; padding: 0 !important; min-height: 100%; background-color: #000 !important; }
 body { margin: 0 !important; padding: 0 !important; background: transparent !important; }
 
 /* ── Full-page SVG gradient — sits on html, behind all content ── */
 html {
-  background-image: url('/images/testsvg.svg') !important;
+  background-image: url('/images/hero_gradient.svg') !important;
   background-size: cover !important;
   background-position: top center !important;
   background-repeat: no-repeat !important;
@@ -3816,7 +3816,7 @@ html {
   left: 0;
   right: 0;
   height: 220px;
-  background: linear-gradient(to bottom, transparent 0%, #0a0b14 100%);
+  background: linear-gradient(to bottom, transparent 0%, #000 100%);
   z-index: 0;
   pointer-events: none;
 }
@@ -4085,7 +4085,7 @@ html {
   content: '' !important;
   position: absolute !important;
   inset: 0 !important;
-  background-color: rgba(8, 9, 16, 0.72) !important;
+  background-color: rgba(0, 0, 0, 0.88) !important;
   background-image: none !important;
   z-index: 0 !important;
   pointer-events: none !important;
@@ -4096,24 +4096,24 @@ html {
   z-index: 1 !important;
 }
 
-/* ── 2. Ellipse section needs a stronger overlay (opaque image) ── */
+/* ── 2. Ellipse section needs full black overlay (opaque circle image) ── */
 .elementor-6427 .elementor-element.elementor-element-865276b::before {
-  background-color: rgba(8, 9, 16, 0.82) !important;
+  background-color: rgba(0, 0, 0, 0.92) !important;
 }
 
 /* ── 3. Inset shadows at section seams for seamless blending ── */
 .elementor-6427 .e-con-boxed.e-parent:not(.elementor-element-09f29d5) {
   box-shadow:
-    inset 0  80px 60px -40px rgba(8, 9, 16, 0.9),   /* top fade in */
-    inset 0 -80px 60px -40px rgba(8, 9, 16, 0.9)    /* bottom fade out */
+    inset 0   80px 60px -40px #000,   /* top fade */
+    inset 0  -80px 60px -40px #000    /* bottom fade */
     !important;
 }
 
-/* ── Keep existing hero→section transition, override the single shadow ── */
+/* ── Stronger top fade on first content section — bridges hero ── */
 .elementor-6427 .elementor-element.elementor-element-a4679ce {
   box-shadow:
-    inset 0  120px 80px -50px rgba(8, 9, 16, 1),    /* stronger at top, bridges hero */
-    inset 0  -80px 60px -40px rgba(8, 9, 16, 0.9)
+    inset 0  130px 90px -50px #000,
+    inset 0  -80px 60px -40px #000
     !important;
 }
 </style>
