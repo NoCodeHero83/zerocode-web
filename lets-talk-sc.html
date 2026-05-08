@@ -993,6 +993,13 @@ body{font-family:'Inter',sans-serif;}
   --column-gap: 24px !important;
 }
 </style>
+<!-- Calendly: pre-connect to their domains so the TLS handshake is done before the widget renders -->
+<link rel="preconnect" href="https://calendly.com" crossorigin>
+<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+<link rel="dns-prefetch" href="https://calendly.com">
+<link rel="dns-prefetch" href="https://assets.calendly.com">
+<!-- Load widget.js early with defer: downloads alongside the page, executes right after DOM is parsed -->
+<script defer src="https://assets.calendly.com/assets/external/widget.js"></script>
 </head>
 <body class="wp-singular page-template-default page page-id-6427 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-6427">
 
@@ -1942,15 +1949,6 @@ body{font-family:'Inter',sans-serif;}
     <p class="zc-cal-sub">Sin compromiso. 30 minutos para claridad total sobre tu operación</p>
     <div class="zc-cal-card">
       <div class="calendly-inline-widget" data-url="https://calendly.com/andres-diaz-/llamada-de-diagnostico-zerocode?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:280px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <script>
-      (function(){
-        var m=document.querySelector("meta[name=viewport]");
-        if(m&&!/maximum-scale/.test(m.content)){
-          m.setAttribute("content",m.content+",maximum-scale=1");
-        }
-      })();
-      </script>
     </div>
   </div>
 </section>
