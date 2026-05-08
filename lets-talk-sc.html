@@ -993,11 +993,32 @@ body{font-family:'Inter',sans-serif;}
   --column-gap: 24px !important;
 }
 </style>
-<!-- Calendly: establish connections before the iframe is rendered -->
+<!-- Calendly: establish connections early -->
 <link rel="preconnect" href="https://calendly.com" crossorigin>
 <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
 <link rel="dns-prefetch" href="https://calendly.com">
 <link rel="dns-prefetch" href="https://assets.calendly.com">
+<!-- widget.js loads async (parallel with page parse); initInlineWidget() creates the iframe
+     immediately without IntersectionObserver, so the SPA starts bootstrapping early -->
+<script async id="zc-cal-js" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<script>
+!function(){
+  var done=false;
+  function init(){
+    if(done)return;
+    var el=document.getElementById('zc-cal-inner');
+    if(el&&window.Calendly&&typeof window.Calendly.initInlineWidget==='function'){
+      done=true;
+      window.Calendly.initInlineWidget({
+        url:'https://calendly.com/andres-diaz-/llamada-de-diagnostico-zerocode?hide_event_type_details=1&hide_gdpr_banner=1',
+        parentElement:el
+      });
+    }
+  }
+  document.getElementById('zc-cal-js').addEventListener('load',init);
+  document.addEventListener('DOMContentLoaded',function(){if(window.Calendly)init();});
+}();
+</script>
 </head>
 <body class="wp-singular page-template-default page page-id-6427 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-6427">
 
@@ -1946,13 +1967,7 @@ body{font-family:'Inter',sans-serif;}
     <h2 class="zc-cal-heading">Reserva tu llamada de diagnóstico</h2>
     <p class="zc-cal-sub">Sin compromiso. 30 minutos para claridad total sobre tu operación</p>
     <div class="zc-cal-card">
-      <iframe
-        src="https://calendly.com/andres-diaz-/llamada-de-diagnostico-zerocode?hide_event_type_details=1&hide_gdpr_banner=1&embed_type=Inline"
-        loading="eager"
-        style="width:100%;height:700px;border:none;display:block;"
-        title="Agenda tu llamada de diagnóstico"
-        allow="payment"
-      ></iframe>
+      <div id="zc-cal-inner" style="min-width:280px;height:700px;"></div>
     </div>
   </div>
 </section>
