@@ -993,6 +993,15 @@ body{font-family:'Inter',sans-serif;}
   --column-gap: 24px !important;
 }
 </style>
+<style>
+<link rel="preload" as="script" href="https://assets.calendly.com/assets/external/widget.js">
+
+<style>
+#zc-calendly {
+  content-visibility: visible !important;
+  contain: none !important;
+}
+</style>
 <!-- Calendly: establish connections early -->
 <link rel="preconnect" href="https://calendly.com" crossorigin>
 <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
@@ -1018,6 +1027,19 @@ body{font-family:'Inter',sans-serif;}
   document.getElementById('zc-cal-js').addEventListener('load',init);
   document.addEventListener('DOMContentLoaded',function(){if(window.Calendly)init();});
 }();
+</script>
+<script>
+window.addEventListener('load', function () {
+  const iframeCheck = setInterval(function () {
+    const iframe = document.querySelector('#zc-cal-inner iframe');
+
+    if (iframe) {
+      iframe.loading = 'eager';
+      iframe.fetchPriority = 'high';
+      clearInterval(iframeCheck);
+    }
+  }, 100);
+});
 </script>
 </head>
 <body class="wp-singular page-template-default page page-id-6427 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-6427">
