@@ -3755,9 +3755,16 @@ html {
   letter-spacing: 0.2px !important;
 }
 
-/* ── The outer 09f29d5 must be at least full viewport height ── */
-.elementor-6427 .elementor-element.elementor-element-09f29d5 {
-  min-height: 100vh !important;
+/* ── Outer hero wrapper: full height only on desktop ── */
+@media (min-width: 768px) {
+  .elementor-6427 .elementor-element.elementor-element-09f29d5 {
+    min-height: 100vh !important;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-6427 .elementor-element.elementor-element-09f29d5 {
+    min-height: 0 !important;
+  }
 }
 
 /* ── Hide the broken Elementor video container (no src) ── */
@@ -3765,21 +3772,18 @@ html {
   display: none !important;
 }
 
-/* ── Responsive: ensure SVG covers on all breakpoints ── */
-@media (max-width: 1024px) {
-  .elementor-6427 .elementor-element.elementor-element-09f29d5::before {
-    background-size: cover !important;
-    background-position: top center !important;
-  }
+/* ── Tablet only: inner hero fills viewport ── */
+@media (min-width: 768px) and (max-width: 1024px) {
   .elementor-6427 .elementor-element.elementor-element-ad38909 {
     --min-height: 100svh !important;
     min-height: 100svh !important;
   }
 }
+/* ── Mobile: inner hero sizes to content ── */
 @media (max-width: 767px) {
   .elementor-6427 .elementor-element.elementor-element-ad38909 {
-    --min-height: 100svh !important;
-    min-height: 100svh !important;
+    --min-height: auto !important;
+    min-height: 0 !important;
   }
 }
 </style>
