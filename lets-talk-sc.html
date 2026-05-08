@@ -3668,12 +3668,11 @@ html, body { overflow-x: hidden !important; max-width: 100% !important; }
    + vignette overlays, matching zerocode.la/es hero visually.
    ══════════════════════════════════════════════════════════════════ */
 
-/* Zero out any browser default body gap */
-html, body { margin: 0 !important; padding: 0 !important; }
+/* Zero out any browser default body gap; match SVG top colour so
+   the page background is seamless from edge to edge */
+html, body { margin: 0 !important; padding: 0 !important; background-color: #0a0b14 !important; }
 
-/* ── Outer hero wrapper: apply the SVG as the ::before overlay
-   (same pattern used on home page 0424e36::before)
-   Override --overlay-opacity to 1 so the gradient is fully visible ── */
+/* ── Outer hero wrapper: apply the SVG as the ::before overlay ── */
 .elementor-6427 .elementor-element.elementor-element-09f29d5 {
   --overlay-opacity: 1 !important;
   position: relative !important;
@@ -3688,13 +3687,33 @@ html, body { margin: 0 !important; padding: 0 !important; }
   z-index: 0 !important;
 }
 
-/* ── Inner hero content container (ad38909):
-   Ensure it renders ABOVE the ::before layer ── */
+/* ── Inner hero content container (ad38909) ── */
 .elementor-6427 .elementor-element.elementor-element-ad38909 {
   position: relative !important;
   z-index: 1 !important;
   --min-height: 100vh !important;
   min-height: 100vh !important;
+}
+
+/* ── Mobile: hero sizes to content (no Calendly to fill the screen) ── */
+@media (max-width: 767px) {
+  .elementor-6427 .elementor-element.elementor-element-ad38909 {
+    --min-height: auto !important;
+    min-height: 0 !important;
+    --gap: 16px 16px !important;
+    --row-gap: 16px !important;
+    --padding-bottom: 32px !important;
+  }
+  /* CTA button wrapper: tight padding so there's no empty slab */
+  .zc-hero-cta-wrap {
+    padding: 4px 16px 0 !important;
+  }
+  /* CTA button: compact on mobile */
+  .zc-cta-primary {
+    font-size: 14px !important;
+    padding: 12px 22px !important;
+    gap: 8px !important;
+  }
 }
 
 /* ── The outer 09f29d5 must be at least full viewport height ── */
