@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html lang="es-ES" style="background:#000">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -50,11 +50,10 @@ p{font-size:17px;color:rgba(255,255,255,.88);line-height:1.75}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 .text-center{text-align:center}
 
-/* ── Animations ── */
+/* ── Animations — elements always visible, animation is additive ── */
 @keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.anim{opacity:0}
-.anim.visible{animation:fadeInUp .7s ease forwards}
+.anim{opacity:1}
+.anim.do-anim{animation:fadeInUp .7s ease both}
 
 /* ── Floating CTA ── */
 #zc-float-cta{
@@ -143,14 +142,12 @@ p{font-size:17px;color:rgba(255,255,255,.88);line-height:1.75}
   display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;
 }
 .problem-left h2{margin-bottom:36px}
-.icon-list{display:flex;flex-direction:column;gap:18px}
+.icon-list{display:flex;flex-direction:column;gap:20px}
 .icon-item{
-  display:flex;align-items:flex-start;gap:14px;
-  padding:18px 20px;
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:15px;
+  display:flex;align-items:flex-start;gap:16px;
 }
-.icon-item svg{flex-shrink:0;margin-top:2px}
-.icon-item p{margin:0;font-size:16px;color:rgba(255,255,255,.88)}
+.icon-item svg{flex-shrink:0;margin-top:4px;width:20px;height:20px}
+.icon-item p{margin:0;font-size:18px;font-family:"Open Sans",sans-serif;font-weight:500;color:rgba(255,255,255,.88);line-height:1.6}
 .problem-right{position:sticky;top:120px}
 .problem-right img{
   width:100%;border-radius:15px;object-fit:cover;
@@ -748,22 +745,17 @@ p{font-size:17px;color:rgba(255,255,255,.88);line-height:1.75}
     });
   });
 
-  // ── Scroll animations (IntersectionObserver) ──
-  var heroEls = document.querySelectorAll('#hero .anim');
-  heroEls.forEach(function(el){ el.classList.add('visible'); });
-
+  // ── Scroll animations — additive, content always visible ──
   if(window.IntersectionObserver){
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if(entry.isIntersecting){
-          entry.target.classList.add('visible');
+          entry.target.classList.add('do-anim');
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08, rootMargin:'0px 0px -40px 0px' });
-    document.querySelectorAll('.anim:not(.visible)').forEach(function(el){ obs.observe(el); });
-  } else {
-    document.querySelectorAll('.anim').forEach(function(el){ el.classList.add('visible'); });
+    }, { threshold: 0.05, rootMargin:'0px 0px -20px 0px' });
+    document.querySelectorAll('.anim').forEach(function(el){ obs.observe(el); });
   }
 })();
 </script>
