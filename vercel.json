@@ -7,5 +7,15 @@
       "destination": "/es/portfolio-es",
       "permanent": false
     }
+  ],
+    "rewrites": [
+    {
+      "source": "/landing",
+      "destination": "https://lets-talk-landing.vercel.app/"
+    },
+    {
+      "source": "/landing/:path*",
+      "destination": "https://lets-talk-landing.vercel.app/:path*"
+    }
   ]
 }
