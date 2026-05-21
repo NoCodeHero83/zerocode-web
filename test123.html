@@ -1,0 +1,126 @@
+"use client"
+
+import Image from "next/image"
+import Link from "next/link"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import {
+  AlertTriangle,
+  Clock,
+  DollarSign,
+  ShieldAlert,
+  TrendingDown,
+  Users,
+} from "lucide-react"
+
+const painPoints = [
+  {
+    icon: DollarSign,
+    text: "Pierdes dinero todos los meses en procesos manuales y herramientas que no controlas ni puedes dejar.",
+  },
+  {
+    icon: TrendingDown,
+    text: "Pierdes clientes por falta de tecnología mientras tu competencia crece mes tras mes.",
+  },
+  {
+    icon: AlertTriangle,
+    text: "Te falló un proveedor que prometió demasiado, entregó poco, y desapareció. Esta vez necesitas proteger tu inversión.",
+  },
+  {
+    icon: ShieldAlert,
+    text: "Está en juego tu capital, operación y la confianza de tus clientes y si eliges mal, tú asumes las consecuencias.",
+  },
+  {
+    icon: Clock,
+    text: "Tienes plazos que cumplir y socios o inversionistas esperando resultados, no promesas.",
+  },
+  {
+    icon: Users,
+    text: "Quieres competir con jugadores como Nubank o Mercado Pago, pero con una solución adaptada a tu mercado y tu marca.",
+  },
+]
+
+export function PainPoints() {
+  const { ref, isVisible } = useScrollAnimation<HTMLElement>()
+
+  return (
+    <section
+      ref={ref}
+      className="py-20 sm:py-28 lg:py-32 bg-secondary/30"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <div
+          className={`text-center mb-14 transition-all duration-700 ${
+            isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+            ¿Has pasado por esto?
+          </h2>
+        </div>
+
+        {/* Main layout */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          
+          {/* Left side */}
+          <div className="space-y-5">
+            {painPoints.map((point, index) => (
+              <div
+                key={index}
+                className={`flex items-start gap-4 transition-all duration-700 ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{
+                  transitionDelay: `${index * 100}ms`,
+                }}
+              >
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-500/10 flex items-center justify-center">
+                  <point.icon className="w-5 h-5 text-cyan-400" />
+                </div>
+
+                <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
+                  {point.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Right side */}
+          <div
+            className={`transition-all duration-700 delay-300 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="relative overflow-hidden rounded-3xl border border-border/50 bg-card shadow-xl">
+              
+              <Image
+                src="/images/2150169850-1.jpg"
+                alt="Fintech dashboard"
+                width={1500}
+                height={1000}
+                className="w-full h-auto object-cover"
+                priority
+              />
+
+              <div className="p-6">
+                <Link
+                  href="#zc-calendly"
+                  className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-primary px-6 py-4 text-primary-foreground font-semibold hover:opacity-90 transition"
+                >
+                  Agenda una llamada de diagnóstico
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

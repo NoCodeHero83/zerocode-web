@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Test Video</title>
+
+  <!-- Faster Calendly loading -->
+  <link rel="preconnect" href="https://assets.calendly.com">
+  <link rel="dns-prefetch" href="https://assets.calendly.com">
+  <link rel="preload" as="script" href="https://assets.calendly.com/assets/external/widget.js">
 
   <style>
     * {
@@ -16,68 +22,145 @@
       background-color: #000000;
       color: #ffffff;
       font-family: Arial, sans-serif;
+
       min-height: 100vh;
+
       display: flex;
       flex-direction: column;
+
       align-items: center;
       justify-content: flex-start;
+
       padding: 60px 20px;
       gap: 60px;
     }
 
+    /* VIDEO */
+
     .video-container {
       width: 100%;
       max-width: 1000px;
+
       border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.06);
+
+      box-shadow: 0 0 40px rgba(255,255,255,0.06);
     }
 
     iframe {
       width: 100%;
       aspect-ratio: 16 / 9;
+
       border: none;
       display: block;
     }
 
+    /* CALENDLY */
+
     .calendly-wrapper {
       width: 100%;
       max-width: 1000px;
-      border-radius: 24px;
+
+      background: transparent !important;
+
+      border: 1px solid rgba(255,255,255,0.05);
+
+      border-radius: 20px;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 20px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.04);
+
+      box-shadow: none;
+    }
+
+    .calendly-inline-widget {
+      width: 100%;
+      min-width: 320px;
+      height: 700px;
+    }
+
+    @media (max-width: 768px) {
+
+      body {
+        padding: 40px 16px;
+        gap: 40px;
+      }
+
+      .calendly-inline-widget {
+        height: 650px;
+      }
+
     }
   </style>
 </head>
 
 <body>
 
+  <!-- VIDEO -->
+
   <div class="video-container">
+
     <iframe
       src="https://www.youtube.com/embed/xt6APM4HtqI"
       allowfullscreen>
     </iframe>
+
   </div>
+
+  <!-- CALENDLY -->
 
   <div class="calendly-wrapper">
-    <!-- Principio del widget integrado de Calendly -->
-    <div 
+
+    <div
+      id="zc-cal-inner"
       class="calendly-inline-widget"
-      data-url="https://calendly.com/andres-diaz-/llamada-de-diagnostico-zerocode?hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff00&text_color=ffffff&primary_color=597395"
-      style="min-width:320px;height:700px;">
+      data-url="https://calendly.com/andres-diaz-/llamada-de-diagnostico-zerocode?hide_event_type_details=1&hide_gdpr_banner=1&background_color=000000&text_color=ffffff&primary_color=597395">
     </div>
 
-    <script 
-      type="text/javascript"
-      src="https://assets.calendly.com/assets/external/widget.js"
-      async>
-    </script>
-    <!-- Final del widget integrado de Calendly -->
   </div>
+
+  <!-- Calendly -->
+
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async>
+  </script>
+
+  <script>
+
+    window.addEventListener('DOMContentLoaded', function () {
+
+      if (window.Calendly) {
+
+        Calendly.initInlineWidget({
+          url: 'https://calendly.com/andres-diaz-/llamada-de-diagnostico-zerocode?hide_event_type_details=1&hide_gdpr_banner=1&background_color=000000&text_color=ffffff&primary_color=597395',
+          parentElement: document.getElementById('zc-cal-inner')
+        });
+
+      }
+
+    });
+
+    /* Force eager iframe loading */
+
+    window.addEventListener('load', function () {
+
+      const iframeCheck = setInterval(function () {
+
+        const iframe = document.querySelector('#zc-cal-inner iframe');
+
+        if (iframe) {
+
+          iframe.loading = 'eager';
+          iframe.fetchPriority = 'high';
+
+          clearInterval(iframeCheck);
+
+        }
+
+      }, 100);
+
+    });
+
+  </script>
 
 </body>
 </html>
