@@ -242,10 +242,15 @@
       width: auto;
     }
 
-    @media (max-width: 640px) {
-      .card { padding: 40px 24px; }
-      .testimonials { grid-template-columns: 1fr; }
-    }
+@media (max-width: 640px) {
+  .card { padding: 32px 24px; }
+  .testimonials { grid-template-columns: 1fr; }
+  .icon { width: 60px; height: 60px; margin: 0 auto 16px; }
+  .icon svg { width: 60px; height: 60px; }
+  .logo { margin-bottom: 24px; }
+  h1 { margin-bottom: 14px; }
+  .lead { margin-bottom: 32px; }
+}
   </style>
 
 <!-- Meta Pixel Code — duplicate guard: skip if fbq already loaded site-wide -->
@@ -358,9 +363,6 @@
         <path d="M32 49.5L42.5 60L64 36" stroke="url(#icon-check)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
-
-    <p class="eyebrow">Confirmación de reunión</p>
-
     <h1>¡Tu reunión está confirmada!</h1>
 
     <p class="lead">En unos minutos recibirás un correo con los detalles y el enlace de acceso a la reunión. Mientras tanto, conoce un poco más sobre cómo trabajamos y los productos digitales que hemos construido.</p>
