@@ -1,0 +1,16 @@
+DEV SERVER STATUS (2026-06-13)
+
+Fixed: Turbopack dev server was OOM-crashing while compiling "/" (V8 "Zone Allocation failed"
++ native Rust "memory allocation of 16777216 bytes failed"). The crashed instance was running
+under a starved heap.
+
+Fix applied:
+- Cleared the crash-corrupted build cache (removed site/.next).
+- Relaunched with an explicit heap: NODE_OPTIONS=--max-old-space-size=4096
+  Command: $env:NODE_OPTIONS='--max-old-space-size=4096'; npx next dev -p 3100
+
+Verified working:
+- GET /     -> 200 (131 KB)
+- GET /es   -> 200 (115 KB)   (/es/ -> 308 redirect to /es, expected trailing-slash behavior)
+
+To run the dev server: cd site; $env:NODE_OPTIONS='--max-old-space-size=4096'; npx next dev -p 3100
