@@ -22,9 +22,10 @@ const techLogos = [
 
 interface ServicesProps {
   content: HomeContent['services']
+  hideHeading?: boolean
 }
 
-export function Services({ content }: ServicesProps) {
+export function Services({ content, hideHeading }: ServicesProps) {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>()
   return (
     <section className="py-12 sm:py-16 lg:py-20 relative">
@@ -41,9 +42,11 @@ export function Services({ content }: ServicesProps) {
                 <SectionIcon />
                 {content.label}
               </span>
-              <h2 className="mt-4 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
-                {content.heading}
-              </h2>
+              {!hideHeading && (
+                <h2 className="mt-4 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
+                  {content.heading}
+                </h2>
+              )}
               <div className="flex justify-center lg:justify-start mt-4">
                 <div className="main-line">
                   <div className="line" />

@@ -58,7 +58,7 @@ export default function ServicePage() {
           </div>
         </section>
 
-        <Services content={shared.services} />
+        <Services content={shared.services} hideHeading />
 
         <section className="py-16 sm:py-24 lg:py-28 relative">
 
