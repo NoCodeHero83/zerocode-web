@@ -338,7 +338,19 @@
   border-radius: 20px;
 }
 
-/* Responsive section padding */
+/* Subtle gradient separator between sections */
+section + section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 1200px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,220,252,0.15) 20%, rgba(38,39,122,0.3) 50%, rgba(0,220,252,0.15) 80%, transparent);
+  pointer-events: none;
+}
+
 @media (max-width: 767px) {
   .section-padding {
     padding-left: 16px !important;
