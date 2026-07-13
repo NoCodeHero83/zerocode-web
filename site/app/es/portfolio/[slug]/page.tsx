@@ -71,7 +71,7 @@ export default async function PortfolioItemPageEs({ params }: Props) {
 
         <section className="pb-16 sm:pb-24 lg:pb-28 relative -mt-12 sm:-mt-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-            <div className="flex flex-col lg:flex-row gap-8 p-5 lg:p-7 border border-white/10 rounded-[25px] bg-[#FFFFFF1C] shadow-[0_0_0_0_rgba(0,0,0,0)] animate-fadeInUp">
+            <div className="flex flex-col lg:flex-row gap-8 p-5 lg:p-7 border border-white/10 rounded-[25px] bg-[#FFFFFF1C] shadow-[0_0_0_0_rgba(0,0,0,0)] animate-fadeIn">
               <div className="flex-1 min-w-0">
                 <PortfolioCarousel images={item.images} title={item.title} />
               </div>

@@ -30,7 +30,7 @@ export function ContactCalendly({ locale }: Props) {
   const url = `${base}?${params.toString()}`
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-white/10 bg-card shadow-2xl shadow-primary/10 animate-fadeInUp">
+    <div className="rounded-2xl overflow-hidden border border-white/10 bg-card shadow-2xl shadow-primary/10 animate-fadeIn">
       <div
         ref={containerRef}
         className="calendly-inline-widget"

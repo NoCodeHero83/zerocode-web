@@ -79,7 +79,7 @@ export function Services({ content, hideHeading }: ServicesProps) {
             {content.items.map((service, index) => (
               <div
                 key={service.title}
-                className="glass-card service-card relative p-5 sm:p-6 animate-fadeInUp"
+                className={`glass-card service-card relative p-5 sm:p-6 ${hideHeading ? 'animate-fadeInUp' : 'animate-fadeIn'}`}
                 style={{ animationDelay: `${index * 75}ms` }}
               >
                 <div className="flex items-start gap-4">

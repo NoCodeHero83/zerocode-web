@@ -119,7 +119,7 @@ export default function AboutPage() {
               {content.team.members.map((member, i) => (
                 <div
                   key={member.name}
-                  className="glass-card animate-fadeInUp p-6"
+                  className="glass-card animate-fadeIn p-6"
                   style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'forwards' }}
                 >
                   <div className="relative mx-auto mb-4 size-48 overflow-hidden rounded-full">
