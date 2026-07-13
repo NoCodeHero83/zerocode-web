@@ -86,7 +86,7 @@ export function Services({ content, hideHeading }: ServicesProps) {
                   <div
                     className="flex size-24 shrink-0 items-center justify-center"
                     style={{
-                      background: 'linear-gradient(135deg, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 100%)',
+                      background: 'linear-gradient(90deg, rgb(45, 47, 134) 0%, rgb(1, 220, 252) 100%)',
                       clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
                     }}
                   >
