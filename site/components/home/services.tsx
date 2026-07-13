@@ -36,7 +36,7 @@ export function Services({ content, hideHeading }: ServicesProps) {
         }`}
       >
         <div className="flex flex-col lg:flex-row lg:gap-12">
-          <div className="lg:sticky lg:top-[148px] lg:self-start lg:w-[45%] lg:shrink-0">
+          <div className={`lg:sticky lg:top-[148px] lg:self-start lg:w-[45%] lg:shrink-0 ${isVisible ? 'animate-zoomIn' : ''}`}>
             <div className="text-center lg:text-left">
               <span className="glass-card inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white">
                 <SectionIcon />

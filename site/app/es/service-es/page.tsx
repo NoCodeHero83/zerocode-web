@@ -44,14 +44,14 @@ export default function ServicePageEs() {
           />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
             <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
-              <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white" style={{ borderRadius: '15px', zIndex: 1, position: 'relative' }}>
+              <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white animate-fadeInUp" style={{ borderRadius: '15px', zIndex: 1, position: 'relative' }}>
                 <SectionIcon />
                 {content.hero.label}
               </p>
-              <h1 className="mt-3 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
+              <h1 className="mt-3 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl animate-fadeInUp" style={{ animationDelay: '100ms' }}>
                 {content.hero.heading}
               </h1>
-              <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">
+              <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '200ms' }}>
                 {content.hero.description}
               </p>
             </div>
@@ -64,7 +64,7 @@ export default function ServicePageEs() {
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
             <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
-              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">{content.designProcess.heading}</h2>
+              <h2 className="text-3xl font-bold text-foreground sm:text-4xl animate-fadeInUp">{content.designProcess.heading}</h2>
               <p className="mt-2 text-lg font-medium text-[#00dcfc]">{content.designProcess.subtitle}</p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -91,7 +91,7 @@ export default function ServicePageEs() {
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
             <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
-              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">{content.devProcess.heading}</h2>
+              <h2 className="text-3xl font-bold text-foreground sm:text-4xl animate-fadeInUp">{content.devProcess.heading}</h2>
               <p className="mt-2 text-lg font-medium text-[#00dcfc]">{content.devProcess.subtitle}</p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

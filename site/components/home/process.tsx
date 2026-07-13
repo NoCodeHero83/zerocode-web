@@ -37,7 +37,7 @@ export function Process({ content }: ProcessProps) {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-5 lg:gap-12">
-          <div className="lg:col-span-2 lg:sticky lg:top-24 lg:self-start">
+          <div className={`lg:col-span-2 lg:sticky lg:top-24 lg:self-start ${isVisible ? 'animate-zoomIn' : ''}`}>
             <div className="rounded-2xl overflow-hidden border border-border/50">
               <video
                 autoPlay

@@ -53,7 +53,7 @@ export default function AboutPage() {
               </h1>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/80">
                 {content.hero.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
+                  <p key={i} className="animate-fadeInUp" style={{ animationDelay: `${200 + i * 100}ms` }}>{p}</p>
                 ))}
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function AboutPage() {
               {content.coreValues.values.map((value, i) => (
                 <div
                   key={value.title}
-                  className="glass-card group relative p-6 animate-fadeInUp"
+                  className="glass-card group relative p-6 animate-fadeInRight"
                   style={{ animationDelay: `${i * 100}ms` }}
                 >
                   <div className="absolute right-4 top-4 flex size-8 items-center justify-center rounded-full bg-white/10 text-white/40 transition-colors group-hover:bg-white/20 group-hover:text-white">
@@ -105,14 +105,14 @@ export default function AboutPage() {
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
             <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
-              <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white" style={{ borderRadius: '15px', zIndex: 1, position: 'relative' }}>
+              <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white animate-fadeInUp" style={{ borderRadius: '15px', zIndex: 1, position: 'relative' }}>
                 <SectionIcon />
                 {content.team.label}
               </p>
-              <h2 className="mt-3 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
+              <h2 className="mt-3 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl animate-fadeInUp" style={{ animationDelay: '100ms' }}>
                 {content.team.heading}
               </h2>
-              <p className="mt-3 text-foreground/70">{content.team.subtitle}</p>
+              <p className="mt-3 text-foreground/70 animate-fadeInUp" style={{ animationDelay: '200ms' }}>{content.team.subtitle}</p>
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2">
