@@ -99,7 +99,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply text-foreground font-sans;
+    background-color: #000000;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(38,39,122,0.2) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 85% 85%, rgba(0,220,252,0.06) 0%, transparent 50%);
     background-attachment: fixed;
   }
 
@@ -336,19 +340,6 @@
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-}
-
-/* Subtle gradient separator between sections */
-section + section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(90%, 1200px);
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0,220,252,0.15) 20%, rgba(38,39,122,0.3) 50%, rgba(0,220,252,0.15) 80%, transparent);
-  pointer-events: none;
 }
 
 @media (max-width: 767px) {
