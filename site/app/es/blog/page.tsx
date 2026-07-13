@@ -56,11 +56,12 @@ export default function BlogPageEs() {
 
           <div className="mx-auto mt-12 max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-6 sm:grid-cols-2">
-              {content.posts.map((post) => (
+              {content.posts.map((post, index) => (
                 <Link
                   key={post.href}
                   href={post.href}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[rgba(255,255,255,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(0,220,252,0.35)] hover:shadow-[0_16px_48px_rgba(0,220,252,0.08)]"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[rgba(255,255,255,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(0,220,252,0.35)] hover:shadow-[0_16px_48px_rgba(0,220,252,0.08)] animate-fadeInUp"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex-1 bg-[#0A0F1E] p-7 sm:p-8">
                     <p className="text-[11px] font-bold uppercase tracking-[.15em] text-[#00dcfc]">

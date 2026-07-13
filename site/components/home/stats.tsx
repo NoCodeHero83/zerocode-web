@@ -11,7 +11,7 @@ export function Stats({ stats }: StatsProps) {
   return (
     <section className="py-8 sm:py-10 relative">
       <div className="mx-auto max-w-[550px] px-4 sm:px-6 relative">
-        <div className="flex flex-nowrap justify-center gap-4 sm:gap-6 rounded-2xl bg-[rgba(255,255,255,0.06)] px-6 py-5 sm:px-10 sm:py-6">
+        <div className="flex flex-nowrap justify-center gap-4 sm:gap-6 rounded-2xl bg-[rgba(255,255,255,0.06)] px-6 py-5 sm:px-10 sm:py-6 animate-fadeInUp">
           {stats.map((stat) => (
             <div
               key={stat.label}
