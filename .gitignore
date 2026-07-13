@@ -1,7 +1,7 @@
 .vercel
 node_modules/
-package.json
-package-lock.json
+/package.json
+/package-lock.json
 optimize.js
 assets/lets-talk-sc.css
 assets/lets-talk-sc.js
