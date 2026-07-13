@@ -5,3 +5,12 @@ package-lock.json
 optimize.js
 assets/lets-talk-sc.css
 assets/lets-talk-sc.js
+.npm-cache/
+.npm-tmp/
+lets-talk/
+zerocode-landing-page/
+site/.next/
+site/node_modules/
+site/dev-server.log
+site/check_icon.py
+site/status.txt
