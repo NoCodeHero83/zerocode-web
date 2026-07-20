@@ -153,7 +153,7 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     title: 'Hulp \u2014 Providers',
     description:
       'Hulp is a Colombian service platform whose mission is to connect trusted handyman professionals with potential clients. To achieve this, the Provider App was developed to let professionals showcase their skills, receive AI-powered job matches, and coordinate their work efficiently through an administrator panel that manages services, users, and issues.',
-    thumbnail: '/images/login-1-scaled.png',
+    thumbnail: '/images/solicitudes-scaled.png',
     images: [
       '/images/login-1-scaled.png',
       '/images/solicitudes-scaled.png',
@@ -484,7 +484,7 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     title: 'Hulp \u2014 Proveedores',
     description:
       'Hulp es una plataforma colombiana cuya misión es conectar profesionales de confianza con clientes potenciales. Para lograrlo, se desarrolló la App para Proveedores que permite a los profesionales mostrar sus habilidades, recibir coincidencias laborales impulsadas por IA y coordinar su trabajo de manera eficiente a través de un panel de administración que gestiona servicios, usuarios y problemas.',
-    thumbnail: '/images/login-1-scaled.png',
+    thumbnail: '/images/solicitudes-scaled.png',
     images: [
       '/images/login-1-scaled.png',
       '/images/solicitudes-scaled.png',

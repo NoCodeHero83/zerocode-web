@@ -123,22 +123,22 @@ export default async function PortfolioItemPage({ params }: Props) {
                   <Link
                     key={related.title}
                     href={related.href}
-                    className="group project-card animate-fadeInUp flex flex-row overflow-hidden"
+                    className="group project-card animate-fadeInUp flex flex-col sm:flex-row overflow-hidden"
                   >
-                    <div className="relative w-1/3 shrink-0 h-[300px]">
+                    <div className="relative w-full sm:w-1/3 shrink-0 h-[200px] sm:h-[300px]">
                       <Image
                         src={related.thumbnail}
                         alt={related.title}
                         fill
-                        sizes="33vw"
+                        sizes="(max-width: 640px) 100vw, 33vw"
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <div className="p-[30px] flex-1 flex flex-col justify-center">
+                    <div className="p-6 sm:p-[30px] flex-1 flex flex-col justify-center">
                       <h3 className="text-xl font-semibold normal-case text-foreground transition-colors group-hover:text-primary pt-[15px]">
                         {related.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-foreground/70">{related.description}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-foreground/70 line-clamp-4">{related.description}</p>
                       <span className="mt-4 inline-flex items-center gap-[10px] self-start px-[30px] py-[14px] text-sm font-medium text-foreground border border-white/30 rounded-full transition-all hover:bg-[rgba(56,189,248,0.32)] hover:border-[rgba(56,189,248,0.32)] hover:text-white">
                         See more
                         <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
