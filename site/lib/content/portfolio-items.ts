@@ -59,7 +59,7 @@ const portfolioItemsEn: PortfolioItemFull[] = [
       ],
       quote: 'Zerocode turned a failed project into a platform we can trust.',
       links: [
-        { label: 'Clutch · Later Life Training testimonial', url: 'https://laterlifetraining.co.uk/' },
+        { label: 'Clutch · Later Life Training testimonial', url: 'https://clutch.co/profile/zerocode-0#review-367019' },
         { label: 'Website · https://laterlifetraining.co.uk/', url: 'https://laterlifetraining.co.uk/' },
       ],
     },
@@ -101,7 +101,7 @@ const portfolioItemsEn: PortfolioItemFull[] = [
       ],
       quote: 'The team delivered a platform we are proud to show our investors.',
       links: [
-        { label: 'Clutch · Alianza Capital testimonial', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
+        { label: 'Clutch · Alianza Capital testimonial', url: 'https://clutch.co/go-to-review/5d1ffa4c-14be-49dd-a119-27464d90b6ea/365444' },
         { label: 'App Store', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
         { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.mycompany.alicard' },
       ],
@@ -390,7 +390,7 @@ const portfolioItemsEs: PortfolioItemFull[] = [
       ],
       quote: 'Zerocode convirtió un proyecto fallido en una plataforma en la que podemos confiar.',
       links: [
-        { label: 'Clutch · Testimonio en Clutch de Later Life Training', url: 'https://laterlifetraining.co.uk/' },
+        { label: 'Clutch · Testimonio en Clutch de Later Life Training', url: 'https://clutch.co/profile/zerocode-0#review-367019' },
         { label: 'Enlace web · https://laterlifetraining.co.uk/', url: 'https://laterlifetraining.co.uk/' },
       ],
     },
@@ -432,7 +432,7 @@ const portfolioItemsEs: PortfolioItemFull[] = [
       ],
       quote: 'El equipo nos entregó una plataforma que nos enorgullece mostrar a los inversores.',
       links: [
-        { label: 'Clutch · Testimonio en Clutch de Alianza Capital', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
+        { label: 'Clutch · Testimonio en Clutch de Alianza Capital', url: 'https://clutch.co/go-to-review/5d1ffa4c-14be-49dd-a119-27464d90b6ea/365444' },
         { label: 'App Store', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
         { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.mycompany.alicard' },
       ],

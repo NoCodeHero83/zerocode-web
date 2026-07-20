@@ -37,7 +37,7 @@ Sector: Healthcare / Training & Education · Scotland
   - Platform ready to scale without constant fixes.
 - *"Zerocode turned a failed project into a platform we can trust."*
 - **Links**
-  - Clutch · Later Life Training testimonial — https://laterlifetraining.co.uk/
+  - Clutch · Later Life Training testimonial — https://clutch.co/profile/zerocode-0#review-367019
   - Website — https://laterlifetraining.co.uk/
 
 **ES — De una implementación inestable a una plataforma totalmente operativa en 6 meses.**
@@ -57,7 +57,7 @@ Sector: Atención de salud / Entrenamientos y Educación · Escocia
   - Plataforma lista para escalar sin necesidad de correcciones constantes.
 - *"Zerocode convirtió un proyecto fallido en una plataforma en la que podemos confiar."*
 - **Enlaces**
-  - Clutch · Testimonio en Clutch de Later Life Training — https://laterlifetraining.co.uk/
+  - Clutch · Testimonio en Clutch de Later Life Training — https://clutch.co/profile/zerocode-0#review-367019
   - Enlace web — https://laterlifetraining.co.uk/
 
 ---
@@ -80,7 +80,7 @@ Sector: Fintech · Colombia
   - Ability to scale clients without growing headcount.
 - *"The team delivered a platform we are proud to show our investors."*
 - **Links**
-  - Clutch · Alianza Capital testimonial — https://apps.apple.com/pe/app/alianza-capital/id6502927890
+  - Clutch · Alianza Capital testimonial — https://clutch.co/go-to-review/5d1ffa4c-14be-49dd-a119-27464d90b6ea/365444
   - App Store — https://apps.apple.com/pe/app/alianza-capital/id6502927890
   - Google Play — https://play.google.com/store/apps/details?id=com.mycompany.alicard
 
@@ -100,7 +100,7 @@ Sector: Fintech · Colombia
   - Capacidad para escalar clientes sin aumentar la plantilla.
 - *"El equipo nos entregó una plataforma que nos enorgullece mostrar a los inversores."*
 - **Enlaces**
-  - Clutch · Testimonio en Clutch de Alianza Capital — https://apps.apple.com/pe/app/alianza-capital/id6502927890
+  - Clutch · Testimonio en Clutch de Alianza Capital — https://clutch.co/go-to-review/5d1ffa4c-14be-49dd-a119-27464d90b6ea/365444
   - App Store — https://apps.apple.com/pe/app/alianza-capital/id6502927890
   - Google Play — https://play.google.com/store/apps/details?id=com.mycompany.alicard
 
