@@ -252,16 +252,30 @@ export const homeContent: Record<Locale, HomeContent> = {
         {
           title: 'Later Life Training',
           description:
-            "Later Life Training is a Scottish company's web application that empowers older adults to prevent age-related conditions and improve quality of life through personalized training programs and supportive services that promote wellbeing, independence, and healthy ageing.",
+            'A platform on the verge of being scrapped became a stable, production-ready system that now activates USD 8,000/month through reliable bookings and payments. We rebuilt the backend and redesigned the UX so the team can finally trust and scale it.',
           image: '/images/Literlife.png',
           href: '/portfolio/later-life-training/',
         },
         {
           title: 'Alianza Capital',
           description:
-            'Alianza is a Colombian financial company whose mission is to make financial products accessible to small investors. To achieve this, Alianza developed a mobile application alongside a web-based management platform to handle all financial contracts and assets.',
+            'From 100% manual operations to a full fintech platform: two companies onboarded and automated, a mobile app live in both stores, and the ability to scale clients without growing headcount.',
           image: '/images/onboarding_app_movil.png',
           href: '/portfolio/alianza-capital/',
+        },
+        {
+          title: 'Hulp — Clients',
+          description:
+            'A manual operation turned into a live marketplace with 5,000+ downloads and recurring revenue. We built the full architecture, booking system and a simple app that clients actually enjoy using.',
+          image: '/images/login-scaled.png',
+          href: '/portfolio/hulp-clients/',
+        },
+        {
+          title: 'Hulp — Providers',
+          description:
+            'Providers got their own app inside the same marketplace, with AI job matches and real-time coordination. The result: a scalable supply side sustaining the platform’s growth.',
+          image: '/images/login-1-scaled.png',
+          href: '/portfolio/hulp-providers/',
         },
         {
           title: 'GM Parts',
@@ -304,20 +318,6 @@ export const homeContent: Record<Locale, HomeContent> = {
             'The Decision Board helps high-performing leadership teams navigate uncertainty and decide how to decide, enabling structured discussions, decisions and pages to make team work more efficient, reliable and productive.',
           image: '/images/35116a0e826-6.png',
           href: '/portfolio/the-decision-board/',
-        },
-        {
-          title: 'Hulp — Clients',
-          description:
-            'Hulp is a Colombian service platform whose mission is to connect clients with trusted handyman professionals. The Client App offers a simple interface, an AI-powered matching system, and integration with an administrator panel that supervises all services, users, and issues.',
-          image: '/images/login-scaled.png',
-          href: '/portfolio/hulp-clients/',
-        },
-        {
-          title: 'Hulp — Providers',
-          description:
-            'Hulp is a Colombian service platform whose mission is to connect trusted handyman professionals with potential clients. The Provider App lets professionals showcase their skills, receive AI-powered job matches, and coordinate work efficiently through an administrator panel.',
-          image: '/images/login-1-scaled.png',
-          href: '/portfolio/hulp-providers/',
         },
         {
           title: 'Supra Sales CRM',
@@ -492,16 +492,30 @@ export const homeContent: Record<Locale, HomeContent> = {
         {
           title: 'Later Life Training',
           description:
-            'Later Life Training es una aplicación web escocesa que empodera a adultos mayores mediante entrenamiento personalizado y apoyo integral para mejorar bienestar, independencia y envejecimiento saludable.',
+            'Una plataforma a punto de ser descartada se convirtió en un sistema estable y listo para producción que hoy activa 8.000 USD/mes mediante reservas y pagos fiables. Reconstruimos el backend y rediseñamos la UX para que el equipo por fin pueda confiar y escalar.',
           image: '/images/Literlife.png',
           href: '/es/portfolio/later-life-training-2/',
         },
         {
           title: 'Alianza Capital',
           description:
-            'Alianza es una empresa financiera colombiana cuya misión es facilitar el acceso a productos financieros a pequeños inversionistas. Para lograrlo, Alianza desarrolló una aplicación móvil junto con una plataforma de gestión web para gestionar todos los contratos y activos financieros.',
+            'De operaciones 100% manuales a una plataforma fintech completa: dos empresas incorporadas y automatizadas, una app móvil en ambas tiendas y la capacidad de escalar clientes sin aumentar la plantilla.',
           image: '/images/onboarding_app_movil.png',
           href: '/es/portfolio/alianza-capital-es/',
+        },
+        {
+          title: 'Hulp — Clientes',
+          description:
+            'Una operación manual se transformó en un marketplace en producción con más de 5.000 descargas e ingresos recurrentes. Construimos la arquitectura completa, el sistema de reservas y una app sencilla que los clientes disfrutan usar.',
+          image: '/images/login-scaled.png',
+          href: '/es/portfolio/hulp-clientes-es/',
+        },
+        {
+          title: 'Hulp — Proveedores',
+          description:
+            'Los proveedores tienen su propia app dentro del mismo marketplace, con emparejamientos de trabajo por IA y coordinación en tiempo real. El resultado: un lado de la oferta escalable que sostiene el crecimiento.',
+          image: '/images/login-1-scaled.png',
+          href: '/es/portfolio/hulp-proveedores-es/',
         },
         {
           title: 'GM Parts',
@@ -520,7 +534,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         {
           title: 'Ecumerca',
           description:
-            'Ecumerca es una plataforma de mercado diseñada para el consumidor final y los proveedores de productos de diversas categorías. Esta plataforma permite al consumidor final crear un carrito de compras y gestionar varios proveedores para que un consumidor pueda realizar compras simultáneamente. Ecumerca incluye un carrito de compras, historial de pedidos, chat de soporte, política de devoluciones y un panel de administrador.',
+            'Ecumerca es una plataforma de mercado diseñada para el consumidor final y los proveedores de productos de diversas categorías. Esta plataforma permite al consumidor final crear un carrito de compras y gestionar varios proveedores para que un consumidor pueda realizar compras simultáneas. Ecumerca incluye un carrito de compras, historial de pedidos, chat de soporte, política de devoluciones y un panel de administrador.',
           image: '/images/f3ff1d5b7be-18.png',
           href: '/es/portfolio/ecumerca-es/',
         },
@@ -544,20 +558,6 @@ export const homeContent: Record<Locale, HomeContent> = {
             'El Panel de Decisiones ayuda a los equipos de liderazgo de alto rendimiento a gestionar la incertidumbre y a decidir cómo tomar decisiones, facilitando debates, decisiones y páginas estructuradas para un trabajo en equipo más eficiente y productivo.',
           image: '/images/35116a0e826-6.png',
           href: '/es/portfolio/the-decision-board-es/',
-        },
-        {
-          title: 'Hulp — Clientes',
-          description:
-            'Hulp es una plataforma de servicios colombiana cuya misión es conectar a los clientes con profesionales de confianza en oficios. La App para Clientes ofrece una interfaz sencilla, un sistema de emparejamiento con IA y un panel administrador que supervisa servicios, usuarios e incidencias.',
-          image: '/images/login-scaled.png',
-          href: '/es/portfolio/hulp-clientes-es/',
-        },
-        {
-          title: 'Hulp — Proveedores',
-          description:
-            'Hulp es una plataforma de servicios colombiana que conecta profesionales de confianza con clientes potenciales. La App para Proveedores permite mostrar habilidades, recibir emparejamientos con IA y coordinar el trabajo mediante un panel administrador.',
-          image: '/images/login-1-scaled.png',
-          href: '/es/portfolio/hulp-proveedores-es/',
         },
         {
           title: 'CRM de Ventas Supra',

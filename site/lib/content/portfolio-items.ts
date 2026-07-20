@@ -1,3 +1,16 @@
+export interface PortfolioBusinessCaseLink {
+  label: string
+  url: string
+}
+
+export interface PortfolioBusinessCase {
+  problem: string
+  built: string[]
+  results: string[]
+  quote?: string
+  links: PortfolioBusinessCaseLink[]
+}
+
 export interface PortfolioItemFull {
   title: string
   description: string
@@ -6,6 +19,7 @@ export interface PortfolioItemFull {
   techSpecs: Record<string, string>
   href: string
   relatedSlugs: string[]
+  businessCase?: PortfolioBusinessCase
 }
 
 const portfolioItemsEn: PortfolioItemFull[] = [
@@ -28,6 +42,27 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     },
     href: '/portfolio/later-life-training/',
     relatedSlugs: ['alianza-capital', 'gm-parts-2'],
+    businessCase: {
+      problem:
+        'After a major investment, the platform was close to being scrapped. Broken workflows, unreliable bookings and payments, and a system too unstable to run, let alone grow.',
+      built: [
+        'Rebuilt database and backend architecture.',
+        'Stabilized the booking, events and payment systems.',
+        'Redesigned the UX/UI for clarity and consistency.',
+        'Admin panel for full operational control.',
+      ],
+      results: [
+        'Stable, production-ready platform.',
+        'USD 8,000/month activated through reliable booking and payment flows.',
+        'Clear and consistent user experience.',
+        'Platform ready to scale without constant fixes.',
+      ],
+      quote: 'Zerocode turned a failed project into a platform we can trust.',
+      links: [
+        { label: 'Clutch · Later Life Training testimonial', url: 'https://laterlifetraining.co.uk/' },
+        { label: 'Website · https://laterlifetraining.co.uk/', url: 'https://laterlifetraining.co.uk/' },
+      ],
+    },
   },
   {
     title: 'Alianza Capital',
@@ -50,6 +85,112 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     },
     href: '/portfolio/alianza-capital/',
     relatedSlugs: ['later-life-training', 'gm-parts-2'],
+    businessCase: {
+      problem:
+        'Client onboarding, investment tracking and reporting were done completely by hand. With no platform, there was no trust from investors or clients, and no way to grow without hiring more people.',
+      built: [
+        'Client portal and admin panel.',
+        'Mobile app for both App Store and Google Play.',
+        'Financial management for payroll and employee loans.',
+      ],
+      results: [
+        'Two companies onboarded and 100% operational, including employees, payroll and savings.',
+        'Automated onboarding, tracking and reporting across the operation.',
+        'Mobile app available in both stores.',
+        'Ability to scale clients without growing headcount.',
+      ],
+      quote: 'The team delivered a platform we are proud to show our investors.',
+      links: [
+        { label: 'Clutch · Alianza Capital testimonial', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
+        { label: 'App Store', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
+        { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.mycompany.alicard' },
+      ],
+    },
+  },
+  {
+    title: 'Hulp \u2014 Clients',
+    description:
+      'Hulp is a Colombian service platform whose mission is to connect clients with trusted handyman professionals. The Client App was specifically developed for users seeking services, offering a simple interface, an AI-powered matching system, and integration with an administrator panel that supervises all services, users, and issues.',
+    thumbnail: '/images/login-scaled.png',
+    images: [
+      '/images/login-scaled.png',
+      '/images/home_page-scaled.png',
+      '/images/busquedas-scaled.png',
+      '/images/historial-scaled.png',
+      '/images/miperfil-scaled.png',
+    ],
+    techSpecs: {
+      'Design': 'Figma',
+      'Implementation': 'FlutterFlow, Supabase',
+      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.hulp.hulp',
+      'Apple Store': 'https://apps.apple.com/pe/app/hulp-servicios-confiables/id6749599177',
+    },
+    href: '/portfolio/hulp-clients/',
+    relatedSlugs: ['hulp-providers', 'beauty-connect'],
+    businessCase: {
+      problem:
+        'The operation ran completely by hand, with no digital platform to handle the demand. Assigning services, providers and managing clients relied on informal processes that were hard to scale, draining efficiency and growth.',
+      built: [
+        'Full marketplace architecture designed and built from scratch.',
+        'Centralized booking, service-assignment and provider-management system.',
+        'Simple and fluid mobile app for users.',
+        'Admin panel with real-time control of supply and demand.',
+      ],
+      results: [
+        'Functional marketplace launched from scratch and live in production.',
+        'Over 5,000 downloads on Google Play with steady adoption.',
+        'Recurring revenue generated through in-platform services.',
+        'Scalable tech base ready for expansion.',
+      ],
+      quote: 'Zerocode let us go from a manual operation to a platform that now sustains our growth.',
+      links: [
+        { label: 'Apple Store', url: 'https://apps.apple.com/pe/app/hulp-servicios-confiables/id6749599177' },
+        { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.hulp.hulp' },
+      ],
+    },
+  },
+  {
+    title: 'Hulp \u2014 Providers',
+    description:
+      'Hulp is a Colombian service platform whose mission is to connect trusted handyman professionals with potential clients. To achieve this, the Provider App was developed to let professionals showcase their skills, receive AI-powered job matches, and coordinate their work efficiently through an administrator panel that manages services, users, and issues.',
+    thumbnail: '/images/login-1-scaled.png',
+    images: [
+      '/images/login-1-scaled.png',
+      '/images/solicitudes-scaled.png',
+      '/images/registro5-scaled.png',
+      '/images/registro2-scaled.png',
+      '/images/desempenio_page-scaled.png',
+      '/images/miperfil-1-scaled.png',
+    ],
+    techSpecs: {
+      'Design': 'Figma',
+      'Implementation': 'FlutterFlow, Supabase',
+      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.hulp.talentohulp',
+      'Apple Store': 'https://apps.apple.com/pe/app/talento-hulp/id6748622356',
+    },
+    href: '/portfolio/hulp-providers/',
+    relatedSlugs: ['hulp-clients', 'supra-sales-crm'],
+    businessCase: {
+      problem:
+        'On the provider side, the business was just as manual: no way to reach clients efficiently, coordinate jobs, or grow the supply side of the marketplace.',
+      built: [
+        'Provider experience built within the same marketplace architecture.',
+        'Mobile app for professionals to manage their work.',
+        'AI-powered job matching.',
+        'Admin panel overseeing the whole operation in real time.',
+      ],
+      results: [
+        'Providers operating inside a live, production marketplace.',
+        'Recurring revenue flowing through in-platform services.',
+        'Scalable foundation for continued expansion.',
+        'Supply side that sustains the platform’s growth.',
+      ],
+      quote: 'Zerocode let us go from a manual operation to a platform that now sustains our growth.',
+      links: [
+        { label: 'Google Play (Providers)', url: 'https://play.google.com/store/apps/details?id=com.hulp.talentohulp' },
+        { label: 'Apple Store (Providers)', url: 'https://apps.apple.com/pe/app/talento-hulp/id6748622356' },
+      ],
+    },
   },
   {
     title: 'GM Parts',
@@ -170,49 +311,6 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     relatedSlugs: ['beauty-connect', 'supra-sales-crm'],
   },
   {
-    title: 'Hulp \u2014 Clients',
-    description:
-      'Hulp is a Colombian service platform whose mission is to connect clients with trusted handyman professionals. The Client App was specifically developed for users seeking services, offering a simple interface, an AI-powered matching system, and integration with an administrator panel that supervises all services, users, and issues.',
-    thumbnail: '/images/login-scaled.png',
-    images: [
-      '/images/login-scaled.png',
-      '/images/home_page-scaled.png',
-      '/images/busquedas-scaled.png',
-      '/images/historial-scaled.png',
-      '/images/miperfil-scaled.png',
-    ],
-    techSpecs: {
-      'Design': 'Figma',
-      'Implementation': 'FlutterFlow, Supabase',
-      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.hulp.hulp',
-      'Apple Store': 'https://apps.apple.com/pe/app/hulp-servicios-confiables/id6749599177',
-    },
-    href: '/portfolio/hulp-clients/',
-    relatedSlugs: ['hulp-providers', 'beauty-connect'],
-  },
-  {
-    title: 'Hulp \u2014 Providers',
-    description:
-      'Hulp is a Colombian service platform whose mission is to connect trusted handyman professionals with potential clients. To achieve this, the Provider App was developed to let professionals showcase their skills, receive AI-powered job matches, and coordinate their work efficiently through an administrator panel that manages services, users, and issues.',
-    thumbnail: '/images/login-1-scaled.png',
-    images: [
-      '/images/login-1-scaled.png',
-      '/images/solicitudes-scaled.png',
-      '/images/registro5-scaled.png',
-      '/images/registro2-scaled.png',
-      '/images/desempenio_page-scaled.png',
-      '/images/miperfil-1-scaled.png',
-    ],
-    techSpecs: {
-      'Design': 'Figma',
-      'Implementation': 'FlutterFlow, Supabase',
-      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.hulp.talentohulp',
-      'Apple Store': 'https://apps.apple.com/pe/app/talento-hulp/id6748622356',
-    },
-    href: '/portfolio/hulp-providers/',
-    relatedSlugs: ['hulp-clients', 'supra-sales-crm'],
-  },
-  {
     title: 'Supra Sales CRM',
     description:
       'Full sales process CRM tool. This CRM enables the management of the entire sales process of SUPRA from the creation of the client and the project through the business case creation, quotation and billing.\n\nSUPRA is a Peruvian company that offers network security solutions to various clients nationwide. A tracking CRM from the creation of the opportunity to the billing of SUPRA\u00b4s services was implemented.\n\nThis CRM covered the whole sales process from the oportunity creation until business case structuration the billing and the invoice generation. It included a summary dashboard for goals tracking and review.',
@@ -275,6 +373,27 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     },
     href: '/es/portfolio/later-life-training-2/',
     relatedSlugs: ['alianza-capital-es', 'repuestos-gm-es'],
+    businessCase: {
+      problem:
+        'Tras una importante inversión, la plataforma estuvo a punto de ser abandonada. Flujos de trabajo defectuosos, reservas y pagos poco fiables, y un sistema demasiado inestable para funcionar, y mucho menos para escalar.',
+      built: [
+        'Base de datos y arquitectura de backend reconstruidas.',
+        'Sistemas de reserva, eventos y pago estabilizados.',
+        'Interfaz de usuario (UX/UI) rediseñada para mayor claridad y coherencia.',
+        'Panel de administración para un control operativo completo.',
+      ],
+      results: [
+        'Plataforma estable y lista para producción.',
+        'Activación de 8.000 USD al mes mediante flujos de reserva y pago fiables.',
+        'Experiencia de usuario clara y consistente.',
+        'Plataforma lista para escalar sin necesidad de correcciones constantes.',
+      ],
+      quote: 'Zerocode convirtió un proyecto fallido en una plataforma en la que podemos confiar.',
+      links: [
+        { label: 'Clutch · Testimonio en Clutch de Later Life Training', url: 'https://laterlifetraining.co.uk/' },
+        { label: 'Enlace web · https://laterlifetraining.co.uk/', url: 'https://laterlifetraining.co.uk/' },
+      ],
+    },
   },
   {
     title: 'Alianza Capital',
@@ -297,6 +416,112 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     },
     href: '/es/portfolio/alianza-capital-es/',
     relatedSlugs: ['later-life-training-2', 'repuestos-gm-es'],
+    businessCase: {
+      problem:
+        'El onboarding de los clientes, el seguimiento de las inversiones y los reportes se realizaban de forma totalmente manual. Sin plataforma, no había confianza de inversionistas ni clientes, y no había forma de crecer sin contratar personal.',
+      built: [
+        'Portal del cliente y panel de administración.',
+        'Aplicación móvil (App Store y Google Play).',
+        'Gestión financiera para nóminas y préstamos a empleados.',
+      ],
+      results: [
+        'Onboarding de dos empresas y 100% operativas incluyendo empleados, nóminas y ahorros.',
+        'Incorporación, seguimiento e informes automatizados en toda la operación.',
+        'Aplicación móvil disponible en ambas tiendas.',
+        'Capacidad para escalar clientes sin aumentar la plantilla.',
+      ],
+      quote: 'El equipo nos entregó una plataforma que nos enorgullece mostrar a los inversores.',
+      links: [
+        { label: 'Clutch · Testimonio en Clutch de Alianza Capital', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
+        { label: 'App Store', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
+        { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.mycompany.alicard' },
+      ],
+    },
+  },
+  {
+    title: 'Hulp \u2014 Clientes',
+    description:
+      'Hulp es una plataforma colombiana cuya misión es conectar clientes con profesionales de confianza. La App para Clientes fue desarrollada específicamente para usuarios que buscan servicios, ofreciendo una interfaz sencilla, un sistema de matching impulsado por IA e integración con un panel de administración que supervisa todos los servicios, usuarios y problemas.',
+    thumbnail: '/images/login-scaled.png',
+    images: [
+      '/images/login-scaled.png',
+      '/images/home_page-scaled.png',
+      '/images/busquedas-scaled.png',
+      '/images/historial-scaled.png',
+      '/images/miperfil-scaled.png',
+    ],
+    techSpecs: {
+      'Diseño': 'Figma',
+      'Implementación': 'FlutterFlow, Supabase',
+      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.hulp.hulp',
+      'Apple Store': 'https://apps.apple.com/pe/app/hulp-servicios-confiables/id6749599177',
+    },
+    href: '/es/portfolio/hulp-clientes-es/',
+    relatedSlugs: ['hulp-proveedores-es', 'beauty-connect-es'],
+    businessCase: {
+      problem:
+        'La operación era completamente manual, sin una plataforma digital que soportara la demanda. La asignación de servicios, proveedores y gestión de clientes dependían de procesos informales y difíciles de escalar, generando pérdida de eficiencia y oportunidades de crecimiento.',
+      built: [
+        'Arquitectura completa del marketplace diseñada y desarrollada desde cero.',
+        'Sistema centralizado de reservas, asignación de servicios y gestión de proveedores.',
+        'Aplicación móvil para usuarios con una experiencia simple y fluida de contratación.',
+        'Panel de administración para el control total de la oferta y la demanda en tiempo real.',
+      ],
+      results: [
+        'Marketplace funcional lanzado desde cero y operativo en producción.',
+        'Más de 5.000 descargas en Google Play con adopción sostenida.',
+        'Ingresos recurrentes generados a través de servicios dentro de la plataforma.',
+        'Base tecnológica escalable para expansión y crecimiento continuo.',
+      ],
+      quote: 'Zerocode nos permitió pasar de una operación manual a una plataforma que hoy sostiene nuestro crecimiento.',
+      links: [
+        { label: 'Apple Store', url: 'https://apps.apple.com/pe/app/hulp-servicios-confiables/id6749599177' },
+        { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.hulp.hulp' },
+      ],
+    },
+  },
+  {
+    title: 'Hulp \u2014 Proveedores',
+    description:
+      'Hulp es una plataforma colombiana cuya misión es conectar profesionales de confianza con clientes potenciales. Para lograrlo, se desarrolló la App para Proveedores que permite a los profesionales mostrar sus habilidades, recibir coincidencias laborales impulsadas por IA y coordinar su trabajo de manera eficiente a través de un panel de administración que gestiona servicios, usuarios y problemas.',
+    thumbnail: '/images/login-1-scaled.png',
+    images: [
+      '/images/login-1-scaled.png',
+      '/images/solicitudes-scaled.png',
+      '/images/registro5-scaled.png',
+      '/images/registro2-scaled.png',
+      '/images/desempenio_page-scaled.png',
+      '/images/miperfil-1-scaled.png',
+    ],
+    techSpecs: {
+      'Diseño': 'Figma',
+      'Implementación': 'FlutterFlow, Supabase',
+      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.hulp.talentohulp',
+      'Apple Store': 'https://apps.apple.com/pe/app/talento-hulp/id6748622356',
+    },
+    href: '/es/portfolio/hulp-proveedores-es/',
+    relatedSlugs: ['hulp-clientes-es', 'supra-sales-crm-es'],
+    businessCase: {
+      problem:
+        'Del lado de los proveedores, el negocio era igual de manual: no había forma de llegar a clientes con eficiencia, coordinar trabajos ni hacer crecer el lado de la oferta del marketplace.',
+      built: [
+        'Experiencia de proveedores construida dentro de la misma arquitectura del marketplace.',
+        'Aplicación móvil para que los profesionales gestionen su trabajo.',
+        'Emparejamiento de trabajos impulsado por IA.',
+        'Panel de administración que supervisa toda la operación en tiempo real.',
+      ],
+      results: [
+        'Proveedores operando dentro de un marketplace en producción.',
+        'Ingresos recurrentes a través de servicios dentro de la plataforma.',
+        'Base escalable para seguir creciendo.',
+        'Lado de la oferta que sostiene el crecimiento del marketplace.',
+      ],
+      quote: 'Zerocode nos permitió pasar de una operación manual a una plataforma que hoy sostiene nuestro crecimiento.',
+      links: [
+        { label: 'Google Play (Proveedores)', url: 'https://play.google.com/store/apps/details?id=com.hulp.talentohulp' },
+        { label: 'Apple Store (Proveedores)', url: 'https://apps.apple.com/pe/app/talento-hulp/id6748622356' },
+      ],
+    },
   },
   {
     title: 'GM Parts',
@@ -415,49 +640,6 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     },
     href: '/es/portfolio/the-decision-board-es/',
     relatedSlugs: ['beauty-connect-es', 'supra-sales-crm-es'],
-  },
-  {
-    title: 'Hulp \u2014 Clientes',
-    description:
-      'Hulp es una plataforma colombiana cuya misión es conectar clientes con profesionales de confianza. La App para Clientes fue desarrollada específicamente para usuarios que buscan servicios, ofreciendo una interfaz sencilla, un sistema de matching impulsado por IA e integración con un panel de administración que supervisa todos los servicios, usuarios y problemas.',
-    thumbnail: '/images/login-scaled.png',
-    images: [
-      '/images/login-scaled.png',
-      '/images/home_page-scaled.png',
-      '/images/busquedas-scaled.png',
-      '/images/historial-scaled.png',
-      '/images/miperfil-scaled.png',
-    ],
-    techSpecs: {
-      'Diseño': 'Figma',
-      'Implementación': 'FlutterFlow, Supabase',
-      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.hulp.hulp',
-      'Apple Store': 'https://apps.apple.com/pe/app/hulp-servicios-confiables/id6749599177',
-    },
-    href: '/es/portfolio/hulp-clientes-es/',
-    relatedSlugs: ['hulp-proveedores-es', 'beauty-connect-es'],
-  },
-  {
-    title: 'Hulp \u2014 Proveedores',
-    description:
-      'Hulp es una plataforma colombiana cuya misión es conectar profesionales de confianza con clientes potenciales. Para lograrlo, se desarrolló la App para Proveedores que permite a los profesionales mostrar sus habilidades, recibir coincidencias laborales impulsadas por IA y coordinar su trabajo de manera eficiente a través de un panel de administración que gestiona servicios, usuarios y problemas.',
-    thumbnail: '/images/login-1-scaled.png',
-    images: [
-      '/images/login-1-scaled.png',
-      '/images/solicitudes-scaled.png',
-      '/images/registro5-scaled.png',
-      '/images/registro2-scaled.png',
-      '/images/desempenio_page-scaled.png',
-      '/images/miperfil-1-scaled.png',
-    ],
-    techSpecs: {
-      'Diseño': 'Figma',
-      'Implementación': 'FlutterFlow, Supabase',
-      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.hulp.talentohulp',
-      'Apple Store': 'https://apps.apple.com/pe/app/talento-hulp/id6748622356',
-    },
-    href: '/es/portfolio/hulp-proveedores-es/',
-    relatedSlugs: ['hulp-clientes-es', 'supra-sales-crm-es'],
   },
   {
     title: 'CRM de Ventas Supra',

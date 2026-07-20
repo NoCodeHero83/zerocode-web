@@ -7,6 +7,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { SectionIcon } from '@/components/ui/section-icon'
 import { PortfolioCarousel } from '@/components/portfolio/portfolio-carousel'
+import { PortfolioBusinessCase } from '@/components/portfolio/portfolio-business-case'
 import { PortfolioCta } from '@/components/home/portfolio-cta'
 import { homeContent } from '@/lib/content/home'
 import { getPortfolioItemBySlug, getRelatedItems } from '@/lib/content/portfolio-items'
@@ -76,6 +77,14 @@ export default async function PortfolioItemPageEs({ params }: Props) {
                 <PortfolioCarousel images={item.images} title={item.title} />
               </div>
               <div className="flex-1 min-w-0">
+                {item.businessCase && (
+                  <PortfolioBusinessCase businessCase={item.businessCase} locale="es" />
+                )}
+
+                {item.businessCase && paragraphs.length > 0 && (
+                  <div className="h-px bg-white/10 my-6" />
+                )}
+
                 {paragraphs.map((p, i) => (
                   <p key={i} className="text-foreground/80 text-base leading-relaxed mb-4 last:mb-0">
                     {p}
