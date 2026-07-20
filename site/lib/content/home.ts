@@ -274,7 +274,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           title: 'Hulp — Providers',
           description:
             'Providers got their own app inside the same marketplace, with AI job matches and real-time coordination. The result: a scalable supply side sustaining the platform’s growth.',
-          image: '/images/login-1-scaled.png',
+          image: '/images/solicitudes-scaled.png',
           href: '/portfolio/hulp-providers/',
         },
         {
@@ -514,7 +514,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           title: 'Hulp — Proveedores',
           description:
             'Los proveedores tienen su propia app dentro del mismo marketplace, con emparejamientos de trabajo por IA y coordinación en tiempo real. El resultado: un lado de la oferta escalable que sostiene el crecimiento.',
-          image: '/images/login-1-scaled.png',
+          image: '/images/solicitudes-scaled.png',
           href: '/es/portfolio/hulp-proveedores-es/',
         },
         {
