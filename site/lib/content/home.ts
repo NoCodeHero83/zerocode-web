@@ -253,84 +253,84 @@ export const homeContent: Record<Locale, HomeContent> = {
           title: 'Later Life Training',
           description:
             'A platform on the verge of being scrapped became a stable, production-ready system that now activates USD 8,000/month through reliable bookings and payments. We rebuilt the backend and redesigned the UX so the team can finally trust and scale it.',
-          image: '/images/Literlife.png',
+          image: '/images/llt-mock-1.png',
           href: '/portfolio/later-life-training/',
         },
         {
           title: 'Alianza Capital',
           description:
             'From 100% manual operations to a full fintech platform: two companies onboarded and automated, a mobile app live in both stores, and the ability to scale clients without growing headcount.',
-          image: '/images/onboarding_app_movil.png',
+          image: '/images/alianza-mock-1.png',
           href: '/portfolio/alianza-capital/',
         },
         {
           title: 'Hulp — Clients',
           description:
             'A manual operation turned into a live marketplace with 5,000+ downloads and recurring revenue. We built the full architecture, booking system and a simple app that clients actually enjoy using.',
-          image: '/images/login-scaled.png',
+          image: '/images/hulp-mock-1.png',
           href: '/portfolio/hulp-clients/',
         },
         {
           title: 'Hulp — Providers',
           description:
             'Providers got their own app inside the same marketplace, with AI job matches and real-time coordination. The result: a scalable supply side sustaining the platform’s growth.',
-          image: '/images/solicitudes-scaled.png',
+          image: '/images/hulp-mock-1.png',
           href: '/portfolio/hulp-providers/',
         },
         {
           title: 'GM Parts',
           description:
             'GM Parts is the ultimate mobile and web solution for auto shops. Manage income, diagnoses, repair actions, spare parts and quotes. Its administrator web panel centralizes the entire process for efficient management. Perfect for shops looking to optimize their workflow.',
-          image: '/images/Splash-1-1-e1773688882258.png',
+          image: '/images/gmparts-mock-1.png',
           href: '/portfolio/gm-parts-2/',
         },
         {
           title: 'Daily Sparkle',
           description:
             'Daily Sparkle is a UK web application that helps care homes engage residents and connect families through care tools, activity planning, enriching content, and a secure family portal with personalized updates and schedules.',
-          image: '/images/Daily-Sparkle.png',
+          image: '/images/dailysparkle-mock-1.png',
           href: '/portfolio/daily-sparkle/',
         },
         {
           title: 'Ecumerca',
           description:
             'Ecumerca is a marketplace platform made for the end consumer and the providers of products of diverse categories. This platform enables a shopping cart with the end consumer and manages several providers so a consumer can make a purchase from several providers at the same time. Ecumerca is composed of a shopping cart, order history, support chat, return policy and an administrator panel.',
-          image: '/images/f3ff1d5b7be-18.png',
+          image: '/images/ecumerca-mock-1.png',
           href: '/portfolio/ecumerca/',
         },
         {
           title: 'Mentor GrowthRockstar',
           description:
             'Joining together mentors and mentees through a scheduling marketplace to ensure growth and success for the mentees.',
-          image: '/images/Portada2.png',
+          image: '/images/mentor-mock-thumb.png',
           href: '/portfolio/mentor-growthrocsktar/',
         },
         {
           title: 'Beauty Connect',
           description:
             'Beauty Connect is a Mexican marketplace mobile application that connects beauty salons with clients, making it easy to discover, reserve, and pay for beauty services.',
-          image: '/images/f3ff1d5b7be-12.png',
+          image: '/images/beautyconnect-mock-1.png',
           href: '/portfolio/beauty-connect/',
         },
         {
           title: 'The Decision Board',
           description:
             'The Decision Board helps high-performing leadership teams navigate uncertainty and decide how to decide, enabling structured discussions, decisions and pages to make team work more efficient, reliable and productive.',
-          image: '/images/35116a0e826-6.png',
+          image: '/images/decisionboard-mock-1.png',
           href: '/portfolio/the-decision-board/',
         },
         {
           title: 'Supra Sales CRM',
           description:
             'Full sales process CRM tool that enables management of the entire sales process from client and project creation through business case, quotation and billing.',
-          image: '/images/35116a0e826-7-2-scaled.png',
+          image: '/images/supra-mock-1.png',
           href: '/portfolio/supra-sales-crm/',
         },
         {
           title: 'Tok&Go',
           description:
             'Fintech digital assets tokenizator that enables investment in real projects through blockchain, providing end-to-end services for digital assets creation, management and distribution in both primary and secondary markets.',
-          image: '/images/35116a0e826-17-1.png',
+          image: '/images/tokgo-mock-1.png',
           href: '/portfolio/tokgo/',
         },
       ],
@@ -493,84 +493,84 @@ export const homeContent: Record<Locale, HomeContent> = {
           title: 'Later Life Training',
           description:
             'Una plataforma a punto de ser descartada se convirtió en un sistema estable y listo para producción que hoy activa 8.000 USD/mes mediante reservas y pagos fiables. Reconstruimos el backend y rediseñamos la UX para que el equipo por fin pueda confiar y escalar.',
-          image: '/images/Literlife.png',
+          image: '/images/llt-mock-1.png',
           href: '/es/portfolio/later-life-training-2/',
         },
         {
           title: 'Alianza Capital',
           description:
             'De operaciones 100% manuales a una plataforma fintech completa: dos empresas incorporadas y automatizadas, una app móvil en ambas tiendas y la capacidad de escalar clientes sin aumentar la plantilla.',
-          image: '/images/onboarding_app_movil.png',
+          image: '/images/alianza-mock-1.png',
           href: '/es/portfolio/alianza-capital-es/',
         },
         {
           title: 'Hulp — Clientes',
           description:
             'Una operación manual se transformó en un marketplace en producción con más de 5.000 descargas e ingresos recurrentes. Construimos la arquitectura completa, el sistema de reservas y una app sencilla que los clientes disfrutan usar.',
-          image: '/images/login-scaled.png',
+          image: '/images/hulp-mock-1.png',
           href: '/es/portfolio/hulp-clientes-es/',
         },
         {
           title: 'Hulp — Proveedores',
           description:
             'Los proveedores tienen su propia app dentro del mismo marketplace, con emparejamientos de trabajo por IA y coordinación en tiempo real. El resultado: un lado de la oferta escalable que sostiene el crecimiento.',
-          image: '/images/solicitudes-scaled.png',
+          image: '/images/hulp-mock-1.png',
           href: '/es/portfolio/hulp-proveedores-es/',
         },
         {
           title: 'GM Parts',
           description:
             'GM Parts es la solución móvil y web definitiva para talleres mecánicos. Gestione ingresos, diagnósticos, reparaciones, repuestos y presupuestos. Su panel web de administrador centraliza todo el proceso para una gestión eficiente. Ideal para talleres que buscan optimizar su flujo de trabajo.',
-          image: '/images/Splash-1-1-e1773688882258.png',
+          image: '/images/gmparts-mock-1.png',
           href: '/es/portfolio/repuestos-gm-es/',
         },
         {
           title: 'Daily Sparkle',
           description:
             'Daily Sparkle es una aplicación web del Reino Unido que ayuda a los hogares de cuidado a involucrar a sus residentes y conectar con sus familias. Ofrece gestión del cuidado, planificación de actividades y un portal seguro con actualizaciones e información.',
-          image: '/images/Daily-Sparkle.png',
+          image: '/images/dailysparkle-mock-1.png',
           href: '/es/portfolio/daily-sparkle-2/',
         },
         {
           title: 'Ecumerca',
           description:
             'Ecumerca es una plataforma de mercado diseñada para el consumidor final y los proveedores de productos de diversas categorías. Esta plataforma permite al consumidor final crear un carrito de compras y gestionar varios proveedores para que un consumidor pueda realizar compras simultáneas. Ecumerca incluye un carrito de compras, historial de pedidos, chat de soporte, política de devoluciones y un panel de administrador.',
-          image: '/images/f3ff1d5b7be-18.png',
+          image: '/images/ecumerca-mock-1.png',
           href: '/es/portfolio/ecumerca-es/',
         },
         {
           title: 'Mentor GrowthRockstar',
           description:
             'Uniendo mentores y aprendices a través de una plataforma de programación para asegurar el crecimiento y el éxito de los aprendices.',
-          image: '/images/Portada2.png',
+          image: '/images/mentor-mock-thumb.png',
           href: '/es/portfolio/mentor-growthrocsktar-es/',
         },
         {
           title: 'Beauty Connect',
           description:
             'Beauty Connect es una aplicación móvil de mercado mexicano que conecta salones de belleza con clientes, facilitando el descubrimiento, la reserva y el pago de servicios de belleza.',
-          image: '/images/f3ff1d5b7be-12.png',
+          image: '/images/beautyconnect-mock-1.png',
           href: '/es/portfolio/beauty-connect-es/',
         },
         {
           title: 'El Tablero de Decisiones',
           description:
             'El Panel de Decisiones ayuda a los equipos de liderazgo de alto rendimiento a gestionar la incertidumbre y a decidir cómo tomar decisiones, facilitando debates, decisiones y páginas estructuradas para un trabajo en equipo más eficiente y productivo.',
-          image: '/images/35116a0e826-6.png',
+          image: '/images/decisionboard-mock-1.png',
           href: '/es/portfolio/the-decision-board-es/',
         },
         {
           title: 'CRM de Ventas Supra',
           description:
             'Herramienta CRM integral que gestiona todo el proceso de ventas de SUPRA, desde la creación del cliente y el proyecto hasta la creación del caso de negocio, la cotización y la facturación.',
-          image: '/images/35116a0e826-7-2-scaled.png',
+          image: '/images/supra-mock-1.png',
           href: '/es/portfolio/supra-sales-crm-es/',
         },
         {
           title: 'Tok&Go',
           description:
             'Fintech tokenizador de activos digitales que permite invertir en proyectos reales mediante blockchain, ofreciendo servicios integrales de creación, gestión y distribución de activos digitales.',
-          image: '/images/35116a0e826-17-1.png',
+          image: '/images/tokgo-mock-1.png',
           href: '/es/portfolio/tokgo-es/',
         },
       ],
