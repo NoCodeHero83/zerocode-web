@@ -131,7 +131,7 @@ export default async function PortfolioItemPage({ params }: Props) {
                         alt={related.title}
                         fill
                         sizes="(max-width: 640px) 100vw, 33vw"
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className={`object-cover ${related.imagePosition ?? 'object-top'} transition-transform duration-500 group-hover:scale-105`}
                       />
                     </div>
                     <div className="p-6 sm:p-[30px] flex-1 flex flex-col justify-center">

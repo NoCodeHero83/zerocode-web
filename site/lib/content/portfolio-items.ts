@@ -15,6 +15,7 @@ export interface PortfolioItemFull {
   title: string
   description: string
   thumbnail: string
+  imagePosition?: string
   images: string[]
   techSpecs: Record<string, string>
   href: string
@@ -23,6 +24,86 @@ export interface PortfolioItemFull {
 }
 
 const portfolioItemsEn: PortfolioItemFull[] = [
+  {
+    title: 'Alianza Capital',
+    description:
+      'Alianza is a Colombian financial company whose mission is to make financial products accessible to small investors. To achieve this, Alianza developed a mobile application alongside a web-based management platform to handle all financial contracts and assets. Alianza provides a user-friendly yet functional and highly effective interface, enabling investors to carry out their transactions with ease and confidence. The PSE payment gateway was integrated, and the application is set to be published on both Google and Apple stores soon.',
+    thumbnail: '/images/alianza-mock-1.png',
+    images: [
+      '/images/alianza-mock-1.png',
+      '/images/alianza-mock-2.png',
+      '/images/alianza-mock-3.png',
+      '/images/alianza-mock-4.png',
+      '/images/alianza-mock-5.png',
+    ],
+    techSpecs: {
+      'Design': 'Figma',
+      'Implementation': 'Flutterflow & Firebase',
+      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.mycompany.alicard',
+      'Apple Store': 'https://apps.apple.com/pe/app/alianza-capital/id6502927890',
+    },
+    href: '/portfolio/alianza-capital/',
+    relatedSlugs: ['ilirox', 'later-life-training'],
+    businessCase: {
+      problem:
+        'Client onboarding, investment tracking and reporting were done completely by hand. With no platform, there was no trust from investors or clients, and no way to grow without hiring more people.',
+      built: [
+        'Client portal and admin panel.',
+        'Mobile app for both App Store and Google Play.',
+        'Financial management for payroll and employee loans.',
+      ],
+      results: [
+        'Two companies onboarded and 100% operational, including employees, payroll and savings.',
+        'Automated onboarding, tracking and reporting across the operation.',
+        'Mobile app available in both stores.',
+        'Ability to scale clients without growing headcount.',
+      ],
+      quote: 'The team delivered a platform we are proud to show our investors.',
+      links: [
+        { label: 'Clutch · Alianza Capital testimonial', url: 'https://clutch.co/go-to-review/5d1ffa4c-14be-49dd-a119-27464d90b6ea/365444' },
+        { label: 'App Store', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
+        { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.mycompany.alicard' },
+      ],
+    },
+  },
+  {
+    title: 'Ilirox',
+    description:
+      'Ilirox is a professional social network for real estate professionals, initially developed for Aguascalientes, Mexico, whose mission is to build the largest real estate professional network in the country. To achieve this, Ilirox provides intelligent matching between searches and properties, automatic alerts whenever new matches appear, advanced search using map polygons, community validation of real estate agents, and the ability to publish reels, videos and social content. The platform is available on the Apple App Store and Google Play, with the goal of expanding from Aguascalientes to all of Mexico.',
+    thumbnail: '/images/ilirox-portada.png',
+    images: [
+      '/images/ilirox-mock-1.png',
+      '/images/ilirox-mock-2.png',
+      '/images/ilirox-mock-3.png',
+      '/images/ilirox-mock-4.png',
+      '/images/ilirox-mock-5.png',
+      '/images/ilirox-mock-6.png',
+      '/images/ilirox-mock-7.png',
+    ],
+    techSpecs: {
+      'Available on': 'Apple App Store, Google Play',
+    },
+    href: '/portfolio/ilirox/',
+    relatedSlugs: ['hulp-clients', 'beauty-connect'],
+    businessCase: {
+      problem:
+        'Real estate professionals in Aguascalientes had no dedicated professional network: matching between searches and properties was manual, there were no automatic alerts when matches appeared, and there was no way to validate agents or share professional content in one place.',
+      built: [
+        'Intelligent match between searches and properties.',
+        'Automatic alerts when new matches appear.',
+        'Advanced search using map polygons.',
+        'Community validation of real estate agents.',
+        'Publication of properties.',
+        'Publication of reels and videos.',
+      ],
+      results: [
+        'A platform designed to become the largest real estate professional network in Mexico.',
+        'Launched initially in Aguascalientes.',
+        'Available on the Apple App Store and Google Play.',
+      ],
+      links: [],
+    },
+  },
   {
     title: 'Later Life Training',
     description:
@@ -65,46 +146,74 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     },
   },
   {
-    title: 'Alianza Capital',
+    title: 'True English',
     description:
-      'Alianza is a Colombian financial company whose mission is to make financial products accessible to small investors. To achieve this, Alianza developed a mobile application alongside a web-based management platform to handle all financial contracts and assets. Alianza provides a user-friendly yet functional and highly effective interface, enabling investors to carry out their transactions with ease and confidence. The PSE payment gateway was integrated, and the application is set to be published on both Google and Apple stores soon.',
-    thumbnail: '/images/alianza-mock-1.png',
+      'True English is an English learning platform assisted by Artificial Intelligence. It offers complete English courses, automatic pronunciation evaluation powered by AI, and personalized feedback. True English also includes specialized courses (TOEFL, children, companies, etc.) and independent content for each organization. Currently used in Hermosillo and Zacatecas, with plans for national expansion, True English is available on the Apple App Store and Google Play.',
+    thumbnail: '/images/trueenglish-mock-1.png',
     images: [
-      '/images/alianza-mock-1.png',
-      '/images/alianza-mock-2.png',
-      '/images/alianza-mock-3.png',
-      '/images/alianza-mock-4.png',
-      '/images/alianza-mock-5.png',
-      '/images/alianza-mock-6.png',
+      '/images/trueenglish-mock-1.png',
+      '/images/trueenglish-mock-2.png',
+      '/images/trueenglish-mock-3.png',
+      '/images/trueenglish-mock-4.png',
+      '/images/trueenglish-mock-5.png',
+      '/images/trueenglish-mock-6.png',
     ],
     techSpecs: {
-      'Design': 'Figma',
-      'Implementation': 'Flutterflow & Firebase',
-      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.mycompany.alicard',
-      'Apple Store': 'https://apps.apple.com/pe/app/alianza-capital/id6502927890',
+      'Available on': 'Apple App Store, Google Play',
     },
-    href: '/portfolio/alianza-capital/',
-    relatedSlugs: ['later-life-training', 'gm-parts-2'],
+    href: '/portfolio/true-english/',
+    relatedSlugs: ['later-life-training', 'daily-sparkle'],
     businessCase: {
       problem:
-        'Client onboarding, investment tracking and reporting were done completely by hand. With no platform, there was no trust from investors or clients, and no way to grow without hiring more people.',
+        'Learning English through generic courses left students without personalized feedback or automatic pronunciation evaluation, making progress difficult to track and organizations unable to deliver tailored content.',
       built: [
-        'Client portal and admin panel.',
-        'Mobile app for both App Store and Google Play.',
-        'Financial management for payroll and employee loans.',
+        'Complete English courses.',
+        'Automatic pronunciation evaluation powered by AI.',
+        'Personalized feedback for each student.',
+        'Specialized courses: TOEFL, children, companies, and more.',
+        'Private content for organizations.',
       ],
       results: [
-        'Two companies onboarded and 100% operational, including employees, payroll and savings.',
-        'Automated onboarding, tracking and reporting across the operation.',
-        'Mobile app available in both stores.',
-        'Ability to scale clients without growing headcount.',
+        'An AI-assisted English learning platform in active use.',
+        'Currently used in Hermosillo and Zacatecas.',
+        'Available on the Apple App Store and Google Play, with plans for national expansion.',
       ],
-      quote: 'The team delivered a platform we are proud to show our investors.',
-      links: [
-        { label: 'Clutch · Alianza Capital testimonial', url: 'https://clutch.co/go-to-review/5d1ffa4c-14be-49dd-a119-27464d90b6ea/365444' },
-        { label: 'App Store', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
-        { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.mycompany.alicard' },
+      links: [],
+    },
+  },
+  {
+    title: 'Increciendo FinTech',
+    description:
+      'Increciendo FinTech is a web platform for online loan management based on a subscription model. It offers preferential rates for subscribed users, standard rates for occasional users, and corporate plans for companies and collaborators. This SaaS model benefits both the fintech and its clients. Increciendo FinTech currently operates in Mexico City, with projection of expansion, and is available exclusively as a web version.',
+    thumbnail: '/images/increciendo-mock-1.png',
+    images: [
+      '/images/increciendo-mock-1.png',
+      '/images/increciendo-mock-2.png',
+      '/images/increciendo-mock-3.png',
+      '/images/increciendo-mock-4.png',
+      '/images/increciendo-mock-5.png',
+    ],
+    techSpecs: {
+      'Available on': 'Web platform only',
+    },
+    href: '/portfolio/increciendo-fintech/',
+    relatedSlugs: ['alianza-capital', 'supra-sales-crm'],
+    businessCase: {
+      problem:
+        'Managing online loans required a pricing model that could reward recurring users, serve occasional clients and give companies a structured offering, all while keeping the platform profitable and scalable.',
+      built: [
+        'Web platform for online loan management.',
+        'Subscription-based pricing model.',
+        'Preferential rates for subscribed users.',
+        'Standard rates for occasional users.',
+        'Corporate plans for companies and collaborators.',
       ],
+      results: [
+        'A SaaS model that benefits both clients and the fintech, adding recurring subscription revenue.',
+        'Operating in Mexico City with projection of expansion.',
+        'Available exclusively as a web version.',
+      ],
+      links: [],
     },
   },
   {
@@ -116,6 +225,8 @@ const portfolioItemsEn: PortfolioItemFull[] = [
       '/images/hulp-mock-1.png',
       '/images/hulp-mock-2.png',
       '/images/hulp-mock-3.png',
+      '/images/hulp-mock-4.png',
+      '/images/hulp-mock-5.png',
     ],
     techSpecs: {
       'Design': 'Figma',
@@ -151,11 +262,14 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     title: 'Hulp \u2014 Providers',
     description:
       'Hulp is a Colombian service platform whose mission is to connect trusted handyman professionals with potential clients. To achieve this, the Provider App was developed to let professionals showcase their skills, receive AI-powered job matches, and coordinate their work efficiently through an administrator panel that manages services, users, and issues.',
-    thumbnail: '/images/hulp-mock-1.png',
+    thumbnail: '/images/hulp-providers-mock-1.png',
     images: [
-      '/images/hulp-mock-1.png',
-      '/images/hulp-mock-2.png',
-      '/images/hulp-mock-3.png',
+      '/images/hulp-providers-mock-1.png',
+      '/images/hulp-providers-mock-2.png',
+      '/images/hulp-providers-mock-3.png',
+      '/images/hulp-providers-mock-4.png',
+      '/images/hulp-providers-mock-5.png',
+      '/images/hulp-providers-mock-6.png',
     ],
     techSpecs: {
       'Design': 'Figma',
@@ -188,10 +302,31 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     },
   },
   {
+    title: 'Daily Sparkle',
+    description:
+      'Daily Sparkle is a web application from the UK designed to help care homes engage residents and connect with families. To achieve this, Daily Sparkle provides care management tools, activity planning, life-enriching content, and a secure family portal with updates, schedules, and personalized resident information.',
+    thumbnail: '/images/dailysparkle-mock-1.png',
+    images: [
+      '/images/dailysparkle-mock-1.png',
+      '/images/dailysparkle-mock-2.png',
+      '/images/dailysparkle-mock-3.png',
+      '/images/dailysparkle-mock-4.png',
+      '/images/dailysparkle-mock-5.png',
+    ],
+    techSpecs: {
+      'Design': 'Lovable',
+      'Implementation': 'Bubble',
+      'Link': 'https://dailysparkle.co.uk/',
+    },
+    href: '/portfolio/daily-sparkle/',
+    relatedSlugs: ['later-life-training', 'ecumerca'],
+  },
+  {
     title: 'GM Parts',
     description:
       'GM Parts is the ultimate mobile and web solution for auto shops. Manage income, diagnoses, repair actions, spare parts and quotes. Its administrator web panel centralizes the entire process for efficient management. Perfect for shops looking to optimize their workflow.\n\nGM Parts is the definitive solution for mechanical workshops seeking to optimize their management process. With this mobile app and its web admin panel, managing your workflow has never been so efficient.\n\nFrom the moment a new car arrives at the shop, GM Parts makes it easy to record revenue and instantly generate diagnostics and fault reports. Users can enter the actions necessary to resolve these faults and manage the required spare parts, all from the convenience of their mobile device.\n\nOne of the standout features of GM Parts is its ability to generate detailed quotes, which can be approved by customers through the app. Once the quote is approved, the shop can proceed with the necessary arrangements quickly and efficiently.\n\nThe administrator web panel offers complete control over the entire process, allowing detailed supervision of each stage. From customer and vehicle management to task assignment and payment tracking, GM Parts centralizes all operations effectively.\n\nIn short, GM Parts is the ultimate tool for auto shops looking to optimize their workflow and provide exceptional service to their customers. With its intuitive interface, complete management functions and real-time tracking capabilities, GM Parts becomes the perfect ally for any modern mechanical workshop.',
     thumbnail: '/images/gmparts-mock-1.png',
+    imagePosition: 'object-center',
     images: [
       '/images/gmparts-mock-1.png',
       '/images/gmparts-mock-2.png',
@@ -208,52 +343,11 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     relatedSlugs: ['alianza-capital', 'daily-sparkle'],
   },
   {
-    title: 'Daily Sparkle',
-    description:
-      'Daily Sparkle is a web application from the UK designed to help care homes engage residents and connect with families. To achieve this, Daily Sparkle provides care management tools, activity planning, life-enriching content, and a secure family portal with updates, schedules, and personalized resident information.',
-    thumbnail: '/images/dailysparkle-mock-1.png',
-    images: [
-      '/images/dailysparkle-mock-1.png',
-      '/images/dailysparkle-mock-2.png',
-      '/images/dailysparkle-mock-3.png',
-      '/images/dailysparkle-mock-4.png',
-      '/images/dailysparkle-mock-5.png',
-      '/images/dailysparkle-mock-6.png',
-    ],
-    techSpecs: {
-      'Design': 'Lovable',
-      'Implementation': 'Bubble',
-      'Link': 'https://dailysparkle.co.uk/',
-    },
-    href: '/portfolio/daily-sparkle/',
-    relatedSlugs: ['later-life-training', 'ecumerca'],
-  },
-  {
-    title: 'Ecumerca',
-    description:
-      'Ecumerca is a marketplace platform made for the end consumer and the the providers of products of diverse categories. This platform enables a shopping cart with the end consumer and manages several providers so a consumer can make a purchase from several providers at the same time. Ecumerca is composed by a shopping cart, order history, support chat, return policy and an administrator panel.',
-    thumbnail: '/images/ecumerca-mock-1.png',
-    images: [
-      '/images/ecumerca-mock-1.png',
-      '/images/ecumerca-mock-2.png',
-      '/images/ecumerca-mock-3.png',
-    ],
-    techSpecs: {
-      'Design': 'Figma',
-      'Implementation': 'FlutterFlow & Firebase',
-      'Google Store': 'https://play.google.com/store/apps/details?id=com.mycompany.ecumerca',
-      'Apple Store': 'https://apps.apple.com/us/app/ecumerca/id6738750466',
-    },
-    href: '/portfolio/ecumerca/',
-    relatedSlugs: ['daily-sparkle', 'alianza-capital'],
-  },
-  {
     title: 'Mentor GrowthRockstar',
     description:
       'Joining together mentors and mentees through a scheduling marketplace to ensure growth and success for the mentees.',
-    thumbnail: '/images/mentor-mock-thumb.png',
+    thumbnail: '/images/mentor-mock-1.png',
     images: [
-      '/images/mentor-mock-thumb.png',
       '/images/mentor-mock-1.png',
       '/images/mentor-mock-2.png',
       '/images/mentor-mock-3.png',
@@ -342,9 +436,146 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     href: '/portfolio/tokgo/',
     relatedSlugs: ['supra-sales-crm', 'alianza-capital'],
   },
+  {
+    title: 'Racing KX',
+    description:
+      'Racing KX is a specialized social network for professionals and enthusiasts of the motorsport world, developed for France together with our partner Creante. It offers professional profiles, posts, followers and specialized networking, plus premium features through a subscription model. Initially designed in Figma and developed in React Native, Racing KX is available on the Apple App Store and Google Play.',
+    thumbnail: '/images/racingkx-mock-2.png',
+    images: [
+      '/images/racingkx-mock-1.png',
+      '/images/racingkx-mock-2.png',
+      '/images/racingkx-mock-3.png',
+      '/images/racingkx-mock-4.png',
+      '/images/racingkx-mock-5.png',
+      '/images/racingkx-mock-6.png',
+    ],
+    techSpecs: {
+      'Design': 'Figma',
+      'Implementation': 'React Native',
+      'Available on': 'Apple App Store, Google Play',
+    },
+    href: '/portfolio/racing-kx/',
+    relatedSlugs: ['daily-sparkle', 'the-decision-board'],
+    businessCase: {
+      problem:
+        'The professional motorsport community needed a specialized space to build professional profiles, share content and network with peers, combined with premium features to support a sustainable model.',
+      built: [
+        'Professional profiles.',
+        'Posts, followers and specialized networking.',
+        'A specialized community.',
+        'Premium features through a subscription model.',
+        'Design in Figma and development in React Native.',
+      ],
+      results: [
+        'A social network built for the professional motorsport community.',
+        'Developed for professionals and enthusiasts of the motorsport world in France.',
+        'Available on the Apple App Store and Google Play.',
+      ],
+      links: [],
+    },
+  },
+  {
+    title: 'Ecumerca',
+    description:
+      'Ecumerca is a marketplace platform made for the end consumer and the the providers of products of diverse categories. This platform enables a shopping cart with the end consumer and manages several providers so a consumer can make a purchase from several providers at the same time. Ecumerca is composed by a shopping cart, order history, support chat, return policy and an administrator panel.',
+    thumbnail: '/images/ecumerca-mock-1.png',
+    images: [
+      '/images/ecumerca-mock-1.png',
+      '/images/ecumerca-mock-2.png',
+      '/images/ecumerca-mock-3.png',
+    ],
+    techSpecs: {
+      'Design': 'Figma',
+      'Implementation': 'FlutterFlow & Firebase',
+      'Google Store': 'https://play.google.com/store/apps/details?id=com.mycompany.ecumerca',
+      'Apple Store': 'https://apps.apple.com/us/app/ecumerca/id6738750466',
+    },
+    href: '/portfolio/ecumerca/',
+    relatedSlugs: ['daily-sparkle', 'alianza-capital'],
+  },
 ]
 
 const portfolioItemsEs: PortfolioItemFull[] = [
+  {
+    title: 'Alianza Capital',
+    description:
+      'Alianza es una empresa financiera colombiana cuya misión es facilitar el acceso a productos financieros a pequeños inversionistas mediante una aplicación móvil y plataforma web para gestionar contratos y activos financieros. Alianza ofrece una interfaz funcional y altamente efectiva, permitiendo a los inversionistas realizar sus transacciones con facilidad y confianza. Se integró la pasarela de pago PSE y la aplicación está próxima a publicarse en las tiendas de Google y Apple.',
+    thumbnail: '/images/alianza-mock-1.png',
+    images: [
+      '/images/alianza-mock-1.png',
+      '/images/alianza-mock-2.png',
+      '/images/alianza-mock-3.png',
+      '/images/alianza-mock-4.png',
+      '/images/alianza-mock-5.png',
+    ],
+    techSpecs: {
+      'Diseño': 'Figma',
+      'Implementación': 'Flutterflow & Firebase',
+      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.mycompany.alicard',
+      'Apple Store': 'https://apps.apple.com/pe/app/alianza-capital/id6502927890',
+    },
+    href: '/es/portfolio/alianza-capital-es/',
+    relatedSlugs: ['ilirox-es', 'later-life-training-2'],
+    businessCase: {
+      problem:
+        'El onboarding de los clientes, el seguimiento de las inversiones y los reportes se realizaban de forma totalmente manual. Sin plataforma, no había confianza de inversionistas ni clientes, y no había forma de crecer sin contratar personal.',
+      built: [
+        'Portal del cliente y panel de administración.',
+        'Aplicación móvil (App Store y Google Play).',
+        'Gestión financiera para nóminas y préstamos a empleados.',
+      ],
+      results: [
+        'Onboarding de dos empresas y 100% operativas incluyendo empleados, nóminas y ahorros.',
+        'Incorporación, seguimiento e informes automatizados en toda la operación.',
+        'Aplicación móvil disponible en ambas tiendas.',
+        'Capacidad para escalar clientes sin aumentar la plantilla.',
+      ],
+      quote: 'El equipo nos entregó una plataforma que nos enorgullece mostrar a los inversores.',
+      links: [
+        { label: 'Clutch · Testimonio en Clutch de Alianza Capital', url: 'https://clutch.co/go-to-review/5d1ffa4c-14be-49dd-a119-27464d90b6ea/365444' },
+        { label: 'App Store', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
+        { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.mycompany.alicard' },
+      ],
+    },
+  },
+  {
+    title: 'Ilirox',
+    description:
+      'Ilirox es una red social profesional para agentes inmobiliarios, desarrollada inicialmente para Aguascalientes, México, cuya misión es construir la mayor red profesional inmobiliaria del país. Para lograrlo, Ilirox ofrece un match inteligente entre búsquedas y propiedades, alertas automáticas cuando aparecen coincidencias, búsqueda avanzada mediante polígonos en el mapa, validación comunitaria de agentes inmobiliarios y publicación de reels, videos y contenido social. La plataforma está disponible en Apple App Store y Google Play, con el objetivo de expandirse desde Aguascalientes hacia todo México.',
+    thumbnail: '/images/ilirox-portada.png',
+    images: [
+      '/images/ilirox-mock-1.png',
+      '/images/ilirox-mock-2.png',
+      '/images/ilirox-mock-3.png',
+      '/images/ilirox-mock-4.png',
+      '/images/ilirox-mock-5.png',
+      '/images/ilirox-mock-6.png',
+      '/images/ilirox-mock-7.png',
+    ],
+    techSpecs: {
+      'Disponible en': 'Apple App Store, Google Play',
+    },
+    href: '/es/portfolio/ilirox-es/',
+    relatedSlugs: ['hulp-clientes-es', 'beauty-connect-es'],
+    businessCase: {
+      problem:
+        'Los profesionales inmobiliarios en Aguascalientes no contaban con una red profesional dedicada: el match entre búsquedas y propiedades era manual, no había alertas automáticas cuando aparecían coincidencias, ni una forma de validar agentes o compartir contenido profesional en un solo lugar.',
+      built: [
+        'Match inteligente entre búsquedas y propiedades.',
+        'Alertas automáticas cuando aparecen coincidencias.',
+        'Búsqueda avanzada mediante polígonos en el mapa.',
+        'Validación comunitaria de agentes inmobiliarios.',
+        'Publicación de propiedades.',
+        'Publicación de reels y videos.',
+      ],
+      results: [
+        'Una plataforma diseñada para convertirse en la mayor red profesional inmobiliaria de México.',
+        'Lanzada inicialmente en Aguascalientes.',
+        'Disponible en Apple App Store y Google Play.',
+      ],
+      links: [],
+    },
+  },
   {
     title: 'Later Life Training',
     description:
@@ -387,46 +618,74 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     },
   },
   {
-    title: 'Alianza Capital',
+    title: 'True English',
     description:
-      'Alianza es una empresa financiera colombiana cuya misión es facilitar el acceso a productos financieros a pequeños inversionistas mediante una aplicación móvil y plataforma web para gestionar contratos y activos financieros. Alianza ofrece una interfaz funcional y altamente efectiva, permitiendo a los inversionistas realizar sus transacciones con facilidad y confianza. Se integró la pasarela de pago PSE y la aplicación está próxima a publicarse en las tiendas de Google y Apple.',
-    thumbnail: '/images/alianza-mock-1.png',
+      'True English es una plataforma de aprendizaje de inglés asistida por Inteligencia Artificial. Ofrece cursos completos de inglés, evaluación automática de pronunciación mediante IA y retroalimentación personalizada. True English también incluye cursos especializados (TOEFL, niños, empresas, etc.) y contenido independiente para cada organización. Actualmente utilizada en Hermosillo y Zacatecas, con planes de expansión nacional, True English está disponible en Apple App Store y Google Play.',
+    thumbnail: '/images/trueenglish-mock-1.png',
     images: [
-      '/images/alianza-mock-1.png',
-      '/images/alianza-mock-2.png',
-      '/images/alianza-mock-3.png',
-      '/images/alianza-mock-4.png',
-      '/images/alianza-mock-5.png',
-      '/images/alianza-mock-6.png',
+      '/images/trueenglish-mock-1.png',
+      '/images/trueenglish-mock-2.png',
+      '/images/trueenglish-mock-3.png',
+      '/images/trueenglish-mock-4.png',
+      '/images/trueenglish-mock-5.png',
+      '/images/trueenglish-mock-6.png',
     ],
     techSpecs: {
-      'Diseño': 'Figma',
-      'Implementación': 'Flutterflow & Firebase',
-      'Google Play Store': 'https://play.google.com/store/apps/details?id=com.mycompany.alicard',
-      'Apple Store': 'https://apps.apple.com/pe/app/alianza-capital/id6502927890',
+      'Disponible en': 'Apple App Store, Google Play',
     },
-    href: '/es/portfolio/alianza-capital-es/',
-    relatedSlugs: ['later-life-training-2', 'repuestos-gm-es'],
+    href: '/es/portfolio/true-english-es/',
+    relatedSlugs: ['later-life-training-2', 'daily-sparkle-2'],
     businessCase: {
       problem:
-        'El onboarding de los clientes, el seguimiento de las inversiones y los reportes se realizaban de forma totalmente manual. Sin plataforma, no había confianza de inversionistas ni clientes, y no había forma de crecer sin contratar personal.',
+        'Aprender inglés con cursos genéricos dejaba a los estudiantes sin retroalimentación personalizada ni evaluación automática de pronunciación, dificultando el seguimiento del progreso y sin permitir que las organizaciones entregaran contenido adaptado.',
       built: [
-        'Portal del cliente y panel de administración.',
-        'Aplicación móvil (App Store y Google Play).',
-        'Gestión financiera para nóminas y préstamos a empleados.',
+        'Cursos completos de inglés.',
+        'Evaluación automática de pronunciación mediante IA.',
+        'Retroalimentación personalizada para cada estudiante.',
+        'Cursos especializados: TOEFL, niños, empresas y más.',
+        'Contenido privado para organizaciones.',
       ],
       results: [
-        'Onboarding de dos empresas y 100% operativas incluyendo empleados, nóminas y ahorros.',
-        'Incorporación, seguimiento e informes automatizados en toda la operación.',
-        'Aplicación móvil disponible en ambas tiendas.',
-        'Capacidad para escalar clientes sin aumentar la plantilla.',
+        'Una plataforma de aprendizaje de inglés asistida por IA en uso activo.',
+        'Actualmente utilizada en Hermosillo y Zacatecas.',
+        'Disponible en Apple App Store y Google Play, con planes de expansión nacional.',
       ],
-      quote: 'El equipo nos entregó una plataforma que nos enorgullece mostrar a los inversores.',
-      links: [
-        { label: 'Clutch · Testimonio en Clutch de Alianza Capital', url: 'https://clutch.co/go-to-review/5d1ffa4c-14be-49dd-a119-27464d90b6ea/365444' },
-        { label: 'App Store', url: 'https://apps.apple.com/pe/app/alianza-capital/id6502927890' },
-        { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.mycompany.alicard' },
+      links: [],
+    },
+  },
+  {
+    title: 'Increciendo FinTech',
+    description:
+      'Increciendo FinTech es una plataforma web para la gestión de préstamos en línea basada en un modelo de suscripción. Ofrece tasas preferenciales para usuarios suscritos, tasas estándar para usuarios ocasionales y planes corporativos para empresas y colaboradores. Este modelo SaaS beneficia tanto a la fintech como a sus clientes. Increciendo FinTech opera actualmente en Ciudad de México, con proyección de expansión, y está disponible únicamente en versión web.',
+    thumbnail: '/images/increciendo-mock-1.png',
+    images: [
+      '/images/increciendo-mock-1.png',
+      '/images/increciendo-mock-2.png',
+      '/images/increciendo-mock-3.png',
+      '/images/increciendo-mock-4.png',
+      '/images/increciendo-mock-5.png',
+    ],
+    techSpecs: {
+      'Disponible en': 'Únicamente versión web',
+    },
+    href: '/es/portfolio/increciendo-fintech-es/',
+    relatedSlugs: ['alianza-capital-es', 'supra-sales-crm-es'],
+    businessCase: {
+      problem:
+        'Gestionar préstamos en línea requería un modelo de precios que recompensara a los usuarios recurrentes, atendiera a clientes ocasionales y ofreciera una propuesta estructurada a las empresas, manteniendo la plataforma rentable y escalable.',
+      built: [
+        'Plataforma web para la gestión de préstamos en línea.',
+        'Modelo de precios basado en suscripción.',
+        'Tasas preferenciales para usuarios suscritos.',
+        'Tasas estándar para usuarios ocasionales.',
+        'Planes corporativos para empresas y colaboradores.',
       ],
+      results: [
+        'Un modelo que beneficia tanto a los clientes como a la fintech, incorporando ingresos recurrentes mediante suscripción.',
+        'Operando en Ciudad de México con proyección de expansión.',
+        'Disponible únicamente en versión web.',
+      ],
+      links: [],
     },
   },
   {
@@ -438,6 +697,8 @@ const portfolioItemsEs: PortfolioItemFull[] = [
       '/images/hulp-mock-1.png',
       '/images/hulp-mock-2.png',
       '/images/hulp-mock-3.png',
+      '/images/hulp-mock-4.png',
+      '/images/hulp-mock-5.png',
     ],
     techSpecs: {
       'Diseño': 'Figma',
@@ -473,11 +734,14 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     title: 'Hulp \u2014 Proveedores',
     description:
       'Hulp es una plataforma colombiana cuya misión es conectar profesionales de confianza con clientes potenciales. Para lograrlo, se desarrolló la App para Proveedores que permite a los profesionales mostrar sus habilidades, recibir coincidencias laborales impulsadas por IA y coordinar su trabajo de manera eficiente a través de un panel de administración que gestiona servicios, usuarios y problemas.',
-    thumbnail: '/images/hulp-mock-1.png',
+    thumbnail: '/images/hulp-providers-mock-1.png',
     images: [
-      '/images/hulp-mock-1.png',
-      '/images/hulp-mock-2.png',
-      '/images/hulp-mock-3.png',
+      '/images/hulp-providers-mock-1.png',
+      '/images/hulp-providers-mock-2.png',
+      '/images/hulp-providers-mock-3.png',
+      '/images/hulp-providers-mock-4.png',
+      '/images/hulp-providers-mock-5.png',
+      '/images/hulp-providers-mock-6.png',
     ],
     techSpecs: {
       'Diseño': 'Figma',
@@ -510,10 +774,31 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     },
   },
   {
+    title: 'Daily Sparkle',
+    description:
+      'Daily Sparkle es una aplicación web del Reino Unido diseñada para ayudar a hogares de cuidado a involucrar a los residentes y conectar a las familias. Para lograrlo, Daily Sparkle proporciona herramientas de gestión de cuidado, planificación de actividades, contenido enriquecedor y un portal familiar seguro con actualizaciones, horarios e información personalizada de los residentes.',
+    thumbnail: '/images/dailysparkle-mock-1.png',
+    images: [
+      '/images/dailysparkle-mock-1.png',
+      '/images/dailysparkle-mock-2.png',
+      '/images/dailysparkle-mock-3.png',
+      '/images/dailysparkle-mock-4.png',
+      '/images/dailysparkle-mock-5.png',
+    ],
+    techSpecs: {
+      'Diseño': 'Lovable',
+      'Implementación': 'Bubble',
+      'Enlace': 'https://dailysparkle.co.uk/',
+    },
+    href: '/es/portfolio/daily-sparkle-2/',
+    relatedSlugs: ['later-life-training-2', 'ecumerca-es'],
+  },
+  {
     title: 'GM Parts',
     description:
       'GM Parts es la solución móvil y web definitiva para talleres mecánicos. Gestione ingresos, diagnósticos, reparaciones, repuestos y presupuestos. Su panel de administración web centraliza todo el proceso.\n\nGM Parts es la solución definitiva para talleres mecánicos que buscan optimizar su proceso de gestión. Con esta aplicación móvil y su panel de administración web, gestionar el flujo de trabajo nunca ha sido tan eficiente.\n\nDesde el momento en que un nuevo automóvil llega al taller, GM Parts facilita el registro de ingresos y la generación instantánea de diagnósticos e informes de fallas. Los usuarios pueden ingresar las acciones necesarias para resolver estas fallas y gestionar los repuestos requeridos, todo desde la comodidad de su dispositivo móvil.\n\nUna de las características destacadas de GM Parts es su capacidad para generar presupuestos detallados, que pueden ser aprobados por los clientes a través de la aplicación. Una vez aprobado el presupuesto, el taller puede proceder con las gestiones necesarias de manera rápida y eficiente.\n\nEl panel de administración web ofrece control completo sobre todo el proceso, permitiendo una supervisión detallada de cada etapa. Desde la gestión de clientes y vehículos hasta la asignación de tareas y el seguimiento de pagos, GM Parts centraliza todas las operaciones de manera efectiva.\n\nEn resumen, GM Parts es la herramienta definitiva para talleres mecánicos que buscan optimizar su flujo de trabajo y brindar un servicio excepcional a sus clientes. Con su interfaz intuitiva, funciones de gestión completas y capacidades de seguimiento en tiempo real, GM Parts se convierte en el aliado perfecto para cualquier taller mecánico moderno.',
     thumbnail: '/images/gmparts-mock-1.png',
+    imagePosition: 'object-center',
     images: [
       '/images/gmparts-mock-1.png',
       '/images/gmparts-mock-2.png',
@@ -530,52 +815,11 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     relatedSlugs: ['alianza-capital-es', 'daily-sparkle-2'],
   },
   {
-    title: 'Daily Sparkle',
-    description:
-      'Daily Sparkle es una aplicación web del Reino Unido diseñada para ayudar a hogares de cuidado a involucrar a los residentes y conectar a las familias. Para lograrlo, Daily Sparkle proporciona herramientas de gestión de cuidado, planificación de actividades, contenido enriquecedor y un portal familiar seguro con actualizaciones, horarios e información personalizada de los residentes.',
-    thumbnail: '/images/dailysparkle-mock-1.png',
-    images: [
-      '/images/dailysparkle-mock-1.png',
-      '/images/dailysparkle-mock-2.png',
-      '/images/dailysparkle-mock-3.png',
-      '/images/dailysparkle-mock-4.png',
-      '/images/dailysparkle-mock-5.png',
-      '/images/dailysparkle-mock-6.png',
-    ],
-    techSpecs: {
-      'Diseño': 'Lovable',
-      'Implementación': 'Bubble',
-      'Enlace': 'https://dailysparkle.co.uk/',
-    },
-    href: '/es/portfolio/daily-sparkle-2/',
-    relatedSlugs: ['later-life-training-2', 'ecumerca-es'],
-  },
-  {
-    title: 'Ecumerca',
-    description:
-      'Ecumerca es una plataforma de mercado para el consumidor final y los proveedores de productos de diversas categorías. Esta plataforma permite un carrito de compras con el consumidor final y gestiona varios proveedores para que un consumidor pueda realizar una compra de varios proveedores al mismo tiempo. Ecumerca está compuesta por un carrito de compras, historial de pedidos, chat de soporte, política de devoluciones y un panel de administración.',
-    thumbnail: '/images/ecumerca-mock-1.png',
-    images: [
-      '/images/ecumerca-mock-1.png',
-      '/images/ecumerca-mock-2.png',
-      '/images/ecumerca-mock-3.png',
-    ],
-    techSpecs: {
-      'Diseño': 'Figma',
-      'Implementación': 'FlutterFlow & Firebase',
-      'Google Store': 'https://play.google.com/store/apps/details?id=com.mycompany.ecumerca',
-      'Apple Store': 'https://apps.apple.com/us/app/ecumerca/id6738750466',
-    },
-    href: '/es/portfolio/ecumerca-es/',
-    relatedSlugs: ['daily-sparkle-2', 'alianza-capital-es'],
-  },
-  {
     title: 'Mentor GrowthRockstar',
     description:
       'Uniendo mentores y aprendices a través de una plataforma de programación para asegurar el crecimiento y el éxito.',
-    thumbnail: '/images/mentor-mock-thumb.png',
+    thumbnail: '/images/mentor-mock-1.png',
     images: [
-      '/images/mentor-mock-thumb.png',
       '/images/mentor-mock-1.png',
       '/images/mentor-mock-2.png',
       '/images/mentor-mock-3.png',
@@ -663,6 +907,63 @@ const portfolioItemsEs: PortfolioItemFull[] = [
     },
     href: '/es/portfolio/tokgo-es/',
     relatedSlugs: ['supra-sales-crm-es', 'alianza-capital-es'],
+  },
+  {
+    title: 'Racing KX',
+    description:
+      'Racing KX es una red social especializada para profesionales y aficionados del mundo del motorsport, desarrollada para Francia junto a nuestro partner Creante. Ofrece perfiles profesionales, publicaciones, seguidores y networking especializado, además de funcionalidades premium mediante suscripción. Diseñada inicialmente en Figma y desarrollada en React Native, Racing KX está disponible en Apple App Store y Google Play.',
+    thumbnail: '/images/racingkx-mock-2.png',
+    images: [
+      '/images/racingkx-mock-1.png',
+      '/images/racingkx-mock-2.png',
+      '/images/racingkx-mock-3.png',
+      '/images/racingkx-mock-4.png',
+      '/images/racingkx-mock-5.png',
+      '/images/racingkx-mock-6.png',
+    ],
+    techSpecs: {
+      'Diseño': 'Figma',
+      'Implementación': 'React Native',
+      'Disponible en': 'Apple App Store, Google Play',
+    },
+    href: '/es/portfolio/racing-kx-es/',
+    relatedSlugs: ['daily-sparkle-2', 'the-decision-board-es'],
+    businessCase: {
+      problem:
+        'La comunidad profesional del automovilismo necesitaba un espacio especializado para construir perfiles profesionales, compartir contenido y hacer networking con sus pares, combinado con funcionalidades premium que sostuvieran un modelo sustentable.',
+      built: [
+        'Perfiles profesionales.',
+        'Publicaciones, seguidores y networking especializado.',
+        'Una comunidad especializada.',
+        'Funcionalidades premium mediante suscripción.',
+        'Diseño en Figma y desarrollo en React Native.',
+      ],
+      results: [
+        'Una red social construida para la comunidad profesional del automovilismo.',
+        'Desarrollada para profesionales y aficionados del motorsport en Francia.',
+        'Disponible en Apple App Store y Google Play.',
+      ],
+      links: [],
+    },
+  },
+  {
+    title: 'Ecumerca',
+    description:
+      'Ecumerca es una plataforma de mercado para el consumidor final y los proveedores de productos de diversas categorías. Esta plataforma permite un carrito de compras con el consumidor final y gestiona varios proveedores para que un consumidor pueda realizar una compra de varios proveedores al mismo tiempo. Ecumerca está compuesta por un carrito de compras, historial de pedidos, chat de soporte, política de devoluciones y un panel de administración.',
+    thumbnail: '/images/ecumerca-mock-1.png',
+    images: [
+      '/images/ecumerca-mock-1.png',
+      '/images/ecumerca-mock-2.png',
+      '/images/ecumerca-mock-3.png',
+    ],
+    techSpecs: {
+      'Diseño': 'Figma',
+      'Implementación': 'FlutterFlow & Firebase',
+      'Google Store': 'https://play.google.com/store/apps/details?id=com.mycompany.ecumerca',
+      'Apple Store': 'https://apps.apple.com/us/app/ecumerca/id6738750466',
+    },
+    href: '/es/portfolio/ecumerca-es/',
+    relatedSlugs: ['daily-sparkle-2', 'alianza-capital-es'],
   },
 ]
 

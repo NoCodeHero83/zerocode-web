@@ -12,7 +12,7 @@ interface PortfolioHighlightsProps {
   content: HomeContent['portfolio']
 }
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = 9
 
 export function PortfolioHighlights({ content }: PortfolioHighlightsProps) {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>()
@@ -46,13 +46,13 @@ export function PortfolioHighlights({ content }: PortfolioHighlightsProps) {
               className="group project-card animate-fadeInUp"
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
             >
-              <div className="relative h-56 overflow-hidden rounded-t-[25px]">
+              <div className="relative h-[322px] overflow-hidden rounded-t-[25px]">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className={`object-cover ${project.imagePosition ?? 'object-top'} transition-transform duration-500 group-hover:scale-105`}
                 />
               </div>
               <div className="p-7">
@@ -86,16 +86,6 @@ export function PortfolioHighlights({ content }: PortfolioHighlightsProps) {
             ))}
           </div>
         )}
-
-        <div className="mt-12 text-center hidden lg:block">
-          <Link
-            href="/portfolio/"
-            className="cursor-pointer inline-flex items-center gap-2 rounded-full border border-[#0A4A7A] bg-[#0A4A7A] px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:bg-transparent hover:text-white"
-          >
-            See all portfolio
-            <ArrowRight className="size-4" />
-          </Link>
-        </div>
       </div>
     </section>
   )

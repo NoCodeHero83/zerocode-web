@@ -23,6 +23,7 @@ export interface PortfolioItem {
   description: string
   image: string
   href: string
+  imagePosition?: string
 }
 
 export interface TestimonialItem {
@@ -250,6 +251,27 @@ export const homeContent: Record<Locale, HomeContent> = {
       heading: 'Beautiful, functional and scalable digital solutions',
       items: [
         {
+          title: 'Alianza Capital',
+          description:
+            'From 100% manual operations to a full fintech platform: two companies onboarded and automated, a mobile app live in both stores, and the ability to scale clients without growing headcount.',
+          image: '/images/alianza-mock-1.png',
+          href: '/portfolio/alianza-capital/',
+        },
+        {
+          title: 'Ilirox',
+          description:
+            'A professional social network for real estate agents with intelligent matching between searches and properties, automatic alerts, polygon-based map search, community validation and social content — built to become Mexico’s largest real estate network.',
+          image: '/images/ilirox-portada.png',
+          href: '/portfolio/ilirox/',
+        },
+        {
+          title: 'Racing KX',
+          description:
+            'A specialized social network for the professional motorsport community with vCard-style profiles, posts, followers and premium features — built with partner Creante for a French content creator community.',
+          image: '/images/racingkx-mock-2.png',
+          href: '/portfolio/racing-kx/',
+        },
+        {
           title: 'Later Life Training',
           description:
             'A platform on the verge of being scrapped became a stable, production-ready system that now activates USD 8,000/month through reliable bookings and payments. We rebuilt the backend and redesigned the UX so the team can finally trust and scale it.',
@@ -257,11 +279,18 @@ export const homeContent: Record<Locale, HomeContent> = {
           href: '/portfolio/later-life-training/',
         },
         {
-          title: 'Alianza Capital',
+          title: 'True English',
           description:
-            'From 100% manual operations to a full fintech platform: two companies onboarded and automated, a mobile app live in both stores, and the ability to scale clients without growing headcount.',
-          image: '/images/alianza-mock-1.png',
-          href: '/portfolio/alianza-capital/',
+            'An AI-assisted English learning platform with complete courses, automatic pronunciation evaluation, personalized feedback and specialized content for each organization — currently used in Hermosillo and Zacatecas.',
+          image: '/images/trueenglish-mock-1.png',
+          href: '/portfolio/true-english/',
+        },
+        {
+          title: 'Increciendo FinTech',
+          description:
+            'A web platform for online loan management based on a subscription model, with preferential rates for subscribed users, standard rates for occasional users and corporate plans — a SaaS that benefits both the fintech and its clients.',
+          image: '/images/increciendo-mock-1.png',
+          href: '/portfolio/increciendo-fintech/',
         },
         {
           title: 'Hulp — Clients',
@@ -271,20 +300,6 @@ export const homeContent: Record<Locale, HomeContent> = {
           href: '/portfolio/hulp-clients/',
         },
         {
-          title: 'Hulp — Providers',
-          description:
-            'Providers got their own app inside the same marketplace, with AI job matches and real-time coordination. The result: a scalable supply side sustaining the platform’s growth.',
-          image: '/images/hulp-mock-1.png',
-          href: '/portfolio/hulp-providers/',
-        },
-        {
-          title: 'GM Parts',
-          description:
-            'GM Parts is the ultimate mobile and web solution for auto shops. Manage income, diagnoses, repair actions, spare parts and quotes. Its administrator web panel centralizes the entire process for efficient management. Perfect for shops looking to optimize their workflow.',
-          image: '/images/gmparts-mock-1.png',
-          href: '/portfolio/gm-parts-2/',
-        },
-        {
           title: 'Daily Sparkle',
           description:
             'Daily Sparkle is a UK web application that helps care homes engage residents and connect families through care tools, activity planning, enriching content, and a secure family portal with personalized updates and schedules.',
@@ -292,17 +307,18 @@ export const homeContent: Record<Locale, HomeContent> = {
           href: '/portfolio/daily-sparkle/',
         },
         {
-          title: 'Ecumerca',
+          title: 'GM Parts',
           description:
-            'Ecumerca is a marketplace platform made for the end consumer and the providers of products of diverse categories. This platform enables a shopping cart with the end consumer and manages several providers so a consumer can make a purchase from several providers at the same time. Ecumerca is composed of a shopping cart, order history, support chat, return policy and an administrator panel.',
-          image: '/images/ecumerca-mock-1.png',
-          href: '/portfolio/ecumerca/',
+            'GM Parts is the ultimate mobile and web solution for auto shops. Manage income, diagnoses, repair actions, spare parts and quotes. Its administrator web panel centralizes the entire process for efficient management. Perfect for shops looking to optimize their workflow.',
+          image: '/images/gmparts-mock-1.png',
+          imagePosition: 'object-center',
+          href: '/portfolio/gm-parts-2/',
         },
         {
           title: 'Mentor GrowthRockstar',
           description:
             'Joining together mentors and mentees through a scheduling marketplace to ensure growth and success for the mentees.',
-          image: '/images/mentor-mock-thumb.png',
+          image: '/images/mentor-mock-1.png',
           href: '/portfolio/mentor-growthrocsktar/',
         },
         {
@@ -332,6 +348,20 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Fintech digital assets tokenizator that enables investment in real projects through blockchain, providing end-to-end services for digital assets creation, management and distribution in both primary and secondary markets.',
           image: '/images/tokgo-mock-1.png',
           href: '/portfolio/tokgo/',
+        },
+        {
+          title: 'Hulp — Providers',
+          description:
+            'Providers got their own app inside the same marketplace, with AI job matches and real-time coordination. The result: a scalable supply side sustaining the platform’s growth.',
+          image: '/images/hulp-providers-mock-1.png',
+          href: '/portfolio/hulp-providers/',
+        },
+        {
+          title: 'Ecumerca',
+          description:
+            'Ecumerca is a marketplace platform made for the end consumer and the providers of products of diverse categories. This platform enables a shopping cart with the end consumer and manages several providers so a consumer can make a purchase from several providers at the same time. Ecumerca is composed of a shopping cart, order history, support chat, return policy and an administrator panel.',
+          image: '/images/ecumerca-mock-1.png',
+          href: '/portfolio/ecumerca/',
         },
       ],
     },
@@ -490,6 +520,27 @@ export const homeContent: Record<Locale, HomeContent> = {
       heading: 'Soluciones digitales intuitivas, funcionales y escalables.',
       items: [
         {
+          title: 'Alianza Capital',
+          description:
+            'De operaciones 100% manuales a una plataforma fintech completa: dos empresas incorporadas y automatizadas, una app móvil en ambas tiendas y la capacidad de escalar clientes sin aumentar la plantilla.',
+          image: '/images/alianza-mock-1.png',
+          href: '/es/portfolio/alianza-capital-es/',
+        },
+        {
+          title: 'Ilirox',
+          description:
+            'Una red social profesional para agentes inmobiliarios con match inteligente entre búsquedas y propiedades, alertas automáticas, búsqueda por polígonos en el mapa, validación comunitaria y contenido social, construida para convertirse en la mayor red inmobiliaria de México.',
+          image: '/images/ilirox-portada.png',
+          href: '/es/portfolio/ilirox-es/',
+        },
+        {
+          title: 'Racing KX',
+          description:
+            'Una red social especializada para la comunidad profesional del automovilismo con perfiles tipo vCard, publicaciones, seguidores y funcionalidades premium, desarrollada junto al partner Creante para una comunidad francesa de creadores de contenido.',
+          image: '/images/racingkx-mock-2.png',
+          href: '/es/portfolio/racing-kx-es/',
+        },
+        {
           title: 'Later Life Training',
           description:
             'Una plataforma a punto de ser descartada se convirtió en un sistema estable y listo para producción que hoy activa 8.000 USD/mes mediante reservas y pagos fiables. Reconstruimos el backend y rediseñamos la UX para que el equipo por fin pueda confiar y escalar.',
@@ -497,11 +548,18 @@ export const homeContent: Record<Locale, HomeContent> = {
           href: '/es/portfolio/later-life-training-2/',
         },
         {
-          title: 'Alianza Capital',
+          title: 'True English',
           description:
-            'De operaciones 100% manuales a una plataforma fintech completa: dos empresas incorporadas y automatizadas, una app móvil en ambas tiendas y la capacidad de escalar clientes sin aumentar la plantilla.',
-          image: '/images/alianza-mock-1.png',
-          href: '/es/portfolio/alianza-capital-es/',
+            'Una plataforma de aprendizaje de inglés asistida por IA con cursos completos, evaluación automática de pronunciación, retroalimentación personalizada y contenido especializado para cada organización, utilizada actualmente en Hermosillo y Zacatecas.',
+          image: '/images/trueenglish-mock-1.png',
+          href: '/es/portfolio/true-english-es/',
+        },
+        {
+          title: 'Increciendo FinTech',
+          description:
+            'Una plataforma web para la gestión de préstamos en línea basada en un modelo de suscripción, con tasas preferenciales para suscritos, tasas estándar para ocasionales y planes corporativos: un SaaS que beneficia tanto a la fintech como a sus clientes.',
+          image: '/images/increciendo-mock-1.png',
+          href: '/es/portfolio/increciendo-fintech-es/',
         },
         {
           title: 'Hulp — Clientes',
@@ -511,20 +569,6 @@ export const homeContent: Record<Locale, HomeContent> = {
           href: '/es/portfolio/hulp-clientes-es/',
         },
         {
-          title: 'Hulp — Proveedores',
-          description:
-            'Los proveedores tienen su propia app dentro del mismo marketplace, con emparejamientos de trabajo por IA y coordinación en tiempo real. El resultado: un lado de la oferta escalable que sostiene el crecimiento.',
-          image: '/images/hulp-mock-1.png',
-          href: '/es/portfolio/hulp-proveedores-es/',
-        },
-        {
-          title: 'GM Parts',
-          description:
-            'GM Parts es la solución móvil y web definitiva para talleres mecánicos. Gestione ingresos, diagnósticos, reparaciones, repuestos y presupuestos. Su panel web de administrador centraliza todo el proceso para una gestión eficiente. Ideal para talleres que buscan optimizar su flujo de trabajo.',
-          image: '/images/gmparts-mock-1.png',
-          href: '/es/portfolio/repuestos-gm-es/',
-        },
-        {
           title: 'Daily Sparkle',
           description:
             'Daily Sparkle es una aplicación web del Reino Unido que ayuda a los hogares de cuidado a involucrar a sus residentes y conectar con sus familias. Ofrece gestión del cuidado, planificación de actividades y un portal seguro con actualizaciones e información.',
@@ -532,17 +576,18 @@ export const homeContent: Record<Locale, HomeContent> = {
           href: '/es/portfolio/daily-sparkle-2/',
         },
         {
-          title: 'Ecumerca',
+          title: 'GM Parts',
           description:
-            'Ecumerca es una plataforma de mercado diseñada para el consumidor final y los proveedores de productos de diversas categorías. Esta plataforma permite al consumidor final crear un carrito de compras y gestionar varios proveedores para que un consumidor pueda realizar compras simultáneas. Ecumerca incluye un carrito de compras, historial de pedidos, chat de soporte, política de devoluciones y un panel de administrador.',
-          image: '/images/ecumerca-mock-1.png',
-          href: '/es/portfolio/ecumerca-es/',
+            'GM Parts es la solución móvil y web definitiva para talleres mecánicos. Gestione ingresos, diagnósticos, reparaciones, repuestos y presupuestos. Su panel web de administrador centraliza todo el proceso para una gestión eficiente. Ideal para talleres que buscan optimizar su flujo de trabajo.',
+          image: '/images/gmparts-mock-1.png',
+          imagePosition: 'object-center',
+          href: '/es/portfolio/repuestos-gm-es/',
         },
         {
           title: 'Mentor GrowthRockstar',
           description:
             'Uniendo mentores y aprendices a través de una plataforma de programación para asegurar el crecimiento y el éxito de los aprendices.',
-          image: '/images/mentor-mock-thumb.png',
+          image: '/images/mentor-mock-1.png',
           href: '/es/portfolio/mentor-growthrocsktar-es/',
         },
         {
@@ -572,6 +617,20 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Fintech tokenizador de activos digitales que permite invertir en proyectos reales mediante blockchain, ofreciendo servicios integrales de creación, gestión y distribución de activos digitales.',
           image: '/images/tokgo-mock-1.png',
           href: '/es/portfolio/tokgo-es/',
+        },
+        {
+          title: 'Hulp — Proveedores',
+          description:
+            'Los proveedores tienen su propia app dentro del mismo marketplace, con emparejamientos de trabajo por IA y coordinación en tiempo real. El resultado: un lado de la oferta escalable que sostiene el crecimiento.',
+          image: '/images/hulp-providers-mock-1.png',
+          href: '/es/portfolio/hulp-proveedores-es/',
+        },
+        {
+          title: 'Ecumerca',
+          description:
+            'Ecumerca es una plataforma de mercado diseñada para el consumidor final y los proveedores de productos de diversas categorías. Esta plataforma permite al consumidor final crear un carrito de compras y gestionar varios proveedores para que un consumidor pueda realizar compras simultáneas. Ecumerca incluye un carrito de compras, historial de pedidos, chat de soporte, política de devoluciones y un panel de administrador.',
+          image: '/images/ecumerca-mock-1.png',
+          href: '/es/portfolio/ecumerca-es/',
         },
       ],
     },

@@ -51,22 +51,24 @@ export function PortfolioBusinessCase({ businessCase, locale }: PortfolioBusines
         </p>
       )}
 
-      <div>
-        <h3 className="text-lg font-semibold text-foreground mb-2">{t.links}</h3>
-        <ul className="list-disc pl-5 space-y-1">
-          {businessCase.links.map((link, i) => (
-            <li key={i} className="text-base leading-relaxed">
-              <Link
-                href={link.url}
-                target="_blank"
-                className="text-[#00DCFC] hover:underline"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {businessCase.links.length > 0 && (
+        <div>
+          <h3 className="text-lg font-semibold text-foreground mb-2">{t.links}</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            {businessCase.links.map((link, i) => (
+              <li key={i} className="text-base leading-relaxed">
+                <Link
+                  href={link.url}
+                  target="_blank"
+                  className="text-[#00DCFC] hover:underline"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   )
 }
