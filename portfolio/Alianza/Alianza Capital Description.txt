@@ -1,0 +1,14 @@
+Alianza Capital
+
+Description:
+
+Alianza is a Colombian financial company whose mission is to make financial products accessible to small investors. To achieve this, Alianza developed a mobile application alongside a web-based management platform to handle all financial contracts and assets.
+
+Alianza provides a user-friendly yet functional and highly effective interface, enabling investors to carry out their transactions with ease and confidence. The PSE payment gateway was integrated, and the application is set to be published on both Google and Apple stores soon.
+
+Design: Fimga
+Implementation: Flutterflow & Firebase
+
+Google Play Store: https://play.google.com/store/apps/details?id=com.mycompany.alicard
+
+Apple Store: https://apps.apple.com/pe/app/alianza-capital/id6502927890

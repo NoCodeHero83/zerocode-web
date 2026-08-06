@@ -1,0 +1,11 @@
+Ecumerca
+
+Ecumerca is a marketplace platform made for the end consumer and the the providers of products of diverse categories. This platform enables a shopping cart with the end consumer and manages several providers so a consumer can make a purchase from several providers at the same time. Ecumerca is composed by a shopping cart, order history, support chat, return policy and an administrator panel.
+
+Design: Figma
+Implementation: FlutterFlow & Firebase
+
+
+Google Store:  https://play.google.com/store/apps/details?id=com.mycompany.ecumerca
+
+Apple Store: https://apps.apple.com/us/app/ecumerca/id6738750466
