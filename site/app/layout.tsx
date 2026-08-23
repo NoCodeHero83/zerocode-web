@@ -1,22 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk, Open_Sans } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
-  display: 'swap',
-})
-
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  variable: '--font-open-sans',
   display: 'swap',
 })
 
@@ -52,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${openSans.variable} dark`}>
+    <html lang="en" className={`${spaceGrotesk.variable} dark`}>
       <body className="min-h-screen antialiased">
         {children}
         <script src="/js/chatbot.js?v=10" defer />
