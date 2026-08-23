@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk } from 'next/font/google'
+import { IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
 
-const spaceGrotesk = Space_Grotesk({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-ibm-plex-sans',
   display: 'swap',
 })
 
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} dark`}>
+    <html lang="en" className={`${ibmPlexSans.variable} dark`}>
       <body className="min-h-screen antialiased">
         {children}
         <script src="/js/chatbot.js?v=10" defer />
