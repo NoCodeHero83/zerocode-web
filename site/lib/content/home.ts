@@ -42,6 +42,8 @@ export interface HomeContent {
   hero: {
     seoTitle: string
     headline: string
+    headlinePart1: string
+    headlinePart2: string
     subheadline: string
     cta: string
     ctaHref: string
@@ -149,8 +151,10 @@ export const homeContent: Record<Locale, HomeContent> = {
   en: {
     hero: {
       seoTitle: 'AI-Assisted Software Development Agency — Zerocode',
-      headline: 'The tools running it are CAPPING YOUR REVENUE',
-      subheadline: "Your business isn't the problem.",
+      headline: 'WE BUILD THE TECHNOLOGY THAT MOVES YOUR BUSINESS FORWARD.',
+      headlinePart1: 'WE BUILD THE TECHNOLOGY',
+      headlinePart2: 'THAT MOVES YOUR BUSINESS FORWARD.',
+      subheadline: "BUILT AROUND YOUR BUSINESS",
       cta: 'Know our work',
       ctaHref: '/portfolio/',
     },
@@ -419,6 +423,8 @@ export const homeContent: Record<Locale, HomeContent> = {
     hero: {
       seoTitle: 'Agencia de Desarrollo de Software Asistido por IA — Zerocode',
       headline: 'Las herramientas que utilizas están limitando tus ingresos.',
+      headlinePart1: 'Las herramientas que utilizas',
+      headlinePart2: 'están limitando tus ingresos.',
       subheadline: 'Tu negocio no es el problema',
       cta: 'Conozca nuestro trabajo',
       ctaHref: '/es/portfolio/',

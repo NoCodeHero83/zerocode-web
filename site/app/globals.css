@@ -102,8 +102,8 @@
     @apply text-foreground font-sans;
     background-color: #000000;
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(38,39,122,0.2) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 30% at 85% 85%, rgba(0,220,252,0.06) 0%, transparent 50%);
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(38,39,122,0.14) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 85% 85%, rgba(0,220,252,0.04) 0%, transparent 50%);
     background-attachment: fixed;
   }
 
