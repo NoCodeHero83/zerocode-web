@@ -45,6 +45,10 @@ export interface HomeContent {
     headlinePart1: string
     headlinePart2: string
     subheadline: string
+    description: string
+    dunsText: string
+    verifyText: string
+    getStartedText: string
     cta: string
     ctaHref: string
   }
@@ -155,6 +159,10 @@ export const homeContent: Record<Locale, HomeContent> = {
       headlinePart1: 'WE BUILD THE TECHNOLOGY',
       headlinePart2: 'THAT MOVES YOUR BUSINESS FORWARD.',
       subheadline: "BUILT AROUND YOUR BUSINESS",
+      description: 'We design and build custom software, platforms and automation for established businesses, helping them operate better, serve more customers and scale with confidence.',
+      dunsText: 'VERIFIED DUNS NUMBER: 751503449',
+      verifyText: 'Verify',
+      getStartedText: 'Get started',
       cta: 'Know our work',
       ctaHref: '/portfolio/',
     },
@@ -422,10 +430,14 @@ export const homeContent: Record<Locale, HomeContent> = {
   es: {
     hero: {
       seoTitle: 'Agencia de Desarrollo de Software Asistido por IA — Zerocode',
-      headline: 'Las herramientas que utilizas están limitando tus ingresos.',
-      headlinePart1: 'Las herramientas que utilizas',
-      headlinePart2: 'están limitando tus ingresos.',
-      subheadline: 'Tu negocio no es el problema',
+      headline: 'DESARROLLAMOS LA TECNOLOGÍA QUE HACE CRECER TU EMPRESA.',
+      headlinePart1: 'DESARROLLAMOS LA TECNOLOGÍA',
+      headlinePart2: 'QUE HACE CRECER TU EMPRESA.',
+      subheadline: 'DISEÑADO PARA TU NEGOCIO',
+      description: 'Diseñamos y construimos software personalizado, plataformas y automatización para empresas consolidadas, ayudándolas a operar mejor, atender más clientes y escalar con confianza.',
+      dunsText: 'CÓDIGO INTERNACIONAL DUNS VERIFICADO: 751503449',
+      verifyText: 'Verificar',
+      getStartedText: 'Comenzar',
       cta: 'Conozca nuestro trabajo',
       ctaHref: '/es/portfolio/',
     },

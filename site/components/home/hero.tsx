@@ -6,7 +6,12 @@ import type { HomeContent } from '@/lib/content/home'
 import { SectionIcon } from '@/components/ui/section-icon'
 
 interface HeroProps {
-  content: HomeContent['hero']
+  content: HomeContent['hero'] & {
+    description: string
+    dunsText: string
+    verifyText: string
+    getStartedText: string
+  }
 }
 
 export function Hero({ content }: HeroProps) {
@@ -36,25 +41,23 @@ export function Hero({ content }: HeroProps) {
           <h1 className="sr-only">{content.seoTitle}</h1>
 
           <h2 className="animate-fadeInUp text-[clamp(1.6rem,3.1vw,2.8rem)] font-medium leading-[1.12] text-white max-w-3xl font-heading tracking-tight" style={{ animationDelay: '100ms' }}>
-            WE BUILD THE TECHNOLOGY{' '}
-            <span className="text-[#00DCFC]">THAT MOVES YOUR BUSINESS FORWARD.</span>
+            {content.headlinePart1}{' '}
+            <span className="text-[#00DCFC]">{content.headlinePart2}</span>
           </h2>
 
 <p className="animate-fadeInUp mt-6 text-base sm:text-lg text-white max-w-2xl leading-[1.6] text-center lg:text-left mx-auto lg:mx-0" style={{ animationDelay: '200ms' }}>
-  We design and build custom software, platforms and automation{' '}
-  <span className="font-normal text-white">for established businesses, helping them operate better</span>, 
-  serve more customers and scale with confidence.
+  {content.description}
 </p>
 
           <div className="animate-fadeInUp mt-8 flex flex-wrap items-center justify-start gap-3" style={{ animationDelay: '300ms' }}>
-            <span className="text-sm font-medium uppercase tracking-wider text-white">VERIFIED DUNS NUMBER: 751503449</span>
+            <span className="text-sm font-medium uppercase tracking-wider text-white">{content.dunsText}</span>
             <a
               href="https://www.dnb.com/de-de/upik-en.html"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium uppercase tracking-wider text-[#38bdf8] underline hover:no-underline text-sm"
             >
-              Verify
+              {content.verifyText}
             </a>
           </div>
 
@@ -65,7 +68,7 @@ export function Hero({ content }: HeroProps) {
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#0A4A7A] bg-[#0A4A7A] px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:bg-transparent hover:text-white cursor-pointer min-h-[44px]"
             >
-              Get started
+              {content.getStartedText}
               <svg className="size-4 transition-transform group-hover:translate-x-1" viewBox="0 0 320 512" fill="currentColor">
                 <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
               </svg>
