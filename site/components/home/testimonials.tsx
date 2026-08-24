@@ -35,7 +35,7 @@ export function Testimonials({ content }: TestimonialsProps) {
           <p className="mt-4 text-lg text-pretty text-muted-foreground">{content.subtext}</p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 items-stretch">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch justify-center">
           {content.items.map((testimonial, index) => (
             <div
               key={testimonial.name}
