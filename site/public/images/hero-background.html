@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero background — premium enterprise</title>
+<style>
+  :root{
+    --bg-0: #050914;
+    --bg-1: #070b14;
+    --glow: 33, 92, 199;
+    --line: 140, 165, 200;
+    --grid-line: 120, 145, 180;
+  }
+
+  *{ box-sizing: border-box; }
+  body{ margin:0; font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg-0); }
+
+  /* ============ HERO BACKGROUND (lo único que se debe reutilizar) ============ */
+  .hero{
+    position: relative;
+    min-height: 100vh;
+    background: var(--bg-1);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Capa 1: resplandor radial detrás del contenido/mockup */
+  .hero__glow{
+    position:absolute; inset:0;
+    z-index:0;
+    background:
+      radial-gradient(60% 50% at 62% 38%, rgba(var(--glow),0.16) 0%, rgba(var(--glow),0) 70%),
+      radial-gradient(40% 35% at 20% 70%, rgba(var(--glow),0.07) 0%, rgba(var(--glow),0) 70%),
+      radial-gradient(50% 45% at 85% 80%, rgba(var(--glow),0.06) 0%, rgba(var(--glow),0) 70%);
+  }
+
+  /* Capa 2: base con profundidad (gradientes lineales apilados) */
+  .hero__depth{
+    position:absolute; inset:0;
+    z-index:0;
+    background:
+      linear-gradient(180deg, #0a1120 0%, #070b14 45%, #04070d 100%),
+      linear-gradient(120deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 30%);
+  }
+
+  /* Capa 3: curvas arquitectónicas muy sutiles (SVG liviano) */
+  .hero__curves{
+    position:absolute; inset:0;
+    z-index:1;
+    width:100%; height:100%;
+    opacity:0.5;
+  }
+  .hero__curves path{
+    fill:none;
+    stroke: rgba(var(--line), 0.16);
+    stroke-width:1;
+    vector-effect: non-scaling-stroke;
+  }
+  .hero__curves path.c2{ stroke: rgba(var(--line), 0.12); }
+  .hero__curves path.c3{ stroke: rgba(var(--line), 0.09); }
+
+  /* Capa 4: malla en perspectiva, muy discreta, fundida abajo */
+  .hero__grid-wrap{
+    position:absolute;
+    left:-25%; right:-25%; bottom:0;
+    height:38%;
+    z-index:1;
+    overflow:hidden;
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%);
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+  }
+  .hero__grid{
+    position:absolute;
+    left:0; right:0; bottom:-20%;
+    height:150%;
+    background-image:
+      repeating-linear-gradient(to right, rgba(var(--grid-line),0.30) 0 1px, transparent 1px calc(100%/28)),
+      repeating-linear-gradient(to top, rgba(var(--grid-line),0.26) 0 1px, transparent 1px 46px);
+    background-size: calc(100%/28) 100%, 100% 46px;
+    transform: perspective(480px) rotateX(58deg);
+    transform-origin: bottom center;
+    opacity:0.8;
+  }
+  .hero__grid-fade-x{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(to right, var(--bg-1) 0%, rgba(7,11,20,0) 18%, rgba(7,11,20,0) 82%, var(--bg-1) 100%);
+  }
+
+  /* Capa 5: viñeta hacia los bordes */
+  .hero__vignette{
+    position:absolute; inset:0;
+    z-index:2;
+    pointer-events:none;
+    background:
+      radial-gradient(120% 90% at 50% 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.35) 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0) 14%, rgba(0,0,0,0) 78%, rgba(0,0,0,0.55) 100%);
+  }
+
+  /* Capa 6: remate final en negro puro */
+  .hero__bottom-fade{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height:22%;
+    z-index:2;
+    pointer-events:none;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(2,3,6,0.85) 55%, #000000 100%);
+  }
+
+  /* ============ contenido de ejemplo ============ */
+  /* Sin contenido: este archivo entrega únicamente las capas de fondo del hero. */
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero__depth"></div>
+  <div class="hero__glow"></div>
+
+  <svg class="hero__curves" viewBox="0 0 1600 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path class="c1" d="M -100,180 C 350,60 700,320 1000,220 C 1250,140 1450,-40 1800,90"/>
+    <path class="c2" d="M -100,480 C 300,360 650,600 950,480 C 1250,360 1500,180 1800,340"/>
+    <path class="c3" d="M -100,700 C 280,600 620,780 950,700 C 1280,620 1500,500 1800,580"/>
+  </svg>
+
+  <div class="hero__grid-wrap">
+    <div class="hero__grid"></div>
+    <div class="hero__grid-fade-x"></div>
+  </div>
+
+  <div class="hero__vignette"></div>
+  <div class="hero__bottom-fade"></div>
+</section>
+
+</body>
+</html>
