@@ -46,7 +46,7 @@ export function PortfolioHighlights({ content }: PortfolioHighlightsProps) {
               className="group project-card animate-fadeInUp"
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
             >
-              <div className="relative h-[322px] overflow-hidden rounded-t-[25px]">
+              <div className="relative h-[400px] overflow-hidden rounded-t-[25px]">
                 <Image
                   src={project.image}
                   alt={project.title}

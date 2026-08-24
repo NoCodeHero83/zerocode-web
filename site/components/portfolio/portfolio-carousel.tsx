@@ -35,7 +35,7 @@ export function PortfolioCarousel({ images, title }: PortfolioCarouselProps) {
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
-      <div className="relative w-full h-[250px] lg:h-[500px]">
+      <div className="relative w-full h-[300px] lg:h-[600px]">
         <Image
           src={images[current]}
           alt={`${title} - Image ${current + 1}`}

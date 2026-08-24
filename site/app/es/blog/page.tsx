@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { SectionIcon } from '@/components/ui/section-icon'
 import { blogContent } from '@/lib/content/blog'
+import { HeroBackground } from '@/components/ui/hero-background'
 
 const content = blogContent.es
 
@@ -25,13 +26,8 @@ export default function BlogPageEs() {
     <>
       <Header locale="es" />
       <main className="relative overflow-hidden">
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(38,39,122,0.6) 0%, transparent 60%)',
-            }}
-          />
         <section className="py-16 sm:py-24 lg:py-28 relative text-center overflow-hidden">
+          <HeroBackground />
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <p className="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#00dcfc] border border-[rgba(0,220,252,0.35)] rounded-full">
               <SectionIcon />

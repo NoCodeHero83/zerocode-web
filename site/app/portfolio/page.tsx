@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/footer'
 import { PortfolioHighlights } from '@/components/home/portfolio-highlights'
 import { PortfolioCta } from '@/components/home/portfolio-cta'
 import { homeContent } from '@/lib/content/home'
+import { HeroBackground } from '@/components/ui/hero-background'
 
 const content = homeContent.en
 
@@ -17,16 +18,7 @@ export default function PortfolioPage() {
     <>
       <Header locale="en" />
       <main className="relative overflow-hidden">
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage: 'url(/fonts/Ellipse-1-2.png)',
-              backgroundPosition: 'bottom center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              opacity: 0.42,
-            }}
-          />
+        <HeroBackground />
 
         <PortfolioHighlights content={content.portfolio} />
         <PortfolioCta />
