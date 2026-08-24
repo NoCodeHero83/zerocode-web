@@ -34,23 +34,23 @@ export function Hero({ content }: HeroProps) {
           <div className="flex justify-center lg:justify-start mb-10 lg:mb-6">
 <div className="glass-card inline-flex items-center justify-start gap-2 px-5 py-2 animate-fadeInUp" style={{ animationDelay: '0ms' }}>
             <SectionIcon />
-            <span className="text-sm font-semibold uppercase tracking-widest text-white">{content.subheadline}</span>
+            <span className="text-sm font-regular uppercase tracking-widest text-white/70">{content.subheadline}</span>
           </div>
           </div>
 
           <h1 className="sr-only">{content.seoTitle}</h1>
 
-          <h2 className="animate-fadeInUp text-[clamp(1.6rem,3.1vw,2.8rem)] font-medium leading-[1.12] text-white max-w-3xl font-heading tracking-tight" style={{ animationDelay: '100ms' }}>
+          <h2 className="animate-fadeInUp text-[clamp(1.5rem,3vw,2.7rem)] font-medium leading-[1.12] text-white max-w-3xl font-heading tracking-tight" style={{ animationDelay: '100ms' }}>
             {content.headlinePart1}{' '}
-            <span className="text-[#00DCFC]">{content.headlinePart2}</span>
+            <span className="text-[#1683B8]">{content.headlinePart2}</span>
           </h2>
 
-<p className="animate-fadeInUp mt-4 text-base sm:text-lg text-white max-w-2xl leading-[1.6] text-center lg:text-left mx-auto lg:mx-0" style={{ animationDelay: '200ms' }}>
+<p className="animate-fadeInUp mt-4 text-base sm:text-lg font-light text-white/70 max-w-2xl leading-[1.6] text-center lg:text-left mx-auto lg:mx-0" style={{ animationDelay: '200ms' }}>
   {content.description}
 </p>
 
           <div className="animate-fadeInUp mt-4 flex flex-wrap items-center justify-start gap-3" style={{ animationDelay: '300ms' }}>
-            <span className="text-sm font-medium uppercase tracking-wider text-white">{content.dunsText}</span>
+            <span className="text-sm font-regular uppercase tracking-wider text-white/70">{content.dunsText}</span>
             <a
               href="https://www.dnb.com/de-de/upik-en.html"
               target="_blank"
@@ -75,7 +75,7 @@ export function Hero({ content }: HeroProps) {
             </a>
             <Link
               href={content.ctaHref}
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-transparent px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:border-[#0A4A7A] hover:text-[#0A4A7A] cursor-pointer min-h-[44px]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-transparent px-8 py-3.5 text-sm font-medium uppercase tracking-wide text-white transition-all duration-300 hover:border-[#0A4A7A] hover:text-[#0A4A7A] cursor-pointer min-h-[44px]"
             >
               {content.cta}
               <svg className="size-4 transition-transform group-hover:translate-x-1" viewBox="0 0 320 512" fill="currentColor">
