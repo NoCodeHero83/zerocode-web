@@ -143,7 +143,7 @@ export function Hero({ content }: HeroProps) {
 
             {/* Primary Dashboard - dominant */}
             <Image
-              src="/images/hero/dashboard1final.png"
+              src="/images/hero/dashboard1.png"
               alt="ZEROCODE dashboard interface — real product"
               width={3999}
               height={2729}
