@@ -31,7 +31,7 @@ export function Hero({ content }: HeroProps) {
 
       <div className="mx-auto flex w-full max-w-[1320px] flex-col items-start lg:flex-row lg:items-center lg:justify-between lg:gap-[40px]">
         <div className="w-full flex-shrink-0 lg:max-w-[700px]">
-          <div className="flex justify-center lg:justify-start mb-10 lg:mb-12">
+          <div className="flex justify-center lg:justify-start mb-10 lg:mb-6">
 <div className="glass-card inline-flex items-center justify-start gap-2 px-5 py-2 animate-fadeInUp" style={{ animationDelay: '0ms' }}>
             <SectionIcon />
             <span className="text-sm font-semibold uppercase tracking-widest text-white">{content.subheadline}</span>
@@ -45,11 +45,11 @@ export function Hero({ content }: HeroProps) {
             <span className="text-[#00DCFC]">{content.headlinePart2}</span>
           </h2>
 
-<p className="animate-fadeInUp mt-6 text-base sm:text-lg text-white max-w-2xl leading-[1.6] text-center lg:text-left mx-auto lg:mx-0" style={{ animationDelay: '200ms' }}>
+<p className="animate-fadeInUp mt-4 text-base sm:text-lg text-white max-w-2xl leading-[1.6] text-center lg:text-left mx-auto lg:mx-0" style={{ animationDelay: '200ms' }}>
   {content.description}
 </p>
 
-          <div className="animate-fadeInUp mt-8 flex flex-wrap items-center justify-start gap-3" style={{ animationDelay: '300ms' }}>
+          <div className="animate-fadeInUp mt-4 flex flex-wrap items-center justify-start gap-3" style={{ animationDelay: '300ms' }}>
             <span className="text-sm font-medium uppercase tracking-wider text-white">{content.dunsText}</span>
             <a
               href="https://www.dnb.com/de-de/upik-en.html"
@@ -61,7 +61,7 @@ export function Hero({ content }: HeroProps) {
             </a>
           </div>
 
-          <div className="animate-fadeInUp mt-10 flex flex-col sm:flex-row justify-start gap-4" style={{ animationDelay: '400ms' }}>
+          <div className="animate-fadeInUp mt-8 flex flex-col sm:flex-row justify-start gap-4" style={{ animationDelay: '400ms' }}>
             <a
               href="https://zerocode.la/contact/"
               target="_blank"
