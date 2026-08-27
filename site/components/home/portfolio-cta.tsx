@@ -62,7 +62,7 @@ export function PortfolioCta({ label, heading, button, href }: PortfolioCtaProps
               </span>
             </div>
 
-            <h2 className="text-2xl font-semibold text-balance text-foreground sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-medium text-balance text-foreground sm:text-3xl lg:text-4xl">
               {heading ?? defaults.heading}
             </h2>
 

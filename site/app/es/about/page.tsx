@@ -101,7 +101,7 @@ export default function AboutPageEs() {
                 <SectionIcon />
                 {content.team.label}
               </p>
-              <h2 className="mt-3 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl animate-fadeInUp" style={{ animationDelay: '100ms' }}>
+              <h2 className="mt-3 text-3xl font-medium text-balance text-foreground sm:text-4xl lg:text-5xl animate-fadeInUp" style={{ animationDelay: '100ms' }}>
                 {content.team.heading}
               </h2>
               <p className="mt-3 text-foreground/70 animate-fadeInUp" style={{ animationDelay: '200ms' }}>{content.team.subtitle}</p>

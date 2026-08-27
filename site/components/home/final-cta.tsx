@@ -64,7 +64,7 @@ export function FinalCta({ content, locale = 'en' }: FinalCtaProps) {
               <SectionIcon />
               {copy.badge}
             </p>
-            <h2 className="text-3xl font-semibold text-balance text-foreground sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-medium text-balance text-foreground sm:text-4xl lg:text-5xl">
               {copy.heading}
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed max-w-lg">

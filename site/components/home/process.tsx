@@ -31,7 +31,7 @@ export function Process({ content }: ProcessProps) {
             <SectionIcon />
             {content.label}
           </p>
-          <h2 className="mt-3 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-medium text-balance text-foreground sm:text-4xl lg:text-5xl">
             {content.heading}
           </h2>
         </div>

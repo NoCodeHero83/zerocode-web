@@ -40,7 +40,7 @@ export default function ServicePageEs() {
                 <SectionIcon />
                 {content.hero.label}
               </p>
-              <h1 className="mt-3 text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl animate-fadeInUp" style={{ animationDelay: '100ms' }}>
+              <h1 className="mt-3 text-3xl font-medium text-balance text-foreground sm:text-4xl lg:text-5xl animate-fadeInUp" style={{ animationDelay: '100ms' }}>
                 {content.hero.heading}
               </h1>
               <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '200ms' }}>

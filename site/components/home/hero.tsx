@@ -1,9 +1,12 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { HomeContent } from '@/lib/content/home'
 import { SectionIcon } from '@/components/ui/section-icon'
+import { HeroBackground } from '@/components/ui/hero-background'
+import { InteractiveNebulaShader } from '@/components/ui/interactive-nebula-shader'
 
 interface HeroProps {
   content: HomeContent['hero'] & {
@@ -15,46 +18,21 @@ interface HeroProps {
 }
 
 export function Hero({ content }: HeroProps) {
+  const [enableNebula, setEnableNebula] = useState(false)
+
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 1024px)').matches
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    setEnableNebula(desktop && !reduced)
+  }, [])
+
   return (
     <section className="relative flex min-h-0 flex-col overflow-hidden px-4 pt-20 pb-16 sm:px-6 sm:pt-24 sm:pb-20 lg:min-h-screen lg:px-8 lg:pt-[130px] lg:pb-28 xl:px-[60px] z-[1] animate-fadeIn" style={{ background: '#070b14' }}>
-      {/* Hero Background Layers */}
-      <div className="pointer-events-none absolute inset-0 -z-10" style={{ background: 'linear-gradient(180deg, #0a1120 0%, #070b14 45%, #04070d 100%), linear-gradient(120deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 30%)' }} />
-      <div className="pointer-events-none absolute inset-0 -z-10" style={{
-        background: `
-          radial-gradient(60% 50% at 62% 38%, rgba(33, 92, 199, 0.16) 0%, rgba(33, 92, 199, 0) 70%),
-          radial-gradient(40% 35% at 20% 70%, rgba(33, 92, 199, 0.07) 0%, rgba(33, 92, 199, 0) 70%),
-          radial-gradient(50% 45% at 85% 80%, rgba(33, 92, 199, 0.06) 0%, rgba(33, 92, 199, 0) 70%)
-        `
-      }} />
-      <svg className="pointer-events-none absolute inset-0 -z-10 w-full h-full opacity-50" viewBox="0 0 1600 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path className="c1" d="M -100,180 C 350,60 700,320 1000,220 C 1250,140 1450,-40 1800,90" fill="none" stroke="rgba(140, 165, 200, 0.16)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-        <path className="c2" d="M -100,480 C 300,360 650,600 950,480 C 1250,360 1500,180 1800,340" fill="none" stroke="rgba(140, 165, 200, 0.12)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-        <path className="c3" d="M -100,700 C 280,600 620,780 950,700 C 1280,620 1500,500 1800,580" fill="none" stroke="rgba(140, 165, 200, 0.09)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-      </svg>
-      <div className="pointer-events-none absolute left-[-25%] right-[-25%] bottom-0 h-[38%] -z-10 overflow-hidden" style={{
-        maskImage: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%)',
-        WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%)',
-      }}>
-        <div className="absolute left-0 right-0 bottom-[-20%] h-[150%]" style={{
-          backgroundImage: `
-            repeating-linear-gradient(to right, rgba(120, 145, 180, 0.30) 0 1px, transparent 1px calc(100%/28)),
-            repeating-linear-gradient(to top, rgba(120, 145, 180, 0.26) 0 1px, transparent 1px 46px)
-          `,
-          backgroundSize: 'calc(100%/28) 100%, 100% 46px',
-          transform: 'perspective(480px) rotateX(58deg)',
-          transformOrigin: 'bottom center',
-          opacity: 0.8,
-        }} />
-        <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, #070b14 0%, rgba(7,11,20,0) 18%, rgba(7,11,20,0) 82%, #070b14 100%)'
-        }} />
-      </div>
-      <div className="pointer-events-none absolute inset-0 -z-10" style={{
-        background: `
-          radial-gradient(120% 90% at 50% 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.35) 100%),
-          linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0) 14%, rgba(0,0,0,0) 78%, rgba(0,0,0,0.55) 100%)
-        `
-      }} />
+      {/* Background: CSS fallback always present; WebGL nebula on desktop (non-reduced-motion) */}
+      <HeroBackground />
+      {enableNebula && <InteractiveNebulaShader />}
+
+      {/* Smooth blend into the next section */}
       <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-[22%] -z-10" style={{
         background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(2,3,6,0.85) 55%, #000000 100%)'
       }} />
@@ -157,40 +135,6 @@ export function Hero({ content }: HeroProps) {
               }}
               className="rounded-[16px] border border-white/10 shadow-[0_24px_64px_rgba(0,0,0,0.4)]"
               sizes="600px"
-            />
-
-            {/* Secondary Dashboard */}
-            <Image
-              src="/images/hero/dashboard2final.png"
-              alt="ZEROCODE dashboard interface — real product"
-              width={3999}
-              height={2729}
-              style={{
-                position: 'absolute',
-                left: '2%',
-                bottom: '-19%',
-                width: '70%',
-                height: 'auto',
-              }}
-              className="rounded-[16px] border border-white/10 shadow-[0_20px_56px_rgba(0,0,0,0.35)] opacity-90"
-              sizes="216px"
-            />
-
-            {/* Mobile screenshot */}
-            <Image
-              src="/images/hero/mobile1.png"
-              alt="ZEROCODE mobile application — real product"
-              width={1858}
-              height={3999}
-              style={{
-                position: 'absolute',
-                right: '5%',
-                bottom: '-18%',
-                width: '22%',
-                height: 'auto',
-              }}
-              className="rounded-[12px] border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.25)] opacity-90"
-              sizes="80px"
             />
           </div>
         </div>
