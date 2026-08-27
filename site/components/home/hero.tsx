@@ -110,7 +110,7 @@ export function Hero({ content }: HeroProps) {
       </div>
 
       {/* CRM board below the buttons — fades into black to blend with the rest of the page (hidden on mobile) */}
-      <div className="relative mx-auto hidden w-full max-w-[1200px] px-4 sm:px-6 lg:px-8 mt-16 sm:mt-20 md:block">
+      <div className="relative mx-auto hidden w-full max-w-[1200px] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 md:block mb-16 sm:mb-24">
         <div
           className="pointer-events-none absolute left-1/2 top-[-22%] w-[88%] -translate-x-1/2"
           aria-hidden="true"
