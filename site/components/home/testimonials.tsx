@@ -39,7 +39,7 @@ export function Testimonials({ content }: TestimonialsProps) {
           {content.items.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="testimonial-card flex flex-col animate-fadeInUp"
+              className="frosted-card testimonial-card flex flex-col animate-fadeInUp"
               style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
             >
               <div className="flex flex-col items-center text-center gap-6">

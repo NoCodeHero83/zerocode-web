@@ -55,7 +55,7 @@ export function Process({ content }: ProcessProps) {
             {content.steps.map((step, index) => (
               <div
                 key={step.title}
-                className="glass-card process-card relative p-6 opacity-0 animate-fadeInRight"
+                className="frosted-card process-card relative p-6 opacity-0 animate-fadeInRight"
                 style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
               >
                 <div className="flex items-start gap-4">
