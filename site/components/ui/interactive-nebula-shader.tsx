@@ -79,7 +79,9 @@ export function InteractiveNebulaShader({
       }
 
       void mainImage(out vec4 O, in vec2 fragCoord) {
-        vec2 uv = (fragCoord - 0.5*iResolution) / min(iResolution.x, iResolution.y);
+        vec2 uv = fragCoord / min(iResolution.x, iResolution.y) - vec2(.9, .5);
+        uv.x += .4;
+        uv.y -= 0.28;
         vec3 col = vec3(0.0);
         float d = 2.5;
 
