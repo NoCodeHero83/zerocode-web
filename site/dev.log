@@ -1,0 +1,235 @@
+
+> zerocode-site@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://100.90.171.33:3000
+✓ Ready in 651ms
+
+ GET /about 200 in 1006ms (next.js: 401ms, application-code: 605ms)
+ GET / 200 in 1064ms (next.js: 147ms, application-code: 918ms)
+ GET /images/sensmessage.jpg 404 in 971ms (next.js: 353ms, application-code: 617ms)
+[browser] Image with src "/images/image.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET /about 200 in 855ms (next.js: 145ms, application-code: 709ms)
+ GET /service 200 in 261ms (next.js: 86ms, application-code: 175ms)
+ GET /about 200 in 271ms (next.js: 23ms, application-code: 248ms)
+ GET /portfolio 200 in 167ms (next.js: 75ms, application-code: 92ms)
+ GET /blog 200 in 375ms (next.js: 145ms, application-code: 230ms)
+ GET /about 200 in 207ms (next.js: 7ms, application-code: 200ms)
+ GET / 200 in 114ms (next.js: 17ms, application-code: 97ms)
+ GET /about 200 in 718ms (next.js: 58ms, application-code: 660ms)
+ GET /about 200 in 161ms (next.js: 6ms, application-code: 154ms)
+✓ Compiled in 432ms
+ GET /service 200 in 108ms (next.js: 4ms, application-code: 104ms)
+ GET /about 200 in 111ms (next.js: 6ms, application-code: 106ms)
+ GET /about 200 in 301ms (next.js: 5ms, application-code: 296ms)
+ GET /service 200 in 144ms (next.js: 4ms, application-code: 139ms)
+ GET /portfolio 200 in 45ms (next.js: 4ms, application-code: 41ms)
+ GET /blog 200 in 87ms (next.js: 4ms, application-code: 82ms)
+ GET /about 200 in 116ms (next.js: 4ms, application-code: 112ms)
+ GET / 200 in 63ms (next.js: 3ms, application-code: 60ms)
+✓ Compiled in 571ms
+ GET /about 200 in 1911ms (next.js: 660ms, application-code: 1251ms)
+ GET /about 200 in 1906ms (next.js: 1456ms, application-code: 450ms)
+✓ Compiled in 370ms
+ GET /about 200 in 311ms (next.js: 5ms, application-code: 306ms)
+✓ Compiled in 211ms
+✓ Compiled in 231ms
+✓ Compiled in 315ms
+✓ Compiled in 497ms
+ GET /about 200 in 891ms (next.js: 181ms, application-code: 710ms)
+ GET /about 200 in 637ms (next.js: 7ms, application-code: 630ms)
+ GET /about 200 in 513ms (next.js: 301ms, application-code: 212ms)
+ GET /about 200 in 596ms (next.js: 89ms, application-code: 507ms)
+ GET /about 200 in 599ms (next.js: 8ms, application-code: 591ms)
+ GET /about 200 in 599ms (next.js: 200ms, application-code: 398ms)
+ GET /about 200 in 551ms (next.js: 6ms, application-code: 545ms)
+ GET /about 200 in 554ms (next.js: 9ms, application-code: 545ms)
+ GET /about 200 in 458ms (next.js: 169ms, application-code: 289ms)
+ GET /about 200 in 461ms (next.js: 92ms, application-code: 369ms)
+ GET /about 200 in 464ms (next.js: 10ms, application-code: 454ms)
+ GET /about 200 in 460ms (next.js: 258ms, application-code: 203ms)
+ GET /about 200 in 621ms (next.js: 7ms, application-code: 614ms)
+ GET /about 200 in 524ms (next.js: 9ms, application-code: 515ms)
+ GET /about 200 in 517ms (next.js: 10ms, application-code: 507ms)
+ GET /about 200 in 514ms (next.js: 307ms, application-code: 207ms)
+ GET /about 200 in 518ms (next.js: 135ms, application-code: 383ms)
+ GET /about 200 in 517ms (next.js: 219ms, application-code: 299ms)
+ GET /about 200 in 217ms (next.js: 6ms, application-code: 211ms)
+ GET /about 200 in 106ms (next.js: 8ms, application-code: 98ms)
+✓ Compiled in 136ms
+⨯ ReferenceError: Spotlight is not defined
+    at AboutPage (app\about\page.tsx:37:12)
+  35 |         <section className="py-16 sm:py-24 lg:py-28 relative overflow-hidden">
+  36 |           <AuroraBackground />
+> 37 |           <Spotlight />
+     |            ^
+  38 |           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+  39 |             <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
+  40 |               <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-... {
+  digest: '3056095198'
+}
+⨯ ReferenceError: Spotlight is not defined
+    at AboutPage (app\about\page.tsx:37:12)
+  35 |         <section className="py-16 sm:py-24 lg:py-28 relative overflow-hidden">
+  36 |           <AuroraBackground />
+> 37 |           <Spotlight />
+     |            ^
+  38 |           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+  39 |             <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
+  40 |               <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-... {
+  digest: '3056095198'
+}
+⨯ ReferenceError: Spotlight is not defined
+    at AboutPage (app\about\page.tsx:37:12)
+  35 |         <section className="py-16 sm:py-24 lg:py-28 relative overflow-hidden">
+  36 |           <AuroraBackground />
+> 37 |           <Spotlight />
+     |            ^
+  38 |           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+  39 |             <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
+  40 |               <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-... {
+  digest: '3056095198'
+}
+⨯ ReferenceError: Spotlight is not defined
+    at AboutPage (app\about\page.tsx:37:12)
+  35 |         <section className="py-16 sm:py-24 lg:py-28 relative overflow-hidden">
+  36 |           <AuroraBackground />
+> 37 |           <Spotlight />
+     |            ^
+  38 |           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+  39 |             <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
+  40 |               <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-... {
+  digest: '3056095198'
+}
+⨯ ReferenceError: Spotlight is not defined
+    at AboutPage (app\about\page.tsx:37:12)
+  35 |         <section className="py-16 sm:py-24 lg:py-28 relative overflow-hidden">
+  36 |           <AuroraBackground />
+> 37 |           <Spotlight />
+     |            ^
+  38 |           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+  39 |             <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
+  40 |               <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-... {
+  digest: '3056095198'
+}
+ GET /about 200 in 558ms (next.js: 202ms, application-code: 356ms)
+ GET /about 200 in 231ms (next.js: 7ms, application-code: 224ms)
+ GET /about 200 in 157ms (next.js: 101ms, application-code: 56ms)
+ GET /about 200 in 159ms (next.js: 57ms, application-code: 102ms)
+ GET /about 200 in 161ms (next.js: 4ms, application-code: 158ms)
+✓ Compiled in 116ms
+ GET /about 200 in 1096ms (next.js: 204ms, application-code: 891ms)
+ GET /images/sensmessage.jpg 404 in 141ms (next.js: 34ms, application-code: 107ms)
+[browser] Image with src "/images/image.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET /about 200 in 342ms (next.js: 15ms, application-code: 327ms)
+ GET /services 200 in 2.3s (next.js: 1670ms, application-code: 610ms)
+ GET / 200 in 207ms (next.js: 58ms, application-code: 149ms)
+ GET / 200 in 124ms (next.js: 6ms, application-code: 118ms)
+○ Compiling /portfolio/[slug] ...
+ GET /about 200 in 2.2s (next.js: 60ms, application-code: 2.2s)
+ GET /about 200 in 75ms (next.js: 30ms, application-code: 45ms)
+ GET /about 200 in 540ms (next.js: 37ms, application-code: 503ms)
+ GET /portfolio/alianza-capital 200 in 7.8s (next.js: 6.3s, generate-params: 2.2s, application-code: 1447ms)
+ GET /es/about 200 in 1467ms (next.js: 1281ms, application-code: 186ms)
+ GET /blog 200 in 264ms (next.js: 91ms, application-code: 173ms)
+ GET /service 200 in 612ms (next.js: 331ms, application-code: 281ms)
+ GET /portfolio 200 in 288ms (next.js: 188ms, application-code: 100ms)
+ GET /blog 200 in 167ms (next.js: 16ms, application-code: 151ms)
+ GET /about 200 in 200ms (next.js: 7ms, application-code: 193ms)
+ GET / 200 in 115ms (next.js: 4ms, application-code: 111ms)
+ GET /about 200 in 315ms (next.js: 17ms, application-code: 299ms)
+ GET / 200 in 98ms (next.js: 16ms, application-code: 82ms)
+ GET /about 200 in 192ms (next.js: 6ms, application-code: 186ms)
+ GET / 200 in 133ms (next.js: 13ms, application-code: 121ms)
+ GET /about 200 in 246ms (next.js: 25ms, application-code: 221ms)
+ GET /service 200 in 115ms (next.js: 5ms, application-code: 110ms)
+ GET /portfolio 200 in 58ms (next.js: 6ms, application-code: 52ms)
+ GET /blog 200 in 130ms (next.js: 6ms, application-code: 124ms)
+ GET /about 200 in 107ms (next.js: 6ms, application-code: 101ms)
+ GET / 200 in 105ms (next.js: 8ms, application-code: 97ms)
+✓ Compiled in 1315ms
+ GET / 200 in 2.3s (next.js: 448ms, application-code: 1853ms)
+ GET / 200 in 1374ms (next.js: 34ms, application-code: 1341ms)
+ GET / 200 in 616ms (next.js: 340ms, application-code: 276ms)
+ GET / 200 in 628ms (next.js: 134ms, application-code: 494ms)
+ GET / 200 in 638ms (next.js: 38ms, application-code: 599ms)
+✓ Compiled in 556ms
+✓ Compiled in 337ms
+✓ Compiled in 285ms
+ GET /about 200 in 431ms (next.js: 95ms, application-code: 336ms)
+ GET /services 200 in 483ms (next.js: 159ms, application-code: 323ms)
+ GET /es/about 200 in 379ms (next.js: 94ms, application-code: 285ms)
+ GET /blog 200 in 298ms (next.js: 104ms, application-code: 195ms)
+ GET /about 200 in 174ms (next.js: 3ms, application-code: 171ms)
+ GET /about 200 in 459ms (next.js: 132ms, application-code: 327ms)
+ GET /service 200 in 442ms (next.js: 260ms, application-code: 183ms)
+ GET /portfolio 200 in 373ms (next.js: 256ms, application-code: 117ms)
+ GET /blog 200 in 83ms (next.js: 11ms, application-code: 72ms)
+ GET /portfolio 200 in 79ms (next.js: 4ms, application-code: 75ms)
+ GET /service 200 in 115ms (next.js: 3ms, application-code: 112ms)
+ GET /about 200 in 83ms (next.js: 3ms, application-code: 80ms)
+ GET / 200 in 79ms (next.js: 3ms, application-code: 75ms)
+ GET /about 200 in 254ms (next.js: 17ms, application-code: 238ms)
+ GET / 200 in 102ms (next.js: 5ms, application-code: 97ms)
+ GET /about 200 in 775ms (next.js: 128ms, application-code: 648ms)
+ GET /service 200 in 388ms (next.js: 153ms, application-code: 235ms)
+ GET /portfolio 200 in 265ms (next.js: 113ms, application-code: 152ms)
+ GET /blog 200 in 285ms (next.js: 90ms, application-code: 195ms)
+ GET /about 200 in 105ms (next.js: 3ms, application-code: 101ms)
+ GET /service 200 in 199ms (next.js: 20ms, application-code: 179ms)
+ GET /portfolio 200 in 162ms (next.js: 37ms, application-code: 125ms)
+ GET /blog 200 in 218ms (next.js: 10ms, application-code: 208ms)
+ GET /about 200 in 203ms (next.js: 8ms, application-code: 194ms)
+ GET /service 200 in 201ms (next.js: 23ms, application-code: 177ms)
+ GET /portfolio 200 in 128ms (next.js: 23ms, application-code: 105ms)
+ GET /blog 200 in 225ms (next.js: 16ms, application-code: 209ms)
+ GET /service 200 in 150ms (next.js: 12ms, application-code: 139ms)
+✓ Compiled in 1546ms
+ GET /portfolio 200 in 7.0s (next.js: 5.6s, application-code: 1357ms)
+ GET /portfolio 200 in 841ms (next.js: 118ms, application-code: 723ms)
+ GET /service 200 in 3.0s (next.js: 1012ms, application-code: 2.0s)
+ GET /service 200 in 1612ms (next.js: 18ms, application-code: 1594ms)
+ GET /service 200 in 1381ms (next.js: 268ms, application-code: 1113ms)
+ GET /service 200 in 1389ms (next.js: 18ms, application-code: 1370ms)
+ GET /service 200 in 1389ms (next.js: 743ms, application-code: 646ms)
+✓ Compiled in 298ms
+ GET /portfolio 200 in 794ms (next.js: 265ms, application-code: 529ms)
+ GET /portfolio 200 in 433ms (next.js: 8ms, application-code: 425ms)
+ GET /portfolio 200 in 314ms (next.js: 11ms, application-code: 303ms)
+ GET /portfolio 200 in 313ms (next.js: 207ms, application-code: 106ms)
+ GET /portfolio 200 in 321ms (next.js: 106ms, application-code: 215ms)
+✓ Compiled in 1598ms
+ GET /about 200 in 2.3s (next.js: 549ms, application-code: 1723ms)
+ GET /about 200 in 299ms (next.js: 17ms, application-code: 282ms)
+ GET /service 200 in 825ms (next.js: 443ms, application-code: 382ms)
+ GET /service 200 in 151ms (next.js: 11ms, application-code: 140ms)
+ GET /portfolio 200 in 81ms (next.js: 9ms, application-code: 71ms)
+ GET /blog 200 in 1008ms (next.js: 805ms, application-code: 203ms)
+ GET /service 200 in 135ms (next.js: 13ms, application-code: 122ms)
+ GET /about 200 in 238ms (next.js: 56ms, application-code: 182ms)
+ GET / 200 in 792ms (next.js: 608ms, application-code: 184ms)
+ GET /about 200 in 377ms (next.js: 17ms, application-code: 360ms)
+ GET /service 200 in 174ms (next.js: 14ms, application-code: 160ms)
+ GET /portfolio 200 in 123ms (next.js: 11ms, application-code: 112ms)
+✓ Compiled in 1058ms
+ GET /portfolio 200 in 2.1s (next.js: 749ms, application-code: 1327ms)
+ GET /portfolio 200 in 953ms (next.js: 19ms, application-code: 934ms)
+ GET /about 200 in 909ms (next.js: 119ms, application-code: 790ms)
+✓ Compiled in 363ms
+ GET /about 200 in 740ms (next.js: 190ms, application-code: 551ms)
+ GET /about 200 in 314ms (next.js: 14ms, application-code: 300ms)
+✓ Compiled in 854ms
+ GET /about 200 in 1227ms (next.js: 444ms, application-code: 782ms)
+ GET /about 200 in 322ms (next.js: 18ms, application-code: 304ms)
+ GET /about 200 in 164ms (next.js: 10ms, application-code: 154ms)
+ GET /service 200 in 528ms (next.js: 174ms, application-code: 355ms)
+ GET /portfolio 200 in 646ms (next.js: 424ms, application-code: 222ms)
+ GET /portfolio 200 in 1772ms (next.js: 18ms, application-code: 1754ms)
+ GET /blog 200 in 558ms (next.js: 207ms, application-code: 351ms)
+○ Compiling /es/portfolio ...
+ GET /es/portfolio 200 in 4.8s (next.js: 4.2s, application-code: 598ms)
+ GET /service 200 in 366ms (next.js: 27ms, application-code: 339ms)
+ GET /about 200 in 211ms (next.js: 19ms, application-code: 193ms)
+ GET / 200 in 617ms (next.js: 425ms, application-code: 193ms)

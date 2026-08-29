@@ -389,3 +389,66 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* --- Aurora background --- */
+.aurora-pulse {
+  animation:
+    auroraPulse 10s ease-in-out infinite,
+    auroraDrift 24s ease-in-out infinite alternate;
+}
+
+@keyframes auroraDrift {
+  0% { transform: translate(-3%, -2%) scale(1); }
+  100% { transform: translate(3%, 2%) scale(1.08); }
+}
+
+.aurora-blob {
+  will-change: transform;
+}
+
+.aurora-blob--1 {
+  animation: auroraBlob1 30s ease-in-out infinite;
+}
+
+.aurora-blob--2 {
+  animation: auroraBlob2 40s ease-in-out infinite;
+}
+
+.aurora-blob--3 {
+  animation: auroraBlob3 50s ease-in-out infinite;
+}
+
+@keyframes auroraPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes auroraBlob1 {
+  0%, 100% { transform: translate(-50px, -20px) scale(1); }
+  50% { transform: translate(50px, 20px) scale(1.2); }
+}
+
+@keyframes auroraBlob2 {
+  0%, 100% { transform: translate(50px, 20px) scale(1); }
+  50% { transform: translate(-50px, -20px) scale(1.3); }
+}
+
+@keyframes auroraBlob3 {
+  0% { transform: translate(20px, -30px) rotate(0deg); }
+  50% { transform: translate(-20px, 30px) rotate(180deg); }
+  100% { transform: translate(20px, -30px) rotate(360deg); }
+}
+
+/* Inner-page hero spotlight: short drift, gentle wave, widens, a touch brighter */
+@keyframes heroSpotlight {
+  0%   { transform: translate(0%, -8%) rotate(-3deg) scale(1); opacity: 0.75; }
+  25%  { transform: translate(6%, -5%) rotate(0deg) scale(1.09); opacity: 0.9; }
+  50%  { transform: translate(16%, -3%) rotate(3deg) scale(1.18); opacity: 1; }
+  75%  { transform: translate(6%, -6%) rotate(0deg) scale(1.09); opacity: 0.9; }
+  100% { transform: translate(0%, -8%) rotate(-3deg) scale(1); opacity: 0.75; }
+}
+
+.animate-hero-spotlight {
+  animation: heroSpotlight 9s ease-in-out infinite;
+  will-change: transform, opacity;
+}

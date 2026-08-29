@@ -18,7 +18,7 @@ import { FinalCta } from '@/components/home/final-cta'
 import { SectionIcon } from '@/components/ui/section-icon'
 import { AboutVideo } from '@/components/about/about-video'
 import { aboutContent } from '@/lib/content/about'
-import { HeroBackground } from '@/components/ui/hero-background'
+import { PageHeroBackground } from '@/components/ui/page-hero-background'
 
 const content = aboutContent.en
 
@@ -33,7 +33,7 @@ export default function AboutPage() {
       <Header locale="en" />
       <main className="relative overflow-hidden">
         <section className="py-16 sm:py-24 lg:py-28 relative overflow-hidden">
-          <HeroBackground />
+          <PageHeroBackground />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
             <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
               <p className="gradient-border inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white" style={{ borderRadius: '15px', zIndex: 1, position: 'relative' }}>

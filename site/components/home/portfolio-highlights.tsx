@@ -10,11 +10,13 @@ import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 
 interface PortfolioHighlightsProps {
   content: HomeContent['portfolio']
+  /** Hide the internal heading (when rendered under a separate hero) */
+  hideHeading?: boolean
 }
 
 const ITEMS_PER_PAGE = 9
 
-export function PortfolioHighlights({ content }: PortfolioHighlightsProps) {
+export function PortfolioHighlights({ content, hideHeading = false }: PortfolioHighlightsProps) {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>()
   const [page, setPage] = useState(1)
   const totalPages = Math.ceil(content.items.length / ITEMS_PER_PAGE)
@@ -28,15 +30,17 @@ export function PortfolioHighlights({ content }: PortfolioHighlightsProps) {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
-          <p className="glass-card inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white">
-            <SectionIcon />
-            {content.label}
-          </p>
-          <h2 className="mt-3 text-3xl font-medium text-balance text-foreground sm:text-4xl lg:text-5xl">
-            {content.heading}
-          </h2>
-        </div>
+        {!hideHeading && (
+          <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
+            <p className="glass-card inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white">
+              <SectionIcon />
+              {content.label}
+            </p>
+            <h2 className="mt-3 text-3xl font-medium text-balance text-foreground sm:text-4xl lg:text-5xl">
+              {content.heading}
+            </h2>
+          </div>
+        )}
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {currentItems.map((project, index) => (
