@@ -24,6 +24,8 @@ export interface PortfolioItem {
   image: string
   href: string
   imagePosition?: string
+  tags?: string[]
+  mockType?: 'mobile' | 'web'
 }
 
 export interface TestimonialItem {
@@ -268,13 +270,17 @@ export const homeContent: Record<Locale, HomeContent> = {
             'From 100% manual operations to a full fintech platform: two companies onboarded and automated, a mobile app live in both stores, and the ability to scale clients without growing headcount.',
           image: '/images/alianza-mock-1.png',
           href: '/portfolio/alianza-capital/',
+          tags: ['Fintech', 'Mobile App', 'Web Platform'],
+          mockType: 'mobile',
         },
         {
           title: 'Ilirox',
           description:
-            'A professional social network for real estate agents with intelligent matching between searches and properties, automatic alerts, polygon-based map search, community validation and social content — built to become Mexico’s largest real estate network.',
+            'A professional social network for real estate agents with intelligent matching between searches and properties, automatic alerts, polygon-based map search, community validation and social content — built to become Mexico\'s largest real estate network.',
           image: '/images/ilirox-portada.png',
           href: '/portfolio/ilirox/',
+          tags: ['Social Network', 'Real Estate', 'Maps'],
+          mockType: 'mobile',
         },
         {
           title: 'Racing KX',
@@ -282,6 +288,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'A specialized social network for the professional motorsport community with vCard-style profiles, posts, followers and premium features — built with partner Creante for a French content creator community.',
           image: '/images/racingkx-mock-2.png',
           href: '/portfolio/racing-kx/',
+          tags: ['Social Network', 'Community', 'Content'],
+          mockType: 'mobile',
         },
         {
           title: 'Later Life Training',
@@ -289,6 +297,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'A platform on the verge of being scrapped became a stable, production-ready system that now activates USD 8,000/month through reliable bookings and payments. We rebuilt the backend and redesigned the UX so the team can finally trust and scale it.',
           image: '/images/llt-mock-1.png',
           href: '/portfolio/later-life-training/',
+          tags: ['Healthcare', 'Web Platform', 'Bookings'],
+          mockType: 'web',
         },
         {
           title: 'True English',
@@ -296,6 +306,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'An AI-assisted English learning platform with complete courses, automatic pronunciation evaluation, personalized feedback and specialized content for each organization — currently used in Hermosillo and Zacatecas.',
           image: '/images/trueenglish-mock-1.png',
           href: '/portfolio/true-english/',
+          tags: ['EdTech', 'AI', 'Language Learning'],
+          mockType: 'mobile',
         },
         {
           title: 'Increciendo FinTech',
@@ -303,6 +315,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'A web platform for online loan management based on a subscription model, with preferential rates for subscribed users, standard rates for occasional users and corporate plans — a SaaS that benefits both the fintech and its clients.',
           image: '/images/increciendo-mock-1.png',
           href: '/portfolio/increciendo-fintech/',
+          tags: ['Fintech', 'SaaS', 'Lending'],
+          mockType: 'web',
         },
         {
           title: 'Hulp — Clients',
@@ -310,6 +324,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'A manual operation turned into a live marketplace with 5,000+ downloads and recurring revenue. We built the full architecture, booking system and a simple app that clients actually enjoy using.',
           image: '/images/hulp-mock-1.png',
           href: '/portfolio/hulp-clients/',
+          tags: ['Marketplace', 'Mobile App', 'On-Demand'],
+          mockType: 'mobile',
         },
         {
           title: 'Daily Sparkle',
@@ -317,6 +333,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Daily Sparkle is a UK web application that helps care homes engage residents and connect families through care tools, activity planning, enriching content, and a secure family portal with personalized updates and schedules.',
           image: '/images/dailysparkle-mock-1.png',
           href: '/portfolio/daily-sparkle/',
+          tags: ['Healthcare', 'Web App', 'Care Homes'],
+          mockType: 'web',
         },
         {
           title: 'GM Parts',
@@ -325,6 +343,8 @@ export const homeContent: Record<Locale, HomeContent> = {
           image: '/images/gmparts-mock-1.png',
           imagePosition: 'object-center',
           href: '/portfolio/gm-parts-2/',
+          tags: ['Automotive', 'Mobile App', 'ERP'],
+          mockType: 'mobile',
         },
         {
           title: 'Mentor GrowthRockstar',
@@ -332,6 +352,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Joining together mentors and mentees through a scheduling marketplace to ensure growth and success for the mentees.',
           image: '/images/mentor-mock-1.png',
           href: '/portfolio/mentor-growthrocsktar/',
+          tags: ['EdTech', 'Marketplace', 'Scheduling'],
+          mockType: 'web',
         },
         {
           title: 'Beauty Connect',
@@ -339,6 +361,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Beauty Connect is a Mexican marketplace mobile application that connects beauty salons with clients, making it easy to discover, reserve, and pay for beauty services.',
           image: '/images/beautyconnect-mock-1.png',
           href: '/portfolio/beauty-connect/',
+          tags: ['Marketplace', 'Mobile App', 'Beauty'],
+          mockType: 'mobile',
         },
         {
           title: 'The Decision Board',
@@ -346,6 +370,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'The Decision Board helps high-performing leadership teams navigate uncertainty and decide how to decide, enabling structured discussions, decisions and pages to make team work more efficient, reliable and productive.',
           image: '/images/decisionboard-mock-1.png',
           href: '/portfolio/the-decision-board/',
+          tags: ['SaaS', 'Leadership', 'Productivity'],
+          mockType: 'web',
         },
         {
           title: 'Supra Sales CRM',
@@ -353,6 +379,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Full sales process CRM tool that enables management of the entire sales process from client and project creation through business case, quotation and billing.',
           image: '/images/supra-mock-1.png',
           href: '/portfolio/supra-sales-crm/',
+          tags: ['CRM', 'Sales', 'Web Platform'],
+          mockType: 'web',
         },
         {
           title: 'Tok&Go',
@@ -360,13 +388,17 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Fintech digital assets tokenizator that enables investment in real projects through blockchain, providing end-to-end services for digital assets creation, management and distribution in both primary and secondary markets.',
           image: '/images/tokgo-mock-1.png',
           href: '/portfolio/tokgo/',
+          tags: ['Fintech', 'Blockchain', 'Tokenization'],
+          mockType: 'web',
         },
         {
           title: 'Hulp — Providers',
           description:
-            'Providers got their own app inside the same marketplace, with AI job matches and real-time coordination. The result: a scalable supply side sustaining the platform’s growth.',
+            'Providers got their own app inside the same marketplace, with AI job matches and real-time coordination. The result: a scalable supply side sustaining the platform\'s growth.',
           image: '/images/hulp-providers-mock-1.png',
           href: '/portfolio/hulp-providers/',
+          tags: ['Marketplace', 'Mobile App', 'AI'],
+          mockType: 'mobile',
         },
         {
           title: 'Ecumerca',
@@ -374,6 +406,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Ecumerca is a marketplace platform made for the end consumer and the providers of products of diverse categories. This platform enables a shopping cart with the end consumer and manages several providers so a consumer can make a purchase from several providers at the same time. Ecumerca is composed of a shopping cart, order history, support chat, return policy and an administrator panel.',
           image: '/images/ecumerca-mock-1.png',
           href: '/portfolio/ecumerca/',
+          tags: ['Marketplace', 'E-Commerce', 'Multi-Vendor'],
+          mockType: 'mobile',
         },
       ],
     },
@@ -543,6 +577,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'De operaciones 100% manuales a una plataforma fintech completa: dos empresas incorporadas y automatizadas, una app móvil en ambas tiendas y la capacidad de escalar clientes sin aumentar la plantilla.',
           image: '/images/alianza-mock-1.png',
           href: '/es/portfolio/alianza-capital-es/',
+          tags: ['Fintech', 'App Móvil', 'Plataforma Web'],
+          mockType: 'mobile',
         },
         {
           title: 'Ilirox',
@@ -550,6 +586,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Una red social profesional para agentes inmobiliarios con match inteligente entre búsquedas y propiedades, alertas automáticas, búsqueda por polígonos en el mapa, validación comunitaria y contenido social, construida para convertirse en la mayor red inmobiliaria de México.',
           image: '/images/ilirox-portada.png',
           href: '/es/portfolio/ilirox-es/',
+          tags: ['Red Social', 'Bienes Raíces', 'Mapas'],
+          mockType: 'mobile',
         },
         {
           title: 'Racing KX',
@@ -557,6 +595,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Una red social especializada para la comunidad profesional del automovilismo con perfiles tipo vCard, publicaciones, seguidores y funcionalidades premium, desarrollada junto al partner Creante para una comunidad francesa de creadores de contenido.',
           image: '/images/racingkx-mock-2.png',
           href: '/es/portfolio/racing-kx-es/',
+          tags: ['Red Social', 'Comunidad', 'Contenido'],
+          mockType: 'mobile',
         },
         {
           title: 'Later Life Training',
@@ -564,6 +604,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Una plataforma a punto de ser descartada se convirtió en un sistema estable y listo para producción que hoy activa 8.000 USD/mes mediante reservas y pagos fiables. Reconstruimos el backend y rediseñamos la UX para que el equipo por fin pueda confiar y escalar.',
           image: '/images/llt-mock-1.png',
           href: '/es/portfolio/later-life-training-2/',
+          tags: ['Salud', 'Plataforma Web', 'Reservas'],
+          mockType: 'web',
         },
         {
           title: 'True English',
@@ -571,6 +613,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Una plataforma de aprendizaje de inglés asistida por IA con cursos completos, evaluación automática de pronunciación, retroalimentación personalizada y contenido especializado para cada organización, utilizada actualmente en Hermosillo y Zacatecas.',
           image: '/images/trueenglish-mock-1.png',
           href: '/es/portfolio/true-english-es/',
+          tags: ['EdTech', 'IA', 'Aprendizaje de Idiomas'],
+          mockType: 'mobile',
         },
         {
           title: 'Increciendo FinTech',
@@ -578,6 +622,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Una plataforma web para la gestión de préstamos en línea basada en un modelo de suscripción, con tasas preferenciales para suscritos, tasas estándar para ocasionales y planes corporativos: un SaaS que beneficia tanto a la fintech como a sus clientes.',
           image: '/images/increciendo-mock-1.png',
           href: '/es/portfolio/increciendo-fintech-es/',
+          tags: ['Fintech', 'SaaS', 'Préstamos'],
+          mockType: 'web',
         },
         {
           title: 'Hulp — Clientes',
@@ -585,6 +631,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Una operación manual se transformó en un marketplace en producción con más de 5.000 descargas e ingresos recurrentes. Construimos la arquitectura completa, el sistema de reservas y una app sencilla que los clientes disfrutan usar.',
           image: '/images/hulp-mock-1.png',
           href: '/es/portfolio/hulp-clientes-es/',
+          tags: ['Marketplace', 'App Móvil', 'On-Demand'],
+          mockType: 'mobile',
         },
         {
           title: 'Daily Sparkle',
@@ -592,6 +640,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Daily Sparkle es una aplicación web del Reino Unido que ayuda a los hogares de cuidado a involucrar a sus residentes y conectar con sus familias. Ofrece gestión del cuidado, planificación de actividades y un portal seguro con actualizaciones e información.',
           image: '/images/dailysparkle-mock-1.png',
           href: '/es/portfolio/daily-sparkle-2/',
+          tags: ['Salud', 'App Web', 'Cuidado de Ancianos'],
+          mockType: 'web',
         },
         {
           title: 'GM Parts',
@@ -600,6 +650,8 @@ export const homeContent: Record<Locale, HomeContent> = {
           image: '/images/gmparts-mock-1.png',
           imagePosition: 'object-center',
           href: '/es/portfolio/repuestos-gm-es/',
+          tags: ['Automotriz', 'App Móvil', 'ERP'],
+          mockType: 'mobile',
         },
         {
           title: 'Mentor GrowthRockstar',
@@ -607,6 +659,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Uniendo mentores y aprendices a través de una plataforma de programación para asegurar el crecimiento y el éxito de los aprendices.',
           image: '/images/mentor-mock-1.png',
           href: '/es/portfolio/mentor-growthrocsktar-es/',
+          tags: ['EdTech', 'Marketplace', 'Agendamiento'],
+          mockType: 'web',
         },
         {
           title: 'Beauty Connect',
@@ -614,6 +668,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Beauty Connect es una aplicación móvil de mercado mexicano que conecta salones de belleza con clientes, facilitando el descubrimiento, la reserva y el pago de servicios de belleza.',
           image: '/images/beautyconnect-mock-1.png',
           href: '/es/portfolio/beauty-connect-es/',
+          tags: ['Marketplace', 'App Móvil', 'Belleza'],
+          mockType: 'mobile',
         },
         {
           title: 'El Tablero de Decisiones',
@@ -621,6 +677,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'El Panel de Decisiones ayuda a los equipos de liderazgo de alto rendimiento a gestionar la incertidumbre y a decidir cómo tomar decisiones, facilitando debates, decisiones y páginas estructuradas para un trabajo en equipo más eficiente y productivo.',
           image: '/images/decisionboard-mock-1.png',
           href: '/es/portfolio/the-decision-board-es/',
+          tags: ['SaaS', 'Liderazgo', 'Productividad'],
+          mockType: 'web',
         },
         {
           title: 'CRM de Ventas Supra',
@@ -628,6 +686,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Herramienta CRM integral que gestiona todo el proceso de ventas de SUPRA, desde la creación del cliente y el proyecto hasta la creación del caso de negocio, la cotización y la facturación.',
           image: '/images/supra-mock-1.png',
           href: '/es/portfolio/supra-sales-crm-es/',
+          tags: ['CRM', 'Ventas', 'Plataforma Web'],
+          mockType: 'web',
         },
         {
           title: 'Tok&Go',
@@ -635,6 +695,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Fintech tokenizador de activos digitales que permite invertir en proyectos reales mediante blockchain, ofreciendo servicios integrales de creación, gestión y distribución de activos digitales.',
           image: '/images/tokgo-mock-1.png',
           href: '/es/portfolio/tokgo-es/',
+          tags: ['Fintech', 'Blockchain', 'Tokenización'],
+          mockType: 'web',
         },
         {
           title: 'Hulp — Proveedores',
@@ -642,6 +704,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Los proveedores tienen su propia app dentro del mismo marketplace, con emparejamientos de trabajo por IA y coordinación en tiempo real. El resultado: un lado de la oferta escalable que sostiene el crecimiento.',
           image: '/images/hulp-providers-mock-1.png',
           href: '/es/portfolio/hulp-proveedores-es/',
+          tags: ['Marketplace', 'App Móvil', 'IA'],
+          mockType: 'mobile',
         },
         {
           title: 'Ecumerca',
@@ -649,6 +713,8 @@ export const homeContent: Record<Locale, HomeContent> = {
             'Ecumerca es una plataforma de mercado diseñada para el consumidor final y los proveedores de productos de diversas categorías. Esta plataforma permite al consumidor final crear un carrito de compras y gestionar varios proveedores para que un consumidor pueda realizar compras simultáneas. Ecumerca incluye un carrito de compras, historial de pedidos, chat de soporte, política de devoluciones y un panel de administrador.',
           image: '/images/ecumerca-mock-1.png',
           href: '/es/portfolio/ecumerca-es/',
+          tags: ['Marketplace', 'E-Commerce', 'Multi-Vendor'],
+          mockType: 'mobile',
         },
       ],
     },

@@ -291,7 +291,7 @@
 /* Project card */
 .project-card {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
+  border-radius: 16px;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
   box-shadow: -10px 10px 100px 0px rgba(56, 188.99999999999994, 248, 0.15);
