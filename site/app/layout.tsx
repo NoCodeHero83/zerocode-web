@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
+import { MouseSpotlight } from '@/components/about/mouse-spotlight'
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${ibmPlexSans.variable} dark`}>
       <body className="min-h-screen antialiased">
+        <MouseSpotlight />
         {children}
         <script src="/js/chatbot.js?v=10" defer />
       </body>
