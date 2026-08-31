@@ -53,7 +53,7 @@ export function PortfolioHighlights({ content, hideHeading = false }: PortfolioH
                 style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
               >
                 <div className="relative overflow-hidden rounded-t-[16px] bg-[radial-gradient(ellipse_at_top_left,_rgba(99,102,241,0.06)_0%,_rgba(0,220,252,0.03)_40%,_transparent_70%)] px-8 pt-8">
-                  <div className={`relative mx-auto h-[300px] overflow-hidden rounded-xl shadow-[0_8px_40px_-8px_rgba(0,220,252,0.2)] ring-1 ring-white/10 ${isMobile ? 'w-[65%]' : 'w-[85%]'}`}>
+                  <div className={`relative mx-auto h-[300px] overflow-hidden rounded-xl shadow-[0_8px_40px_-8px_rgba(0,220,252,0.2)] ring-1 ring-white/10 ${isMobile ? 'w-[65%]' : 'w-full sm:w-[85%]'}`}>
                     <div className="absolute -inset-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-400/15 via-cyan-500/5 to-transparent blur-xl" />
                     <Image
                       src={project.image}
