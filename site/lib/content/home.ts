@@ -120,6 +120,13 @@ const testimonialsEn: TestimonialItem[] = [
     company: 'Later Life Training',
     image: '/images/Pete.jpeg',
   },
+  {
+    quote:
+      'The ZeroCode team have helped us turn our vision into reality. Their patience, agility, and adaptability have been instrumental throughout the many iterations required to build tools that genuinely support our operations, the needs of our clients and providers, and that evolve with us as we scale.',
+    name: 'Hulp Colombia',
+    company: 'Hulp Colombia',
+    image: '/images/HulpLogo.png',
+  },
 ]
 
 const testimonialsEs: TestimonialItem[] = [
@@ -150,6 +157,13 @@ const testimonialsEs: TestimonialItem[] = [
     name: 'Pete Campbell',
     company: 'Later Life Training',
     image: '/images/Pete.jpeg',
+  },
+  {
+    quote:
+      'El equipo de ZeroCode nos ha ayudado a convertir nuestra visión en realidad. Su paciencia, agilidad y adaptabilidad han sido fundamentales a lo largo de las muchas iteraciones necesarias para construir herramientas que realmente respaldan nuestras operaciones, las necesidades de nuestros clientes y proveedores, y que evolucionan con nosotros a medida que escalamos.',
+    name: 'Hulp Colombia',
+    company: 'Hulp Colombia',
+    image: '/images/HulpLogo.png',
   },
 ]
 

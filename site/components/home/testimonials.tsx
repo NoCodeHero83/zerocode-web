@@ -43,8 +43,18 @@ export function Testimonials({ content }: TestimonialsProps) {
               style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
             >
               <div className="flex flex-col items-center text-center gap-6">
-                <div className="relative size-[100px] shrink-0 overflow-hidden rounded-full ring-2 ring-primary/20">
-                  <Image src={testimonial.image} alt={testimonial.name} fill sizes="100px" className="object-cover" />
+                <div
+                  className={`relative size-[100px] shrink-0 overflow-hidden rounded-full ring-2 ring-primary/20 ${
+                    testimonial.image.includes('HulpLogo') ? 'bg-white p-3' : ''
+                  }`}
+                >
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    fill
+                    sizes="100px"
+                    className={testimonial.image.includes('HulpLogo') ? 'object-contain p-2' : 'object-cover'}
+                  />
                 </div>
                 <div>
                   <p className="text-lg font-bold uppercase tracking-wide text-white">{testimonial.name}</p>
