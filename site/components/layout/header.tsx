@@ -16,6 +16,7 @@ export function Header({ locale }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10)
@@ -71,18 +72,52 @@ export function Header({ locale }: HeaderProps) {
             />
           </Link>
 
-          <nav className="hidden items-center gap-12 lg:flex lg:ml-auto lg:mr-8">
-            {items.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#38bdf8] ${
-                  isActive(item.href) ? 'text-[#38bdf8]' : 'text-white/80'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <nav className="hidden items-center gap-8 lg:flex lg:ml-auto lg:mr-8">
+            {items.map((item) => {
+              const hasChildren = !!item.children?.length
+              const isParentActive = isActive(item.href) || !!item.children?.some((c) => isActive(c.href))
+              if (hasChildren) {
+                return (
+                  <div key={item.label} className="relative group flex items-center self-stretch">
+                    <Link
+                      href={item.href}
+                      className={`flex items-center gap-1 text-sm font-medium uppercase tracking-wide leading-none transition-colors hover:text-[#38bdf8] ${
+                        isParentActive ? 'text-[#38bdf8]' : 'text-white/80'
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown className="size-3 shrink-0 transition-transform duration-200 group-hover:rotate-180" />
+                    </Link>
+                    <div className="absolute left-1/2 top-full hidden -translate-x-1/2 pt-[14px] group-hover:block group-focus-within:block">
+                      <div className="min-w-[210px] border border-white/10 bg-[#0a0f1e] p-1 shadow-lg">
+                        {item.children!.map((child) => (
+                          <Link
+                            key={child.href + child.label}
+                            href={child.href}
+                            className={`block px-4 py-2.5 text-sm font-medium leading-none transition-colors hover:bg-white/[0.06] hover:text-white ${
+                              isActive(child.href) ? 'text-white bg-white/[0.06]' : 'text-white/75'
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#38bdf8] ${
+                    isActive(item.href) ? 'text-[#38bdf8]' : 'text-white/80'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
@@ -163,18 +198,56 @@ export function Header({ locale }: HeaderProps) {
         {isMenuOpen && (
           <div className="border-t border-white/10 bg-black/95 lg:hidden">
             <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
-              {items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`rounded-lg px-3 py-2.5 text-sm font-medium uppercase tracking-wide transition-colors hover:bg-white/5 hover:text-[#38bdf8] ${
-                    isActive(item.href) ? 'text-[#38bdf8]' : 'text-white/80'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {items.map((item) => {
+                const hasChildren = !!item.children?.length
+                const isParentActive = isActive(item.href) || !!item.children?.some((c) => isActive(c.href))
+                if (hasChildren) {
+                  return (
+                    <div key={item.label} className="rounded-lg">
+                      <button
+                        type="button"
+                        onClick={() => setMobileServicesOpen((o) => !o)}
+                        className={`flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium uppercase tracking-wide transition-colors hover:bg-white/5 hover:text-[#38bdf8] ${
+                          isParentActive ? 'text-[#38bdf8]' : 'text-white/80'
+                        }`}
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown
+                          className={`size-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+                      {mobileServicesOpen && (
+                        <div className="ml-3 mt-1 flex flex-col gap-1 border-l border-white/10 pl-3">
+                          {item.children!.map((child) => (
+                            <Link
+                              key={child.href + child.label}
+                              href={child.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-white/5 hover:text-[#38bdf8] ${
+                                isActive(child.href) ? 'text-[#38bdf8]' : 'text-white/70'
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )
+                }
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`rounded-lg px-3 py-2.5 text-sm font-medium uppercase tracking-wide transition-colors hover:bg-white/5 hover:text-[#38bdf8] ${
+                      isActive(item.href) ? 'text-[#38bdf8]' : 'text-white/80'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              })}
               <div className="mt-2 flex items-center gap-3 px-3 py-2">
                 <Link
                   href={otherHref}

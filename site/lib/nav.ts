@@ -3,20 +3,35 @@ export type Locale = 'en' | 'es'
 export interface NavItem {
   label: string
   href: string
+  children?: NavItem[]
 }
 
 export const navItems: Record<Locale, NavItem[]> = {
   en: [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about/' },
-    { label: 'Service', href: '/service/' },
+    {
+      label: 'Services',
+      href: '/service/',
+      children: [
+        { label: 'General Services', href: '/service/' },
+        { label: 'Fintech Solutions', href: '/fintech/' },
+      ],
+    },
     { label: 'Portfolio', href: '/portfolio/' },
     { label: 'Blog', href: '/blog/' },
   ],
   es: [
     { label: 'Inicio', href: '/es/' },
     { label: 'Acerca de', href: '/es/about/' },
-    { label: 'Servicios', href: '/es/service-es/' },
+    {
+      label: 'Servicios',
+      href: '/es/service-es/',
+      children: [
+        { label: 'Servicios Generales', href: '/es/service-es/' },
+        { label: 'Soluciones Fintech', href: '/es/fintech/' },
+      ],
+    },
     { label: 'Portafolio', href: '/es/portfolio/' },
     { label: 'Blog', href: '/es/blog/' },
   ],
@@ -37,6 +52,7 @@ const staticRouteMapEnToEs: Record<string, string> = {
   '/about': '/es/about',
   '/service': '/es/service-es',
   '/services': '/es/services',
+  '/fintech': '/es/fintech',
   '/portfolio': '/es/portfolio',
   '/blog': '/es/blog',
   '/contact': '/es/contact-es',
@@ -47,6 +63,7 @@ const staticRouteMapEsToEn: Record<string, string> = {
   '/es/about': '/about',
   '/es/service-es': '/service',
   '/es/services': '/services',
+  '/es/fintech': '/fintech',
   '/es/portfolio': '/portfolio',
   '/es/blog': '/blog',
   '/es/contact-es': '/contact',

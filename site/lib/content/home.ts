@@ -292,6 +292,15 @@ export const homeContent: Record<Locale, HomeContent> = {
           mockType: 'mobile',
         },
         {
+          title: 'Multiclasificados Effe',
+          description:
+            'A multipurpose classifieds marketplace where providers buy listing packages across multiple categories and countries. Built web-only in under 10 weeks with React and Supabase, featuring a highly complex package pricing engine — all AI-assisted — and launched quality-first at coleffe.com.',
+          image: '/images/multiclasificados-mock-1.png',
+          href: '/portfolio/multiclasificados-effe/',
+          tags: ['Marketplace', 'Web Platform', 'Pricing Engine'],
+          mockType: 'web',
+        },
+        {
           title: 'Later Life Training',
           description:
             'A platform on the verge of being scrapped became a stable, production-ready system that now activates USD 8,000/month through reliable bookings and payments. We rebuilt the backend and redesigned the UX so the team can finally trust and scale it.',
@@ -597,6 +606,15 @@ export const homeContent: Record<Locale, HomeContent> = {
           href: '/es/portfolio/racing-kx-es/',
           tags: ['Red Social', 'Comunidad', 'Contenido'],
           mockType: 'mobile',
+        },
+        {
+          title: 'Multiclasificados Effe',
+          description:
+            'Un marketplace de clasificados multipropósito donde los proveedores compran paquetes de avisos por múltiples categorías y países. Desarrollado solo web en menos de 10 semanas con React y Supabase, con un complejo motor de cálculo de precios por paquete —todo asistido por IA— y lanzado con foco en calidad en coleffe.com.',
+          image: '/images/multiclasificados-mock-1.png',
+          href: '/es/portfolio/multiclasificados-effe-es/',
+          tags: ['Marketplace', 'Plataforma Web', 'Motor de Precios'],
+          mockType: 'web',
         },
         {
           title: 'Later Life Training',

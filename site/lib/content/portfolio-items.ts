@@ -146,6 +146,46 @@ const portfolioItemsEn: PortfolioItemFull[] = [
     },
   },
   {
+    title: 'Multiclasificados Effe',
+    description:
+      'Multiclasificados Effe is a multipurpose classifieds marketplace where providers purchase listing packages to publish across diverse categories, with reach across multiple countries worldwide. The platform was delivered web-only in record time — under 10 weeks — as a React frontend on Supabase, developed entirely with AI-assisted workflows. Its core is a highly complex package pricing engine that calculates tiered bundle costs, enabling flexible monetization at scale. Zerocode accompanied Effe from build through launch, prioritizing platform quality, stability and readiness for growth at coleffe.com.',
+    thumbnail: '/images/multiclasificados-mock-1.png',
+    images: [
+      '/images/multiclasificados-mock-1.png',
+      '/images/multiclasificados-mock-2.png',
+      '/images/multiclasificados-mock-3.png',
+      '/images/multiclasificados-mock-4.png',
+      '/images/multiclasificados-mock-5.png',
+    ],
+    techSpecs: {
+      'Design': 'Figma',
+      'Implementation': 'React & Supabase',
+      'AI-Assisted': 'Claude Code, Antigravity, GitHub Copilot',
+      'Link': 'https://coleffe.com',
+    },
+    href: '/portfolio/multiclasificados-effe/',
+    relatedSlugs: ['later-life-training', 'true-english'],
+    businessCase: {
+      problem:
+        'Providers needed a flexible way to buy listing packages across many categories and geographies, but package pricing was too complex to manage manually — bundles, tiers and multi-country rules made quoting slow, error-prone and impossible to scale, with no e-commerce foundation ready for launch.',
+      built: [
+        'Web-only multipurpose classifieds marketplace with multi-category browsing and publishing.',
+        'Package-based listing sales for providers with purchase and management flows.',
+        'Highly complex pricing engine calculating tiered package costs across categories.',
+        'Multi-country architecture ready to scale across diverse markets.',
+        'React + Supabase platform delivered entirely with AI-assisted development.',
+      ],
+      results: [
+        'Launched at coleffe.com in under 10 weeks, on time for business debut.',
+        'Complex package pricing automated and ready for scale.',
+        'Quality-first web platform stable for launch and growth.',
+        'Multi-category, multi-country foundation for continuous expansion.',
+        'Efficient monetization through flexible bundle sales.',
+      ],
+      links: [{ label: 'Website · https://coleffe.com', url: 'https://coleffe.com' }],
+    },
+  },
+  {
     title: 'True English',
     description:
       'True English is an English learning platform assisted by Artificial Intelligence. It offers complete English courses, automatic pronunciation evaluation powered by AI, and personalized feedback. True English also includes specialized courses (TOEFL, children, companies, etc.) and independent content for each organization. Currently used in Hermosillo and Zacatecas, with plans for national expansion, True English is available on the Apple App Store and Google Play.',
@@ -615,6 +655,46 @@ const portfolioItemsEs: PortfolioItemFull[] = [
         { label: 'Clutch · Testimonio en Clutch de Later Life Training', url: 'https://clutch.co/profile/zerocode-0#review-367019' },
         { label: 'Enlace web · https://laterlifetraining.co.uk/', url: 'https://laterlifetraining.co.uk/' },
       ],
+    },
+  },
+  {
+    title: 'Multiclasificados Effe',
+    description:
+      'Multiclasificados Effe es un marketplace de clasificados multipropósito donde los proveedores compran paquetes de avisos para publicar en múltiples categorías, con alcance en varios países del mundo. La plataforma se entregó solo web en tiempo récord —menos de 10 semanas— como frontend en React sobre Supabase, desarrollada íntegramente con flujos asistidos por IA. Su núcleo es un complejo algoritmo de cálculo de precios por paquetes que define costos escalonados por volumen, habilitando una monetización flexible y escalable. Zerocode acompañó a Effe desde el desarrollo hasta el lanzamiento, cuidando especialmente la calidad, estabilidad y la puesta en producción en coleffe.com.',
+    thumbnail: '/images/multiclasificados-mock-1.png',
+    images: [
+      '/images/multiclasificados-mock-1.png',
+      '/images/multiclasificados-mock-2.png',
+      '/images/multiclasificados-mock-3.png',
+      '/images/multiclasificados-mock-4.png',
+      '/images/multiclasificados-mock-5.png',
+    ],
+    techSpecs: {
+      'Diseño': 'Figma',
+      'Implementación': 'React & Supabase',
+      'IA Asistida': 'Claude Code, Antigravity, GitHub Copilot',
+      'Enlace': 'https://coleffe.com',
+    },
+    href: '/es/portfolio/multiclasificados-effe-es/',
+    relatedSlugs: ['later-life-training-2', 'true-english-es'],
+    businessCase: {
+      problem:
+        'Los proveedores necesitaban comprar paquetes de avisos de forma flexible en múltiples categorías y geografías, pero el cálculo de precios era demasiado complejo para gestionarse manualmente —bundles, escalas y reglas por país volvían la cotización lenta, propensa a errores e imposible de escalar— sin una base e-commerce lista para el lanzamiento.',
+      built: [
+        'Marketplace multipropósito solo web con navegación y publicación por múltiples categorías.',
+        'Venta de paquetes de avisos para proveedores con flujo de compra y gestión.',
+        'Complejo motor de precios que calcula costos escalonados por paquete y categoría.',
+        'Arquitectura multi-país lista para escalar en diversos mercados.',
+        'Plataforma React + Supabase desarrollada íntegramente con IA asistida.',
+      ],
+      results: [
+        'Lanzado en coleffe.com en menos de 10 semanas, a tiempo para el debut del negocio.',
+        'Precios por paquete complejos automatizados y listos para escalar.',
+        'Plataforma web con foco en calidad, estable para el lanzamiento y el crecimiento.',
+        'Base multi-categoría y multi-país para expansión continua.',
+        'Monetización eficiente mediante venta flexible de paquetes.',
+      ],
+      links: [{ label: 'Sitio web · https://coleffe.com', url: 'https://coleffe.com' }],
     },
   },
   {
