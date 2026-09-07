@@ -13,6 +13,7 @@ interface FintechCarouselProps {
 export function FintechCarousel({ images, title, variant = 'desktop' }: FintechCarouselProps) {
   const [current, setCurrent] = useState(0)
   const [hovering, setHovering] = useState(false)
+  const [touchStartX, setTouchStartX] = useState<number | null>(null)
 
   const prev = useCallback(() => {
     setCurrent((c) => (c === 0 ? images.length - 1 : c - 1))
@@ -32,11 +33,24 @@ export function FintechCarousel({ images, title, variant = 'desktop' }: FintechC
 
   const isMobile = variant === 'mobile'
 
+  const handleTouchStart = (e: React.TouchEvent) => setTouchStartX(e.touches[0].clientX)
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null) return
+    const delta = touchStartX - e.changedTouches[0].clientX
+    if (Math.abs(delta) > 50) {
+      if (delta > 0) next()
+      else prev()
+    }
+    setTouchStartX(null)
+  }
+
   return (
     <div
-      className="relative w-full overflow-hidden border border-white/10 bg-[#0a0f1e] shadow-[0_12px_40px_rgba(0,0,0,0.5)]"
+      className="relative w-full overflow-hidden border border-white/10 bg-[#0a0f1e] shadow-[0_12px_40px_rgba(0,0,0,0.5)] touch-pan-y"
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <div
         className={`relative w-full overflow-hidden bg-black ${

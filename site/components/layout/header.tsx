@@ -17,6 +17,7 @@ export function Header({ locale }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10)
@@ -78,22 +79,39 @@ export function Header({ locale }: HeaderProps) {
               const isParentActive = isActive(item.href) || !!item.children?.some((c) => isActive(c.href))
               if (hasChildren) {
                 return (
-                  <div key={item.label} className="relative group flex items-center self-stretch">
-                    <Link
-                      href={item.href}
+                  <div
+                    key={item.label}
+                    className="relative group flex items-center self-stretch"
+                    onMouseEnter={() => setDesktopServicesOpen(true)}
+                    onMouseLeave={() => setDesktopServicesOpen(false)}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setDesktopServicesOpen((o) => !o)}
+                      aria-haspopup="menu"
+                      aria-expanded={desktopServicesOpen}
                       className={`flex items-center gap-1 text-sm font-medium uppercase tracking-wide leading-none transition-colors hover:text-[#38bdf8] ${
                         isParentActive ? 'text-[#38bdf8]' : 'text-white/80'
                       }`}
                     >
                       {item.label}
-                      <ChevronDown className="size-3 shrink-0 transition-transform duration-200 group-hover:rotate-180" />
-                    </Link>
-                    <div className="absolute left-1/2 top-full hidden -translate-x-1/2 pt-[14px] group-hover:block group-focus-within:block">
+                      <ChevronDown
+                        className={`size-3 shrink-0 transition-transform duration-200 ${
+                          desktopServicesOpen ? 'rotate-180' : 'group-hover:rotate-180'
+                        }`}
+                      />
+                    </button>
+                    <div
+                      className={`absolute left-1/2 top-full -translate-x-1/2 pt-[14px] ${
+                        desktopServicesOpen ? 'block' : 'hidden'
+                      } group-hover:block group-focus-within:block`}
+                    >
                       <div className="min-w-[210px] border border-white/10 bg-[#0a0f1e] p-1 shadow-lg">
                         {item.children!.map((child) => (
                           <Link
                             key={child.href + child.label}
                             href={child.href}
+                            onClick={() => setDesktopServicesOpen(false)}
                             className={`block px-4 py-2.5 text-sm font-medium leading-none transition-colors hover:bg-white/[0.06] hover:text-white ${
                               isActive(child.href) ? 'text-white bg-white/[0.06]' : 'text-white/75'
                             }`}
