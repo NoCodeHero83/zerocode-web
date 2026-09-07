@@ -61,7 +61,7 @@ export default function FintechPage() {
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp" style={{ animationDelay: '400ms' }}>
                 <Link
                   href={content.hero.ctaHref}
-                  className="inline-flex items-center gap-2 bg-white px-8 py-4 text-sm font-semibold text-black transition-all hover:bg-white/90 hover:shadow-xl"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-black transition-all hover:bg-white/90 hover:shadow-xl"
                 >
                   {content.hero.cta}
                   <ArrowRight className="size-4" />
@@ -82,9 +82,9 @@ export default function FintechPage() {
               <div className="flex justify-center -mt-4 mb-4">
                 <Link
                   href={content.hero.ctaHref}
-                  className="inline-flex items-center gap-2 bg-white px-8 py-3 text-sm font-semibold text-black transition-all hover:bg-white/90"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition-all hover:bg-white/90 hover:shadow-xl"
                 >
-                  {content.hero.cta}
+                  Book a demo
                   <ArrowRight className="size-4" />
                 </Link>
               </div>
@@ -104,7 +104,7 @@ export default function FintechPage() {
               </p>
               <Link
                 href={content.closing.ctaHref}
-                className="mt-8 inline-flex items-center gap-2 bg-[#00dcfc] px-8 py-4 text-sm font-semibold text-black transition-all hover:bg-[#00dcfc]/90 hover:shadow-xl hover:shadow-[#00dcfc]/20"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-black transition-all hover:bg-white/90 hover:shadow-xl"
               >
                 {content.closing.cta}
                 <ArrowRight className="size-4" />

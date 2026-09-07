@@ -40,7 +40,7 @@ export function FintechCarousel({ images, title, variant = 'desktop' }: FintechC
     >
       <div
         className={`relative w-full overflow-hidden bg-black ${
-          isMobile ? 'aspect-[9/16] max-h-[640px] sm:aspect-[9/16]' : 'aspect-[16/10] sm:aspect-[16/9]'
+          isMobile ? 'aspect-[9/16] max-h-[640px] sm:aspect-[9/16]' : 'aspect-[16/11] sm:aspect-[16/10.5]'
         }`}
       >
         <Image
@@ -48,7 +48,7 @@ export function FintechCarousel({ images, title, variant = 'desktop' }: FintechC
           alt={`${title} — ${current + 1}`}
           fill
           sizes={isMobile ? "(max-width: 768px) 100vw, 400px" : "(max-width: 768px) 100vw, 640px"}
-          className={isMobile ? "object-contain bg-[#0a0f1e]" : "object-cover object-top"}
+          className={isMobile ? "object-contain bg-[#0a0f1e]" : "object-contain bg-[#0a0f1e]"}
           priority={current === 0}
         />
       </div>
