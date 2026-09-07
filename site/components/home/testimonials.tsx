@@ -45,7 +45,7 @@ export function Testimonials({ content }: TestimonialsProps) {
               <div className="flex flex-col items-center text-center gap-6">
                 <div
                   className={`relative size-[100px] shrink-0 overflow-hidden rounded-full ring-2 ring-primary/20 ${
-                    testimonial.image.includes('HulpLogo') ? 'bg-white p-3' : ''
+                    testimonial.image.includes('HulpLogo') ? 'bg-black p-3' : ''
                   }`}
                 >
                   <Image
