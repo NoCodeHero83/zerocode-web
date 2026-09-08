@@ -29,29 +29,24 @@ export function ContactCalendly({ locale }: Props) {
 
   const copy = isEs
     ? {
-        heading: 'Todo lo que necesitas saber, en una sola llamada.',
-        description: 'Te diremos cuánto cuesta, cuánto demora y si realmente tiene sentido para tu negocio.',
+        heading: 'Todo lo que necesitas saber en una sola llamada',
       }
     : {
-        heading: 'Everything you need to know, in a single call.',
-        description: "We'll tell you how much it costs, how long it takes and if it really makes sense for your business.",
+        heading: 'Everything you need to know in a single call',
       }
 
   return (
     <section id="calendly" ref={ref} className="py-20 sm:py-28 lg:py-32">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header — idéntico a lets-talk final-cta */}
+        {/* Section header — heading only, 1pt less weight / 2pt less size / full width */}
         <div
           className={`text-center mb-10 sm:mb-12 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
+          <h2 className="w-full text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground mb-4">
             {copy.heading}
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            {copy.description}
-          </p>
         </div>
 
         {/* Calendly embed — contenedor premium perfectamente alineado */}
