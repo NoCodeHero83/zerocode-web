@@ -24,7 +24,7 @@ export default function ContactPageEs() {
                 Consulta Gratuita
               </p>
               <h1 className="mt-4 text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">
-                De Cero a Ingresos — la solución operacional
+                Arreglemos tu operación
               </h1>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/80">
                 <p><em>En esta llamada vamos a:</em></p>
@@ -38,11 +38,7 @@ export default function ContactPageEs() {
           </div>
         </section>
 
-        <section className="pb-16 sm:pb-24 lg:pb-28 relative">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative">
-            <ContactCalendly locale="es" />
-          </div>
-        </section>
+        <ContactCalendly locale="es" />
       </main>
       <Footer locale="es" />
     </>
