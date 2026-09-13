@@ -124,11 +124,10 @@ export const aboutContent: Record<Locale, AboutContent> = {
           linkedin: 'https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/',
         },
         {
-          name: 'Jaime Solís',
-          role: 'Project Manager',
-          bio: 'Jaime brings a strong expertise in Product Management, supported by a solid technological and analytical foundation, and a consistent focus on customer satisfaction. His professional background spans a wide range of organizations—from early-stage startups to large corporations—with notable experience in sectors such as finance, consulting, telecommunications, tourism, and technology.',
-          image: '/images/Jaime-Solis.jpeg',
-          linkedin: 'https://www.linkedin.com/in/jaime-solis-gonzales/',
+          name: 'Dylan Sannino',
+          role: 'Quality Assurance & Project Manager',
+          bio: 'Dylan combines strong organizational and management skills with discipline, clear coordination, and a consistent focus on achieving objectives. He works closely with clients to ensure alignment and successful outcomes. Additionally he has many years of experience developing high-quality web and mobile applications.',
+          image: '/images/Dylan.jpeg',
         },
         {
           name: 'Felix Mwita',
@@ -259,11 +258,10 @@ export const aboutContent: Record<Locale, AboutContent> = {
           linkedin: 'https://www.linkedin.com/in/jose-andr%C3%A9s-d%C3%ADaz/',
         },
         {
-          name: 'Jaime Solís',
-          role: 'Gerente de Proyectos',
-          bio: 'Jaime aporta una sólida expertise en Gestión de Producto, respaldada por una base tecnológica y analítica sólida, con un enfoque constante en la satisfacción del cliente.',
-          image: '/images/Jaime-Solis.jpeg',
-          linkedin: 'https://www.linkedin.com/in/jaime-solis-gonzales/',
+          name: 'Dylan Sannino',
+          role: 'Quality Assurance & Project Manager',
+          bio: 'Dylan combina fuertes habilidades de organización y gestión con disciplina, coordinación clara y un enfoque constante en alcanzar objetivos. Trabaja estrechamente con los clientes para asegurar la alineación y resultados exitosos. Además, cuenta con muchos años de experiencia desarrollando aplicaciones web y móviles de alta calidad.',
+          image: '/images/Dylan.jpeg',
         },
         {
           name: 'Felix Mwita',
