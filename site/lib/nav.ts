@@ -16,6 +16,7 @@ export const navItems: Record<Locale, NavItem[]> = {
       children: [
         { label: 'General Services', href: '/service/' },
         { label: 'Fintech Solutions', href: '/fintech/' },
+        { label: 'Odoo ERP & CRM', href: '/odoo/' },
       ],
     },
     { label: 'Portfolio', href: '/portfolio/' },
@@ -30,6 +31,7 @@ export const navItems: Record<Locale, NavItem[]> = {
       children: [
         { label: 'Servicios Generales', href: '/es/service-es/' },
         { label: 'Soluciones Fintech', href: '/es/fintech/' },
+        { label: 'Odoo ERP & CRM', href: '/es/odoo/' },
       ],
     },
     { label: 'Portafolio', href: '/es/portfolio/' },
@@ -53,6 +55,7 @@ const staticRouteMapEnToEs: Record<string, string> = {
   '/service': '/es/service-es',
   '/services': '/es/services',
   '/fintech': '/es/fintech',
+  '/odoo': '/es/odoo',
   '/portfolio': '/es/portfolio',
   '/blog': '/es/blog',
   '/contact': '/es/contact-es',
@@ -64,6 +67,7 @@ const staticRouteMapEsToEn: Record<string, string> = {
   '/es/service-es': '/service',
   '/es/services': '/services',
   '/es/fintech': '/fintech',
+  '/es/odoo': '/odoo',
   '/es/portfolio': '/portfolio',
   '/es/blog': '/blog',
   '/es/contact-es': '/contact',
