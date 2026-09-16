@@ -111,22 +111,16 @@ export default function OdooPage() {
               </p>
               <h2 className="mt-3 text-3xl font-medium text-foreground sm:text-4xl">{content.featuredProject.title}</h2>
             </div>
-            <div className="mx-auto max-w-3xl">
-              <div className="relative">
-                <div className="absolute left-[29px] top-0 bottom-0 w-px bg-white/10 hidden sm:block" />
-                <div className="space-y-4">
-                  {content.featuredProject.steps.map((step) => (
-                    <div key={step.number} className="frosted-card p-5 sm:p-6 sm:pl-20 relative group hover:border-[#00dcfc]/30 transition-colors">
-                      <div className="hidden sm:flex absolute left-0 top-5 -translate-x-1/2 size-14 items-center justify-center rounded-full border border-[#00dcfc]/30 bg-background text-[#00dcfc] text-sm font-bold">
-                        {step.number}
-                      </div>
-                      <span className="sm:hidden text-xs font-bold text-[#00dcfc] uppercase tracking-widest">Step {step.number}</span>
-                      <h3 className="mt-1 text-base font-bold uppercase tracking-wide text-foreground">{step.title}</h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-foreground/70">{step.description}</p>
-                    </div>
-                  ))}
+            <div className="grid gap-5 sm:grid-cols-3">
+              {content.featuredProject.steps.map((step) => (
+                <div key={step.number} className="frosted-card p-6 sm:p-8 flex flex-col items-center text-center group hover:border-[#00dcfc]/30 transition-colors">
+                  <div className="flex size-14 items-center justify-center rounded-full border border-[#00dcfc]/30 bg-[#00dcfc]/5 text-[#00dcfc] text-lg font-bold mb-4">
+                    {step.number}
+                  </div>
+                  <h3 className="text-sm font-bold uppercase tracking-wide text-foreground">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">{step.description}</p>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
