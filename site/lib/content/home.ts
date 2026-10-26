@@ -127,6 +127,13 @@ const testimonialsEn: TestimonialItem[] = [
     company: 'Hulp Colombia',
     image: '/images/HulpLogo.png',
   },
+  {
+    quote:
+      "Zerocode's response speed was outstanding — every question answered immediately. They respected the scope at every stage and delivered the project exactly on time, at the exact cost and with the exact scope we agreed.",
+    name: 'Cesar Lozano',
+    company: 'Effe Multiclasificados',
+    image: '/images/Cesar-Lozano.jpg',
+  },
 ]
 
 const testimonialsEs: TestimonialItem[] = [
@@ -164,6 +171,13 @@ const testimonialsEs: TestimonialItem[] = [
     name: 'Hulp Colombia',
     company: 'Hulp Colombia',
     image: '/images/HulpLogo.png',
+  },
+  {
+    quote:
+      'La velocidad de respuesta de Zerocode fue sobresaliente: cada consulta se respondió de inmediato. Respetaron el alcance en cada etapa y entregaron el proyecto exactamente en el tiempo, con el costo y el alcance que acordamos.',
+    name: 'Cesar Lozano',
+    company: 'Effe Multiclasificados',
+    image: '/images/Cesar-Lozano.jpg',
   },
 ]
 
